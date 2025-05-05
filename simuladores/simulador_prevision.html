@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulación Previsión de Cargas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #004080; padding: 6px; text-align: center; }
+        input[type='number'], input[type='text'] { width: 100px; }
+        .section { margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simulador Previsión de Cargas</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="simulador_lga.html">Simulación LGA</a></li>
+                <li><a href="simulador_di.html">Simulación Derivación Individual</a></li>
+                <li><a href="simulador_prevision.html">Simulación Previsión Cargas</a></li>
+                <li><a href="../test/index.html">Test</a></li>
+                <li><a href="../plantillas/index.html">Plantillas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>1. VIVIENDAS</h2>
+        <table id="viviendas">
+            <tr>
+                <th>Nº Vivienda</th>
+                <th>Superficie (m²)</th>
+                <th>Grado electrificación</th>
+                <th>Potencia prevista (W)</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><input type="number" id="sup1"></td>
+                <td><input type="text" id="grado1"></td>
+                <td><input type="number" id="pot1"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="number" id="sup2"></td>
+                <td><input type="text" id="grado2"></td>
+                <td><input type="number" id="pot2"></td>
+            </tr>
+        </table>
+        <label>Coef. simultaneidad:</label> <input type="number" step="any" id="coef_sim">
+        <button onclick="calcular()">Calcular</button>
+
+        <div class="section">
+            <h2>Resultado</h2>
+            <p>Total potencia viviendas: <input type="text" id="total" readonly> W</p>
+        </div>
+    </main>
+
+    <script>
+        function calcular() {
+            let p1 = parseFloat(document.getElementById('pot1').value) || 0;
+            let p2 = parseFloat(document.getElementById('pot2').value) || 0;
+            let coef = parseFloat(document.getElementById('coef_sim').value) || 1;
+
+            let media = (p1 + p2) / 2;
+            let total = media * coef;
+
+            document.getElementById('total').value = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
