@@ -3,17 +3,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Simulación Derivación Individual</title>
+    <title>Simulador Derivación Individual - Ejercicio</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
         input[type=text], input[type=number] {
-            width: 150px;
+            width: 200px;
             padding: 5px;
             margin: 4px;
         }
         label {
             display: inline-block;
-            width: 350px;
+            width: 400px;
         }
         .form-section {
             margin-bottom: 20px;
@@ -24,7 +24,7 @@
 </head>
 <body>
     <header>
-        <h1>Simulador Derivación Individual</h1>
+        <h1>Simulador DI - Ejercicio Real</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -37,23 +37,25 @@
         </nav>
     </header>
     <main>
-        <h2>Formulario DI - Cálculos automáticos</h2>
+        <h2>Ejercicio de Cálculo Real de Derivación Individual</h2>
         <form id="formDI">
             <div class="form-section">
-                <h3>1. Datos Iniciales</h3>
-                <label>Potencia prevista (kW):</label><input type="number" step="any" id="potencia"><br>
-                <label>Tensión (V):</label><input type="number" step="any" id="tension"><br>
-                <label>cos(phi):</label><input type="number" step="any" id="cosphi"><br>
-                <label>Longitud derivación (m):</label><input type="number" step="any" id="longitud"><br>
-                <label>¿Trifásica? (sí=1 / no=0):</label><input type="number" min="0" max="1" id="trifasica"><br>
-                <label>¿Totalmente centralizado? (sí=1 / no=0):</label><input type="number" min="0" max="1" id="centralizado"><br>
+                <label>Potencia prevista (W):</label><input type="number" id="potencia" value="5750"><br>
+                <label>Tensión (V):</label><input type="number" id="tension" value="230"><br>
+                <label>cos(phi):</label><input type="number" step="any" id="cosphi" value="0.95"><br>
+                <label>Longitud de la derivación (m):</label><input type="number" id="longitud" value="18"><br>
+                <label>Conductividad (γ, m/Ohm·mm²):</label><input type="number" step="any" id="gamma" value="56"><br>
+                <label>¿Trifásica? (1 = sí, 0 = no):</label><input type="number" id="trifasica" value="0"><br>
+                <label>¿Totalmente centralizado? (1 = sí, 0 = no):</label><input type="number" id="centralizado" value="1"><br>
             </div>
 
             <div class="form-section">
-                <h3>2. Resultados</h3>
+                <h3>Resultados</h3>
                 <label>Caída máxima permitida (V):</label><input type="text" id="caida" readonly><br>
                 <label>Intensidad (A):</label><input type="text" id="intensidad" readonly><br>
-                <label>Sección (mm²):</label><input type="text" id="seccion" readonly><br>
+                <label>Sección mínima (mm²):</label><input type="text" id="seccion" readonly><br>
+                <label>Sección comercial (aprox.):</label><input type="text" id="comercial" readonly><br>
+                <label>Protección (IGA):</label><input type="text" id="iga" readonly><br>
             </div>
 
             <button type="button" onclick="calcular()">Calcular</button>
@@ -61,24 +63,29 @@
 
         <script>
             function calcular() {
-                const P = parseFloat(document.getElementById('potencia').value) * 1000;
+                const P = parseFloat(document.getElementById('potencia').value);
                 const U = parseFloat(document.getElementById('tension').value);
                 const cosphi = parseFloat(document.getElementById('cosphi').value);
                 const L = parseFloat(document.getElementById('longitud').value);
+                const gamma = parseFloat(document.getElementById('gamma').value);
                 const trifasica = parseInt(document.getElementById('trifasica').value);
                 const centralizado = parseInt(document.getElementById('centralizado').value);
-
-                if (isNaN(P) || isNaN(U) || isNaN(cosphi) || isNaN(L)) return;
 
                 let e_pct = centralizado === 1 ? 1.0 : 0.5;
                 let e = (e_pct / 100) * U;
                 let I = trifasica === 1 ? P / (1.73 * U * cosphi) : P / (U * cosphi);
-                let gamma = 56; // Suponemos cobre
-                let S = trifasica === 1 ? (L * P) / (gamma * e * U) : (2 * L * P) / (gamma * e * U);
+                let S = trifasica === 1 ?
+                    (L * P) / (gamma * e * U) :
+                    (2 * L * P) / (gamma * e * U);
+
+                let seccionComercial = S <= 6 ? 6 : (S <= 10 ? 10 : (S <= 16 ? 16 : 25));
+                let iga = Math.ceil(I / 5) * 5;
 
                 document.getElementById('caida').value = e.toFixed(2);
                 document.getElementById('intensidad').value = I.toFixed(2);
                 document.getElementById('seccion').value = S.toFixed(2);
+                document.getElementById('comercial').value = seccionComercial + " mm²";
+                document.getElementById('iga').value = iga + " A";
             }
         </script>
     </main>
