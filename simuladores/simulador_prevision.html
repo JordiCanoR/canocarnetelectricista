@@ -69,7 +69,7 @@
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
 </table>
-<button onclick="agregarFila('tablaOficinas')">Añadir oficina</button>
+<button onclick="agregarFilaOficinas()">Añadir oficina</button>
 <label>Total oficinas: <input type="text"/> W</label>
 
 <div class="section">
@@ -178,7 +178,7 @@ function agregarFila(idTabla) {
         celda.appendChild(input);
     }
 }
-function agregarFilatablaOficinas() {
+function agregarFilaOficinas() {
     const table = document.querySelector("table");
     const row = table.insertRow(-1);
     for (let i = 0; i < 4; i++) {
@@ -186,7 +186,7 @@ function agregarFilatablaOficinas() {
         const input = document.createElement("input");
         input.type = "number";
         input.placeholder = "";
-        input.oninput = totalOficinas;
+        input.oninput = calcularOficinas;
         cell.appendChild(input);
     }
 function calcularTotales() {
