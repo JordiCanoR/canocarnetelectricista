@@ -38,6 +38,27 @@
         .correcta { background-color: #d4edda; }
         .incorrecta { background-color: #f8d7da; }
         .resaltada-correcta { text-decoration: underline; font-weight: bold; color: green; }
+    
+        .mensaje-final {
+            animation: zoomIn 0.5s ease-out;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .aprobado {
+            background-color: #d4edda;
+            color: #155724;
+            border: 2px solid #28a745;
+        }
+        .suspendido {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 2px solid #dc3545;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
     </style>
 </head>
 <body>
