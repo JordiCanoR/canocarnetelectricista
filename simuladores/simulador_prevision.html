@@ -7,103 +7,116 @@
     <link rel="stylesheet" href="../css/style.css">
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
-        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
         th, td { border: 1px solid #004080; padding: 6px; text-align: center; }
-        input[type='number'], input[type='text'] { width: 90%; }
-        .section { margin-top: 30px; }
-        label { display: inline-block; width: 300px; margin-bottom: 8px; }
+        input[type='number'], input[type='text'] { width: 95%; padding: 4px; }
+        h2 { background-color: #e0e0e0; padding: 5px; }
+        .boton { padding: 10px 20px; font-size: 16px; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Simulador Previsión de Cargas</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="simulador_lga.html">Simulación LGA</a></li>
-                <li><a href="simulador_di.html">Simulación Derivación Individual</a></li>
-                <li><a href="simulador_prevision.html">Simulación Previsión Cargas</a></li>
-                <li><a href="../test/index.html">Test</a></li>
-                <li><a href="../plantillas/index.html">Plantillas</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>PLANTILLA DE CÁLCULO DE CARGAS ELÉCTRICAS - REBT (Guía BT-10)</h1>
 
-    <main>
-        <h2>1. Viviendas</h2>
-        <table id="tabla_viviendas">
-            <tr><th>Nº</th><th>Superficie (m²)</th><th>Electrificación</th><th>Potencia prevista (W)</th></tr>
-            <tr><td>1</td><td><input id="sup1"></td><td><input id="tipo1"></td><td><input id="pot1" type="number"></td></tr>
-            <tr><td>2</td><td><input id="sup2"></td><td><input id="tipo2"></td><td><input id="pot2" type="number"></td></tr>
-        </table>
-        <label>Nº total viviendas:</label> <input id="total_viv" type="number" value="2"><br>
-        <label>Coef. simultaneidad:</label> <input id="coef_sim" type="number" step="any"><br>
-        <label>Media potencias previstas (W):</label> <input id="media" readonly><br>
-        <label>Total potencia viviendas (W):</label> <input id="pot_viv" readonly><br>
+    <h2>1. DATOS GENERALES DEL PROYECTO</h2>
+    <label>Nombre del proyecto: <input type="text"></label><br>
+    <label>Ubicación: <input type="text"></label><br>
+    <label>Tipo de edificio: <input type="text"></label><br>
+    <label>Instalador/Proyectista: <input type="text"></label><br>
+    <label>Fecha: <input type="text"></label><br>
 
-        <div class="section">
-            <h2>2. Servicios Generales</h2>
-            <label>Ascensor 1 (W):</label> <input id="asc1" type="number"><br>
-            <label>Ascensor 2 (W):</label> <input id="asc2" type="number"><br>
-            <label>Alumbrado fluo (1.8 × puntos × W × 0.9):</label> <input id="alumbf" type="number"><br>
-            <label>Alumbrado incan. (puntos × W):</label> <input id="alumbi" type="number"><br>
-            <label>Puertas automáticas (W):</label> <input id="puertas" type="number"><br>
-            <label>Grupo presión 1 (CV):</label> <input id="gp1" type="number"><br>
-            <label>Grupo presión 2 (CV):</label> <input id="gp2" type="number"><br>
-            <label>Otros (W):</label> <input id="otros" type="number"><br>
-            <label>Total servicios generales (W):</label> <input id="total_servicios" readonly><br>
-        </div>
+    <h2>2. VIVIENDAS: CÁLCULO DE POTENCIA PREVISTA</h2>
+    <table>
+        <tr><th>Nº Vivienda</th><th>Superficie (m²)</th><th>Grado de electrificación</th><th>Potencia prevista (W)</th></tr>
+        <tr><td>1</td><td><input type="number"></td><td><input type="text"></td><td><input type="number" id="v1"></td></tr>
+        <tr><td>2</td><td><input type="number"></td><td><input type="text"></td><td><input type="number" id="v2"></td></tr>
+    </table>
+    Media aritmética de potencias previstas: <input type="text" id="media" readonly><br>
+    Nº total de viviendas: <input type="number" id="num_viv"><br>
+    Coef. de simultaneidad: <input type="number" step="any" id="coef"><br>
+    Potencia total viviendas: <input type="text" id="pot_viv" readonly><br>
 
-        <div class="section">
-            <h2>3. Garajes</h2>
-            <label>Nº plazas:</label> <input id="plazas" type="number"><br>
-            <label>Ventilación (natural=10W, forzada=20W):</label> <input id="ventilacion" type="number"><br>
-            <label>Puntos de recarga VE:</label> <input id="puntos_ve" type="number"><br>
-            <label>¿Con SPL? (1=sí, 0=no):</label> <input id="spl" type="number"><br>
-            <label>Total garajes (W):</label> <input id="pot_garaje" readonly><br>
-        </div>
+    <h2>3. SERVICIOS GENERALES</h2>
+    <label>Ascensor 1 (W): <input type="number" id="asc1"></label><br>
+    <label>Ascensor 2 (W): <input type="number" id="asc2"></label><br>
+    <label>Alumbrado zonas comunes (fluorescente): <input type="number" id="fluor"></label><br>
+    <label>Alumbrado zonas comunes (incandescente): <input type="number" id="incan"></label><br>
+    <label>Puertas automáticas (W): <input type="number" id="puertas"></label><br>
+    <label>Grupo de presión 1 (CV): <input type="number" id="gp1"></label><br>
+    <label>Grupo de presión 2 (CV): <input type="number" id="gp2"></label><br>
+    <label>Bomba de agua 1 (W): <input type="number" id="ba1"></label><br>
+    <label>Bomba de agua 2 (W): <input type="number" id="ba2"></label><br>
+    <label>Otros (W): <input type="number" id="otros"></label><br>
+    Total servicios generales: <input type="text" id="pot_serv" readonly><br>
 
-        <div class="section">
-            <h2>Resultado Final</h2>
-            <label>Potencia total prevista edificio (W):</label> <input id="total_edificio" readonly><br>
-        </div>
+    <h2>4. LOCALES COMERCIALES</h2>
+    <label>Total locales comerciales (W): <input type="number" id="comercio"></label><br>
 
-        <button onclick="calcular()">Calcular Todo</button>
-    </main>
+    <h2>5. OFICINAS</h2>
+    <label>Total oficinas (W): <input type="number" id="oficinas"></label><br>
+
+    <h2>6. GARAJES</h2>
+    <label>Ventilación (natural=10W/plaza, forzada=20W/plaza): <input type="number" id="ventilacion"></label><br>
+    <label>Nº de plazas: <input type="number" id="plazas"></label><br>
+    <label>Iluminación garajes (W): <input type="number" id="ilum"></label><br>
+    <label>Nº puntos recarga VE: <input type="number" id="ve"></label><br>
+    <label>¿Con SPL? (1=sí, 0=no): <input type="number" id="spl"></label><br>
+    Total potencia garajes: <input type="text" id="pot_garaje" readonly><br>
+
+    <h2>7. POTENCIA TOTAL DEL EDIFICIO</h2>
+    Total viviendas: <input type="text" id="res_viv" readonly><br>
+    Total servicios generales: <input type="text" id="res_serv" readonly><br>
+    Total locales comerciales: <input type="text" id="res_com" readonly><br>
+    Total oficinas: <input type="text" id="res_ofi" readonly><br>
+    Total garajes: <input type="text" id="res_gar" readonly><br>
+    <strong>POTENCIA TOTAL PREVISTA:</strong> <input type="text" id="total_final" readonly><br><br>
+
+    <button class="boton" onclick="calcular()">CALCULAR</button>
 
     <script>
         function calcular() {
-            let pot1 = parseFloat(document.getElementById('pot1').value) || 0;
-            let pot2 = parseFloat(document.getElementById('pot2').value) || 0;
-            let media = (pot1 + pot2) / 2;
+            let v1 = parseFloat(document.getElementById('v1').value) || 0;
+            let v2 = parseFloat(document.getElementById('v2').value) || 0;
+            let media = (v1 + v2) / 2;
             document.getElementById('media').value = media.toFixed(2);
-
-            let coef = parseFloat(document.getElementById('coef_sim').value) || 1;
-            let totalViv = media * coef;
-            document.getElementById('pot_viv').value = totalViv.toFixed(2);
+            let num = parseFloat(document.getElementById('num_viv').value) || 0;
+            let coef = parseFloat(document.getElementById('coef').value) || 1;
+            let pot_viv = media * coef;
+            document.getElementById('pot_viv').value = pot_viv.toFixed(2);
 
             let asc1 = parseFloat(document.getElementById('asc1').value) || 0;
             let asc2 = parseFloat(document.getElementById('asc2').value) || 0;
-            let alumbf = parseFloat(document.getElementById('alumbf').value) || 0;
-            let alumbi = parseFloat(document.getElementById('alumbi').value) || 0;
+            let fluor = parseFloat(document.getElementById('fluor').value) || 0;
+            let incan = parseFloat(document.getElementById('incan').value) || 0;
             let puertas = parseFloat(document.getElementById('puertas').value) || 0;
             let gp1 = parseFloat(document.getElementById('gp1').value) || 0;
             let gp2 = parseFloat(document.getElementById('gp2').value) || 0;
+            let ba1 = parseFloat(document.getElementById('ba1').value) || 0;
+            let ba2 = parseFloat(document.getElementById('ba2').value) || 0;
             let otros = parseFloat(document.getElementById('otros').value) || 0;
 
-            let servicios = (asc1 + asc2) * 1.3 + alumbf + alumbi + puertas + (gp1 * 736) + (gp2 * 736) + otros;
-            document.getElementById('total_servicios').value = servicios.toFixed(2);
+            let serv = (asc1 + asc2) * 1.3 + fluor + incan + puertas + gp1*736 + gp2*736 + ba1 + ba2 + otros;
+            document.getElementById('pot_serv').value = serv.toFixed(2);
 
-            let plazas = parseInt(document.getElementById('plazas').value) || 0;
-            let vent = parseInt(document.getElementById('ventilacion').value) || 10;
-            let puntos_ve = parseInt(document.getElementById('puntos_ve').value) || 0;
+            let comercio = parseFloat(document.getElementById('comercio').value) || 0;
+            let oficinas = parseFloat(document.getElementById('oficinas').value) || 0;
+
+            let plazas = parseFloat(document.getElementById('plazas').value) || 0;
+            let vent = parseFloat(document.getElementById('ventilacion').value) || 10;
+            let ilum = parseFloat(document.getElementById('ilum').value) || 0;
+            let ve = parseFloat(document.getElementById('ve').value) || 0;
             let spl = parseInt(document.getElementById('spl').value) || 0;
-            let potVE = puntos_ve * 3680 * (spl ? 0.3 : 1);
-            let pot_garaje = plazas * vent + potVE;
-            document.getElementById('pot_garaje').value = pot_garaje.toFixed(2);
+            let recarga = ve * 3680 * (spl === 1 ? 0.3 : 1);
+            let gar = plazas * vent + ilum + recarga;
+            document.getElementById('pot_garaje').value = gar.toFixed(2);
 
-            let total = totalViv + servicios + pot_garaje;
-            document.getElementById('total_edificio').value = total.toFixed(2);
+            document.getElementById('res_viv').value = pot_viv.toFixed(2);
+            document.getElementById('res_serv').value = serv.toFixed(2);
+            document.getElementById('res_com').value = comercio.toFixed(2);
+            document.getElementById('res_ofi').value = oficinas.toFixed(2);
+            document.getElementById('res_gar').value = gar.toFixed(2);
+
+            let total = pot_viv + serv + comercio + oficinas + gar;
+            document.getElementById('total_final').value = total.toFixed(2);
         }
     </script>
 </body>
