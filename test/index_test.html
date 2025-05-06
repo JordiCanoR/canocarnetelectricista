@@ -176,18 +176,75 @@
 
         const respuestasCorrectas = ['a', 'b', 'b', 'a', 'b', 'a', 'b', 'a', 'b', 'b', 'b', 'b', 'b', 'a', 'b', 'a', 'b', 'b', 'c', 'c', 'b', 'b', 'b', 'b', 'b', 'b', 'a', 'b', 'b', 'a'];
 
-        function corregirTest() {
-            let correctas = 0;
-            for (let i = 1; i <= 30; i++) {
-                const preguntaDiv = document.querySelector(`.pregunta:nth-of-type(${i})`);
-                const opciones = document.getElementsByName(`q${i}`);
-                let seleccion = null;
+        
+function corregirTest() {
+    let correctas = 0;
+    let detallesFallos = "";
 
-                opciones.forEach(op => {
-                    op.parentElement.classList.remove("correcta", "incorrecta", "resaltada-correcta");
-                    if (op.checked) {
-                        seleccion = op;
+    for (let i = 1; i <= 30; i++) {
+        const preguntaDiv = document.querySelector(`.pregunta:nth-of-type(${i})`);
+        const opciones = document.getElementsByName(`q${i}`);
+        let seleccion = null;
+
+        opciones.forEach(op => {
+            op.closest("label").classList.remove("correcta", "incorrecta", "resaltada-correcta");
+            if (op.checked) {
+                seleccion = op;
+            }
+        });
+
+        let correctaMostrada = false;
+        let respondida = false;
+
+        opciones.forEach(op => {
+            if (op.checked) respondida = true;
+            if (op.value === respuestasCorrectas[i - 1]) {
+                if (seleccion && seleccion.value === op.value) {
+                    correctas++;
+                    op.closest("label").classList.add("correcta");
+                } else {
+                    if (!correctaMostrada) {
+                        op.closest("label").classList.add("resaltada-correcta");
+                        correctaMostrada = true;
                     }
+                    if (seleccion && seleccion.value !== op.value) {
+                        seleccion.closest("label").classList.add("incorrecta");
+                    }
+                    if (!respondida) {
+                        detallesFallos += `<li>Pregunta ${i}: No respondida. Respuesta correcta: <strong>${op.value.toUpperCase()}</strong></li>`;
+                    } else if (seleccion && seleccion.value !== op.value) {
+                        detallesFallos += `<li>Pregunta ${i}: Respondida con <strong>${seleccion.value.toUpperCase()}</strong>. Correcta: <strong>${op.value.toUpperCase()}</strong></li>`;
+                    }
+                }
+            }
+        });
+    }
+
+    let total = 30;
+    let resultado = `Has acertado ${correctas} de ${total} preguntas. Puntuación: ${(correctas / total * 100).toFixed(2)}%<br><br>`;
+    let mensajeFinal = "";
+    let clase = "";
+    if ((correctas / total) >= 0.9) {
+        mensajeFinal = "✅ ¡Excelente! Has aprobado con nota.";
+        clase = "aprobado";
+    } else if ((correctas / total) >= 0.6) {
+        mensajeFinal = "✅ ¡Bien hecho! Has aprobado.";
+        clase = "aprobado";
+    } else {
+        mensajeFinal = "❌ Necesitas repasar. ¡Ánimo, la próxima lo consigues!";
+        clase = "suspendido";
+    }
+
+    document.getElementById("resultado").innerHTML = `
+        ${resultado}
+        <div class='mensaje-final ${clase}'>${mensajeFinal}</div>
+        <br>
+        <details>
+            <summary>Ver detalles de respuestas falladas</summary>
+            <ul>${detallesFallos}</ul>
+        </details>
+    `;
+}
                 });
 
                 let correctaMostrada = false;
