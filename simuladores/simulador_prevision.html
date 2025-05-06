@@ -108,5 +108,20 @@
 <label>Seleccionar calibre según potencia total prevista: <input type="text"> A</label>
 </div>
 
+
+<script>
+function calcularResultado() {
+    let viv = parseFloat(document.querySelector('[placeholder="Media aritmética de potencias previstas"]')?.value) || 0;
+    let serv = parseFloat(document.querySelectorAll('input')[document.querySelectorAll('input').length - 29]?.value) || 0;
+    let com = parseFloat(document.querySelectorAll('input')[document.querySelectorAll('input').length - 20]?.value) || 0;
+    let ofi = parseFloat(document.querySelectorAll('input')[document.querySelectorAll('input').length - 11]?.value) || 0;
+    let gar = parseFloat(document.querySelectorAll('input')[document.querySelectorAll('input').length - 3]?.value) || 0;
+
+    let total = viv + serv + com + ofi + gar;
+    document.querySelector('strong input').value = total.toFixed(2);
+}
+window.addEventListener("input", calcularResultado);
+</script>
+
 </body>
 </html>
