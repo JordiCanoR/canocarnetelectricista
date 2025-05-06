@@ -7,54 +7,62 @@
     <link rel="stylesheet" href="../css/style.css">
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
-        header { background-color: #004080; padding: 20px; color: white; text-align: center; }
-        nav ul { list-style-type: none; padding: 0; display: flex; justify-content: center; gap: 20px; }
-        nav ul li { display: inline; }
-        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
         table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
         th, td { border: 1px solid #004080; padding: 6px; text-align: center; }
         input[type='number'], input[type='text'] { width: 95%; padding: 4px; }
         h2 { background-color: #e0e0e0; padding: 5px; }
         .boton { padding: 10px 20px; font-size: 16px; margin-top: 10px; }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>canocarnetelectricista</h1>
-        <p>Bienvenido a tu portal eléctrico de pruebas, plantillas y simuladores</p>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="simulador_lga.html">Simulación LGA</a></li>
-                <li><a href="simulador_di.html">Simulación Derivación Individual</a></li>
-                <li><a href="simulador_prevision.html">Simulación Previsión Cargas</a></li>
-                <li><a href="../test/index.html">Test</a></li>
-                <li><a href="../plantillas/index.html">Plantillas</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>PLANTILLA DE CÁLCULO DE CARGAS ELÉCTRICAS - REBT (Guía BT-10)</h1>
 
-    <main>
-        <h2>Simulador con Exportación PDF</h2>
-        <label>Nombre del proyecto: <input id="nombre_proyecto" type="text"></label><br><br>
-        <label>Potencia total prevista (W): <input id="pot_total" type="text"></label><br><br>
-        <button class="boton" onclick="exportarPDF()">Exportar a PDF</button>
-    </main>
+    <h2>4. LOCALES COMERCIALES</h2>
+    <table id="tabla_comercio">
+        <tr><th>Nº</th><th>Superficie (m²)</th><th>Potencia prevista (W)</th></tr>
+        <tr><td>1</td><td><input type="number"></td><td><input class="com_pot" type="number"></td></tr>
+        <tr><td>2</td><td><input type="number"></td><td><input class="com_pot" type="number"></td></tr>
+    </table>
+    <button class="boton" onclick="agregarFila('tabla_comercio', 'com_pot')">Añadir local comercial</button><br>
+    <label>Total locales comerciales (W): <input type="text" id="res_com" readonly></label>
+
+    <h2>5. OFICINAS</h2>
+    <table id="tabla_oficinas">
+        <tr><th>Nº</th><th>Superficie (m²)</th><th>Potencia prevista (W)</th></tr>
+        <tr><td>1</td><td><input type="number"></td><td><input class="ofi_pot" type="number"></td></tr>
+        <tr><td>2</td><td><input type="number"></td><td><input class="ofi_pot" type="number"></td></tr>
+    </table>
+    <button class="boton" onclick="agregarFila('tabla_oficinas', 'ofi_pot')">Añadir oficina</button><br>
+    <label>Total oficinas (W): <input type="text" id="res_ofi" readonly></label>
 
     <script>
-        function exportarPDF() {
-            const {{ jsPDF }} = window.jspdf;
-            const doc = new jsPDF();
-            const proyecto = document.getElementById('nombre_proyecto').value;
-            const total = document.getElementById('pot_total').value;
-
-            doc.setFontSize(14);
-            doc.text("Informe de Previsión de Cargas", 20, 20);
-            doc.text("Nombre del proyecto: " + proyecto, 20, 40);
-            doc.text("Potencia total prevista: " + total + " W", 20, 60);
-            doc.save("prevision_cargas.pdf");
+        function agregarFila(tablaId, clase) {
+            const tabla = document.getElementById(tablaId);
+            const rowCount = tabla.rows.length;
+            const row = tabla.insertRow();
+            const celdaNum = row.insertCell(0);
+            const celdaSup = row.insertCell(1);
+            const celdaPot = row.insertCell(2);
+            celdaNum.textContent = rowCount;
+            celdaSup.innerHTML = "<input type='number'>";
+            celdaPot.innerHTML = "<input type='number' class='" + clase + "'>";
         }
+
+        function calcularOficinasLocales() {
+            let total_com = 0;
+            document.querySelectorAll(".com_pot").forEach(e => {
+                total_com += parseFloat(e.value) || 0;
+            });
+            let total_ofi = 0;
+            document.querySelectorAll(".ofi_pot").forEach(e => {
+                total_ofi += parseFloat(e.value) || 0;
+            });
+
+            document.getElementById('res_com').value = total_com.toFixed(2);
+            document.getElementById('res_ofi').value = total_ofi.toFixed(2);
+        }
+
+        window.addEventListener("input", calcularOficinasLocales);
     </script>
 </body>
 </html>
