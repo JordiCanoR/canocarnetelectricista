@@ -28,7 +28,7 @@
 <h2>2. VIVIENDAS: CÁLCULO DE POTENCIA PREVISTA</h2>
 <table>
 <tr><th>Nº Vivienda</th><th>Superficie (m²)</th><th>Grado electrificación</th><th>Potencia prevista (W)</th></tr>
-<tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="text"/></td><td><input type="number"/></td></tr>
+<tr><td><input id="totalLocales" placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="text"/></td><td><input type="number"/></td></tr>
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="text"/></td><td><input type="number"/></td></tr>
 </table><button onclick="agregarFilaVivienda()">Añadir vivienda</button>
 <label>Media aritmética de potencias previstas: <input type="text"/> W</label><br/>
@@ -108,8 +108,46 @@ function agregarFilaVivienda() {
         const input = document.createElement("input");
         input.type = "text";
         input.placeholder = "";
+        input.oninput = calcularViviendas;
         cell.appendChild(input);
     }
+    calcularViviendas();
+}
+
+function calcularViviendas() {
+    const table = document.querySelector("table");
+    const rows = Array.from(table.rows).slice(1);
+    let potenciaTotal = 0;
+    let nViviendas = 0;
+
+    rows.forEach(row => {
+        const grado = row.cells[2].querySelector("input")?.value.trim().toLowerCase();
+        let potencia = 0;
+        if (grado === "básica" || grado === "basica") potencia = 5750;
+        else if (grado === "elevada") potencia = 9200;
+
+        if (potencia > 0) {
+            nViviendas++;
+            row.cells[3].querySelector("input").value = potencia;
+            potenciaTotal += potencia;
+        } else {
+            row.cells[3].querySelector("input").value = "";
+        }
+    });
+
+    let coef = obtenerCoefSimultaneidad(nViviendas);
+    const resultado = document.getElementById("totalViviendas");
+    if (resultado) resultado.value = (potenciaTotal * coef).toFixed(2);
+}
+
+function obtenerCoefSimultaneidad(n) {
+    const tabla = {
+        1: 1, 2: 3, 3: 3.8, 4: 4.6, 5: 5.4, 6: 6.2, 7: 7, 8: 7.8, 9: 8.5,
+        10: 9.2, 11: 9.9, 12: 10.6, 13: 11.3, 14: 11.9, 15: 12.5,
+        16: 13.1, 17: 13.7, 18: 14.3, 19: 14.8, 20: 15.3, 21: 15.3
+    };
+    if (n <= 21) return tabla[n] || 1;
+    return 15.3 + (n - 21) * 0.5;
 }
 
 function agregarFila(idTabla) {
@@ -122,8 +160,28 @@ function agregarFila(idTabla) {
         const input = document.createElement("input");
         input.type = "text";
         input.placeholder = "";
+        input.oninput = calcularTotales;
         celda.appendChild(input);
     }
+}
+
+function calcularTotales() {
+    calcularSeccion('tablaLocales', 'totalLocales');
+    calcularSeccion('tablaOficinas', 'totalOficinas');
+}
+
+function calcularSeccion(tablaId, salidaId) {
+    const tabla = document.getElementById(tablaId);
+    const salida = document.getElementById(salidaId);
+    if (!tabla || !salida) return;
+    let total = 0;
+    for (let i = 1; i < tabla.rows.length; i++) {
+        const cells = tabla.rows[i].cells;
+        const superficie = parseFloat(cells[1].querySelector("input")?.value || 0);
+        const wpm = parseFloat(cells[2].querySelector("input")?.value || 0);
+        total += superficie * wpm;
+    }
+    salida.value = total.toFixed(2);
 }
 </script></body>
 </html>
