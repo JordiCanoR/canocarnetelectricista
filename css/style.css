@@ -8,55 +8,61 @@ body {
 }
 
 .main-header {
-  background-color: rgba(0, 64, 128, 0.85);
+  background: linear-gradient(135deg, rgba(0,64,128,0.9), rgba(0,128,192,0.8));
   color: white;
   text-align: center;
-  padding: 30px 10px;
+  padding: 40px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .main-header h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 20px;
+  border-radius: 16px;
   text-align: center;
   text-decoration: none;
   color: #004080;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  background-color: #e6f0ff;
+  transform: scale(1.06);
+  background-color: #e0f0ff;
 }
 
 .card h2 {
   margin: 0;
+  font-size: 1.5em;
+  line-height: 1.4;
 }
 
 .footer {
   text-align: center;
-  padding: 15px;
-  font-size: 0.9em;
-  background: rgba(0, 0, 0, 0.6);
-  margin-top: 40px;
+  padding: 20px;
+  font-size: 1em;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 50px;
+  color: #ddd;
+  border-top: 1px solid #444;
 }
 
-/* 🛠 Corrección para textos en simuladores */
+/* Formularios claros en simuladores */
 form, label, input, select, textarea {
   color: #000 !important;
   background-color: #fff !important;
@@ -64,22 +70,28 @@ form, label, input, select, textarea {
 
 input[type='number'], input[type='text'], select {
   border: 1px solid #666;
-  padding: 5px;
-  border-radius: 5px;
-  width: auto;
+  padding: 8px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
-.boton-volver {
+
+/* Botón volver y enlaces extra */
+.boton-volver, .link-buttons a {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #6c757d;
+  padding: 12px 24px;
+  background-color: #007bff;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 8px;
-  margin-top: 30px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.boton-volver:hover {
-  background-color: #5a6268;
+
+.boton-volver:hover, .link-buttons a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
