@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,52 +15,62 @@
 </head>
 <body>
 <h1>PLANTILLA DE CÁLCULO DE CARGAS ELÉCTRICAS - REBT (Guía BT-10)</h1>
-<div class="section">
-<h2>1. DATOS GENERALES DEL PROYECTO</h2>
-<label>Nombre del proyecto: <input type="text"/></label><br/>
-<label>Ubicación: <input type="text"/></label><br/>
-<label>Tipo de edificio: <input type="text"/></label><br/>
-<label>Instalador/Proyectista: <input type="text"/></label><br/>
-<label>Fecha: <input type="text"/></label>
-</div>
 
-<div class="section">
-<h2>2. VIVIENDAS: CÁLCULO DE POTENCIA PREVISTA</h2>
-<table id="tablaViviendas">
-<tr><th>Nº Vivienda</th><th>Superficie (m²)</th><th>Grado electrificación</th><th>Potencia prevista (W)</th></tr>
-<tr><td><input type="text"/></td><td><input type="number"/></td><td><input type="text"/></td><td><input type="number"/></td></tr>
-<tr><td><input type="text"/></td><td><input type="number"/></td><td><input type="text"/></td><td><input type="number"/></td></tr>
-</table>
-<button onclick="agregarFila('tablaViviendas')">Añadir vivienda</button>
-<label>Media aritmética de potencias previstas: <input type="text"/> W</label><br/>
-<label>Nº total de viviendas: <input type="number"/></label><br/>
-<label>Coef. de simultaneidad (según tabla guía BT-10): <input step="any" type="number"/></label><br/>
-<label>Potencia total viviendas: <input type="text"/> W</label>
-</div>
-
-<div class="section">
-<h2>4. LOCALES COMERCIALES</h2>
-<table id="tablaLocales">
-<tr><th>Local</th><th>Superficie (m²)</th><th>W/m²</th><th>Potencia total (W)</th></tr>
-<tr><td><input type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
-<tr><td><input type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
-</table>
-<button onclick="agregarFila('tablaLocales')">Añadir local comercial</button>
-<label>Total locales comerciales: <input id="totalLocales" type="text"/> W</label>
-</div>
-
-<div class="section">
-<h2>5. OFICINAS</h2>
-<table id="tablaOficinas">
-<tr><th>Oficina</th><th>Superficie (m²)</th><th>W/m²</th><th>Potencia total (W)</th></tr>
-<tr><td><input type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
-<tr><td><input type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
-</table>
-<button onclick="agregarFila('tablaOficinas')">Añadir oficina</button>
-<label>Total oficinas: <input id="totalOficinas" type="text"/> W</label>
-</div>
+<!-- OMITIDO: las secciones de datos generales, viviendas, servicios, garajes, totales, etc. -->
+<!-- IMPORTANTE: Las tablas de locales y oficinas deben tener id="tablaLocales" y id="tablaOficinas" respectivamente -->
+<!-- Se asume que ya están bien colocadas en tu HTML -->
 
 <script>
+function agregarFilaVivienda() {
+    const tabla = document.querySelector("table");
+    const row = tabla.insertRow(-1);
+    for (let i = 0; i < 4; i++) {
+        const cell = row.insertCell(i);
+        const input = document.createElement("input");
+        input.type = i === 2 ? "text" : "number";
+        input.placeholder = "";
+        input.oninput = calcularViviendas;
+        cell.appendChild(input);
+    }
+    calcularViviendas();
+}
+
+function calcularViviendas() {
+    const tabla = document.querySelector("table");
+    const rows = Array.from(tabla.rows).slice(1);
+    let potenciaTotal = 0;
+    let nViviendas = 0;
+
+    rows.forEach(row => {
+        const grado = row.cells[2].querySelector("input")?.value.trim().toLowerCase();
+        let potencia = 0;
+        if (grado === "básica" || grado === "basica") potencia = 5750;
+        else if (grado === "elevada") potencia = 9200;
+
+        if (potencia > 0) {
+            nViviendas++;
+            row.cells[3].querySelector("input").value = potencia;
+            potenciaTotal += potencia;
+        } else {
+            row.cells[3].querySelector("input").value = "";
+        }
+    });
+
+    const coef = obtenerCoefSimultaneidad(nViviendas);
+    const resultado = document.getElementById("totalViviendas");
+    if (resultado) resultado.value = (potenciaTotal * coef).toFixed(2);
+}
+
+function obtenerCoefSimultaneidad(n) {
+    const tabla = {
+        1: 1, 2: 3, 3: 3.8, 4: 4.6, 5: 5.4, 6: 6.2, 7: 7, 8: 7.8, 9: 8.5,
+        10: 9.2, 11: 9.9, 12: 10.6, 13: 11.3, 14: 11.9, 15: 12.5,
+        16: 13.1, 17: 13.7, 18: 14.3, 19: 14.8, 20: 15.3, 21: 15.3
+    };
+    if (n <= 21) return tabla[n] || 1;
+    return 15.3 + (n - 21) * 0.5;
+}
+
 function agregarFila(idTabla) {
     const tabla = document.getElementById(idTabla);
     if (!tabla) return;
@@ -91,10 +102,20 @@ function calcularSeccion(tablaId, salidaId) {
         const superficie = parseFloat(cells[1].querySelector("input")?.value || 0);
         const wpm = parseFloat(cells[2].querySelector("input")?.value || 0);
         total += superficie * wpm;
-        cells[3].querySelector("input").value = (superficie * wpm).toFixed(2);
+        if (cells[3] && cells[3].querySelector("input")) {
+            cells[3].querySelector("input").value = (superficie * wpm).toFixed(2);
+        }
     }
     salida.value = total.toFixed(2);
 }
+
+function calcularPotenciaGarajeArea() {
+    const m2 = parseFloat(document.getElementById("superficieGaraje").value) || 0;
+    const wpm2 = parseFloat(document.getElementById("wPorM2Garaje").value) || 0;
+    const total = m2 * wpm2;
+    document.getElementById("resultadoGarajeArea").value = total.toFixed(2);
+}
 </script>
+
 </body>
 </html>
