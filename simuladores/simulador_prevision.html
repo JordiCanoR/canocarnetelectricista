@@ -71,6 +71,19 @@
 </table>
 <label>Total oficinas: <input type="text"/> W</label>
 </div>
+
+<div>
+  Superficie del garaje (m²):
+  <input id="superficieGaraje" oninput="calcularPotenciaGarajeArea()" placeholder="Ej: 150" type="number"/>
+  × 
+  <select id="wPorM2Garaje" onchange="calcularPotenciaGarajeArea()">
+<option value="10">10 W/m²</option>
+<option value="20">20 W/m²</option>
+</select>
+  = 
+  <input id="resultadoGarajeArea" placeholder="Resultado W" readonly="" type="text"/>
+  W
+</div>
 <div class="section">
 <h2>6. GARAJES</h2>
 <label>Ventilación:
@@ -183,5 +196,14 @@ function calcularSeccion(tablaId, salidaId) {
     }
     salida.value = total.toFixed(2);
 }
-</script></body>
+</script>
+<script>
+function calcularPotenciaGarajeArea() {
+    const m2 = parseFloat(document.getElementById("superficieGaraje").value) || 0;
+    const wpm2 = parseFloat(document.getElementById("wPorM2Garaje").value) || 0;
+    const total = m2 * wpm2;
+    document.getElementById("resultadoGarajeArea").value = total.toFixed(2);
+}
+</script>
+</body>
 </html>
