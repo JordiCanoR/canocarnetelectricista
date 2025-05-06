@@ -31,29 +31,18 @@
             font-size: 16px;
             border-radius: 5px;
         }
-        .btn-correccion:hover {
-            background-color: #218838;
-        }
+        .btn-correccion:hover { background-color: #218838; }
         .correcta { background-color: #d4edda !important; }
         .incorrecta { background-color: #f8d7da !important; }
         .resaltada-correcta { text-decoration: underline; font-weight: bold; color: green; }
-
         .mensaje-final {
             animation: zoomIn 0.5s ease-out;
             margin-top: 10px;
             padding: 10px;
             border-radius: 8px;
         }
-        .aprobado {
-            background-color: #d4edda;
-            color: #155724;
-            border: 2px solid #28a745;
-        }
-        .suspendido {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 2px solid #dc3545;
-        }
+        .aprobado { background-color: #d4edda; color: #155724; border: 2px solid #28a745; }
+        .suspendido { background-color: #f8d7da; color: #721c24; border: 2px solid #dc3545; }
         @keyframes zoomIn {
             from { transform: scale(0.8); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
@@ -65,14 +54,190 @@
     <div id="temporizador">Tiempo restante: <span id="tiempo">40:00</span></div>
     <form id="testForm">
         <div class="pregunta">
-            <p><strong>1. ¿Cuál es la normativa principal que regula las instalaciones eléctricas en baja tensión en España?</strong></p>
-            <label><input type="radio" name="q1" value="a"> REBT</label><br>
-            <label><input type="radio" name="q1" value="b"> RITE</label><br>
-            <label><input type="radio" name="q1" value="c"> CTE</label><br>
-        </div>
+<p><strong>1. ¿Qué REBT regula derivaciones individuales?</strong></p>
+<label><input type="radio" name="q1" value="a"> ITC-BT-15</label><br>
+<label><input type="radio" name="q1" value="b"> ITC-BT-16</label><br>
+<label><input type="radio" name="q1" value="c"> ITC-BT-14</label><br>
+</div>
+<div class="pregunta">
+<p><strong>2. ¿Cuál es la tensión nominal de una instalación de baja tensión?</strong></p>
+<label><input type="radio" name="q2" value="a"> 230/400 V</label><br>
+<label><input type="radio" name="q2" value="b"> 1000 V</label><br>
+<label><input type="radio" name="q2" value="c"> 127 V</label><br>
+</div>
+<div class="pregunta">
+<p><strong>3. ¿Cuál es la sensibilidad típica de un diferencial?</strong></p>
+<label><input type="radio" name="q3" value="a"> 30 mA</label><br>
+<label><input type="radio" name="q3" value="b"> 100 mA</label><br>
+<label><input type="radio" name="q3" value="c"> 10 mA</label><br>
+</div>
+<div class="pregunta">
+<p><strong>4. ¿Qué elemento se instala para evitar sobretensiones?</strong></p>
+<label><input type="radio" name="q4" value="a"> Diferencial</label><br>
+<label><input type="radio" name="q4" value="b"> SPD</label><br>
+<label><input type="radio" name="q4" value="c"> Contactor</label><br>
+</div>
+<div class="pregunta">
+<p><strong>5. ¿Qué valor máximo de resistencia de tierra se acepta en viviendas?</strong></p>
+<label><input type="radio" name="q5" value="a"> 100 Ω</label><br>
+<label><input type="radio" name="q5" value="b"> 50 Ω</label><br>
+<label><input type="radio" name="q5" value="c"> 37 Ω</label><br>
+</div>
+<div class="pregunta">
+<p><strong>6. ¿Qué canalización se permite empotrada en viviendas?</strong></p>
+<label><input type="radio" name="q6" value="a"> Cable suelto</label><br>
+<label><input type="radio" name="q6" value="b"> Tubo corrugado</label><br>
+<label><input type="radio" name="q6" value="c"> Canaleta</label><br>
+</div>
+<div class="pregunta">
+<p><strong>7. ¿Qué ITC regula los locales con riesgo de incendio o explosión?</strong></p>
+<label><input type="radio" name="q7" value="a"> ITC-BT-25</label><br>
+<label><input type="radio" name="q7" value="b"> ITC-BT-28</label><br>
+<label><input type="radio" name="q7" value="c"> ITC-BT-29</label><br>
+</div>
+<div class="pregunta">
+<p><strong>8. ¿Qué dispositivo se usa para automatizar encendidos?</strong></p>
+<label><input type="radio" name="q8" value="a"> Contactor</label><br>
+<label><input type="radio" name="q8" value="b"> Interruptor horario</label><br>
+<label><input type="radio" name="q8" value="c"> Diferencial</label><br>
+</div>
+<div class="pregunta">
+<p><strong>9. ¿Qué tipo de tubo se usa en garajes?</strong></p>
+<label><input type="radio" name="q9" value="a"> Tubo corrugado</label><br>
+<label><input type="radio" name="q9" value="b"> Tubo rígido PVC</label><br>
+<label><input type="radio" name="q9" value="c"> Canaleta metálica</label><br>
+</div>
+<div class="pregunta">
+<p><strong>10. ¿Qué elemento mide el consumo eléctrico?</strong></p>
+<label><input type="radio" name="q10" value="a"> Contador</label><br>
+<label><input type="radio" name="q10" value="b"> Contactor</label><br>
+<label><input type="radio" name="q10" value="c"> Temporizador</label><br>
+</div>
+<div class="pregunta">
+<p><strong>11. ¿Qué tipo de corriente se usa en BT?</strong></p>
+<label><input type="radio" name="q11" value="a"> Corriente alterna</label><br>
+<label><input type="radio" name="q11" value="b"> Corriente continua</label><br>
+<label><input type="radio" name="q11" value="c"> Ambas</label><br>
+</div>
+<div class="pregunta">
+<p><strong>12. ¿Qué color es el neutro según el REBT?</strong></p>
+<label><input type="radio" name="q12" value="a"> Negro</label><br>
+<label><input type="radio" name="q12" value="b"> Verde</label><br>
+<label><input type="radio" name="q12" value="c"> Azul</label><br>
+</div>
+<div class="pregunta">
+<p><strong>13. ¿Qué aparato permite el control remoto?</strong></p>
+<label><input type="radio" name="q13" value="a"> Contactor</label><br>
+<label><input type="radio" name="q13" value="b"> Magnetotérmico</label><br>
+<label><input type="radio" name="q13" value="c"> Interruptor</label><br>
+</div>
+<div class="pregunta">
+<p><strong>14. ¿Qué tipo de instalación necesita verificación anual?</strong></p>
+<label><input type="radio" name="q14" value="a"> Locales de pública concurrencia</label><br>
+<label><input type="radio" name="q14" value="b"> Viviendas</label><br>
+<label><input type="radio" name="q14" value="c"> Garajes</label><br>
+</div>
+<div class="pregunta">
+<p><strong>15. ¿Qué curva de magnetotérmico es adecuada para motores?</strong></p>
+<label><input type="radio" name="q15" value="a"> Curva B</label><br>
+<label><input type="radio" name="q15" value="b"> Curva C</label><br>
+<label><input type="radio" name="q15" value="c"> Curva D</label><br>
+</div>
+<div class="pregunta">
+<p><strong>16. ¿Cuál es el símbolo de peligro eléctrico?</strong></p>
+<label><input type="radio" name="q16" value="a"> Círculo rojo</label><br>
+<label><input type="radio" name="q16" value="b"> Cuadrado azul</label><br>
+<label><input type="radio" name="q16" value="c"> Triángulo amarillo con rayo</label><br>
+</div>
+<div class="pregunta">
+<p><strong>17. ¿Qué EPI es obligatorio con tensión?</strong></p>
+<label><input type="radio" name="q17" value="a"> Casco</label><br>
+<label><input type="radio" name="q17" value="b"> Botas dieléctricas</label><br>
+<label><input type="radio" name="q17" value="c"> Guantes aislantes</label><br>
+</div>
+<div class="pregunta">
+<p><strong>18. ¿Qué sección mínima se permite para alumbrado?</strong></p>
+<label><input type="radio" name="q18" value="a"> 1 mm²</label><br>
+<label><input type="radio" name="q18" value="b"> 1,5 mm²</label><br>
+<label><input type="radio" name="q18" value="c"> 2,5 mm²</label><br>
+</div>
+<div class="pregunta">
+<p><strong>19. ¿Qué norma regula la verificación de instalaciones?</strong></p>
+<label><input type="radio" name="q19" value="a"> ITC-BT-05</label><br>
+<label><input type="radio" name="q19" value="b"> ITC-BT-19</label><br>
+<label><input type="radio" name="q19" value="c"> ITC-BT-03</label><br>
+</div>
+<div class="pregunta">
+<p><strong>20. ¿Qué tipo de esquema se usa en instalaciones BT?</strong></p>
+<label><input type="radio" name="q20" value="a"> Esquema TT</label><br>
+<label><input type="radio" name="q20" value="b"> Esquema TN</label><br>
+<label><input type="radio" name="q20" value="c"> Esquema IT</label><br>
+</div>
+<div class="pregunta">
+<p><strong>21. ¿Qué color se utiliza para el conductor de protección?</strong></p>
+<label><input type="radio" name="q21" value="a"> Azul</label><br>
+<label><input type="radio" name="q21" value="b"> Verde-amarillo</label><br>
+<label><input type="radio" name="q21" value="c"> Rojo</label><br>
+</div>
+<div class="pregunta">
+<p><strong>22. ¿Qué aparato se usa para medir continuidad?</strong></p>
+<label><input type="radio" name="q22" value="a"> Amperímetro</label><br>
+<label><input type="radio" name="q22" value="b"> Multímetro</label><br>
+<label><input type="radio" name="q22" value="c"> Telurómetro</label><br>
+</div>
+<div class="pregunta">
+<p><strong>23. ¿Qué tipo de cable es libre de halógenos?</strong></p>
+<label><input type="radio" name="q23" value="a"> RV-K</label><br>
+<label><input type="radio" name="q23" value="b"> H07Z1-K</label><br>
+<label><input type="radio" name="q23" value="c"> V-U</label><br>
+</div>
+<div class="pregunta">
+<p><strong>24. ¿Qué norma define la protección IP?</strong></p>
+<label><input type="radio" name="q24" value="a"> UNE-EN 60670</label><br>
+<label><input type="radio" name="q24" value="b"> UNE 20460</label><br>
+<label><input type="radio" name="q24" value="c"> UNE-EN 60529</label><br>
+</div>
+<div class="pregunta">
+<p><strong>25. ¿Qué elemento protege contra sobrecargas?</strong></p>
+<label><input type="radio" name="q25" value="a"> Interruptor diferencial</label><br>
+<label><input type="radio" name="q25" value="b"> Magnetotérmico</label><br>
+<label><input type="radio" name="q25" value="c"> Relé térmico</label><br>
+</div>
+<div class="pregunta">
+<p><strong>26. ¿Qué potencia mínima exige el REBT en cocinas?</strong></p>
+<label><input type="radio" name="q26" value="a"> 3500 W</label><br>
+<label><input type="radio" name="q26" value="b"> 5750 W</label><br>
+<label><input type="radio" name="q26" value="c"> 7270 W</label><br>
+</div>
+<div class="pregunta">
+<p><strong>27. ¿Cuál es el objetivo del interruptor diferencial?</strong></p>
+<label><input type="radio" name="q27" value="a"> Proteger contra cortocircuitos</label><br>
+<label><input type="radio" name="q27" value="b"> Detectar fugas a tierra</label><br>
+<label><input type="radio" name="q27" value="c"> Medir consumo</label><br>
+</div>
+<div class="pregunta">
+<p><strong>28. ¿Qué es el factor de simultaneidad?</strong></p>
+<label><input type="radio" name="q28" value="a"> Relación entre cargas activas y totales</label><br>
+<label><input type="radio" name="q28" value="b"> Factor de carga instantáneo</label><br>
+<label><input type="radio" name="q28" value="c"> Potencia prevista</label><br>
+</div>
+<div class="pregunta">
+<p><strong>29. ¿Qué documento técnico acompaña al REBT?</strong></p>
+<label><input type="radio" name="q29" value="a"> ITC</label><br>
+<label><input type="radio" name="q29" value="b"> Normas UNE</label><br>
+<label><input type="radio" name="q29" value="c"> CTE</label><br>
+</div>
+<div class="pregunta">
+<p><strong>30. ¿Qué documento acredita una instalación?</strong></p>
+<label><input type="radio" name="q30" value="a"> Factura</label><br>
+<label><input type="radio" name="q30" value="b"> Boletín de instalación</label><br>
+<label><input type="radio" name="q30" value="c"> Presupuesto</label><br>
+</div>
+
+        <button type="submit">Enviar test</button>
+        <button type="button" class="btn-correccion" id="btnCorregir">Finalizar y corregir ahora</button>
+        <button type="button" class="btn-correccion" onclick="window.location.reload()">Nuevo Test</button>
     </form>
-    <button type="submit">Enviar test</button>
-    <button type="button" class="btn-correccion" id="btnCorregir">Finalizar y corregir ahora</button>
     <div id="resultado"></div>
     <script>
         let tiempo = 40 * 60;
@@ -88,20 +253,18 @@
             tiempo--;
         }, 1000);
 
-        const respuestasCorrectas = ['a'];
+        const respuestasCorrectas = ['b', 'a', 'a', 'b', 'c', 'b', 'b', 'b', 'b', 'a', 'a', 'c', 'a', 'a', 'c', 'c', 'c', 'b', 'c', 'a', 'b', 'b', 'b', 'c', 'b', 'b', 'b', 'a', 'a', 'b'];
 
         function corregirTest() {
             let correctas = 0;
             let detallesFallos = "";
-            for (let i = 1; i <= 1; i++) {
+            for (let i = 1; i <= respuestasCorrectas.length; i++) {
                 const preguntaDiv = document.querySelector(".pregunta:nth-of-type(" + i + ")");
                 const opciones = document.getElementsByName("q" + i);
                 let seleccion = null;
                 opciones.forEach(op => {
                     op.closest("label").classList.remove("correcta", "incorrecta", "resaltada-correcta");
-                    if (op.checked) {
-                        seleccion = op;
-                    }
+                    if (op.checked) { seleccion = op; }
                 });
                 let correctaMostrada = false;
                 let respondida = false;
@@ -128,8 +291,7 @@
                     }
                 });
             }
-
-            let total = 1;
+            let total = respuestasCorrectas.length;
             let resultado = "Has acertado " + correctas + " de " + total + " preguntas. Puntuación: " + ((correctas / total) * 100).toFixed(2) + "%<br><br>";
             let mensajeFinal = "";
             let clase = "";
@@ -143,7 +305,6 @@
                 mensajeFinal = "❌ Necesitas repasar. ¡Ánimo, la próxima lo consigues!";
                 clase = "suspendido";
             }
-
             document.getElementById("resultado").innerHTML =
                 resultado +
                 "<div class='mensaje-final " + clase + "'>" + mensajeFinal + "</div><br>" +
