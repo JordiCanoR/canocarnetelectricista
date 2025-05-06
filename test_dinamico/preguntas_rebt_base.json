@@ -1,0 +1,28 @@
+
+[
+    {
+        "pregunta": "¿Cuál es la tensión nominal de una instalación doméstica en España?",
+        "opciones": ["230 V", "400 V", "125 V"],
+        "respuesta": "230 V"
+    },
+    {
+        "pregunta": "¿Qué tipo de diferencial es obligatorio en viviendas según el REBT?",
+        "opciones": ["10 mA", "30 mA", "100 mA"],
+        "respuesta": "30 mA"
+    },
+    {
+        "pregunta": "¿Qué reglamento regula las instalaciones eléctricas en España?",
+        "opciones": ["REBT", "RITE", "CTE"],
+        "respuesta": "REBT"
+    },
+    {
+        "pregunta": "¿Qué conductor se conecta al borne de tierra?",
+        "opciones": ["Verde-amarillo", "Azul", "Negro"],
+        "respuesta": "Verde-amarillo"
+    },
+    {
+        "pregunta": "¿Qué tipo de tubo se usa en instalaciones vistas en garajes?",
+        "opciones": ["Tubo rígido PVC", "Canaleta de madera", "Tubo corrugado"],
+        "respuesta": "Tubo rígido PVC"
+    }
+]
