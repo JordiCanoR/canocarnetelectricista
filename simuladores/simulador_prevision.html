@@ -71,7 +71,6 @@
 </table>
 <label>Total oficinas: <input type="text"/> W</label>
 </div>
-
 <div>
   Superficie del garaje (m²):
   <input id="superficieGaraje" oninput="calcularPotenciaGarajeArea()" placeholder="Ej: 150" type="number"/>
@@ -99,6 +98,19 @@
 <label>Nº de puntos: <input type="number"/> x 3.680 W × (0.3 o 1) = <input type="text"/> W</label><br/>
 <label>Total potencia garajes: <input type="text"/> W</label>
 </div>
+<div id="bloqueSuperficieGaraje">
+  Superficie del garaje (m²):
+  <input id="superficieGaraje" oninput="calcularPotenciaGarajeArea()" placeholder="Ej: 150" type="number"/>
+  × 
+  <select id="wPorM2Garaje" onchange="calcularPotenciaGarajeArea()">
+<option value="10">10 W/m²</option>
+<option value="20">20 W/m²</option>
+</select>
+  = 
+  <input id="resultadoGarajeArea" placeholder="Resultado W" readonly="" type="text"/>
+  W
+</div>
+
 <div class="section">
 <h2>7. POTENCIA TOTAL DEL EDIFICIO</h2>
 <label>Total viviendas: <input type="text"/> W</label><br/>
