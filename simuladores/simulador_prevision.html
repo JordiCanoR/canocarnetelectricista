@@ -30,7 +30,7 @@
 <tr><th>Nº Vivienda</th><th>Superficie (m²)</th><th>Grado electrificación</th><th>Potencia prevista (W)</th></tr>
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="text"/></td><td><input type="number"/></td></tr>
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="text"/></td><td><input type="number"/></td></tr>
-</table><button onclick="agregarFilaVivienda()">Añadir vivienda</button>
+</table>
 <label>Media aritmética de potencias previstas: <input type="text"/> W</label><br/>
 <label>Nº total de viviendas: <input type="number"/></label><br/>
 <label>Coef. de simultaneidad (según tabla guía BT-10): <input step="any" type="number"/></label><br/>
@@ -50,7 +50,7 @@
 <tr><td>Bomba de agua 1</td><td><input type="number"/></td></tr>
 <tr><td>Bomba de agua 2</td><td><input type="number"/></td></tr>
 <tr><td>Otros (especificar)</td><td><input type="text"/> <input type="number"/></td></tr>
-</table><button onclick="agregarFila('tablaLocales')">Añadir Local Comercial</button>
+</table>
 <label><strong>TOTAL servicios generales: <input type="text"/> W</strong></label>
 </div>
 <div class="section">
@@ -59,7 +59,7 @@
 <tr><th>Local</th><th>Superficie (m²)</th><th>W/m²</th><th>Potencia total (W)</th></tr>
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
-</table><button onclick="agregarFila('tablaOficinas')">Añadir Oficina</button>
+</table>
 <label>Total locales comerciales: <input type="text"/> W</label>
 </div>
 <div class="section">
@@ -99,30 +99,19 @@
 <h2>8. INTERRUPTOR GENERAL AUTOMÁTICO (IGA)</h2>
 <label>Seleccionar calibre según potencia total prevista: <input type="text"/> A</label>
 </div>
-<script>
-function calcularResultado() {
-    let viv = parseFloat(document.querySelector('[placeholder="Media aritmética de potencias previstas"]')?.value) || 0;
-    let serv = parseFloat(document.querySelectorAll('input')[document.querySelectorAll('input').length - 29]?.value) || 0;
-    let com = parseFloat(document.querySelectorAll('input')[document.querySelectorAll('input').length - 20]?.value) || 0;
-    let ofi = parseFloat(document.querySelectorAll('input')[document.querySelectorAll('input').length - 11]?.value) || 0;
-    let gar = parseFloat(document.querySelectorAll('input')[document.querySelectorAll('input').length - 3]?.value) || 0;
 
-    let total = viv + serv + com + ofi + gar;
-    document.querySelector('strong input').value = total.toFixed(2);
-}
-window.addEventListener("input", calcularResultado);
-</script>
 <script>
-function agregarFilaVivienda() {
-    const table = document.querySelector("table");
-    const row = table.insertRow(-1);
-
-    for (let i = 0; i < 4; i++) {
-        const cell = row.insertCell(i);
+function agregarFila(idTabla) {
+    const tabla = document.getElementById(idTabla);
+    if (!tabla) return;
+    const fila = tabla.insertRow(-1);
+    const columnas = tabla.rows[0].cells.length;
+    for (let i = 0; i < columnas; i++) {
+        const celda = fila.insertCell(i);
         const input = document.createElement("input");
         input.type = "text";
         input.placeholder = "";
-        cell.appendChild(input);
+        celda.appendChild(input);
     }
 }
 </script></body>
