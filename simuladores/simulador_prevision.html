@@ -30,7 +30,7 @@
 <tr><th>Nº Vivienda</th><th>Superficie (m²)</th><th>Grado electrificación</th><th>Potencia prevista (W)</th></tr>
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="text"/></td><td><input type="number"/></td></tr>
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="text"/></td><td><input type="number"/></td></tr>
-</table>
+</table><button onclick="agregarFilaVivienda()">Añadir vivienda</button>
 <label>Media aritmética de potencias previstas: <input type="text"/> W</label><br/>
 <label>Nº total de viviendas: <input type="number"/></label><br/>
 <label>Coef. de simultaneidad (según tabla guía BT-10): <input step="any" type="number"/></label><br/>
@@ -99,8 +99,19 @@
 <h2>8. INTERRUPTOR GENERAL AUTOMÁTICO (IGA)</h2>
 <label>Seleccionar calibre según potencia total prevista: <input type="text"/> A</label>
 </div>
-
 <script>
+function agregarFilaVivienda() {
+    const table = document.querySelector("table");
+    const row = table.insertRow(-1);
+    for (let i = 0; i < 4; i++) {
+        const cell = row.insertCell(i);
+        const input = document.createElement("input");
+        input.type = "text";
+        input.placeholder = "";
+        cell.appendChild(input);
+    }
+}
+
 function agregarFila(idTabla) {
     const tabla = document.getElementById(idTabla);
     if (!tabla) return;
