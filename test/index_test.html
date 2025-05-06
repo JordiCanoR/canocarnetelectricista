@@ -136,7 +136,7 @@
         <p><strong>30. La resistencia máxima de tierra en viviendas debe ser menor a:</strong></p><label><input type="radio" name="q30" value="a"> 20 ohmios</label><br><label><input type="radio" name="q30" value="b"> 100 ohmios</label><br><label><input type="radio" name="q30" value="c"> 37 ohmios</label><br></div>
 
         <button type="submit">Enviar test</button>
-        <button type="button" class="btn-correccion" onclick="corregirTest()">Finalizar y corregir ahora</button>
+        <button type="button" class="btn-correccion" id="btnCorregir">Finalizar y corregir ahora</button>
     </form>
     <div id="resultado"></div>
     <script>
@@ -186,6 +186,7 @@
             document.getElementById("resultado").textContent = resultado;
         }
 
+        document.getElementById("btnCorregir").addEventListener("click", corregirTest);
         document.getElementById("testForm").addEventListener("submit", function(e) {
             e.preventDefault();
             corregirTest();
