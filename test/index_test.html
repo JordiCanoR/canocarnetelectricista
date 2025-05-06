@@ -1,5 +1,4 @@
-# Crear el archivo HTML completo con el estilo del temporizador mejorado
-html_code = """
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +9,7 @@ html_code = """
         body {{ font-family: Arial, sans-serif; margin: 20px; }}
         .pregunta {{ margin-bottom: 20px; }}
         #resultado {{ font-weight: bold; margin-top: 20px; }}
-        #temporizador {{
+        #temporizador {
             position: fixed;
             top: 10px;
             right: 10px;
@@ -22,14 +21,14 @@ html_code = """
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
             z-index: 1000;
-        }}
+        }
     </style>
 </head>
 <body>
     <h1>Test Oficial - Carnet Instalador Baja Tensión</h1>
     <div id="temporizador">Tiempo restante: <span id="tiempo">35:00</span></div>
     <form id="testForm">
-        <!-- 30 preguntas -->
+        <!-- Generar 30 preguntas con 3 opciones -->
         {}
         <button type="submit">Enviar test</button>
     </form>
@@ -50,6 +49,7 @@ html_code = """
             tiempo--;
         }}, 1000);
 
+        // Respuestas correctas (solo ejemplo, deben ajustarse)
         const respuestasCorrectas = [
             "a","b","c","a","b","c","a","b","c","a",
             "b","c","a","b","c","a","b","c","a","b",
@@ -73,10 +73,10 @@ html_code = """
 </html>
 """
 
-# Generar preguntas HTML
-preguntas = ""
+# Generamos 30 preguntas de ejemplo
+preguntas_html = ""
 for i in range(1, 31):
-    preguntas += f"""
+    preguntas_html += f"""
     <div class="pregunta">
         <p><strong>{i}. Pregunta de ejemplo {i}</strong></p>
         <label><input type="radio" name="q{i}" value="a"> Opción A</label><br>
@@ -85,13 +85,11 @@ for i in range(1, 31):
     </div>
     """
 
-# Formar el HTML completo
-html_final = html_code.format(preguntas)
+# Insertamos las preguntas en el HTML
+final_html = html_content.format(preguntas_html)
 
-# Guardar el archivo
-file_path = Path("/mnt/data/index_test_mejorado.html")
-file_path.write_text(html_final, encoding="utf-8")
+# Guardamos el archivo HTML
+output_path = Path("/mnt/data/index_test.html")
+output_path.write_text(final_html, encoding="utf-8")
 
-file_path
-
-
+output_path
