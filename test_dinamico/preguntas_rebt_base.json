@@ -1,28 +1,137 @@
-
 [
     {
-        "pregunta": "¿Cuál es la tensión nominal de una instalación doméstica en España?",
-        "opciones": ["230 V", "400 V", "125 V"],
-        "respuesta": "230 V"
+        "pregunta": "¿Cuál es la normativa principal en baja tensión en España?",
+        "opciones": [
+            "REBT",
+            "RITE",
+            "CTE"
+        ],
+        "respuesta": "a"
     },
     {
-        "pregunta": "¿Qué tipo de diferencial es obligatorio en viviendas según el REBT?",
-        "opciones": ["10 mA", "30 mA", "100 mA"],
-        "respuesta": "30 mA"
+        "pregunta": "¿Qué documento entrega el instalador tras finalizar?",
+        "opciones": [
+            "Certificado de eficiencia",
+            "Boletín de instalación",
+            "Informe térmico"
+        ],
+        "respuesta": "b"
     },
     {
-        "pregunta": "¿Qué reglamento regula las instalaciones eléctricas en España?",
-        "opciones": ["REBT", "RITE", "CTE"],
-        "respuesta": "REBT"
+        "pregunta": "¿Qué color tiene el conductor de protección?",
+        "opciones": [
+            "Verde-amarillo",
+            "Azul",
+            "Negro"
+        ],
+        "respuesta": "a"
     },
     {
-        "pregunta": "¿Qué conductor se conecta al borne de tierra?",
-        "opciones": ["Verde-amarillo", "Azul", "Negro"],
-        "respuesta": "Verde-amarillo"
+        "pregunta": "¿Qué protege un diferencial?",
+        "opciones": [
+            "Sobrecargas",
+            "Fugas a tierra",
+            "Cortocircuitos"
+        ],
+        "respuesta": "b"
     },
     {
-        "pregunta": "¿Qué tipo de tubo se usa en instalaciones vistas en garajes?",
-        "opciones": ["Tubo rígido PVC", "Canaleta de madera", "Tubo corrugado"],
-        "respuesta": "Tubo rígido PVC"
+        "pregunta": "¿Qué sección mínima se recomienda para iluminación?",
+        "opciones": [
+            "1,5 mm²",
+            "2,5 mm²",
+            "4 mm²"
+        ],
+        "respuesta": "a"
+    },
+    {
+        "pregunta": "¿Qué tubo usar en garajes vistos?",
+        "opciones": [
+            "Corrugado",
+            "Rígido PVC",
+            "Canaleta madera"
+        ],
+        "respuesta": "b"
+    },
+    {
+        "pregunta": "¿Qué hace un interruptor horario?",
+        "opciones": [
+            "Evita cortos",
+            "Automatiza encendidos",
+            "Mide energía"
+        ],
+        "respuesta": "b"
+    },
+    {
+        "pregunta": "¿Qué señal indica peligro eléctrico?",
+        "opciones": [
+            "Triángulo amarillo con rayo negro",
+            "Círculo rojo con rayo blanco",
+            "Cuadro azul con rayo verde"
+        ],
+        "respuesta": "a"
+    },
+    {
+        "pregunta": "¿Qué es el procedimiento LOTO?",
+        "opciones": [
+            "Encender maquinaria",
+            "Bloquear energía",
+            "Medir corriente"
+        ],
+        "respuesta": "b"
+    },
+    {
+        "pregunta": "¿Qué sensibilidad tiene un diferencial doméstico?",
+        "opciones": [
+            "10 mA",
+            "30 mA",
+            "100 mA"
+        ],
+        "respuesta": "b"
+    },
+    {
+        "pregunta": "¿Qué valor de tensión se considera baja tensión según el REBT?",
+        "opciones": [
+            "< 1000 V en corriente alterna",
+            "< 1500 V en corriente continua",
+            "Ambas anteriores"
+        ],
+        "respuesta": "Ambas anteriores"
+    },
+    {
+        "pregunta": "¿Qué tipo de esquema de instalación se utiliza comúnmente en viviendas?",
+        "opciones": [
+            "TT",
+            "IT",
+            "TN-S"
+        ],
+        "respuesta": "TT"
+    },
+    {
+        "pregunta": "¿Cuál es la finalidad del interruptor diferencial?",
+        "opciones": [
+            "Proteger contra sobrecargas",
+            "Detectar fugas de corriente",
+            "Proteger motores"
+        ],
+        "respuesta": "Detectar fugas de corriente"
+    },
+    {
+        "pregunta": "¿Qué norma regula la seguridad en trabajos eléctricos?",
+        "opciones": [
+            "RD 614/2001",
+            "REBT",
+            "UNE 20460"
+        ],
+        "respuesta": "RD 614/2001"
+    },
+    {
+        "pregunta": "¿Qué color identifica el conductor neutro en instalaciones fijas?",
+        "opciones": [
+            "Azul",
+            "Negro",
+            "Verde-amarillo"
+        ],
+        "respuesta": "Azul"
     }
 ]

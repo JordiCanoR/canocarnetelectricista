@@ -1,25 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Test Dinámico Carnet Instalador</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .pregunta { margin-bottom: 20px; padding: 10px; border-radius: 5px; }
-        .correcta { background-color: #d4edda !important; }
-        .incorrecta { background-color: #f8d7da !important; }
-        .resaltada-correcta { text-decoration: underline; font-weight: bold; color: green; }
-        .mensaje-final { margin-top: 15px; padding: 10px; border-radius: 5px; font-size: 18px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test Dinámico Oficial</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .correcta { background-color: #d4edda !important; }
+    .incorrecta { background-color: #f8d7da !important; }
+    .resaltada-correcta { text-decoration: underline; font-weight: bold; color: green; }
+    .mensaje-final {
+      animation: zoomIn 0.5s ease-out;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .aprobado {
+      background-color: #d4edda;
+      color: #155724;
+      border: 2px solid #28a745;
+    }
+    .suspendido {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 2px solid #dc3545;
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Test Dinámico - Carnet Instalador</h1>
-    <form id="testForm"></form>
-    <div id="resultado"></div>
-    <button id="nuevoTest">Generar otro test</button>
-    <script src="script.js"></script>
+  <h1>Test Dinámico Oficial - 30 Preguntas</h1>
+  <div id="temporizador">Tiempo restante: <span id="tiempo">40:00</span></div>
+  <form id="testForm"></form>
+  <button id="btnCorregir" class="btn-correccion">Finalizar y corregir ahora</button>
+  <button id="btnNuevo" class="btn-correccion" style="background-color:#0069d9">Nuevo test aleatorio</button>
+  <div id="resultado"></div>
+  <script src="script.js"></script>
 </body>
-<a href="../index.html" class="boton-volver">⬅️ Volver al Menú Principal</a>
-
 </html>
