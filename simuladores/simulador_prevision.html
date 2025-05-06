@@ -70,37 +70,26 @@
 <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
 </table>
 <label>Total oficinas: <input type="text"/> W</label>
-</div>
-<div>
-  Superficie del garaje (m²):
-  <input id="superficieGaraje" oninput="calcularPotenciaGarajeArea()" placeholder="Ej: 150" type="number"/>
-  × 
-  <select id="wPorM2Garaje" onchange="calcularPotenciaGarajeArea()">
-<option value="10">10 W/m²</option>
-<option value="20">20 W/m²</option>
-</select>
-  = 
-  <input id="resultadoGarajeArea" placeholder="Resultado W" readonly="" type="text"/>
-  W
-</div>
+
 <div class="section">
 <h2>6. GARAJES</h2>
 <label>Ventilación:
     <input type="checkbox"/> Natural
     <input type="checkbox"/> Forzada
 </label><br/>
-<div id="bloqueSuperficieGaraje">
-    Superficie del garaje (m²):
-    <input id="superficieGaraje" oninput="calcularPotenciaGarajeArea()" placeholder="Ej: 150" type="number"/>
-    × 
-    <select id="wPorM2Garaje" onchange="calcularPotenciaGarajeArea()">
-  <option value="10">10 W/m²</option>
-  <option value="20">20 W/m²</option>
-  </select>
-    = 
-    <input id="resultadoGarajeArea" placeholder="Resultado W" readonly="" type="text"/>
-    W
-  </div>
+<div>
+    <div>
+        Superficie del garaje (m²):
+        <input id="superficieGaraje" oninput="calcularPotenciaGarajeArea()" placeholder="Ej: 150" type="number"/>
+        × 
+        <select id="wPorM2Garaje" onchange="calcularPotenciaGarajeArea()">
+      <option value="10">10 W/m²</option>
+      <option value="20">20 W/m²</option>
+      </select>
+        = 
+        <input id="resultadoGarajeArea" placeholder="Resultado W" readonly="" type="text"/>
+        W
+      </div>
 <label>Nº de plazas: <input type="number"/></label><br/>
 <label>Potencia estimada por plaza: <input type="number" value="100"/> W</label><br/>
 <label>Total potencia iluminación garajes: <input type="number"/> W</label><br/>
