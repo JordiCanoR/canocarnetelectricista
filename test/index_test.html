@@ -175,14 +175,14 @@
                     if (op.value === respuestasCorrectas[i - 1]) {
                         if (seleccion && seleccion.value === op.value) {
                             correctas++;
-                            op.parentElement.classList.add("correcta");
+                            op.closest("label").classList.add("correcta");
                         } else {
                             if (!correctaMostrada) {
                                 op.parentElement.classList.add("resaltada-correcta");
                                 correctaMostrada = true;
                             }
                             if (seleccion && seleccion.value !== op.value) {
-                                seleccion.parentElement.classList.add("incorrecta");
+                                seleccion?.closest("label")?.classList.add("incorrecta");
                             }
                         }
                     }
@@ -191,17 +191,6 @@
 
             const resultado = `Has acertado ${correctas} de 30 preguntas. Puntuación: ${(correctas / 30 * 100).toFixed(2)}%`;
             document.getElementById("resultado").textContent = resultado;
-
-let mensajeFinal = "";
-if ((correctas / 30) >= 0.9) {
-    mensajeFinal = "¡Excelente! Has aprobado con nota.";
-} else if ((correctas / 30) >= 0.6) {
-    mensajeFinal = "¡Bien hecho! Has aprobado.";
-} else {
-    mensajeFinal = "Necesitas repasar. ¡Ánimo, la próxima lo consigues!";
-}
-document.getElementById("resultado").innerHTML += "<br><br>" + mensajeFinal;
-
         }
 
         document.getElementById("btnCorregir").addEventListener("click", corregirTest);
