@@ -161,27 +161,34 @@
                 const preguntaDiv = document.querySelector(`.pregunta:nth-of-type(${i})`);
                 const opciones = document.getElementsByName(`q${i}`);
                 let seleccion = null;
-                for (let op of opciones) {
+
+                opciones.forEach(op => {
+                    op.parentElement.classList.remove("correcta", "incorrecta", "resaltada-correcta");
                     if (op.checked) {
                         seleccion = op;
                     }
-                    op.parentElement.classList.remove("correcta", "incorrecta", "resaltada-correcta");
-                }
+                });
 
-                if (seleccion && seleccion.value === respuestasCorrectas[i - 1]) {
-                    correctas++;
-                    seleccion.parentElement.classList.add("correcta");
-                } else {
-                    if (seleccion) {
-                        seleccion.parentElement.classList.add("incorrecta");
-                    }
-                    for (let op of opciones) {
-                        if (op.value === respuestasCorrectas[i - 1]) {
-                            op.parentElement.classList.add("resaltada-correcta");
+                let correctaMostrada = false;
+
+                opciones.forEach(op => {
+                    if (op.value === respuestasCorrectas[i - 1]) {
+                        if (seleccion && seleccion.value === op.value) {
+                            correctas++;
+                            op.parentElement.classList.add("correcta");
+                        } else {
+                            if (!correctaMostrada) {
+                                op.parentElement.classList.add("resaltada-correcta");
+                                correctaMostrada = true;
+                            }
+                            if (seleccion && seleccion.value !== op.value) {
+                                seleccion.parentElement.classList.add("incorrecta");
+                            }
                         }
                     }
-                }
+                });
             }
+
             const resultado = `Has acertado ${correctas} de 30 preguntas. Puntuación: ${(correctas / 30 * 100).toFixed(2)}%`;
             document.getElementById("resultado").textContent = resultado;
         }
