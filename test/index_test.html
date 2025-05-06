@@ -6,9 +6,9 @@
     <title>Test Carnet Instalador</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        body {{ font-family: Arial, sans-serif; margin: 20px; }}
-        .pregunta {{ margin-bottom: 20px; }}
-        #resultado {{ font-weight: bold; margin-top: 20px; }}
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .pregunta { margin-bottom: 20px; }
+        #resultado { font-weight: bold; margin-top: 20px; }
         #temporizador {
             position: fixed;
             top: 10px;
@@ -26,71 +26,131 @@
 </head>
 <body>
     <h1>Test Oficial - Carnet Instalador Baja Tensión</h1>
-    <div id="temporizador">Tiempo restante: <span id="tiempo">35:00</span></div>
+    <div id="temporizador">Tiempo restante: <span id="tiempo">40:00</span></div>
     <form id="testForm">
-        <!-- Generar 30 preguntas con 3 opciones -->
-        {}
+        
+    <div class="pregunta">
+        <p><strong>1. ¿Cuál es la normativa principal que regula las instalaciones eléctricas en baja tensión en España?</strong></p><label><input type="radio" name="q1" value="a"> REBT</label><br><label><input type="radio" name="q1" value="b"> RITE</label><br><label><input type="radio" name="q1" value="c"> CTE</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>2. ¿Qué documento debe entregar el instalador al finalizar una instalación?</strong></p><label><input type="radio" name="q2" value="a"> Certificado de eficiencia energética</label><br><label><input type="radio" name="q2" value="b"> Boletín de instalación</label><br><label><input type="radio" name="q2" value="c"> Informe de revisión térmica</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>3. La ITC-BT-25 del REBT trata sobre:</strong></p><label><input type="radio" name="q3" value="a"> Protección contra sobreintensidades</label><br><label><input type="radio" name="q3" value="b"> Locales con riesgo de incendio</label><br><label><input type="radio" name="q3" value="c"> Verificación de instalaciones</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>4. ¿Qué categoría permite realizar instalaciones en locales de pública concurrencia?</strong></p><label><input type="radio" name="q4" value="a"> Especialista</label><br><label><input type="radio" name="q4" value="b"> Ayudante</label><br><label><input type="radio" name="q4" value="c"> Básico</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>5. El REBT se compone principalmente de:</strong></p><label><input type="radio" name="q5" value="a"> Un reglamento y anexos gráficos</label><br><label><input type="radio" name="q5" value="b"> Un reglamento y una serie de instrucciones técnicas complementarias</label><br><label><input type="radio" name="q5" value="c"> Solo una guía explicativa</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>6. ¿Qué color se usa para el conductor de protección?</strong></p><label><input type="radio" name="q6" value="a"> Verde-amarillo</label><br><label><input type="radio" name="q6" value="b"> Azul</label><br><label><input type="radio" name="q6" value="c"> Negro</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>7. ¿Qué herramienta se utiliza para pelar cables sin dañarlos?</strong></p><label><input type="radio" name="q7" value="a"> Alicates de corte</label><br><label><input type="radio" name="q7" value="b"> Pelacables</label><br><label><input type="radio" name="q7" value="c"> Destornillador</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>8. ¿Cuál es el material más común para conductores eléctricos?</strong></p><label><input type="radio" name="q8" value="a"> Cobre</label><br><label><input type="radio" name="q8" value="b"> Aluminio</label><br><label><input type="radio" name="q8" value="c"> Hierro</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>9. La canalización empotrada debe:</strong></p><label><input type="radio" name="q9" value="a"> Ir sin tubos</label><br><label><input type="radio" name="q9" value="b"> Llevar tubos aislantes</label><br><label><input type="radio" name="q9" value="c"> Estar pintada</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>10. Las cajas de derivación sirven para:</strong></p><label><input type="radio" name="q10" value="a"> Proteger motores</label><br><label><input type="radio" name="q10" value="b"> Derivar conductores</label><br><label><input type="radio" name="q10" value="c"> Medir potencia</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>11. ¿Qué dispositivo protege contra contactos indirectos?</strong></p><label><input type="radio" name="q11" value="a"> Magnetotérmico</label><br><label><input type="radio" name="q11" value="b"> Diferencial</label><br><label><input type="radio" name="q11" value="c"> Contactor</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>12. Un interruptor magnetotérmico protege contra:</strong></p><label><input type="radio" name="q12" value="a"> Sobretensiones</label><br><label><input type="radio" name="q12" value="b"> Sobrecargas y cortocircuitos</label><br><label><input type="radio" name="q12" value="c"> Fugas a tierra</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>13. ¿Qué tipo de protección se requiere en zonas húmedas?</strong></p><label><input type="radio" name="q13" value="a"> IP20</label><br><label><input type="radio" name="q13" value="b"> IP44 o superior</label><br><label><input type="radio" name="q13" value="c"> No requiere protección especial</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>14. La curva C de un magnetotérmico es adecuada para:</strong></p><label><input type="radio" name="q14" value="a"> Protección general</label><br><label><input type="radio" name="q14" value="b"> Motores</label><br><label><input type="radio" name="q14" value="c"> Iluminación LED</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>15. ¿Cuál es la sensibilidad estándar de un diferencial en viviendas?</strong></p><label><input type="radio" name="q15" value="a"> 10 mA</label><br><label><input type="radio" name="q15" value="b"> 30 mA</label><br><label><input type="radio" name="q15" value="c"> 100 mA</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>16. ¿Qué sección mínima se recomienda para iluminación en viviendas?</strong></p><label><input type="radio" name="q16" value="a"> 1,5 mm²</label><br><label><input type="radio" name="q16" value="b"> 2,5 mm²</label><br><label><input type="radio" name="q16" value="c"> 4 mm²</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>17. ¿Cuál es la altura mínima de montaje de un cuadro eléctrico?</strong></p><label><input type="radio" name="q17" value="a"> 0,5 m</label><br><label><input type="radio" name="q17" value="b"> 1,5 m</label><br><label><input type="radio" name="q17" value="c"> 2,5 m</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>18. ¿Qué tipo de tubo se recomienda para instalaciones vistas en garajes?</strong></p><label><input type="radio" name="q18" value="a"> Tubo corrugado</label><br><label><input type="radio" name="q18" value="b"> Tubo rígido PVC</label><br><label><input type="radio" name="q18" value="c"> Canaleta de madera</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>19. ¿Qué debe hacerse antes de energizar una instalación nueva?</strong></p><label><input type="radio" name="q19" value="a"> Revisar la factura</label><br><label><input type="radio" name="q19" value="b"> Llamar al cliente</label><br><label><input type="radio" name="q19" value="c"> Verificar continuidad y aislamiento</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>20. La derivación individual conecta:</strong></p><label><input type="radio" name="q20" value="a"> El cuadro general con el alumbrado</label><br><label><input type="radio" name="q20" value="b"> La CGP con el contador</label><br><label><input type="radio" name="q20" value="c"> El contador con la vivienda</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>21. ¿Qué aparato permite el control remoto de una carga?</strong></p><label><input type="radio" name="q21" value="a"> Interruptor</label><br><label><input type="radio" name="q21" value="b"> Contactor</label><br><label><input type="radio" name="q21" value="c"> Diferencial</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>22. Un relé térmico sirve para proteger:</strong></p><label><input type="radio" name="q22" value="a"> Personas</label><br><label><input type="radio" name="q22" value="b"> Motores</label><br><label><input type="radio" name="q22" value="c"> Alumbrado</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>23. ¿Qué elemento se usa para medir consumo eléctrico?</strong></p><label><input type="radio" name="q23" value="a"> Contactor</label><br><label><input type="radio" name="q23" value="b"> Contador</label><br><label><input type="radio" name="q23" value="c"> Temporizador</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>24. ¿Qué se instala para evitar sobretensiones transitorias?</strong></p><label><input type="radio" name="q24" value="a"> Diferencial</label><br><label><input type="radio" name="q24" value="b"> Protección contra sobretensiones (SPD)</label><br><label><input type="radio" name="q24" value="c"> Contactor</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>25. Un interruptor horario permite:</strong></p><label><input type="radio" name="q25" value="a"> Evitar cortocircuitos</label><br><label><input type="radio" name="q25" value="b"> Automatizar encendidos</label><br><label><input type="radio" name="q25" value="c"> Medir la energía</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>26. ¿Qué EPI es obligatorio al trabajar con tensión?</strong></p><label><input type="radio" name="q26" value="a"> Casco de obra</label><br><label><input type="radio" name="q26" value="b"> Guantes aislantes</label><br><label><input type="radio" name="q26" value="c"> Botas con puntera</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>27. La señal de peligro eléctrico es:</strong></p><label><input type="radio" name="q27" value="a"> Triángulo amarillo con rayo negro</label><br><label><input type="radio" name="q27" value="b"> Círculo rojo con rayo blanco</label><br><label><input type="radio" name="q27" value="c"> Cuadrado azul con rayo verde</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>28. Antes de comenzar a trabajar, ¿qué se debe comprobar?</strong></p><label><input type="radio" name="q28" value="a"> Que haya café</label><br><label><input type="radio" name="q28" value="b"> Ausencia de tensión</label><br><label><input type="radio" name="q28" value="c"> Nivel de agua</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>29. El procedimiento LOTO sirve para:</strong></p><label><input type="radio" name="q29" value="a"> Encender maquinaria</label><br><label><input type="radio" name="q29" value="b"> Bloquear energía peligrosa</label><br><label><input type="radio" name="q29" value="c"> Medir corriente</label><br></div>
+
+    <div class="pregunta">
+        <p><strong>30. La resistencia máxima de tierra en viviendas debe ser menor a:</strong></p><label><input type="radio" name="q30" value="a"> 20 ohmios</label><br><label><input type="radio" name="q30" value="b"> 100 ohmios</label><br><label><input type="radio" name="q30" value="c"> 37 ohmios</label><br></div>
+
         <button type="submit">Enviar test</button>
     </form>
     <div id="resultado"></div>
-
     <script>
-        // Temporizador
-        let tiempo = 35 * 60;
+        // Temporizador de 40 minutos
+        let tiempo = 40 * 60;
         const tiempoSpan = document.getElementById("tiempo");
-        const temporizador = setInterval(() => {{
+        const temporizador = setInterval(() => {
             let minutos = Math.floor(tiempo / 60);
             let segundos = tiempo % 60;
-            tiempoSpan.textContent = `${{minutos.toString().padStart(2, '0')}}:${{segundos.toString().padStart(2, '0')}}`;
-            if (tiempo <= 0) {{
+            tiempoSpan.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+            if (tiempo <= 0) {
                 clearInterval(temporizador);
                 document.getElementById("testForm").submit();
-            }}
+            }
             tiempo--;
-        }}, 1000);
+        }, 1000);
 
-        // Respuestas correctas (solo ejemplo, deben ajustarse)
-        const respuestasCorrectas = [
-            "a","b","c","a","b","c","a","b","c","a",
-            "b","c","a","b","c","a","b","c","a","b",
-            "c","a","b","c","a","b","c","a","b","c"
-        ];
+        const respuestasCorrectas = ["a","b","b","a","b","a","b","a","b","b","b","b","b","a","b","a","b","b","c","c","b","b","b","b","b","b","a","b","b","a"];
 
-        document.getElementById("testForm").addEventListener("submit", function(e) {{
+        document.getElementById("testForm").addEventListener("submit", function(e) {
             e.preventDefault();
             let correctas = 0;
-            for (let i = 1; i <= 30; i++) {{
-                const respuesta = document.querySelector(`input[name="q${{i}}"]:checked`);
-                if (respuesta && respuesta.value === respuestasCorrectas[i - 1]) {{
+            for (let i = 1; i <= 30; i++) {
+                const respuesta = document.querySelector(`input[name="q${i}"]:checked`);
+                if (respuesta && respuesta.value === respuestasCorrectas[i - 1]) {
                     correctas++;
-                }}
-            }}
-            const resultado = `Has acertado ${{correctas}} de 30 preguntas. Puntuación: ${{(correctas / 30 * 100).toFixed(2)}}%`;
+                }
+            }
+            const resultado = `Has acertado ${correctas} de 30 preguntas. Puntuación: ${(correctas / 30 * 100).toFixed(2)}%`;
             document.getElementById("resultado").textContent = resultado;
-        }});
+        });
     </script>
 </body>
 </html>
-"""
-
-# Generamos 30 preguntas de ejemplo
-preguntas_html = ""
-for i in range(1, 31):
-    preguntas_html += f"""
-    <div class="pregunta">
-        <p><strong>{i}. Pregunta de ejemplo {i}</strong></p>
-        <label><input type="radio" name="q{i}" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q{i}" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q{i}" value="c"> Opción C</label>
-    </div>
-    """
-
-# Formar el HTML completo
-html_final = html_code.format(preguntas)
-
-# Guardar el archivo
-file_path = Path("/mnt/data/index_test_mejorado.html")
-file_path.write_text(html_final, encoding="utf-8")
-
-file_path
-
