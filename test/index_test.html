@@ -153,7 +153,7 @@
             tiempo--;
         }, 1000);
 
-        const respuestasCorrectas = [{}];
+        const respuestasCorrectas = ['a', 'b', 'b', 'a', 'b', 'a', 'b', 'a', 'b', 'b', 'b', 'b', 'b', 'a', 'b', 'a', 'b', 'b', 'c', 'c', 'b', 'b', 'b', 'b', 'b', 'b', 'a', 'b', 'b', 'a'];
 
         function corregirTest() {
             let correctas = 0;
@@ -191,6 +191,17 @@
 
             const resultado = `Has acertado ${correctas} de 30 preguntas. Puntuación: ${(correctas / 30 * 100).toFixed(2)}%`;
             document.getElementById("resultado").textContent = resultado;
+
+let mensajeFinal = "";
+if ((correctas / 30) >= 0.9) {
+    mensajeFinal = "¡Excelente! Has aprobado con nota.";
+} else if ((correctas / 30) >= 0.6) {
+    mensajeFinal = "¡Bien hecho! Has aprobado.";
+} else {
+    mensajeFinal = "Necesitas repasar. ¡Ánimo, la próxima lo consigues!";
+}
+document.getElementById("resultado").innerHTML += "<br><br>" + mensajeFinal;
+
         }
 
         document.getElementById("btnCorregir").addEventListener("click", corregirTest);
