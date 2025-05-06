@@ -1,65 +1,76 @@
 
+/* Estilo moderno para Jordi, el Ingeniero */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url('https://cdn.pixabay.com/photo/2016/11/22/20/03/electric-1846087_1280.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #fff;
+  color: #f0f0f0;
 }
 
 .main-header {
-  background: linear-gradient(135deg, rgba(0,64,128,0.9), rgba(0,128,192,0.8));
-  color: white;
+  background: linear-gradient(135deg, #001F3F, #0074D9);
+  color: #ffffff;
   text-align: center;
-  padding: 40px 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  padding: 50px 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  border-bottom: 4px solid #00BFFF;
 }
 
 .main-header h1 {
   margin: 0;
-  font-size: 3em;
-  text-shadow: 2px 2px 4px #000;
+  font-size: 3.2em;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.main-header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  opacity: 0.9;
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 50px 30px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .card {
   background: rgba(255, 255, 255, 0.95);
-  padding: 30px 20px;
-  border-radius: 16px;
+  padding: 35px 25px;
+  border-radius: 18px;
   text-align: center;
   text-decoration: none;
-  color: #004080;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #003366;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
-  transform: scale(1.06);
-  background-color: #e0f0ff;
+  transform: translateY(-5px) scale(1.03);
+  background-color: #e0f4ff;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
 }
 
 .card h2 {
   margin: 0;
-  font-size: 1.5em;
-  line-height: 1.4;
+  font-size: 1.6em;
+  font-weight: 600;
 }
 
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   font-size: 1em;
-  background: rgba(0, 0, 0, 0.7);
-  margin-top: 50px;
-  color: #ddd;
-  border-top: 1px solid #444;
+  background: rgba(0, 0, 0, 0.8);
+  margin-top: 60px;
+  color: #ccc;
+  border-top: 2px solid #00BFFF;
 }
 
 /* Formularios claros en simuladores */
@@ -68,30 +79,31 @@ form, label, input, select, textarea {
   background-color: #fff !important;
 }
 
-input[type='number'], input[type='text'], select {
-  border: 1px solid #666;
-  padding: 8px;
-  border-radius: 6px;
+input[type='number'], input[type='text'], select, textarea {
+  border: 1px solid #aaa;
+  padding: 10px;
+  border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1em;
 }
 
-/* Botón volver y enlaces extra */
+/* Botones modernos */
 .boton-volver, .link-buttons a {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: #007bff;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #007BFF, #00BFFF);
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 12px;
+  margin-top: 25px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .boton-volver:hover, .link-buttons a:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #0056b3, #0088cc);
+  transform: scale(1.08);
 }
