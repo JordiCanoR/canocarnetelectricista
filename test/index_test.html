@@ -22,6 +22,19 @@
             box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
             z-index: 1000;
         }
+        .btn-correccion {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .btn-correccion:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
@@ -119,11 +132,11 @@
     <div class="pregunta">
         <p><strong>30. La resistencia máxima de tierra en viviendas debe ser menor a:</strong></p><label><input type="radio" name="q30" value="a"> 20 ohmios</label><br><label><input type="radio" name="q30" value="b"> 100 ohmios</label><br><label><input type="radio" name="q30" value="c"> 37 ohmios</label><br></div>
 
-        <button type="submit">Enviar test</button> <button type="button" onclick="corregirTest()">Finalizar y corregir ahora</button>
+        <button type="submit">Enviar test</button>
+        <button type="button" class="btn-correccion" onclick="corregirTest()">Finalizar y corregir ahora</button>
     </form>
     <div id="resultado"></div>
     <script>
-        // Temporizador de 40 minutos
         let tiempo = 40 * 60;
         const tiempoSpan = document.getElementById("tiempo");
         const temporizador = setInterval(() => {
@@ -132,12 +145,12 @@
             tiempoSpan.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
             if (tiempo <= 0) {
                 clearInterval(temporizador);
-                document.getElementById("testForm").submit();
+                corregirTest();
             }
             tiempo--;
         }, 1000);
 
-        const respuestasCorrectas = [{}];
+        const respuestasCorrectas = ["a","b","b","a","b","a","b","a","b","b","b","b","b","a","b","a","b","b","c","c","b","b","b","b","b","b","a","b","b","a"];
 
         function corregirTest() {
             let correctas = 0;
@@ -153,15 +166,7 @@
 
         document.getElementById("testForm").addEventListener("submit", function(e) {
             e.preventDefault();
-            let correctas = 0;
-            for (let i = 1; i <= 30; i++) {
-                const respuesta = document.querySelector(`input[name="q${i}"]:checked`);
-                if (respuesta && respuesta.value === respuestasCorrectas[i - 1]) {
-                    correctas++;
-                }
-            }
-            const resultado = `Has acertado ${correctas} de 30 preguntas. Puntuación: ${(correctas / 30 * 100).toFixed(2)}%`;
-            document.getElementById("resultado").textContent = resultado;
+            corregirTest();
         });
     </script>
 </body>
