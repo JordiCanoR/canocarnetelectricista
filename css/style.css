@@ -6,16 +6,19 @@ body {
   background-size: cover;
   color: #fff;
 }
+
 .main-header {
   background-color: rgba(0, 64, 128, 0.85);
   color: white;
   text-align: center;
   padding: 30px 10px;
 }
+
 .main-header h1 {
   margin: 0;
   font-size: 2.5em;
 }
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -24,6 +27,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .card {
   background: rgba(255, 255, 255, 0.9);
   padding: 30px;
@@ -34,17 +38,33 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   transition: transform 0.2s ease;
 }
+
 .card:hover {
   transform: scale(1.05);
   background-color: #e6f0ff;
 }
+
 .card h2 {
   margin: 0;
 }
+
 .footer {
   text-align: center;
   padding: 15px;
   font-size: 0.9em;
   background: rgba(0, 0, 0, 0.6);
   margin-top: 40px;
+}
+
+/* 🛠 Corrección para textos en simuladores */
+form, label, input, select, textarea {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+input[type='number'], input[type='text'], select {
+  border: 1px solid #666;
+  padding: 5px;
+  border-radius: 5px;
+  width: auto;
 }
