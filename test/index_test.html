@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
-        .pregunta { margin-bottom: 20px; }
-        #resultado { font-weight: bold; margin-top: 20px; }
+        .pregunta { margin-bottom: 20px; padding: 10px; border-radius: 5px; }
+        #resultado { font-weight: bold; margin-top: 20px; font-size: 18px; }
         #temporizador {
             position: fixed;
             top: 10px;
@@ -35,6 +35,9 @@
         .btn-correccion:hover {
             background-color: #218838;
         }
+        .correcta { background-color: #d4edda; }
+        .incorrecta { background-color: #f8d7da; }
+        .resaltada-correcta { text-decoration: underline; font-weight: bold; color: green; }
     </style>
 </head>
 <body>
@@ -150,14 +153,33 @@
             tiempo--;
         }, 1000);
 
-        const respuestasCorrectas = ["a","b","b","a","b","a","b","a","b","b","b","b","b","a","b","a","b","b","c","c","b","b","b","b","b","b","a","b","b","a"];
+        const respuestasCorrectas = [{}];
 
         function corregirTest() {
             let correctas = 0;
             for (let i = 1; i <= 30; i++) {
-                const respuesta = document.querySelector(`input[name="q${i}"]:checked`);
-                if (respuesta && respuesta.value === respuestasCorrectas[i - 1]) {
+                const preguntaDiv = document.querySelector(`.pregunta:nth-of-type(${i})`);
+                const opciones = document.getElementsByName(`q${i}`);
+                let seleccion = null;
+                for (let op of opciones) {
+                    if (op.checked) {
+                        seleccion = op;
+                    }
+                    op.parentElement.classList.remove("correcta", "incorrecta", "resaltada-correcta");
+                }
+
+                if (seleccion && seleccion.value === respuestasCorrectas[i - 1]) {
                     correctas++;
+                    seleccion.parentElement.classList.add("correcta");
+                } else {
+                    if (seleccion) {
+                        seleccion.parentElement.classList.add("incorrecta");
+                    }
+                    for (let op of opciones) {
+                        if (op.value === respuestasCorrectas[i - 1]) {
+                            op.parentElement.classList.add("resaltada-correcta");
+                        }
+                    }
                 }
             }
             const resultado = `Has acertado ${correctas} de 30 preguntas. Puntuación: ${(correctas / 30 * 100).toFixed(2)}%`;
