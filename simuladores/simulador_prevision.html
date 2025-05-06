@@ -4,65 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <title>Simulador Previsión de Cargas</title>
-    <link rel="stylesheet" href="../css/style.css">
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
-        th, td { border: 1px solid #004080; padding: 6px; text-align: center; }
-        input[type='number'], input[type='text'] { width: 95%; padding: 4px; }
-        h2 { background-color: #e0e0e0; padding: 5px; }
-        .boton { padding: 10px 20px; font-size: 16px; margin-top: 10px; }
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        h1, h2 { background-color: #e0e0e0; padding: 10px; }
+        input[type='text'], input[type='number'] { width: 300px; margin: 4px; padding: 4px; }
+        .section { margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #333; padding: 6px; text-align: center; }
     </style>
 </head>
 <body>
     <h1>PLANTILLA DE CÁLCULO DE CARGAS ELÉCTRICAS - REBT (Guía BT-10)</h1>
 
-    <h2>4. LOCALES COMERCIALES</h2>
-    <table id="tabla_comercio">
-        <tr><th>Nº</th><th>Superficie (m²)</th><th>Potencia prevista (W)</th></tr>
-        <tr><td>1</td><td><input type="number"></td><td><input class="com_pot" type="number"></td></tr>
-        <tr><td>2</td><td><input type="number"></td><td><input class="com_pot" type="number"></td></tr>
-    </table>
-    <button class="boton" onclick="agregarFila('tabla_comercio', 'com_pot')">Añadir local comercial</button><br>
-    <label>Total locales comerciales (W): <input type="text" id="res_com" readonly></label>
+    <div class="section">
+        <h2>1. DATOS GENERALES DEL PROYECTO</h2>
+        <label>Nombre del proyecto: <input type="text"></label><br>
+        <label>Ubicación: <input type="text"></label><br>
+        <label>Tipo de edificio: <input type="text"></label><br>
+        <label>Instalador/Proyectista: <input type="text"></label><br>
+        <label>Fecha: <input type="text"></label><br>
+    </div>
 
-    <h2>5. OFICINAS</h2>
-    <table id="tabla_oficinas">
-        <tr><th>Nº</th><th>Superficie (m²)</th><th>Potencia prevista (W)</th></tr>
-        <tr><td>1</td><td><input type="number"></td><td><input class="ofi_pot" type="number"></td></tr>
-        <tr><td>2</td><td><input type="number"></td><td><input class="ofi_pot" type="number"></td></tr>
-    </table>
-    <button class="boton" onclick="agregarFila('tabla_oficinas', 'ofi_pot')">Añadir oficina</button><br>
-    <label>Total oficinas (W): <input type="text" id="res_ofi" readonly></label>
+    <div class="section">
+        <h2>2. VIVIENDAS: CÁLCULO DE POTENCIA PREVISTA</h2>
+        <table>
+            <tr><th>Nº Vivienda</th><th>Superficie (m²)</th><th>Grado electrificación</th><th>Potencia prevista (W)</th></tr>
+            <tr><td>1</td><td><input type="number"></td><td><input type="text"></td><td><input type="number"></td></tr>
+            <tr><td>2</td><td><input type="number"></td><td><input type="text"></td><td><input type="number"></td></tr>
+        </table>
+        <label>Media aritmética de potencias previstas: <input type="text"></label><br>
+        <label>Nº total de viviendas: <input type="number"></label><br>
+        <label>Coef. de simultaneidad: <input type="number" step="any"></label><br>
+        <label>Potencia total viviendas: <input type="text"></label><br>
+    </div>
 
-    <script>
-        function agregarFila(tablaId, clase) {
-            const tabla = document.getElementById(tablaId);
-            const rowCount = tabla.rows.length;
-            const row = tabla.insertRow();
-            const celdaNum = row.insertCell(0);
-            const celdaSup = row.insertCell(1);
-            const celdaPot = row.insertCell(2);
-            celdaNum.textContent = rowCount;
-            celdaSup.innerHTML = "<input type='number'>";
-            celdaPot.innerHTML = "<input type='number' class='" + clase + "'>";
-        }
+    <div class="section">
+        <h2>3. SERVICIOS GENERALES</h2>
+        <label>Ascensor / montacargas 1 (W): <input type="number"></label><br>
+        <label>Ascensor / montacargas 2 (W): <input type="number"></label><br>
+        <label>Alumbrado zonas comunes (fluorescente): <input type="number"></label><br>
+        <label>Alumbrado zonas comunes (incandescente): <input type="number"></label><br>
+        <label>Puertas automáticas (W): <input type="number"></label><br>
+        <label>Grupo de presión 1 (CV): <input type="number"></label><br>
+        <label>Grupo de presión 2 (CV): <input type="number"></label><br>
+        <label>Bomba de agua 1 (W): <input type="number"></label><br>
+        <label>Bomba de agua 2 (W): <input type="number"></label><br>
+        <label>Otros (especificar): <input type="text"> <input type="number"></label><br>
+        <label>Total servicios generales: <input type="text"></label><br>
+    </div>
 
-        function calcularOficinasLocales() {
-            let total_com = 0;
-            document.querySelectorAll(".com_pot").forEach(e => {
-                total_com += parseFloat(e.value) || 0;
-            });
-            let total_ofi = 0;
-            document.querySelectorAll(".ofi_pot").forEach(e => {
-                total_ofi += parseFloat(e.value) || 0;
-            });
+    <div class="section">
+        <h2>4. LOCALES COMERCIALES</h2>
+        <table>
+            <tr><th>Local</th><th>Superficie (m²)</th><th>W/m²</th><th>Potencia total (W)</th></tr>
+            <tr><td>1</td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td></tr>
+            <tr><td>2</td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td></tr>
+        </table>
+        <label>Total locales comerciales: <input type="text"></label><br>
+    </div>
 
-            document.getElementById('res_com').value = total_com.toFixed(2);
-            document.getElementById('res_ofi').value = total_ofi.toFixed(2);
-        }
+    <div class="section">
+        <h2>5. OFICINAS</h2>
+        <table>
+            <tr><th>Oficina</th><th>Superficie (m²)</th><th>W/m²</th><th>Potencia total (W)</th></tr>
+            <tr><td>1</td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td></tr>
+            <tr><td>2</td><td><input type="number"></td><td><input type="number"></td><td><input type="number"></td></tr>
+        </table>
+        <label>Total oficinas: <input type="text"></label><br>
+    </div>
 
-        window.addEventListener("input", calcularOficinasLocales);
-    </script>
+    <div class="section">
+        <h2>6. GARAJES</h2>
+        <label>Ventilación: 
+            <input type="radio" name="vent" value="natural"> Natural 
+            <input type="radio" name="vent" value="forzada"> Forzada
+        </label><br>
+        <label>Nº de plazas: <input type="number"></label><br>
+        <label>Potencia estimada por plaza: <input type="number" value="100"></label><br>
+        <label>Iluminación garajes (W): <input type="number"></label><br>
+        <label>Puntos de recarga VE:
+            <input type="radio" name="spl" value="con"> Con SPL
+            <input type="radio" name="spl" value="sin"> Sin SPL
+        </label><br>
+        <label>Nº de puntos: <input type="number"></label><br>
+        <label>Total potencia garajes: <input type="text"></label><br>
+    </div>
+
+    <div class="section">
+        <h2>7. POTENCIA TOTAL DEL EDIFICIO</h2>
+        <label>Total viviendas: <input type="text"></label><br>
+        <label>Total servicios generales: <input type="text"></label><br>
+        <label>Total locales comerciales: <input type="text"></label><br>
+        <label>Total oficinas: <input type="text"></label><br>
+        <label>Total garajes: <input type="text"></label><br>
+        <strong>POTENCIA TOTAL PREVISTA: <input type="text"></strong><br>
+    </div>
+
+    <div class="section">
+        <h2>8. INTERRUPTOR GENERAL AUTOMÁTICO (IGA)</h2>
+        <label>Calibre recomendado (A): <input type="text"></label><br>
+    </div>
 </body>
 </html>
