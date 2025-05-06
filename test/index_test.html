@@ -1,4 +1,5 @@
-
+# Crear el archivo HTML completo con el estilo del temporizador mejorado
+html_code = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,228 +7,30 @@
     <title>Test Carnet Instalador</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .pregunta { margin-bottom: 20px; }
-        #resultado { font-weight: bold; margin-top: 20px; }
-        #temporizador { position: fixed; top: 10px; right: 10px; background: #f0f0f0; padding: 10px; border-radius: 8px; }
+        body {{ font-family: Arial, sans-serif; margin: 20px; }}
+        .pregunta {{ margin-bottom: 20px; }}
+        #resultado {{ font-weight: bold; margin-top: 20px; }}
+        #temporizador {{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }}
     </style>
 </head>
 <body>
     <h1>Test Oficial - Carnet Instalador Baja Tensión</h1>
     <div id="temporizador">Tiempo restante: <span id="tiempo">35:00</span></div>
     <form id="testForm">
-        <!-- Generar 30 preguntas con 3 opciones -->
-        
-    <div class="pregunta">
-        <p><strong>1. Pregunta de ejemplo 1</strong></p>
-        <label><input type="radio" name="q1" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q1" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q1" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>2. Pregunta de ejemplo 2</strong></p>
-        <label><input type="radio" name="q2" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q2" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q2" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>3. Pregunta de ejemplo 3</strong></p>
-        <label><input type="radio" name="q3" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q3" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q3" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>4. Pregunta de ejemplo 4</strong></p>
-        <label><input type="radio" name="q4" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q4" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q4" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>5. Pregunta de ejemplo 5</strong></p>
-        <label><input type="radio" name="q5" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q5" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q5" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>6. Pregunta de ejemplo 6</strong></p>
-        <label><input type="radio" name="q6" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q6" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q6" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>7. Pregunta de ejemplo 7</strong></p>
-        <label><input type="radio" name="q7" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q7" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q7" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>8. Pregunta de ejemplo 8</strong></p>
-        <label><input type="radio" name="q8" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q8" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q8" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>9. Pregunta de ejemplo 9</strong></p>
-        <label><input type="radio" name="q9" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q9" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q9" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>10. Pregunta de ejemplo 10</strong></p>
-        <label><input type="radio" name="q10" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q10" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q10" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>11. Pregunta de ejemplo 11</strong></p>
-        <label><input type="radio" name="q11" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q11" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q11" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>12. Pregunta de ejemplo 12</strong></p>
-        <label><input type="radio" name="q12" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q12" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q12" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>13. Pregunta de ejemplo 13</strong></p>
-        <label><input type="radio" name="q13" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q13" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q13" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>14. Pregunta de ejemplo 14</strong></p>
-        <label><input type="radio" name="q14" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q14" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q14" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>15. Pregunta de ejemplo 15</strong></p>
-        <label><input type="radio" name="q15" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q15" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q15" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>16. Pregunta de ejemplo 16</strong></p>
-        <label><input type="radio" name="q16" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q16" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q16" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>17. Pregunta de ejemplo 17</strong></p>
-        <label><input type="radio" name="q17" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q17" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q17" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>18. Pregunta de ejemplo 18</strong></p>
-        <label><input type="radio" name="q18" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q18" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q18" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>19. Pregunta de ejemplo 19</strong></p>
-        <label><input type="radio" name="q19" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q19" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q19" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>20. Pregunta de ejemplo 20</strong></p>
-        <label><input type="radio" name="q20" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q20" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q20" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>21. Pregunta de ejemplo 21</strong></p>
-        <label><input type="radio" name="q21" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q21" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q21" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>22. Pregunta de ejemplo 22</strong></p>
-        <label><input type="radio" name="q22" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q22" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q22" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>23. Pregunta de ejemplo 23</strong></p>
-        <label><input type="radio" name="q23" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q23" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q23" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>24. Pregunta de ejemplo 24</strong></p>
-        <label><input type="radio" name="q24" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q24" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q24" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>25. Pregunta de ejemplo 25</strong></p>
-        <label><input type="radio" name="q25" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q25" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q25" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>26. Pregunta de ejemplo 26</strong></p>
-        <label><input type="radio" name="q26" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q26" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q26" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>27. Pregunta de ejemplo 27</strong></p>
-        <label><input type="radio" name="q27" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q27" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q27" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>28. Pregunta de ejemplo 28</strong></p>
-        <label><input type="radio" name="q28" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q28" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q28" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>29. Pregunta de ejemplo 29</strong></p>
-        <label><input type="radio" name="q29" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q29" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q29" value="c"> Opción C</label>
-    </div>
-    
-    <div class="pregunta">
-        <p><strong>30. Pregunta de ejemplo 30</strong></p>
-        <label><input type="radio" name="q30" value="a"> Opción A</label><br>
-        <label><input type="radio" name="q30" value="b"> Opción B</label><br>
-        <label><input type="radio" name="q30" value="c"> Opción C</label>
-    </div>
-    
+        <!-- 30 preguntas -->
+        {}
         <button type="submit">Enviar test</button>
     </form>
     <div id="resultado"></div>
@@ -236,36 +39,59 @@
         // Temporizador
         let tiempo = 35 * 60;
         const tiempoSpan = document.getElementById("tiempo");
-        const temporizador = setInterval(() => {
+        const temporizador = setInterval(() => {{
             let minutos = Math.floor(tiempo / 60);
             let segundos = tiempo % 60;
-            tiempoSpan.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
-            if (tiempo <= 0) {
+            tiempoSpan.textContent = `${{minutos.toString().padStart(2, '0')}}:${{segundos.toString().padStart(2, '0')}}`;
+            if (tiempo <= 0) {{
                 clearInterval(temporizador);
                 document.getElementById("testForm").submit();
-            }
+            }}
             tiempo--;
-        }, 1000);
+        }}, 1000);
 
-        // Respuestas correctas (solo ejemplo, deben ajustarse)
         const respuestasCorrectas = [
             "a","b","c","a","b","c","a","b","c","a",
             "b","c","a","b","c","a","b","c","a","b",
             "c","a","b","c","a","b","c","a","b","c"
         ];
 
-        document.getElementById("testForm").addEventListener("submit", function(e) {
+        document.getElementById("testForm").addEventListener("submit", function(e) {{
             e.preventDefault();
             let correctas = 0;
-            for (let i = 1; i <= 30; i++) {
-                const respuesta = document.querySelector(`input[name="q${i}"]:checked`);
-                if (respuesta && respuesta.value === respuestasCorrectas[i - 1]) {
+            for (let i = 1; i <= 30; i++) {{
+                const respuesta = document.querySelector(`input[name="q${{i}}"]:checked`);
+                if (respuesta && respuesta.value === respuestasCorrectas[i - 1]) {{
                     correctas++;
-                }
-            }
-            const resultado = `Has acertado ${correctas} de 30 preguntas. Puntuación: ${(correctas / 30 * 100).toFixed(2)}%`;
+                }}
+            }}
+            const resultado = `Has acertado ${{correctas}} de 30 preguntas. Puntuación: ${{(correctas / 30 * 100).toFixed(2)}}%`;
             document.getElementById("resultado").textContent = resultado;
-        });
+        }});
     </script>
 </body>
 </html>
+"""
+
+# Generar preguntas HTML
+preguntas = ""
+for i in range(1, 31):
+    preguntas += f"""
+    <div class="pregunta">
+        <p><strong>{i}. Pregunta de ejemplo {i}</strong></p>
+        <label><input type="radio" name="q{i}" value="a"> Opción A</label><br>
+        <label><input type="radio" name="q{i}" value="b"> Opción B</label><br>
+        <label><input type="radio" name="q{i}" value="c"> Opción C</label>
+    </div>
+    """
+
+# Formar el HTML completo
+html_final = html_code.format(preguntas)
+
+# Guardar el archivo
+file_path = Path("/mnt/data/index_test_mejorado.html")
+file_path.write_text(html_final, encoding="utf-8")
+
+file_path
+
+
