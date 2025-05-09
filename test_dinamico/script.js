@@ -1,4 +1,3 @@
-// test_script_corregido.js
 let tiempo = 40 * 60;
 const tiempoSpan = document.getElementById("tiempo");
 const testForm = document.getElementById("testForm");
@@ -32,6 +31,14 @@ function generarTest() {
     });
 }
 
+function normalizar(texto) {
+    return texto
+        .trim()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, ""); // quita acentos
+}
+
 function corregirTest() {
     let correctas = 0;
     let detallesFallos = "";
@@ -45,14 +52,14 @@ function corregirTest() {
             if (op.checked) seleccion = op;
         });
 
-        let respondida = !!seleccion;
-        let correctaMostrada = false;
+        const respondida = !!seleccion;
+        const respNormalizada = normalizar(pregunta.respuesta);
 
         opciones.forEach(op => {
-            let esCorrecta = op.value.trim().toLowerCase() === pregunta.respuesta.trim().toLowerCase();
+            const opValNorm = normalizar(op.value);
 
-            if (esCorrecta) {
-                if (seleccion && seleccion.value.trim().toLowerCase() === op.value.trim().toLowerCase()) {
+            if (opValNorm === respNormalizada) {
+                if (seleccion && normalizar(seleccion.value) === opValNorm) {
                     correctas++;
                     op.closest("label").classList.add("correcta");
                 } else {
@@ -60,26 +67,26 @@ function corregirTest() {
                 }
             }
 
-            if (seleccion && seleccion.value === op.value && !esCorrecta) {
+            if (seleccion && seleccion.value === op.value && opValNorm !== respNormalizada) {
                 seleccion.closest("label").classList.add("incorrecta");
             }
         });
 
         if (!respondida) {
             detallesFallos += `<li>Pregunta ${i + 1}: No respondida. Respuesta correcta: <strong>${pregunta.respuesta}</strong></li>`;
-        } else if (seleccion.value.trim().toLowerCase() !== pregunta.respuesta.trim().toLowerCase()) {
+        } else if (normalizar(seleccion.value) !== respNormalizada) {
             detallesFallos += `<li>Pregunta ${i + 1}: Respondida con <strong>${seleccion.value}</strong>. Correcta: <strong>${pregunta.respuesta}</strong></li>`;
         }
     });
 
-    let total = seleccionadas.length;
-    let resultado = `Has acertado ${correctas} de ${total} preguntas. Puntuación: ${(correctas / total * 100).toFixed(2)}%<br><br>`;
+    const total = seleccionadas.length;
+    const porcentaje = (correctas / total * 100).toFixed(2);
     let mensajeFinal = "", clase = "";
 
-    if ((correctas / total) >= 0.9) {
+    if (correctas / total >= 0.9) {
         mensajeFinal = "✅ ¡Excelente! Has aprobado con nota.";
         clase = "aprobado";
-    } else if ((correctas / total) >= 0.6) {
+    } else if (correctas / total >= 0.6) {
         mensajeFinal = "✅ ¡Bien hecho! Has aprobado.";
         clase = "aprobado";
     } else {
@@ -88,7 +95,7 @@ function corregirTest() {
     }
 
     document.getElementById("resultado").innerHTML =
-        resultado +
+        `Has acertado ${correctas} de ${total} preguntas. Puntuación: ${porcentaje}%<br><br>` +
         `<div class='mensaje-final ${clase}'>${mensajeFinal}</div><br>` +
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
 }
