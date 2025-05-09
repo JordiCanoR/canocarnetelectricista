@@ -63,7 +63,7 @@ function corregirTest() {
                     correctas++;
                     op.closest("label").classList.add("correcta");
                 } else {
-                    op.closest("label").classList.add("resaltada-correcta");
+                    op.closest("label").classList.add("correcta");
                 }
             }
 
@@ -80,13 +80,13 @@ function corregirTest() {
     });
 
     const total = seleccionadas.length;
-    const porcentaje = (correctas / total * 100).toFixed(2);
+    const puntos = (correctas * 0.3).toFixed(2);
     let mensajeFinal = "", clase = "";
 
-    if (correctas / total >= 0.9) {
+    if (puntos >= 8.1) {
         mensajeFinal = "✅ ¡Excelente! Has aprobado con nota.";
         clase = "aprobado";
-    } else if (correctas / total >= 0.6) {
+    } else if (puntos >= 5) {
         mensajeFinal = "✅ ¡Bien hecho! Has aprobado.";
         clase = "aprobado";
     } else {
@@ -95,7 +95,7 @@ function corregirTest() {
     }
 
     document.getElementById("resultado").innerHTML =
-        `Has acertado ${correctas} de ${total} preguntas. Puntuación: ${porcentaje}%<br><br>` +
+        `Has acertado ${correctas} de ${total} preguntas. Puntuación: ${puntos} / 9<br><br>` +
         `<div class='mensaje-final ${clase}'>${mensajeFinal}</div><br>` +
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
 }
