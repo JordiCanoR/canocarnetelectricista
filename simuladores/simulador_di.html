@@ -88,6 +88,75 @@
                 document.getElementById('iga').value = iga + " A";
             }
         </script>
+                <div class="form-section">
+                <h3>Resultados</h3>
+                <label>Caída máxima permitida (V):</label><input type="text" id="caida" readonly><br>
+                <label>Intensidad (A):</label><input type="text" id="intensidad" readonly><br>
+                <label>Sección (mm²):</label><input type="text" id="seccion" readonly><br>
+                <label>Sección conductor neutro (70% regla):</label><input type="text" id="neutro" readonly><br>
+                <label>Diámetro tubo (aprox.):</label><input type="text" id="tubo" readonly><br>
+                <label>Fusible recomendado CGP (A):</label><input type="text" id="fusible" readonly><br>
+                <label>Conductores a usar:</label><input type="text" id="conductores" readonly><br>
+            </div>
+
+            <button type="button" onclick="calcular()">Calcular</button>
+        </form>
+
+        <script>
+            function calcular() {
+                const P = parseFloat(document.getElementById('potencia').value);
+                const U = parseFloat(document.getElementById('tension').value);
+                const cosphi = parseFloat(document.getElementById('cosphi').value);
+                const L = parseFloat(document.getElementById('longitud').value);
+                const gamma = parseFloat(document.getElementById('gamma').value);
+                const trifasica = parseInt(document.getElementById('trifasica').value);
+                const centralizado = parseInt(document.getElementById('centralizado').value);
+
+                let e_pct = centralizado === 1 ? 1 : 0.5;
+                let e = (e_pct / 100) * U;
+                let I = trifasica === 1 ? P / (1.73 * U * cosphi) : P / (U * cosphi);
+                let S = trifasica === 1 ? (L * P) / (gamma * e * U) : (2 * L * P) / (gamma * e * U);
+
+                // Ajustar a sección comercial (por simplicidad aproximamos)
+                let seccionComercial = S <= 25 ? 25 : (S <= 35 ? 35 : (S <= 50 ? 50 : (S <= 70 ? 70 : 95)));
+
+                // Fusible: corriente nominal mayor o igual a la intensidad
+                let fusible = Math.ceil(I / 10) * 10;
+
+                // Tubo (aproximación muy básica para 3F+N)
+                let diametroTubo = seccionComercial <= 35 ? "40 mm" : "50 mm";
+
+                document.getElementById('caida').value = e.toFixed(2);
+                document.getElementById('intensidad').value = I.toFixed(2);
+                document.getElementById('seccion').value = seccionComercial + " mm²";
+                document.getElementById('neutro').value = Math.floor(seccionComercial * 0.7) + " mm²";
+                document.getElementById('tubo').value = diametroTubo;
+                document.getElementById('fusible').value = fusible + " A";
+                document.getElementById('conductores').value = "3 fases + 1 neutro";
+            }
+        </script>
+        <div class="section">
+         <button onclick="window.print()" style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+         Imprimir plantilla
+         </button>
+         <button onclick="descargarComoPDF()" style="padding: 10px 20px; font-size: 16px; background-color: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+         Descargar como PDF
+         </button>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+        <script>
+         function descargarComoPDF() {
+         const elemento = document.getElementById("contenedorPDF");
+         const opciones = {
+         margin: 0.3,
+         filename: 'simulador_prevision.pdf',
+         image: { type: 'jpeg', quality: 0.98 },
+         html2canvas: { scale: 2 },
+         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+         };
+         html2pdf().set(opciones).from(elemento).save();
+         }
+       </script>
     </main>
 </body>
 </html>
