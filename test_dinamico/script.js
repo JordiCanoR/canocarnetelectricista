@@ -25,7 +25,8 @@ function generarTest() {
         div.classList.add("pregunta");
         div.innerHTML = `<p><strong>${i + 1}. ${pregunta.pregunta}</strong></p>` +
             pregunta.opciones.map((op, idx) =>
-                `<label><input type="radio" name="q${i + 1}" value="${String.fromCharCode(97 + idx)}"> ${op}</label><br>`
+            `<label><input type="radio" name="q${i + 1}" value="${op}"> ${op}</label><br>`
+    
             ).join("");
         testForm.appendChild(div);
     });
@@ -45,7 +46,7 @@ function corregirTest() {
         let respondida = false;
         opciones.forEach((op, idx) => {
             if (op.checked) respondida = true;
-            if (String.fromCharCode(97 + idx) === pregunta.respuesta) {
+            if (op.value.trim() === pregunta.respuesta.trim().toLowerCase()){               
                 if (seleccion && seleccion.value === op.value) {
                     correctas++;
                     op.closest("label").classList.add("correcta");
