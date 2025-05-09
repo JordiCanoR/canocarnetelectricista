@@ -19,15 +19,15 @@
 <div id="contenedorPDF">
 
     <h1>PLANTILLA DE CÁLCULO DE CARGAS ELÉCTRICAS - REBT (Guía BT-10)</h1>
-<div class="section">
-<h2>1. DATOS GENERALES DEL PROYECTO</h2>
-<label>Nombre del proyecto: <input type="text"/></label><br/>
-<label>Ubicación: <input type="text"/></label><br/>
-<label>Tipo de edificio: <input type="text"/></label><br/>
-<label>Instalador/Proyectista: <input type="text"/></label><br/>
-<label>Fecha: <input type="text"/></label>
-</div>
-<div class="section">
+ <div class="section">
+ <h2>1. DATOS GENERALES DEL PROYECTO</h2>
+ <label>Nombre del proyecto: <input type="text"/></label><br/>
+ <label>Ubicación: <input type="text"/></label><br/>
+ <label>Tipo de edificio: <input type="text"/></label><br/>
+ <label>Instalador/Proyectista: <input type="text"/></label><br/>
+ <label>Fecha: <input type="text"/></label>
+ </div>
+ <div class="section">
     <h2>2. VIVIENDAS: CÁLCULO DE POTENCIA PREVISTA</h2>
     <table id="tablaViviendas">
     <tr><th>Nº Vivienda</th><th>Superficie (m²)</th><th>Grado electrificación</th><th>Potencia prevista (W)</th></tr>
@@ -39,52 +39,52 @@
     <label>Nº total de viviendas: <input type="number"/></label><br/>
     <label>Coef. de simultaneidad (según tabla guía BT-10): <input step="any" type="number"/></label><br/>
     <label>Potencia total viviendas: <input type="text"/> W</label>
-</div>
+ </div>
 
-<h2>3. SERVICIOS GENERALES</h2>
-<table>
-<tr><th>Servicio</th><th>Potencia estimada/calculada (W)</th></tr>
-<tr><td>Ascensor / montacargas 1</td><td><input type="number"/></td></tr>
-<tr><td>Ascensor / montacargas 2</td><td><input type="number"/></td></tr>
-<tr><td>Alumbrado zonas comunes (fluorescente)</td><td><input type="number"/></td></tr>
-<tr><td>Alumbrado zonas comunes (incandescente)</td><td><input type="number"/></td></tr>
-<tr><td>Puertas automáticas</td><td><input type="number"/></td></tr>
-<tr><td>Grupo de presión 1</td><td><input placeholder="CV × 736" type="number"/></td></tr>
-<tr><td>Grupo de presión 2</td><td><input placeholder="CV × 736" type="number"/></td></tr>
-<tr><td>Bomba de agua 1</td><td><input type="number"/></td></tr>
-<tr><td>Bomba de agua 2</td><td><input type="number"/></td></tr>
-<tr><td>Otros (especificar)</td><td><input type="text"/> <input type="text"/></td></tr>
-</table>
-<label><strong>TOTAL servicios generales: <input type="text"/> W</strong></label>
+ <h2>3. SERVICIOS GENERALES</h2>
+ <table>
+ <tr><th>Servicio</th><th>Potencia estimada/calculada (W)</th></tr>
+ <tr><td>Ascensor / montacargas 1</td><td><input type="number"/></td></tr>
+ <tr><td>Ascensor / montacargas 2</td><td><input type="number"/></td></tr>
+ <tr><td>Alumbrado zonas comunes (fluorescente)</td><td><input type="number"/></td></tr>
+ <tr><td>Alumbrado zonas comunes (incandescente)</td><td><input type="number"/></td></tr>
+ <tr><td>Puertas automáticas</td><td><input type="number"/></td></tr>
+ <tr><td>Grupo de presión 1</td><td><input placeholder="CV × 736" type="number"/></td></tr>
+ <tr><td>Grupo de presión 2</td><td><input placeholder="CV × 736" type="number"/></td></tr>
+ <tr><td>Bomba de agua 1</td><td><input type="number"/></td></tr>
+ <tr><td>Bomba de agua 2</td><td><input type="number"/></td></tr>
+ <tr><td>Otros (especificar)</td><td><input type="text"/> <input type="text"/></td></tr>
+ </table>
+ <label><strong>TOTAL servicios generales: <input type="text"/> W</strong></label>
 
-<div class="section">
-<h2>4. LOCALES COMERCIALES</h2>
-<table>
-<tr><th>Local</th><th>Superficie (m²)</th><th>W/m²</th><th>Potencia total (W)</th></tr>
+ <div class="section">
+ <h2>4. LOCALES COMERCIALES</h2>
+ <table>
+ <tr><th>Local</th><th>Superficie (m²)</th><th>W/m²</th><th>Potencia total (W)</th></tr>
 <tr><td><input placeholder="" type="number"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
-<tr><td><input placeholder="" type="number"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
-</table>
-<button onclick="agregarFila('tablaLocales')">Añadir local comercial</button>
-<label>Total locales comerciales: <input id="totalLocales" type="text"/> W</label>
-</div>
-<div class="section">
-<h2>5. OFICINAS</h2>
-<table>
-<tr><th>Oficina</th><th>Superficie (m²)</th><th>W/m²</th><th>Potencia total (W)</th></tr>
-<tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
-<tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
-</table>
-<button onclick="agregarFila('tablaOficinas')">Añadir oficina</button>
-<label>Total oficinas: <input id="totalOficinas" type="text"/> W</label>
-</div>
+ <tr><td><input placeholder="" type="number"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
+ </table>
+ <button onclick="agregarFila('tablaLocales')">Añadir local comercial</button>
+ <label>Total locales comerciales: <input id="totalLocales" type="text"/> W</label>
+ </div>
+ <div class="section">
+ <h2>5. OFICINAS</h2>
+ <table>
+ <tr><th>Oficina</th><th>Superficie (m²)</th><th>W/m²</th><th>Potencia total (W)</th></tr>
+ <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
+ <tr><td><input placeholder="" type="text"/></td><td><input type="number"/></td><td><input type="number"/></td><td><input type="number"/></td></tr>
+ </table>
+ <button onclick="agregarFila('tablaOficinas')">Añadir oficina</button>
+ <label>Total oficinas: <input id="totalOficinas" type="text"/> W</label>
+ </div>
 
-<div class="section">
-<h2>6. GARAJES</h2>
-<label>Ventilación:
+ <div class="section">
+ <h2>6. GARAJES</h2>
+ <label>Ventilación:
     <input type="checkbox"/> Natural
     <input type="checkbox"/> Forzada
-</label><br/>
-<div>
+ </label><br/>
+ <div>
     <div>
         Superficie del garaje (m²):
         <input id="superficieGaraje" oninput="calcularPotenciaGarajeArea()" placeholder="Ej: 150" type="number"/>
@@ -97,33 +97,33 @@
         <input id="resultadoGarajeArea" placeholder="Resultado W" readonly="" type="text"/>
         W
     </div>
-<label>Nº de plazas: <input type="number"/></label><br/>
-<label>Potencia estimada por plaza: <input type="number" value="100"/> W</label><br/>
-<label>Total potencia iluminación garajes: <input type="number"/> W</label><br/>
-<label>Puntos de recarga vehículo eléctrico:</label><br/>
-<label><input type="checkbox"/> Con SPL (multiplica 0,3 a 3680 W)</label><br/>
-<label><input type="checkbox"/> Sin SPL (multiplica 1 a 3680 W)</label><br/>
-<label>Nº de puntos: <input type="number"/> x 3.680 W × (0.3 o 1) = <input type="text"/> W</label><br/>
-<label>Total potencia garajes: <input type="number"/> W</label>
-</div>
+ <label>Nº de plazas: <input type="number"/></label><br/>
+ <label>Potencia estimada por plaza: <input type="number" value="100"/> W</label><br/>
+ <label>Total potencia iluminación garajes: <input type="number"/> W</label><br/>
+ <label>Puntos de recarga vehículo eléctrico:</label><br/>
+ <label><input type="checkbox"/> Con SPL (multiplica 0,3 a 3680 W)</label><br/>
+ <label><input type="checkbox"/> Sin SPL (multiplica 1 a 3680 W)</label><br/>
+ <label>Nº de puntos: <input type="number"/> x 3.680 W × (0.3 o 1) = <input type="text"/> W</label><br/>
+ <label>Total potencia garajes: <input type="number"/> W</label>
+ </div>
 
-<div class="section">
-<h2>7. POTENCIA TOTAL DEL EDIFICIO</h2>
-<label>Total viviendas: <input type="number"/> W</label><br/>
-<label>Total servicios generales: <input type="text"/> W</label><br/>
-<label>Total locales comerciales: <input type="text"/> W</label><br/>
-<label>Total oficinas: <input type="number"/> W</label><br/>
-<label>Total garajes: <input type="number"/> W</label><br/>
-<strong>POTENCIA TOTAL PREVISTA: <input type="number"/> W</strong>
-</div>
+ <div class="section">
+ <h2>7. POTENCIA TOTAL DEL EDIFICIO</h2>
+ <label>Total viviendas: <input type="number"/> W</label><br/>
+ <label>Total servicios generales: <input type="text"/> W</label><br/>
+ <label>Total locales comerciales: <input type="text"/> W</label><br/>
+ <label>Total oficinas: <input type="number"/> W</label><br/>
+ <label>Total garajes: <input type="number"/> W</label><br/>
+ <strong>POTENCIA TOTAL PREVISTA: <input type="number"/> W</strong>
+ </div>
 
-<div class="section">
-<h2>8. INTERRUPTOR GENERAL AUTOMÁTICO (IGA)</h2>
-<label>Seleccionar calibre según potencia total prevista: <input type="number"/> A</label>
-</div>
+ <div class="section">
+ <h2>8. INTERRUPTOR GENERAL AUTOMÁTICO (IGA)</h2>
+ <label>Seleccionar calibre según potencia total prevista: <input type="number"/> A</label>
+ </div>
 
-<script>
-function agregarFilaVivienda() {
+ <script>
+ function agregarFilaVivienda() {
     const table = document.querySelector("table");
     const row = table.insertRow(-1);
     for (let i = 0; i < 4; i++) {
@@ -135,9 +135,9 @@ function agregarFilaVivienda() {
         cell.appendChild(input);
     }
     calcularViviendas();
-}
+ }
 
-function calcularViviendas() {
+ function calcularViviendas() {
     const table = document.querySelector("table");
     const rows = Array.from(table.rows).slice(1);
     let potenciaTotal = 0;
@@ -161,9 +161,9 @@ function calcularViviendas() {
     let coef = obtenerCoefSimultaneidad(nViviendas);
     const resultado = document.getElementById("totalViviendas");
     if (resultado) resultado.value = (potenciaTotal * coef).toFixed(2);
-}
+ }
 
-function obtenerCoefSimultaneidad(n) {
+ function obtenerCoefSimultaneidad(n) {
     const tabla = {
         1: 1, 2: 3, 3: 3.8, 4: 4.6, 5: 5.4, 6: 6.2, 7: 7, 8: 7.8, 9: 8.5,
         10: 9.2, 11: 9.9, 12: 10.6, 13: 11.3, 14: 11.9, 15: 12.5,
@@ -171,9 +171,9 @@ function obtenerCoefSimultaneidad(n) {
     };
     if (n <= 21) return tabla[n] || 1;
     return 15.3 + (n - 21) * 0.5;
-}
+ }
 
-function agregarFila(idTabla) {
+ function agregarFila(idTabla) {
     const tabla = document.getElementById(idTabla);
     if (!tabla) return;
     const fila = tabla.insertRow(-1);
@@ -186,14 +186,14 @@ function agregarFila(idTabla) {
         input.oninput = calcularTotales;
         celda.appendChild(input);
     }
-}
+ }
 
-function calcularTotales() {
+ function calcularTotales() {
     calcularSeccion('tablaLocales', 'totalLocales');
     calcularSeccion('tablaOficinas', 'totalOficinas');
-}
+ }
 
-function calcularSeccion(tablaId, salidaId) {
+ function calcularSeccion(tablaId, salidaId) {
     const tabla = document.getElementById(tablaId);
     const salida = document.getElementById(salidaId);
     if (!tabla || !salida) return;
@@ -205,28 +205,28 @@ function calcularSeccion(tablaId, salidaId) {
         total += superficie * wpm;
     }
     salida.value = total.toFixed(2);
-}
-</script>
-<script>
-function calcularPotenciaGarajeArea() {
+ }
+ </script>
+ <script>
+ function calcularPotenciaGarajeArea() {
     const m2 = parseFloat(document.getElementById("superficieGaraje").value) || 0;
     const wpm2 = parseFloat(document.getElementById("wPorM2Garaje").value) || 0;
     const total = m2 * wpm2;
     document.getElementById("resultadoGarajeArea").value = total.toFixed(2);
-}
-</script>
-</div>
-<div class="section">
+ }
+ </script>
+ 
+ <div class="section">
     <button onclick="window.print()" style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
         Imprimir plantilla
     </button>
     <button onclick="descargarComoPDF()" style="padding: 10px 20px; font-size: 16px; background-color: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
         Descargar como PDF
     </button>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script>
-function descargarComoPDF() {
+ </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+ <script>
+ function descargarComoPDF() {
     const elemento = document.getElementById("contenedorPDF");
     const opciones = {
         margin: 0.3,
@@ -236,7 +236,8 @@ function descargarComoPDF() {
         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
     };
     html2pdf().set(opciones).from(elemento).save();
-}
+ }
 </script>
 </body>
+</div>
 </html>
