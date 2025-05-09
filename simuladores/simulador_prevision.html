@@ -209,6 +209,14 @@ function calcularPotenciaGarajeArea() {
     document.getElementById("resultadoGarajeArea").value = total.toFixed(2);
 }
 </script>
+<div class="section">
+    <button onclick="window.print()" style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Imprimir plantilla
+    </button>
+    <button onclick="descargarComoPDF()" style="padding: 10px 20px; font-size: 16px; background-color: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+        Descargar como PDF
+    </button>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 function descargarComoPDF() {
