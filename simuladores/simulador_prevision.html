@@ -14,8 +14,11 @@
         .section { margin-top: 30px; }
     </style>
 </head>
+
 <body>
-<h1>PLANTILLA DE CÁLCULO DE CARGAS ELÉCTRICAS - REBT (Guía BT-10)</h1>
+<div id="contenedorPDF">
+
+    <h1>PLANTILLA DE CÁLCULO DE CARGAS ELÉCTRICAS - REBT (Guía BT-10)</h1>
 <div class="section">
 <h2>1. DATOS GENERALES DEL PROYECTO</h2>
 <label>Nombre del proyecto: <input type="text"/></label><br/>
@@ -53,7 +56,7 @@
 <tr><td>Otros (especificar)</td><td><input type="text"/> <input type="text"/></td></tr>
 </table>
 <label><strong>TOTAL servicios generales: <input type="text"/> W</strong></label>
-</div>
+
 <div class="section">
 <h2>4. LOCALES COMERCIALES</h2>
 <table>
@@ -93,7 +96,7 @@
         = 
         <input id="resultadoGarajeArea" placeholder="Resultado W" readonly="" type="text"/>
         W
-      </div>
+    </div>
 <label>Nº de plazas: <input type="number"/></label><br/>
 <label>Potencia estimada por plaza: <input type="number" value="100"/> W</label><br/>
 <label>Total potencia iluminación garajes: <input type="number"/> W</label><br/>
@@ -102,6 +105,7 @@
 <label><input type="checkbox"/> Sin SPL (multiplica 1 a 3680 W)</label><br/>
 <label>Nº de puntos: <input type="number"/> x 3.680 W × (0.3 o 1) = <input type="text"/> W</label><br/>
 <label>Total potencia garajes: <input type="number"/> W</label>
+</div>
 
 <div class="section">
 <h2>7. POTENCIA TOTAL DEL EDIFICIO</h2>
@@ -112,10 +116,12 @@
 <label>Total garajes: <input type="number"/> W</label><br/>
 <strong>POTENCIA TOTAL PREVISTA: <input type="number"/> W</strong>
 </div>
+
 <div class="section">
 <h2>8. INTERRUPTOR GENERAL AUTOMÁTICO (IGA)</h2>
 <label>Seleccionar calibre según potencia total prevista: <input type="number"/> A</label>
 </div>
+
 <script>
 function agregarFilaVivienda() {
     const table = document.querySelector("table");
@@ -209,6 +215,7 @@ function calcularPotenciaGarajeArea() {
     document.getElementById("resultadoGarajeArea").value = total.toFixed(2);
 }
 </script>
+</div>
 <div class="section">
     <button onclick="window.print()" style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
         Imprimir plantilla
@@ -220,7 +227,7 @@ function calcularPotenciaGarajeArea() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 function descargarComoPDF() {
-    const elemento = document.body;
+    const elemento = document.getElementById("contenedorPDF");
     const opciones = {
         margin: 0.3,
         filename: 'simulador_prevision.pdf',
