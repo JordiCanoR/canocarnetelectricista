@@ -6,25 +6,93 @@
   <title>Test Dinámico Oficial</title>
   <link rel="stylesheet" href="../css/style.css" />
   <style>
+    body {
+      background: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #001F3F, #0074D9);
+      color: #fff;
+      text-align: center;
+      padding: 30px 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+      border-bottom: 4px solid #00BFFF;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    #temporizador {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #007bff;
+      margin: 25px 0;
+    }
+
+    .pregunta {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 800px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #007BFF, #00BFFF);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      margin: 20px 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #0056b3, #0088cc);
+      transform: scale(1.08);
+    }
+
     .correcta { background-color: #d4edda !important; }
     .incorrecta { background-color: #f8d7da !important; }
-    .resaltada-correcta {background-color: #d4edda !important; }
+    .resaltada-correcta { background-color: #d4edda !important; }
+
     .mensaje-final {
       animation: zoomIn 0.5s ease-out;
-      margin-top: 10px;
-      padding: 10px;
-      border-radius: 8px;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      text-align: center;
     }
+
     .aprobado {
       background-color: #d4edda;
       color: #155724;
       border: 2px solid #28a745;
     }
+
     .suspendido {
       background-color: #f8d7da;
       color: #721c24;
       border: 2px solid #dc3545;
     }
+
     @keyframes zoomIn {
       from { transform: scale(0.8); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
@@ -32,14 +100,22 @@
   </style>
 </head>
 <body>
-  <h1>Test Dinámico Oficial - 30 Preguntas</h1>
-  <div id="temporizador">Tiempo restante: <span id="tiempo">40:00</span></div>
+
+  <header>
+    <h1>Test Dinámico Oficial - 30 Preguntas</h1>
+  </header>
+
+  <div id="temporizador">⏳ Tiempo restante: <span id="tiempo">40:00</span></div>
+
   <form id="testForm"></form>
-<div>
-  <button id="btnCorregir" type="button">Finalizar y corregir ahora</button>
-  <button id="btnNuevo" type="button">Nuevo test aleatorio</button>
-</div> 
+
+  <div style="text-align: center;">
+    <button id="btnCorregir" type="button">✅ Finalizar y corregir</button>
+    <button id="btnNuevo" type="button">🔄 Nuevo test</button>
+  </div>
+
   <div id="resultado"></div>
+
   <script src="script.js"></script>
 
 </body>
