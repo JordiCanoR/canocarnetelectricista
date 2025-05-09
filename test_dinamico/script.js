@@ -1,3 +1,4 @@
+// test_script_corregido.js
 let tiempo = 40 * 60;
 const tiempoSpan = document.getElementById("tiempo");
 const testForm = document.getElementById("testForm");
@@ -24,9 +25,8 @@ function generarTest() {
         const div = document.createElement("div");
         div.classList.add("pregunta");
         div.innerHTML = `<p><strong>${i + 1}. ${pregunta.pregunta}</strong></p>` +
-            pregunta.opciones.map((op, idx) =>
-            `<label><input type="radio" name="q${i + 1}" value="${op}"> ${op}</label><br>`
-    
+            pregunta.opciones.map(op =>
+                `<label><input type="radio" name="q${i + 1}" value="${op}"> ${op}</label><br>`
             ).join("");
         testForm.appendChild(div);
     });
@@ -35,41 +35,47 @@ function generarTest() {
 function corregirTest() {
     let correctas = 0;
     let detallesFallos = "";
+
     seleccionadas.forEach((pregunta, i) => {
         const opciones = document.getElementsByName("q" + (i + 1));
         let seleccion = null;
+
         opciones.forEach(op => {
             op.closest("label").classList.remove("correcta", "incorrecta", "resaltada-correcta");
             if (op.checked) seleccion = op;
         });
+
+        let respondida = !!seleccion;
         let correctaMostrada = false;
-        let respondida = false;
-        opciones.forEach((op, idx) => {
-            if (op.checked) respondida = true;
-            if (op.value.trim() === pregunta.respuesta.trim().toLowerCase()){               
-                if (seleccion && seleccion.value === op.value) {
+
+        opciones.forEach(op => {
+            let esCorrecta = op.value.trim().toLowerCase() === pregunta.respuesta.trim().toLowerCase();
+
+            if (esCorrecta) {
+                if (seleccion && seleccion.value.trim().toLowerCase() === op.value.trim().toLowerCase()) {
                     correctas++;
                     op.closest("label").classList.add("correcta");
                 } else {
-                    if (!correctaMostrada) {
-                        op.closest("label").classList.add("resaltada-correcta");
-                        correctaMostrada = true;
-                    }
-                    if (seleccion && seleccion.value !== op.value) {
-                        seleccion.closest("label").classList.add("incorrecta");
-                    }
-                    if (!respondida) {
-                        detallesFallos += `<li>Pregunta ${i + 1}: No respondida. Respuesta correcta: <strong>${pregunta.respuesta.toUpperCase()}</strong></li>`;
-                    } else {
-                        detallesFallos += `<li>Pregunta ${i + 1}: Respondida con <strong>${seleccion.value.toUpperCase()}</strong>. Correcta: <strong>${pregunta.respuesta.toUpperCase()}</strong></li>`;
-                    }
+                    op.closest("label").classList.add("resaltada-correcta");
                 }
             }
+
+            if (seleccion && seleccion.value === op.value && !esCorrecta) {
+                seleccion.closest("label").classList.add("incorrecta");
+            }
         });
+
+        if (!respondida) {
+            detallesFallos += `<li>Pregunta ${i + 1}: No respondida. Respuesta correcta: <strong>${pregunta.respuesta}</strong></li>`;
+        } else if (seleccion.value.trim().toLowerCase() !== pregunta.respuesta.trim().toLowerCase()) {
+            detallesFallos += `<li>Pregunta ${i + 1}: Respondida con <strong>${seleccion.value}</strong>. Correcta: <strong>${pregunta.respuesta}</strong></li>`;
+        }
     });
+
     let total = seleccionadas.length;
     let resultado = `Has acertado ${correctas} de ${total} preguntas. Puntuación: ${(correctas / total * 100).toFixed(2)}%<br><br>`;
     let mensajeFinal = "", clase = "";
+
     if ((correctas / total) >= 0.9) {
         mensajeFinal = "✅ ¡Excelente! Has aprobado con nota.";
         clase = "aprobado";
@@ -80,6 +86,7 @@ function corregirTest() {
         mensajeFinal = "❌ Necesitas repasar. ¡Ánimo, la próxima lo consigues!";
         clase = "suspendido";
     }
+
     document.getElementById("resultado").innerHTML =
         resultado +
         `<div class='mensaje-final ${clase}'>${mensajeFinal}</div><br>` +
