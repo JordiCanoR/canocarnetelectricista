@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="container">
-  <h1>Simulador LGA Mejorado</h1>
+  <h1>Simulador LGA Oficial</h1>
   <label>Potencia prevista (W):</label>
   <input type="number" id="potencia" value="148890">
 
@@ -37,7 +37,7 @@
 
   <label>Tipo de instalación:</label>
   <select id="tipo">
-    <option value="pared">Tubo empotrado en pared</option>
+    <option value="empotrado">Tubo empotrado en pared</option>
     <option value="superficie">Montaje superficial</option>
     <option value="canal">Canal protectora</option>
     <option value="obra">Conducto cerrado obra</option>
@@ -52,12 +52,12 @@
   <div class="resultados" id="resultados"></div>
 </div>
 <script>
-const tabla = {
-  pared:   {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
+const tablaCobre = {
+  empotrado: {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
   superficie: {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
-  canal:   {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
-  obra:    {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
-  enterrado:{10:77, 16:100, 25:128, 35:152, 50:184, 70:224, 95:268, 120:304, 150:336, 185:384, 240:440}
+  canal: {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
+  obra: {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
+  enterrado: {10:77, 16:100, 25:128, 35:152, 50:184, 70:224, 95:268, 120:304, 150:336, 185:384, 240:440}
 };
 
 function calcular() {
@@ -70,13 +70,13 @@ function calcular() {
 
   let I = trifasica === 1 ? P / (1.73 * U * cosphi) : P / (U * cosphi);
   let secciones = [10,16,25,35,50,70,95,120,150,185,240];
-  let seccion = secciones.find(s => tabla[tipo][s] >= I) || 240;
+  let seccion = secciones.find(s => tablaCobre[tipo][s] >= I) || 240;
 
   let resultados = document.getElementById("resultados");
   resultados.innerHTML = `
     <div class="resultado">Intensidad calculada: ${I.toFixed(2)} A</div>
     <div class="resultado">Sección comercial elegida: ${seccion} mm²</div>
-    <div class="resultado">Intensidad máxima permitida (${tipo}): ${tabla[tipo][seccion]} A</div>
+    <div class="resultado">Intensidad máxima permitida (${tipo}): ${tablaCobre[tipo][seccion]} A</div>
   `;
 }
 </script>
