@@ -89,9 +89,9 @@
     <label>Sección teórica (mm²): <input type="text" id="seccion" readonly></label>
     <label>Sección comercial elegida (mm²): <input type="text" id="seccionComercial" readonly></label>
     <label>Intensidad máxima permitida (A): <input type="text" id="imax" readonly></label>
-    <label>Sección neutro (70%): <input type="text" id="neutro" readonly></label>
-    <label>Diámetro tubo (mm): <input type="text" id="tubo" readonly></label>
-    <label>Fusible recomendado (A): <input type="text" id="fusible" readonly></label>
+    <label>Sección neutro oficial: <input type="text" id="neutro" readonly></label>
+    <label>Diámetro tubo oficial (mm): <input type="text" id="tubo" readonly></label>
+    <label>Fusible recomendado oficial (A): <input type="text" id="fusible" readonly></label>
     <label>Conductores: <input type="text" id="conductores" readonly></label>
 
     <button type="button" onclick="calcular()">Calcular</button>
@@ -99,6 +99,20 @@
 </form>
 
 <script>
+const tablaDatos = [
+    { fase: 10, neutro: 10, tubo: 75, fusible: 63 },
+    { fase: 16, neutro: 16, tubo: 75, fusible: 80 },
+    { fase: 25, neutro: 16, tubo: 110, fusible: 100 },
+    { fase: 35, neutro: 16, tubo: 110, fusible: 125 },
+    { fase: 50, neutro: 25, tubo: 125, fusible: 160 },
+    { fase: 70, neutro: 35, tubo: 140, fusible: 200 },
+    { fase: 95, neutro: 50, tubo: 140, fusible: 250 },
+    { fase: 120, neutro: 70, tubo: 160, fusible: 315 },
+    { fase: 150, neutro: 70, tubo: 160, fusible: 315 },
+    { fase: 185, neutro: 95, tubo: 180, fusible: 400 },
+    { fase: 240, neutro: 120, tubo: 200, fusible: 500 }
+];
+
 const tablaCobre = {
     empotrado: {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:313, 185:356, 240:419},
     superficie: {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:313, 185:356, 240:419},
@@ -122,17 +136,18 @@ function calcular() {
     let I = trifasica ? P / (1.73 * U * cosphi) : P / (U * cosphi);
     let S = trifasica ? (L * P) / (gamma * e * U) : (2 * L * P) / (gamma * e * U);
 
-    let secciones = [10,16,25,35,50,70,95,120,150,185,240];
+    let secciones = tablaDatos.map(d => d.fase);
     let seccion = secciones.find(s => tablaCobre[tipo][s] >= I) || 240;
+    let datos = tablaDatos.find(d => d.fase === seccion);
 
     document.getElementById('caida').value = e.toFixed(2);
     document.getElementById('intensidad').value = I.toFixed(2);
     document.getElementById('seccion').value = S.toFixed(2) + " mm²";
     document.getElementById('seccionComercial').value = seccion + " mm²";
     document.getElementById('imax').value = tablaCobre[tipo][seccion] + " A";
-    document.getElementById('neutro').value = Math.floor(seccion * 0.7) + " mm²";
-    document.getElementById('tubo').value = (seccion <= 35 ? 40 : (seccion <= 70 ? 50 : (seccion <= 120 ? 63 : 75))) + " mm";
-    document.getElementById('fusible').value = Math.ceil(I / 10) * 10 + " A";
+    document.getElementById('neutro').value = datos.neutro + " mm²";
+    document.getElementById('tubo').value = datos.tubo + " mm";
+    document.getElementById('fusible').value = datos.fusible + " A";
     document.getElementById('conductores').value = "3 fases + 1 neutro";
 }
 </script>
