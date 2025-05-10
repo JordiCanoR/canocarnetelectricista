@@ -16,10 +16,19 @@ function temporizador() {
         tiempo--;
     }, 1000);
 }
-
 function generarTest() {
     testForm.innerHTML = "";
-    seleccionadas = preguntas.sort(() => 0.5 - Math.random()).slice(0, 30);
+
+    // Copia y baraja usando Fisher-Yates
+    let copiaPreguntas = [...preguntas];
+    for (let i = copiaPreguntas.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copiaPreguntas[i], copiaPreguntas[j]] = [copiaPreguntas[j], copiaPreguntas[i]];
+    }
+
+    // Selecciona las primeras 30
+    seleccionadas = copiaPreguntas.slice(0, 30);
+
     seleccionadas.forEach((pregunta, i) => {
         const div = document.createElement("div");
         div.classList.add("pregunta");
@@ -30,6 +39,7 @@ function generarTest() {
         testForm.appendChild(div);
     });
 }
+
 
 function normalizar(texto) {
     return texto
