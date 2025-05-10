@@ -404,5 +404,135 @@
              "En los dispositivos generales de mando y protección"  
         ],  
         "respuesta": " En los dispositivos generales de mando y protección"
+    },
+    {
+        "pregunta": "¿Qué tipo de aislamiento deben tener los conductores en locales húmedos? (ITC-BT 26)",
+        "opciones": ["PVC", "Polietileno reticulado", "Caucho o equivalente"],
+        "respuesta": "Caucho o equivalente"
+    },
+    {
+        "pregunta": "¿Cuál es la resistencia máxima permitida para una toma de tierra en instalaciones de BT? (ITC-BT 18)",
+        "opciones": ["10 Ω", "5 Ω", "2 Ω"],
+        "respuesta": "5 Ω"
+    },
+    {
+        "pregunta": "¿Qué sección mínima debe tener el conductor de tierra principal de un edificio? (ITC-BT 18)",
+        "opciones": ["10 mm²", "16 mm²", "25 mm²"],
+        "respuesta": "16 mm²"
+    },
+    {
+        "pregunta": "¿Qué tipo de protección contra incendios debe tener un cuadro eléctrico en zonas comunes? (ITC-BT 17)",
+        "opciones": ["IP44", "IP65", "Material no propagador de la llama"],
+        "respuesta": "Material no propagador de la llama"
+    },
+    {
+        "pregunta": "¿Qué ITC regula las instalaciones en locales de pública concurrencia?",
+        "opciones": ["ITC-BT 28", "ITC-BT 30", "ITC-BT 32"],
+        "respuesta": "ITC-BT 28"
+    },
+    {
+        "pregunta": "¿Cuál es la profundidad mínima de enterramiento de cables en terrenos no transitados? (ITC-BT 07)",
+        "opciones": ["30 cm", "50 cm", "60 cm"],
+        "respuesta": "50 cm"
+    },
+    {
+        "pregunta": "¿Qué norma específica los colores de los conductores? (ITC-BT 19)",
+        "opciones": ["UNE 21123", "UNE 20460-5-51", "UNE 60670"],
+        "respuesta": "UNE 20460-5-51"
+    },
+    {
+        "pregunta": "¿Qué dispositivo se recomienda para proteger líneas de alumbrado exterior? (ITC-BT 09)",
+        "opciones": ["Magnetotérmico", "Interruptor diferencial", "Protección contra sobretensiones"],
+        "respuesta": "Protección contra sobretensiones"
+    },
+    {
+        "pregunta": "¿Qué intensidad nominal debe soportar una base de enchufe doméstica estándar? (ITC-BT 25)",
+        "opciones": ["10 A", "16 A", "20 A"],
+        "respuesta": "16 A"
+    },
+    {
+        "pregunta": "¿Qué clase de protección IP se exige para cajas en exteriores? (ITC-BT 07)",
+        "opciones": ["IP21", "IP44", "IP67"],
+        "respuesta": "IP44"
+    },
+    {
+        "pregunta": "¿Qué instalación debe llevar sistema de corte omnipolar? (ITC-BT 17)",
+        "opciones": ["Cualquier circuito interior", "Solo circuitos trifásicos", "Solo alumbrado exterior"],
+        "respuesta": "Cualquier circuito interior"
+    },
+    {
+        "pregunta": "¿Qué requisito debe cumplir una canalización empotrada en hormigón? (ITC-BT 21)",
+        "opciones": ["Ser de tubo corrugado", "Ser de tubo rígido y continuo", "No se permite canalización empotrada"],
+        "respuesta": "Ser de tubo rígido y continuo"
+    },
+    {
+        "pregunta": "¿Qué dispositivos son obligatorios en instalaciones con riesgo de incendio? (ITC-BT 29)",
+        "opciones": ["Detector de humo", "Interruptores automáticos", "Disyuntores diferenciales"],
+        "respuesta": "Disyuntores diferenciales"
+    },
+    {
+        "pregunta": "¿Qué sección mínima debe tener el conductor de protección en instalaciones de viviendas? (ITC-BT 19)",
+        "opciones": ["1,5 mm²", "2,5 mm²", "4 mm²"],
+        "respuesta": "2,5 mm²"
+    },
+    {
+        "pregunta": "¿Qué cable se usa normalmente para acometidas subterráneas de BT? (ITC-BT 14)",
+        "opciones": ["RV-K", "H05VV-F", "H07V-K"],
+        "respuesta": "RV-K"
+    },
+    {
+        "pregunta": "¿Qué distancia mínima debe existir entre líneas eléctricas y canalizaciones de gas? (ITC-BT 21)",
+        "opciones": ["5 cm", "10 cm", "15 cm"],
+        "respuesta": "15 cm"
+    },
+    {
+        "pregunta": "¿Qué normativa establece las condiciones técnicas de seguridad en locales de piscinas? (ITC-BT 31)",
+        "opciones": ["ITC-BT 28", "ITC-BT 31", "ITC-BT 37"],
+        "respuesta": "ITC-BT 31"
+    },
+    {
+        "pregunta": "¿Qué valor de corriente se considera como umbral de fibrilación ventricular? (PRL)",
+        "opciones": ["30 mA", "50 mA", "100 mA"],
+        "respuesta": "50 mA"
+    },
+    {
+        "pregunta": "¿Qué requisito de instalación existe para tubos enterrados en vías públicas? (ITC-BT 07)",
+        "opciones": ["Uso de tubo corrugado", "Hormigonado obligatorio", "Protección con cinta de advertencia"],
+        "respuesta": "Hormigonado obligatorio"
+    },
+    {
+        "pregunta": "¿Qué medida de seguridad eléctrica exige el RD 614/2001?",
+        "opciones": ["Señalización permanente", "Uso exclusivo de guantes dieléctricos", "Solo inspección anual"],
+        "respuesta": "Señalización permanente"
+    },
+    {
+        "pregunta": "¿Qué intensidad máxima permite la ITC-BT para un cable de 70 mm² enterrado? (ITC-BT 20)",
+        "opciones": ["150 A", "170 A", "200 A"],
+        "respuesta": "170 A"
+    },
+    {
+        "pregunta": "¿Cuál es el grado mínimo de protección IP exigido para cuadros eléctricos en garajes? (ITC-BT 28)",
+        "opciones": ["IP20", "IP44", "IP65"],
+        "respuesta": "IP44"
+    },
+    {
+        "pregunta": "¿Qué componente no debe faltar en un cuadro eléctrico doméstico? (ITC-BT 25)",
+        "opciones": ["Interruptor diferencial", "Transformador", "Rectificador"],
+        "respuesta": "Interruptor diferencial"
+    },
+    {
+        "pregunta": "¿Qué elementos deben incluir las instalaciones en quirófanos? (ITC-BT 38)",
+        "opciones": ["Sistema IT médico", "Solo diferencial", "Solo magnetotérmico"],
+        "respuesta": "Sistema IT médico"
+    },
+    {
+        "pregunta": "¿Qué tipo de sistema de puesta a tierra es obligatorio en viviendas? (ITC-BT 08)",
+        "opciones": ["TN-S", "IT", "TT"],
+        "respuesta": "TT"
+    },
+    {
+        "pregunta": "¿Qué IP mínimo deben tener las luminarias instaladas en exteriores? (ITC-BT 09)",
+        "opciones": ["IP21", "IP44", "IP65"],
+        "respuesta": "IP65"
     }
-]   
+  ] 
