@@ -2,66 +2,114 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Simulación LGA Mejorada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador LGA Mejorado</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        input[type=text], input[type=number] {
-            width: 200px;
-            padding: 5px;
-            margin: 4px;
+        /* ===== ESTILO MEJORADO PARA SIMULADOR LGA ===== */
+
+        .sim-card {
+            background: #ffffffee;
+            border: 2px solid #007bff;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
         }
-        label {
-            display: inline-block;
-            width: 400px;
-        }
-        .form-section {
+
+        .sim-card h2 {
+            text-align: center;
+            color: #007bff;
+            font-weight: bold;
             margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #004080;
+        }
+
+        .sim-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .sim-table th, .sim-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .sim-table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .sim-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        #formLGA button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #formLGA button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 600px) {
+            .sim-card {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .sim-table th, .sim-table td {
+                padding: 8px;
+            }
+
+            #formLGA button {
+                width: 100%;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>Simulador LGA - Mejorado</h1>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="simulador_lga.html">Simulación LGA</a></li>
-            <li><a href="simulador_di.html">Simulación Derivación Individual</a></li>
-            <li><a href="simulador_prevision.html">Simulación Previsión Cargas</a></li>
-            <li><a href="../test/index.html">Test</a></li>
-            <li><a href="../plantillas/index.html">Plantillas</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <h2>Ejercicio Real LGA + Sección Comercial</h2>
+    <h1 style="text-align:center; color:#007bff;">Simulador LGA - Mejorado</h1>
     <form id="formLGA">
-        <div class="form-section">
-            <label>Potencia prevista (W):</label><input type="number" id="potencia" value="148890"><br>
-            <label>Tensión (V):</label><input type="number" id="tension" value="400"><br>
-            <label>cos(phi):</label><input type="number" step="any" id="cosphi" value="0.9"><br>
-            <label>Longitud de la LGA (m):</label><input type="number" id="longitud" value="23"><br>
-            <label>Temperatura ambiente (°C):</label><input type="number" id="temperatura" value="40"><br>
-            <label>Conductividad (γ, m/Ohm·mm²):</label><input type="number" step="any" id="gamma" value="44"><br>
-            <label>¿Trifásica? (1 = sí, 0 = no):</label><input type="number" id="trifasica" value="1"><br>
-            <label>¿Centralización parcial? (1 = sí, 0 = no):</label><input type="number" id="centralizado" value="1"><br>
+        <div class="sim-card">
+            <h2>Datos de Entrada</h2>
+            <label>Potencia prevista (W): <input type="number" id="potencia" value="148890"></label><br>
+            <label>Tensión (V): <input type="number" id="tension" value="400"></label><br>
+            <label>cos(phi): <input type="number" step="any" id="cosphi" value="0.9"></label><br>
+            <label>Longitud LGA (m): <input type="number" id="longitud" value="23"></label><br>
+            <label>Conductividad (γ, m/Ohm·mm²): <input type="number" step="any" id="gamma" value="44"></label><br>
+            <label>¿Trifásica? (1 = sí, 0 = no): <input type="number" id="trifasica" value="1"></label><br>
+            <label>¿Centralización parcial? (1 = sí, 0 = no): <input type="number" id="centralizado" value="1"></label><br>
         </div>
 
-        <div class="form-section">
-            <h3>Resultados</h3>
-            <label>Caída máxima permitida (V):</label><input type="text" id="caida" readonly><br>
-            <label>Intensidad (A):</label><input type="text" id="intensidad" readonly><br>
-            <label>Sección (mm²):</label><input type="text" id="seccion" readonly><br>
-            <label>Sección conductor neutro (70% regla):</label><input type="text" id="neutro" readonly><br>
-            <label>Diámetro tubo (aprox.):</label><input type="text" id="tubo" readonly><br>
-            <label>Fusible recomendado CGP (A):</label><input type="text" id="fusible" readonly><br>
-            <label>Conductores a usar:</label><input type="text" id="conductores" readonly><br>
-            <label>Sección comercial elegida (mm²):</label><input type="text" id="seccionComercial" readonly><br>
-            <label>Intensidad máxima permitida (A):</label><input type="text" id="intensidadMax" readonly><br>
+        <div class="sim-card">
+            <h2>Resultados</h2>
+            <table class="sim-table">
+                <tr><th>Concepto</th><th>Valor</th></tr>
+                <tr><td>Caída máxima permitida (V)</td><td id="caida"></td></tr>
+                <tr><td>Intensidad (A)</td><td id="intensidad"></td></tr>
+                <tr><td>Sección (mm²)</td><td id="seccion"></td></tr>
+                <tr><td>Sección conductor neutro</td><td id="neutro"></td></tr>
+                <tr><td>Diámetro tubo</td><td id="tubo"></td></tr>
+                <tr><td>Fusible recomendado CGP</td><td id="fusible"></td></tr>
+                <tr><td>Conductores a usar</td><td id="conductores"></td></tr>
+                <tr><td>Sección comercial elegida</td><td id="seccionComercial"></td></tr>
+                <tr><td>Intensidad máxima permitida</td><td id="intensidadMax"></td></tr>
+            </table>
         </div>
-
         <button type="button" onclick="calcular()">Calcular</button>
     </form>
 
@@ -80,38 +128,23 @@
             let I = trifasica === 1 ? P / (1.73 * U * cosphi) : P / (U * cosphi);
             let S = trifasica === 1 ? (L * P) / (gamma * e * U) : (2 * L * P) / (gamma * e * U);
 
-            const tablaSecciones = [
-                { seccion: 16, intensidad: 76 },
-                { seccion: 25, intensidad: 101 },
-                { seccion: 35, intensidad: 125 },
-                { seccion: 50, intensidad: 152 },
-                { seccion: 70, intensidad: 192 },
-                { seccion: 95, intensidad: 232 },
-                { seccion: 120, intensidad: 269 },
-                { seccion: 150, intensidad: 309 },
-                { seccion: 185, intensidad: 353 },
-                { seccion: 240, intensidad: 415 }
-            ];
-
-            let seccionElegida = tablaSecciones.find(s => s.seccion >= S) || tablaSecciones[tablaSecciones.length - 1];
-            let seccionComercial = seccionElegida.seccion;
-            let intensidadMax = seccionElegida.intensidad;
+            let seccionComercial = S <= 25 ? 25 : (S <= 35 ? 35 : (S <= 50 ? 50 : (S <= 70 ? 70 : 95)));
+            let intensidades = { 25: 116, 35: 136, 50: 152, 70: 192, 95: 232 };
+            let intensidadMax = intensidades[seccionComercial];
 
             let fusible = Math.ceil(I / 10) * 10;
             let diametroTubo = seccionComercial <= 35 ? "40 mm" : "50 mm";
 
-            document.getElementById('caida').value = e.toFixed(2);
-            document.getElementById('intensidad').value = I.toFixed(2);
-            document.getElementById('seccion').value = seccionComercial + " mm²";
-            document.getElementById('neutro').value = Math.floor(seccionComercial * 0.7) + " mm²";
-            document.getElementById('tubo').value = diametroTubo;
-            document.getElementById('fusible').value = fusible + " A";
-            document.getElementById('conductores').value = "3 fases + 1 neutro";
-            document.getElementById('seccionComercial').value = seccionComercial + " mm²";
-            document.getElementById('intensidadMax').value = intensidadMax + " A";
+            document.getElementById('caida').innerText = e.toFixed(2);
+            document.getElementById('intensidad').innerText = I.toFixed(2);
+            document.getElementById('seccion').innerText = S.toFixed(0) + " mm²";
+            document.getElementById('neutro').innerText = Math.floor(seccionComercial * 0.7) + " mm²";
+            document.getElementById('tubo').innerText = diametroTubo;
+            document.getElementById('fusible').innerText = fusible + " A";
+            document.getElementById('conductores').innerText = "3 fases + 1 neutro";
+            document.getElementById('seccionComercial').innerText = seccionComercial + " mm²";
+            document.getElementById('intensidadMax').innerText = intensidadMax + " A";
         }
     </script>
-</main>
 </body>
 </html>
-
