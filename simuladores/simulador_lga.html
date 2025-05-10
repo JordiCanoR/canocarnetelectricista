@@ -1,120 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Simulador LGA Definitivo</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f9;
-            color: #333;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            text-align: center;
-            color: #004080;
-        }
-        form {
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input[type=text], input[type=number] {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador LGA Mejorado</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; }
+    .container { max-width: 800px; margin: 20px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #007bff; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
+    button { margin-top: 15px; width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+    .resultados { margin-top: 20px; }
+    .resultado { background: #e9ecef; padding: 10px; border-radius: 5px; margin-bottom: 10px; }
+  </style>
 </head>
 <body>
-<h1>Simulador Línea General de Alimentación (LGA)</h1>
-<form id="formLGA">
-    <h3>Datos de entrada</h3>
-    <label>Potencia prevista (W): <input type="number" id="potencia" value="148890"></label>
-    <label>Tensión (V): <input type="number" id="tension" value="400"></label>
-    <label>Cos(phi): <input type="number" step="any" id="cosphi" value="0.9"></label>
-    <label>Longitud LGA (m): <input type="number" id="longitud" value="23"></label>
-    <label>Temperatura ambiente (°C): <input type="number" id="temperatura" value="40"></label>
-    <label>Conductividad (γ, m/Ohm·mm²): <input type="number" step="any" id="gamma" value="44"></label>
-    <label>¿Trifásica? (1 = sí, 0 = no): <input type="number" id="trifasica" value="1"></label>
-    <label>¿Centralización parcial? (1 = sí, 0 = no): <input type="number" id="centralizado" value="1"></label>
+<div class="container">
+  <h1>Simulador LGA Mejorado</h1>
+  <label>Potencia prevista (W):</label>
+  <input type="number" id="potencia" value="148890">
 
-    <h3>Resultados</h3>
-    <label>Caída máxima permitida (V): <input type="text" id="caida" readonly></label>
-    <label>Intensidad (A): <input type="text" id="intensidad" readonly></label>
-    <label>Sección teórica (mm²): <input type="text" id="seccion" readonly></label>
-    <label>Sección comercial elegida (mm²): <input type="text" id="seccionComercial" readonly></label>
-    <label>Intensidad máxima permitida (A): <input type="text" id="imax" readonly></label>
-    <label>Sección neutro (70%): <input type="text" id="neutro" readonly></label>
-    <label>Diámetro tubo (mm): <input type="text" id="tubo" readonly></label>
-    <label>Fusible recomendado (A): <input type="text" id="fusible" readonly></label>
-    <label>Conductores: <input type="text" id="conductores" readonly></label>
+  <label>Tensión (V):</label>
+  <input type="number" id="tension" value="400">
 
-    <button type="button" onclick="calcular()">Calcular</button>
-</form>
+  <label>cos(phi):</label>
+  <input type="number" step="any" id="cosphi" value="0.9">
 
+  <label>Longitud de la LGA (m):</label>
+  <input type="number" id="longitud" value="23">
+
+  <label>Temperatura ambiente (°C):</label>
+  <input type="number" id="temperatura" value="40">
+
+  <label>Tipo de instalación:</label>
+  <select id="tipo">
+    <option value="pared">Tubo empotrado en pared</option>
+    <option value="superficie">Montaje superficial</option>
+    <option value="canal">Canal protectora</option>
+    <option value="obra">Conducto cerrado obra</option>
+    <option value="enterrado">Tubo enterrado</option>
+  </select>
+
+  <label>¿Trifásica? (1=sí, 0=no):</label>
+  <input type="number" id="trifasica" value="1">
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div class="resultados" id="resultados"></div>
+</div>
 <script>
+const tabla = {
+  pared:   {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
+  superficie: {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
+  canal:   {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
+  obra:    {10:57, 16:77, 25:100, 35:124, 50:151, 70:193, 95:234, 120:272, 150:312, 185:356, 240:419},
+  enterrado:{10:77, 16:100, 25:128, 35:152, 50:184, 70:224, 95:268, 120:304, 150:336, 185:384, 240:440}
+};
+
 function calcular() {
-    const tablaSecciones = [
-        { seccion: 10, intensidad: 57, tubo: 75 },
-        { seccion: 16, intensidad: 77, tubo: 75 },
-        { seccion: 25, intensidad: 100, tubo: 110 },
-        { seccion: 35, intensidad: 125, tubo: 110 },
-        { seccion: 50, intensidad: 152, tubo: 125 },
-        { seccion: 70, intensidad: 193, tubo: 140 },
-        { seccion: 95, intensidad: 232, tubo: 140 },
-        { seccion: 120, intensidad: 269, tubo: 160 },
-        { seccion: 150, intensidad: 304, tubo: 160 },
-        { seccion: 185, intensidad: 351, tubo: 180 },
-        { seccion: 240, intensidad: 414, tubo: 200 },
-    ];
+  const P = parseFloat(document.getElementById('potencia').value);
+  const U = parseFloat(document.getElementById('tension').value);
+  const cosphi = parseFloat(document.getElementById('cosphi').value);
+  const L = parseFloat(document.getElementById('longitud').value);
+  const tipo = document.getElementById('tipo').value;
+  const trifasica = parseInt(document.getElementById('trifasica').value);
 
-    const P = parseFloat(document.getElementById('potencia').value);
-    const U = parseFloat(document.getElementById('tension').value);
-    const cosphi = parseFloat(document.getElementById('cosphi').value);
-    const L = parseFloat(document.getElementById('longitud').value);
-    const gamma = parseFloat(document.getElementById('gamma').value);
-    const trifasica = parseInt(document.getElementById('trifasica').value);
-    const centralizado = parseInt(document.getElementById('centralizado').value);
+  let I = trifasica === 1 ? P / (1.73 * U * cosphi) : P / (U * cosphi);
+  let secciones = [10,16,25,35,50,70,95,120,150,185,240];
+  let seccion = secciones.find(s => tabla[tipo][s] >= I) || 240;
 
-    let e_pct = centralizado === 1 ? 1 : 0.5;
-    let e = (e_pct / 100) * U;
-    let I = trifasica ? P / (1.73 * U * cosphi) : P / (U * cosphi);
-    let S = trifasica ? (L * P) / (gamma * e * U) : (2 * L * P) / (gamma * e * U);
-
-    let seccionComercial = tablaSecciones.find(s => s.intensidad >= I);
-    if (!seccionComercial) seccionComercial = tablaSecciones[tablaSecciones.length -1];
-
-    document.getElementById('caida').value = e.toFixed(2);
-    document.getElementById('intensidad').value = I.toFixed(2);
-    document.getElementById('seccion').value = S.toFixed(2) + " mm²";
-    document.getElementById('seccionComercial').value = seccionComercial.seccion + " mm²";
-    document.getElementById('imax').value = seccionComercial.intensidad + " A";
-    document.getElementById('neutro').value = Math.floor(seccionComercial.seccion * 0.7) + " mm²";
-    document.getElementById('tubo').value = seccionComercial.tubo + " mm";
-    document.getElementById('fusible').value = Math.ceil(I / 10) * 10 + " A";
-    document.getElementById('conductores').value = "3 fases + 1 neutro";
+  let resultados = document.getElementById("resultados");
+  resultados.innerHTML = `
+    <div class="resultado">Intensidad calculada: ${I.toFixed(2)} A</div>
+    <div class="resultado">Sección comercial elegida: ${seccion} mm²</div>
+    <div class="resultado">Intensidad máxima permitida (${tipo}): ${tabla[tipo][seccion]} A</div>
+  `;
 }
 </script>
 </body>
