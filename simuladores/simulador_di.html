@@ -90,21 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     table td, table th { border: 1px solid #555; padding: 8px; text-align: center; }
     table th { background-color: #4fc3f7; color: #1e1e2f; }
 </style>
-    header { background-color: #2a2a40; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
-    header h1 { color: #4fc3f7; margin: 0; font-size: 24px; font-weight: 600; }
-
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e1e2f; color: #f0f0f0; padding: 20px; }
-    h2, h3 { text-align: center; color: #4fc3f7; }
-    .container { max-width: 800px; margin: auto; background-color: #2a2a40; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
-    label { display: block; margin-top: 10px; }
-    input { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #555; background-color: #1e1e2f; color: #f0f0f0; }
-    button { padding: 10px 20px; margin: 15px 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
-    button.primary { background-color: #4fc3f7; color: #1e1e2f; }
-    button.secondary { background-color: #555; color: #fff; }
-    button:hover { opacity: 0.9; }
-    table { width: 100%; border-collapse: collapse; background-color: #2a2a40; margin-top: 20px; }
-    table td, table th { border: 1px solid #555; padding: 8px; text-align: center; }
-    table th { background-color: #4fc3f7; color: #1e1e2f; }
 </style>
 <div class='container'>
 <h2>Simulador Derivación Individual</h2>
@@ -168,25 +153,6 @@ function calcular() {
 
     datos.tipoCable = document.getElementById('tipoCable').value;
     const res = calcularDerivacionIndividual(datos);
-    document.getElementById('resultado').innerHTML = `
-        <h3>Informe de Cálculo</h3>
-        <table border='1' cellpadding='5'>
-            <tr><td><b>Potencia</b></td><td>${datos.potencia} kW</td></tr>
-            <tr><td><b>Tensión</b></td><td>${datos.tension} V</td></tr>
-            <tr><td><b>Cosφ</b></td><td>${datos.cosphi}</td></tr>
-            <tr><td><b>Intensidad calculada</b></td><td>${res.intensidadCalculada} A</td></tr>
-            <tr><td><b>Intensidad admisible corregida</b></td><td>${res.intensidadAdmisibleCorregida} A</td></tr>
-            <tr><td><b>Sección</b></td><td>${res.seccion} mm²</td></tr>
-            <tr><td><b>Temperatura</b></td><td>${res.temperatura} °C</td></tr>
-            <tr><td><b>Nº Circuitos</b></td><td>${res.numeroCircuitos}</td></tr>
-            <tr><td><b>Instalación</b></td><td>${datos.tipoInstalacion}</td></tr>
-            <tr><td><b>Material</b></td><td>${datos.material}</td></tr>
-            <tr><td><b>Centralización</b></td><td>${res.centralizacion}</td></tr>
-            <tr><td><b>Longitud línea</b></td><td>${res.longitud} m</td></tr>
-            <tr><td><b>Caída tensión real</b></td><td>${res.caidaReal} V</td></tr>
-            <tr><td><b>Caída máxima admisible</b></td><td>${res.caidaMaxAdmisible} V</td></tr>
-<tr><td><b>Sección mínima normativa</b></td><td>${res.seccionMinimaNormativa ?? 'No encontrada'} mm²</td></tr>
-            <tr><td><b>Cumple intensidad</b></td><td>${res.cumpleIntensidad ? 'Sí' : 'No'}</td></tr>
-            <tr><td><b>Cumple caída de tensión</b></td><td>${res.cumpleCaida ? 'Sí' : 'No'}</td></tr>
-        </table>`;
+    document.getElementById('resultado').innerHTML = `$1`;
+    alert("✅ Cálculo realizado con éxito.");
 }
