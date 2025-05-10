@@ -71,30 +71,26 @@ function calcularDerivacionIndividual({potencia, tension, tipoSuministro, cosphi
 // ➡️ FORMULARIO HTML EN PÁGINA
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = `<style>
+    document.body.innerHTML = `
+<header><h1>Simulador Profesional de Derivación Individual REBT</h1></header>
+<style>
+    header { background-color: #2a2a40; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+    header h1 { color: #4fc3f7; margin: 0; font-size: 24px; font-weight: 600; }
+
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e1e2f; color: #f0f0f0; padding: 20px; }
     h2, h3 { text-align: center; color: #4fc3f7; }
-    input { width: 100%; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #555; background-color: #2a2a40; color: #f0f0f0; }
-    button { padding: 10px 20px; margin: 10px 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    .container { max-width: 800px; margin: auto; background-color: #2a2a40; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+    label { display: block; margin-top: 10px; }
+    input { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #555; background-color: #1e1e2f; color: #f0f0f0; }
+    button { padding: 10px 20px; margin: 15px 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
     button.primary { background-color: #4fc3f7; color: #1e1e2f; }
     button.secondary { background-color: #555; color: #fff; }
     button:hover { opacity: 0.9; }
-    table { width: 100%; border-collapse: collapse; background-color: #2a2a40; }
+    table { width: 100%; border-collapse: collapse; background-color: #2a2a40; margin-top: 20px; }
     table td, table th { border: 1px solid #555; padding: 8px; text-align: center; }
     table th { background-color: #4fc3f7; color: #1e1e2f; }
 </style>
-<style>
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e1e2f; color: #f0f0f0; padding: 20px; }
-    h2, h3 { text-align: center; color: #4fc3f7; }
-    input { width: 100%; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #555; background-color: #2a2a40; color: #f0f0f0; }
-    button { padding: 10px 20px; margin: 10px 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
-    button:first-of-type { background-color: #4fc3f7; color: #1e1e2f; }
-    button:last-of-type { background-color: #555; color: #fff; }
-    button:hover { opacity: 0.9; }
-    table { width: 100%; border-collapse: collapse; background-color: #2a2a40; }
-    table td, table th { border: 1px solid #555; padding: 8px; text-align: center; }
-    table th { background-color: #4fc3f7; color: #1e1e2f; }
-</style>
+<div class='container'>
 <h2>Simulador Derivación Individual</h2>
         <input placeholder='Potencia kW' id='potencia'><br>
         <input placeholder='Tensión V' id='tension'><br>
