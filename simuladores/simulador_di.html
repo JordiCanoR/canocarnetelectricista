@@ -97,7 +97,10 @@
   </select>
 
   <label>Temperatura ambiente prevista (°C)</label>
-  <input type="number" id="temperatura">
+<input type="number" id="temperatura">
+
+<label>Coseno de phi</label>
+<input type="number" step="0.01" id="cosphi" value="0.95">
 
     <label>Sección seleccionada (mm²)</label>
   <input type="number" id="seccion">
@@ -148,8 +151,10 @@ const caida = caidaPorcentaje / 100 * U;
   const seccion = parseFloat(document.getElementById('seccion').value);
   const material = document.getElementById('material_conductor').value;
   const tipoCable = document.getElementById('tipo_cable').value;
-  let cosphi = 0.95;
-  let I = (tipo === 'mono') ? (P / (U * cosphi)) : (P / (1.73 * U * cosphi));
+  let cosphi = parseFloat(document.getElementById('cosphi').value) || 0.95;
+  let potenciaInput = parseFloat(document.getElementById('potencia').value);
+let P = (potenciaInput > 1000) ? potenciaInput : potenciaInput * 1000;
+let I = (tipo === 'mono') ? (P / (U * cosphi)) : (P / (1.73 * U * cosphi));
   let gamma = 56;
   let Scalc = (tipo === 'mono') ? ((2 * L * P) / (gamma * caida * U)) : ((L * P) / (gamma * caida * U));
 
