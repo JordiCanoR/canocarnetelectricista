@@ -173,6 +173,20 @@ function calcular() {
 
     document.getElementById('conductores').value = "3 fases + 1 neutro";
 }
+// NUEVA FUNCIÓN: también restablece valores de entrada
+document.getElementById('formLGA').addEventListener('reset', () => {
+    setTimeout(() => {  // Se retrasa para que actúe después del reset del navegador
+        document.getElementById('potencia').value = 148890;
+        document.getElementById('tension').value = 400;
+        document.getElementById('cosphi').value = 0.9;
+        document.getElementById('longitud').value = 23;
+        document.getElementById('temperatura').value = 40;
+        document.getElementById('gamma').value = 44;
+        document.getElementById('tipo').value = "empotrado";
+        document.getElementById('trifasica').value = 1;
+        document.getElementById('centralizado').value = 1;
+    }, 0);
+});
 </script>
 </body>
 </html>
