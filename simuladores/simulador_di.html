@@ -98,8 +98,19 @@
   <label>Sección seleccionada (mm²)</label>
   <input type="number" id="seccion">
 
+  <label>Material del conductor</label>
+  <select id="material_conductor">
+    <option value="cobre">Cobre</option>
+    <option value="aluminio">Aluminio</option>
+  </select>
+
   <label>Tipo de cable</label>
-  <input type="text" id="cable">
+  <select id="tipo_cable">
+    <option value="3PVC">3x PVC</option>
+    <option value="2PVC">2x PVC</option>
+    <option value="3XLPE">3x XLPE</option>
+    <option value="2XLPE">2x XLPE</option>
+  </select>
 
   <button onclick="calcular()">Calcular</button>
   <button onclick="reiniciar()">Reiniciar</button>
@@ -107,14 +118,21 @@
   <div class="results" id="resultados"></div>
 </div>
 <script>
-const tablaIntensidades = {
-  "A1": {1.5: 14, 2.5: 20, 4: 25, 6: 32, 10: 45, 16: 60, 25: 80, 35: 100, 50: 125, 70: 160, 95: 200, 120: 230, 150: 260, 185: 300, 240: 340},
-  "A2": {1.5: 17, 2.5: 25, 4: 32, 6: 40, 10: 55, 16: 75, 25: 100, 35: 125, 50: 150, 70: 195, 95: 230, 120: 265, 150: 300, 185: 340, 240: 400},
-  "B1": {1.5: 17, 2.5: 25, 4: 32, 6: 40, 10: 55, 16: 75, 25: 100, 35: 125, 50: 150, 70: 195, 95: 230, 120: 265, 150: 300, 185: 340, 240: 400},
-  "B2": {1.5: 19, 2.5: 27, 4: 36, 6: 46, 10: 63, 16: 85, 25: 115, 35: 135, 50: 165, 70: 215, 95: 260, 120: 300, 150: 340, 185: 385, 240: 450},
-  "D1": {1.5: 20.5, 2.5: 27.5, 4: 36, 6: 44, 10: 59, 16: 78, 25: 104, 35: 129, 50: 158, 70: 199, 95: 240, 120: 276, 150: 309, 185: 342, 240: 380},
-  "D2": {1.5: 24.5, 2.5: 32.5, 4: 42, 6: 51, 10: 68, 16: 91, 25: 123, 35: 152, 50: 186, 70: 233, 95: 282, 120: 324, 150: 362, 185: 400, 240: 450}
+const tablaEnterrado = {
+  cobre: {
+    "2PVC": {1.5: 20, 2.5: 27, 4: 36, 6: 44, 10: 59, 16: 76, 25: 98, 35: 118, 50: 140, 70: 173, 95: 205, 120: 233, 150: 264, 185: 296, 240: 342, 300: 387},
+    "3PVC": {1.5: 17, 2.5: 22, 4: 29, 6: 37, 10: 49, 16: 63, 25: 81, 35: 97, 50: 115, 70: 143, 95: 170, 120: 192, 150: 218, 185: 245, 240: 282, 300: 319},
+    "2XLPE": {1.5: 24, 2.5: 32, 4: 42, 6: 53, 10: 70, 16: 91, 25: 116, 35: 140, 50: 166, 70: 204, 95: 241, 120: 275, 150: 311, 185: 348, 240: 402, 300: 455},
+    "3XLPE": {1.5: 21, 2.5: 27, 4: 35, 6: 44, 10: 58, 16: 75, 25: 96, 35: 117, 50: 138, 70: 170, 95: 202, 120: 230, 150: 260, 185: 295, 240: 336, 300: 380}
+  },
+  aluminio: {
+    "2PVC": {2.5: 20, 4: 27, 6: 34, 10: 45, 16: 58, 25: 76, 35: 91, 50: 107, 70: 133, 95: 157, 120: 179, 150: 202, 185: 228, 240: 263, 300: 297},
+    "3PVC": {2.5: 17.5, 4: 22, 6: 28, 10: 38, 16: 49, 25: 62, 35: 76, 50: 89, 70: 111, 95: 131, 120: 149, 150: 169, 185: 190, 240: 218, 300: 247},
+    "2XLPE": {2.5: 24, 4: 32, 6: 40, 10: 53, 16: 70, 25: 90, 35: 107, 50: 126, 70: 156, 95: 185, 120: 211, 150: 239, 185: 267, 240: 309, 300: 349},
+    "3XLPE": {2.5: 21, 4: 27, 6: 34, 10: 45, 16: 58, 25: 74, 35: 90, 50: 107, 70: 132, 95: 157, 120: 178, 150: 201, 185: 226, 240: 261, 300: 295}
+  }
 };
+
 function calcular() {
   const P = parseFloat(document.getElementById('potencia').value) * 1000;
   const U = parseFloat(document.getElementById('tension').value);
@@ -123,25 +141,27 @@ function calcular() {
   const tipoInstal = document.getElementById('tipo_instalacion').value;
   const caida = parseFloat(document.getElementById('caida').value) / 100 * U;
   const seccion = parseFloat(document.getElementById('seccion').value);
+  const material = document.getElementById('material_conductor').value;
+  const tipoCable = document.getElementById('tipo_cable').value;
   let cosphi = 0.95;
   let I = (tipo === 'mono') ? (P / (U * cosphi)) : (P / (1.73 * U * cosphi));
   let gamma = 56;
   let Scalc = (tipo === 'mono') ? ((2 * L * P) / (gamma * caida * U)) : ((L * P) / (gamma * caida * U));
-  let Iadm = tablaIntensidades[tipoInstal][seccion] || 'No disponible';
+
+  let tabla = (tipoInstal.startsWith('D')) ? 'ITC-BT19 (enterrado)' : 'UNE-HD 60364-5-52 (aire)';
+let Iadm = (tipoInstal.startsWith('D')) ? tablaEnterrado[material][tipoCable][seccion] : tablaIntensidades[tipoInstal][seccion];
+
   let resultado = `<strong>Resultado:</strong><br>`;
   resultado += `Intensidad calculada: ${I.toFixed(2)} A<br>`;
   resultado += `Sección mínima calculada: ${Scalc.toFixed(2)} mm²<br>`;
   resultado += `Sección seleccionada: ${seccion} mm²<br>`;
-  resultado += `Intensidad admisible para ${tipoInstal} según tabla: ${Iadm} A<br>`;
+  resultado += `Material: ${material} | Tipo de cable: ${tipoCable}<br>`;
+  resultado += `Intensidad admisible: ${Iadm} A<br>`;
   resultado += (typeof Iadm === 'number' && I <= Iadm) ? `<span style='color:lime;'>La sección cumple normativa.</span>` : `<span style='color:red;'>La sección NO cumple normativa.</span>`;
+
   document.getElementById('resultados').innerHTML = resultado;
-}
-function reiniciar() {
-  document.querySelectorAll('input').forEach(input => input.value = '');
-  document.getElementById('tipo_suministro').selectedIndex = 0;
-  document.getElementById('tipo_instalacion').selectedIndex = 0;
-  document.getElementById('resultados').innerHTML = '';
 }
 </script>
 </body>
 </html>
+
