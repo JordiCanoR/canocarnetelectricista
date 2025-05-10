@@ -534,5 +534,105 @@
         "pregunta": "¿Qué IP mínimo deben tener las luminarias instaladas en exteriores? (ITC-BT 09)",
         "opciones": ["IP21", "IP44", "IP65"],
         "respuesta": "IP65"
+    },
+    {
+        "pregunta": "¿Qué función tiene un seccionador en una instalación eléctrica? (ITC-BT-17)",
+        "opciones": ["Proteger contra sobrecargas", "Interrumpir la corriente de forma segura", "Detectar fugas a tierra"],
+        "respuesta": "Interrumpir la corriente de forma segura"
+    },
+    {
+        "pregunta": "¿Qué norma regula las características de las instalaciones interiores en edificios? (ITC-BT-25)",
+        "opciones": ["ITC-BT-19", "ITC-BT-25", "ITC-BT-26"],
+        "respuesta": "ITC-BT-25"
+    },
+    {
+        "pregunta": "¿Cuál es la finalidad de un transformador de aislamiento? (ITC-BT-38)",
+        "opciones": ["Incrementar la tensión", "Reducir las pérdidas eléctricas", "Proteger contra descargas eléctricas"],
+        "respuesta": "Proteger contra descargas eléctricas"
+    },
+    {
+        "pregunta": "¿Qué documento acredita la capacidad técnica de una empresa instaladora? (ITC-BT-03)",
+        "opciones": ["Certificado de instalación", "Carné profesional de instalador", "Autorización administrativa"],
+        "respuesta": "Autorización administrativa"
+    },
+    {
+        "pregunta": "¿Qué protección se debe instalar en un punto de recarga para vehículo eléctrico? (ITC-BT-52)",
+        "opciones": ["Interruptor horario", "Protección diferencial y magnetotérmica", "Contactor auxiliar"],
+        "respuesta": "Protección diferencial y magnetotérmica"
+    },
+    {
+        "pregunta": "¿Qué significa la sigla IP en un material eléctrico? (UNE 20324)",
+        "opciones": ["Índice de Protección", "Intensidad Permitida", "Instalación Protegida"],
+        "respuesta": "Índice de Protección"
+    },
+    {
+        "pregunta": "¿Qué tipo de lámparas son más eficientes energéticamente? (Guía IDAE)",
+        "opciones": ["Incandescentes", "LED", "Halógenas"],
+        "respuesta": "LED"
+    },
+    {
+        "pregunta": "¿En qué parte de la instalación se sitúan normalmente los diferenciales? (ITC-BT-24)",
+        "opciones": ["En la acometida", "En el cuadro general de distribución", "En la toma de tierra"],
+        "respuesta": "En el cuadro general de distribución"
+    },
+    {
+        "pregunta": "¿Qué dispositivo permite el arranque suave de un motor eléctrico? (ITC-BT-47)",
+        "opciones": ["Variador de frecuencia", "Interruptor automático", "Relé térmico"],
+        "respuesta": "Variador de frecuencia"
+    },
+    {
+        "pregunta": "¿Qué material es comúnmente usado para conductores eléctricos en viviendas? (ITC-BT-19)",
+        "opciones": ["Aluminio", "Cobre", "Acero"],
+        "respuesta": "Cobre"
+    },
+    {
+        "pregunta": "¿Qué es una carga inductiva? (ITC-BT-19)",
+        "opciones": ["Una carga que genera calor", "Una carga que produce campo magnético", "Una carga sin reactancia"],
+        "respuesta": "Una carga que produce campo magnético"
+    },
+    {
+        "pregunta": "¿Qué dispositivo protege una instalación contra cortocircuitos? (ITC-BT-17)",
+        "opciones": ["Diferencial", "Magnetotérmico", "Interruptor horario"],
+        "respuesta": "Magnetotérmico"
+    },
+    {
+        "pregunta": "¿Qué unidad mide la resistencia eléctrica? (Concepto general)",
+        "opciones": ["Ohmios", "Amperios", "Vatios"],
+        "respuesta": "Ohmios"
+    },
+    {
+        "pregunta": "¿Qué aparato se usa para medir la intensidad de corriente? (Concepto general)",
+        "opciones": ["Voltímetro", "Amperímetro", "Multímetro"],
+        "respuesta": "Amperímetro"
+    },
+    {
+        "pregunta": "¿Qué nombre recibe el conjunto de conductores que unen la CGP con el cuadro de contadores? (ITC-BT-14)",
+        "opciones": ["Derivación individual", "Línea general de alimentación", "Toma de tierra"],
+        "respuesta": "Línea general de alimentación"
+    },
+    {
+        "pregunta": "¿Qué significa que un conductor sea libre de halógenos? (ITC-BT-19 + UNE 211002)",
+        "opciones": ["No contiene cloro, flúor ni bromo", "Es reciclable", "Es ignífugo"],
+        "respuesta": "No contiene cloro, flúor ni bromo"
+    },
+    {
+        "pregunta": "¿Cuál es la función principal de un contactor? (ITC-BT-47)",
+        "opciones": ["Elevar la tensión", "Controlar la apertura y cierre de un circuito", "Proteger contra sobrecargas"],
+        "respuesta": "Controlar la apertura y cierre de un circuito"
+    },
+    {
+        "pregunta": "¿Qué significa la sigla PE en un esquema eléctrico? (ITC-BT-18)",
+        "opciones": ["Protección Eléctrica", "Puesta a Tierra", "Punto de Entrada"],
+        "respuesta": "Puesta a Tierra"
+    },
+    {
+        "pregunta": "¿Qué normativa regula las instalaciones de recarga de vehículo eléctrico? (ITC-BT-52)",
+        "opciones": ["ITC-BT-52", "ITC-BT-40", "ITC-BT-19"],
+        "respuesta": "ITC-BT-52"
+    },
+    {
+        "pregunta": "¿Cuál es la sección mínima recomendada para cables de fuerza en instalaciones domésticas? (ITC-BT-25)",
+        "opciones": ["1,5 mm²", "2,5 mm²", "4 mm²"],
+        "respuesta": "2,5 mm²"
     }
-  ] 
+]
