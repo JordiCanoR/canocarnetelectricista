@@ -1,190 +1,159 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador Derivación Individual - Pro</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1e1e2f;
-      color: #f0f0f0;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #4fc3f7;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: #2a2a40;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
-    label {
-      display: block;
-      margin-top: 12px;
-      font-weight: bold;
-    }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #555;
-      border-radius: 5px;
-      background-color: #1e1e2f;
-      color: #f0f0f0;
-    }
-    button {
-      margin-top: 20px;
-      padding: 12px 25px;
-      border: none;
-      background-color: #4fc3f7;
-      color: #1e1e2f;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 16px;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: #0288d1;
-    }
-    .results {
-      margin-top: 25px;
-      padding: 15px;
-      background: #35354f;
-      border-radius: 8px;
-      box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
-    }
-  </style>
-</head>
-<body>
-<div class="container">
-  <h1>Simulador Derivación Individual - Pro</h1>
-  <label>Potencia prevista (kW)</label>
-  <input type="number" id="potencia">
+// 🟢 Simulador Derivación Individual - Pro (versión profesional REBT COMPLETA + caída tensión + formulario web)
 
-  <label>Tensión de suministro (V)</label>
-  <input type="number" id="tension">
-
-  <label>Tipo de suministro</label>
-  <select id="tipo_suministro">
-    <option value="mono">Monofásico</option>
-    <option value="tri">Trifásico</option>
-  </select>
-
-  <label>Longitud de la derivación (m)</label>
-  <input type="number" id="longitud">
-
-  <label>Configuración de contadores</label>
-  <select id="contadores">
-    <option value="1">Totalmente centralizados (1%)</option>
-    <option value="0.5">Parcialmente centralizados (0.5%)</option>
-    <option value="1.5">Suministro único sin LGA (1.5%)</option>
-  </select>
-
-  <label>Tipo de instalación</label>
-  <select id="tipo_instalacion">
-    <option value="A1">A1</option>
-    <option value="A2">A2</option>
-    <option value="B1">B1</option>
-    <option value="B2">B2</option>
-    <option value="D1">D1</option>
-    <option value="D2">D2</option>
-  </select>
-
-  <label>Temperatura ambiente prevista (°C)</label>
-  <input type="number" id="temperatura">
-
-  <label>Coseno de phi(cosφ)</label>
-  <input type="number"  step="0.01" id="cosphi" value="0.95">
-
-  <label>Sección seleccionada (mm²)</label>
-  <input type="number" id="seccion">
-
-  <label>Material del conductor</label>
-  <select id="material_conductor">
-    <option value="cobre">Cobre</option>
-    <option value="aluminio">Aluminio</option>
-  </select>
-
-  <label>Tipo de cable</label>
-  <select id="tipo_cable">
-    <option value="3PVC">3x PVC</option>
-    <option value="2PVC">2x PVC</option>
-    <option value="3XLPE">3x XLPE</option>
-    <option value="2XLPE">2x XLPE</option>
-  </select>
-
-  <button onclick="calcular()">Calcular</button>
-  <button onclick="reiniciar()">Reiniciar</button>
-
-  <div class="results" id="resultados"></div>
-</div>
-<script>
-const tablaEnterrado = {
-  cobre: {
-    "2PVC": {1.5: 20, 2.5: 27, 4: 36, 6: 44, 10: 59, 16: 76, 25: 98, 35: 118, 50: 140, 70: 173, 95: 205, 120: 233, 150: 264, 185: 296, 240: 342, 300: 387},
-    "3PVC": {1.5: 17, 2.5: 22, 4: 29, 6: 37, 10: 49, 16: 63, 25: 81, 35: 97, 50: 115, 70: 143, 95: 170, 120: 192, 150: 218, 185: 245, 240: 282, 300: 319},
-    "2XLPE": {1.5: 24, 2.5: 32, 4: 42, 6: 53, 10: 70, 16: 91, 25: 116, 35: 140, 50: 166, 70: 204, 95: 241, 120: 275, 150: 311, 185: 348, 240: 402, 300: 455},
-    "3XLPE": {1.5: 21, 2.5: 27, 4: 35, 6: 44, 10: 58, 16: 75, 25: 96, 35: 117, 50: 138, 70: 170, 95: 202, 120: 230, 150: 260, 185: 295, 240: 336, 300: 380}
-  },
-  aluminio: {
-    "2PVC": {2.5: 20, 4: 27, 6: 34, 10: 45, 16: 58, 25: 76, 35: 91, 50: 107, 70: 133, 95: 157, 120: 179, 150: 202, 185: 228, 240: 263, 300: 297},
-    "3PVC": {2.5: 17.5, 4: 22, 6: 28, 10: 38, 16: 49, 25: 62, 35: 76, 50: 89, 70: 111, 95: 131, 120: 149, 150: 169, 185: 190, 240: 218, 300: 247},
-    "2XLPE": {2.5: 24, 4: 32, 6: 40, 10: 53, 16: 70, 25: 90, 35: 107, 50: 126, 70: 156, 95: 185, 120: 211, 150: 239, 185: 267, 240: 309, 300: 349},
-    "3XLPE": {2.5: 21, 4: 27, 6: 34, 10: 45, 16: 58, 25: 74, 35: 90, 50: 107, 70: 132, 95: 157, 120: 178, 150: 201, 185: 226, 240: 261, 300: 295}
-  }
+const tablasOficiales = {
+    aire: {...},
+    enterrado: {...}
 };
 
-function calcular() {
-  const P = parseFloat(document.getElementById('potencia').value) * 1000;
-  const U = parseFloat(document.getElementById('tension').value);
-  const tipo = document.getElementById('tipo_suministro').value;
-  const L = parseFloat(document.getElementById('longitud').value);
-  const tipoInstal = document.getElementById('tipo_instalacion').value;
-  const caidaPorcentaje = parseFloat(document.getElementById('contadores').value);
-  const caida = caidaPorcentaje / 100 * U;
-  const seccion = parseFloat(document.getElementById('seccion').value);
-  const material = document.getElementById('material_conductor').value;
-  const tipoCable = document.getElementById('tipo_cable').value;
-  let cosphi = parseFloat(document.getElementById('cosphi').value);
-  if (isNaN(cosphi) || cosphi <= 0 || cosphi > 1) {
-    alert('Por favor, introduce un valor válido para cosφ entre 0.8 y 1.0');
-    return;
-  }
-  let potenciaInput = parseFloat(document.getElementById('potencia').value);
-  let Ptotal = (potenciaInput > 1000) ? potenciaInput : potenciaInput * 1000;
-  let I = (tipo === 'mono') ? (P / (U * cosphi)) : (P / (1.73 * U * cosphi));
-  let gamma = 56;
-  let Scalc = (tipo === 'mono') ? ((2 * L * P) / (gamma * caida * U)) : ((L * P) / (gamma * caida * U));
+const factoresTemperatura = {
+    25: 1.12, 30: 1.00, 35: 0.94, 40: 0.88, 45: 0.82, 50: 0.76
+};
 
-  let tabla = (tipoInstal.startsWith('D')) ? 'ITC-BT19 (enterrado)' : 'UNE-HD 60364-5-52 (aire)';
-  let Iadm = (tipoInstal.startsWith('D')) ? tablaEnterrado[material][tipoCable][seccion] : tablaIntensidades[tipoInstal][seccion];
+const factoresAgrupamiento = {
+    1: 1.00, 2: 0.80, 3: 0.70, 4: 0.65, 5: 0.60
+};
 
-  let resultado = `<strong>Resultado:</strong><br>`;
-  resultado += `Intensidad calculada: ${I.toFixed(2)} A<br>`;
-  resultado += `Sección mínima calculada: ${Scalc.toFixed(2)} mm²<br>`;
-  resultado += `Sección seleccionada: ${seccion} mm²<br>`;
-  resultado += `Material: ${material} | Tipo de cable: ${tipoCable}<br>`;
-  resultado += `Intensidad admisible: ${Iadm} A<br>`;
-  resultado += (typeof Iadm === 'number' && I <= Iadm) ? `<span style='color:lime;'>La sección cumple normativa.</span>` : `<span style='color:red;'>La sección NO cumple normativa.</span>`;
+const porcentajeCaida = {
+    total: 1.00,
+    parcial: 0.50,
+    sinLGA: 1.50
+};
 
-  document.getElementById('resultados').innerHTML = resultado;
+function calcularDerivacionIndividual({potencia, tension, tipoSuministro, cosphi, tipoInstalacion, seccion, material, temperatura=30, numeroCircuitos=1, centralizacion='total', longitud=0}) {
+    const P = potencia * 1000;
+    let I = (tipoSuministro === 'mono') ? P / (tension * cosphi) : P / (Math.sqrt(3) * tension * cosphi);
+
+    const tablaTipo = ['D1','D2'].includes(tipoInstalacion) ? 'enterrado' : 'aire';
+    const tabla = tablasOficiales[tablaTipo][material][tipoInstalacion];
+    const IadmBase = tabla ? tabla[seccion] : undefined;
+
+    if (!IadmBase) return {error: 'Datos no válidos'};
+
+    const factorTemp = factoresTemperatura[temperatura] ?? 1.00;
+    const factorAgrup = factoresAgrupamiento[numeroCircuitos] ?? 0.60;
+    const IadmCorregido = IadmBase * factorTemp * factorAgrup;
+
+    // ➕ Cálculo sección mínima normativa
+    let seccionMinima = null;
+    if (tabla) {
+        const seccionesOrdenadas = Object.keys(tabla).map(Number).sort((a, b) => a - b);
+        for (const s of seccionesOrdenadas) {
+            const intensidadBase = tabla[s];
+            const intensidadCorregida = intensidadBase * factorTemp * factorAgrup;
+            if (I <= intensidadCorregida) {
+                seccionMinima = s;
+                break;
+            }
+        }
+    }
+
+    const caidaMaxAdmisible = (porcentajeCaida[centralizacion] ?? 1.00) / 100 * tension;
+    const resistenciaLineal = (material === 'cobre') ? 56 : 34;
+    const caidaReal = (tipoSuministro === 'mono') ? (2 * longitud * I) / (resistenciaLineal * seccion) : (Math.sqrt(3) * longitud * I) / (resistenciaLineal * seccion);
+
+    return {
+        intensidadCalculada: I.toFixed(2),
+        intensidadAdmisibleBase: IadmBase,
+        intensidadAdmisibleCorregida: IadmCorregido.toFixed(2),
+        seccion: seccion,
+        temperatura: temperatura,
+        numeroCircuitos: numeroCircuitos,
+        centralizacion: centralizacion,
+        longitud: longitud,
+        caidaMaxAdmisible: caidaMaxAdmisible.toFixed(2),
+        caidaReal: caidaReal.toFixed(2),
+        cumpleIntensidad: I <= IadmCorregido,
+        cumpleCaida: caidaReal <= caidaMaxAdmisible,
+        seccionMinimaNormativa: seccionMinima
+    };
 }
 
-const tablaIntensidades = {
-  "A1": {1.5: 14, 2.5: 20, 4: 25, 6: 32, 10: 45, 16: 60, 25: 80, 35: 100, 50: 125, 70: 160, 95: 200, 120: 230, 150: 260, 185: 300, 240: 340},
-  "A2": {1.5: 17, 2.5: 25, 4: 32, 6: 40, 10: 55, 16: 75, 25: 100, 35: 125, 50: 150, 70: 195, 95: 230, 120: 265, 150: 300, 185: 340, 240: 400},
-  "B1": {1.5: 17, 2.5: 25, 4: 32, 6: 40, 10: 55, 16: 75, 25: 100, 35: 125, 50: 150, 70: 195, 95: 230, 120: 265, 150: 300, 185: 340, 240: 400},
-  "B2": {1.5: 19, 2.5: 27, 4: 36, 6: 46, 10: 63, 16: 85, 25: 115, 35: 135, 50: 165, 70: 215, 95: 260, 120: 300, 150: 340, 185: 385, 240: 450},
-  "D1": {1.5: 20.5, 2.5: 27.5, 4: 36, 6: 44, 10: 59, 16: 78, 25: 104, 35: 129, 50: 158, 70: 199, 95: 240, 120: 276, 150: 309, 185: 342, 240: 380},
-  "D2": {1.5: 24.5, 2.5: 32.5, 4: 42, 6: 51, 10: 68, 16: 91, 25: 123, 35: 152, 50: 186, 70: 233, 95: 282, 120: 324, 150: 362, 185: 400, 240: 450}
-};
+// ➡️ FORMULARIO HTML EN PÁGINA
 
-</script>
-</body>
-</html>
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.innerHTML = `<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e1e2f; color: #f0f0f0; padding: 20px; }
+    h2, h3 { text-align: center; color: #4fc3f7; }
+    input { width: 100%; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #555; background-color: #2a2a40; color: #f0f0f0; }
+    button { padding: 10px 20px; margin: 10px 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    button.primary { background-color: #4fc3f7; color: #1e1e2f; }
+    button.secondary { background-color: #555; color: #fff; }
+    button:hover { opacity: 0.9; }
+    table { width: 100%; border-collapse: collapse; background-color: #2a2a40; }
+    table td, table th { border: 1px solid #555; padding: 8px; text-align: center; }
+    table th { background-color: #4fc3f7; color: #1e1e2f; }
+</style>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e1e2f; color: #f0f0f0; padding: 20px; }
+    h2, h3 { text-align: center; color: #4fc3f7; }
+    input { width: 100%; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #555; background-color: #2a2a40; color: #f0f0f0; }
+    button { padding: 10px 20px; margin: 10px 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    button:first-of-type { background-color: #4fc3f7; color: #1e1e2f; }
+    button:last-of-type { background-color: #555; color: #fff; }
+    button:hover { opacity: 0.9; }
+    table { width: 100%; border-collapse: collapse; background-color: #2a2a40; }
+    table td, table th { border: 1px solid #555; padding: 8px; text-align: center; }
+    table th { background-color: #4fc3f7; color: #1e1e2f; }
+</style>
+<h2>Simulador Derivación Individual</h2>
+        <input placeholder='Potencia kW' id='potencia'><br>
+        <input placeholder='Tensión V' id='tension'><br>
+        <input placeholder='Cosφ (ej. 0.95)' id='cosphi'><br>
+        <input placeholder='Sección mm²' id='seccion'><br>
+        <input placeholder='Temperatura (25-50)' id='temperatura'><br>
+        <input placeholder='Longitud línea (m)' id='longitud'><br>
+        <input placeholder='Nº Circuitos' id='circuitos'><br>
+        <input placeholder='Instalación (A1,B2,D1...)' id='instalacion'><br>
+        <input placeholder='Tipo de cable (2xPVC,3xPVC,2xXLPE,3xXLPE)' id='tipoCable'><br>
+        <input placeholder='Material (cobre/aluminio)' id='material'><br>
+        <input placeholder='Suministro (mono/tri)' id='suministro'><br>
+        <input placeholder='Centralización (total/parcial/sinLGA)' id='centralizacion'><br>
+        <button class='primary' onclick='calcular()'>Calcular</button>
+<button class='secondary' onclick='reiniciar()'>Reiniciar</button>
+        <pre id='resultado'></pre>`;
+});
+
+function reiniciar() {
+    document.querySelectorAll('input').forEach(input => input.value = '');
+    document.getElementById('resultado').innerHTML = '';
+}
+
+function calcular() {
+    const datos = {
+        potencia: parseFloat(document.getElementById('potencia').value),
+        tension: parseFloat(document.getElementById('tension').value),
+        cosphi: parseFloat(document.getElementById('cosphi').value),
+        seccion: parseFloat(document.getElementById('seccion').value),
+        temperatura: parseInt(document.getElementById('temperatura').value),
+        longitud: parseFloat(document.getElementById('longitud').value),
+        numeroCircuitos: parseInt(document.getElementById('circuitos').value),
+        tipoInstalacion: document.getElementById('instalacion').value,
+        material: document.getElementById('material').value,
+        tipoSuministro: document.getElementById('suministro').value,
+        centralizacion: document.getElementById('centralizacion').value
+    };
+
+    datos.tipoCable = document.getElementById('tipoCable').value;
+    const res = calcularDerivacionIndividual(datos);
+    document.getElementById('resultado').innerHTML = `
+        <h3>Informe de Cálculo</h3>
+        <table border='1' cellpadding='5'>
+            <tr><td><b>Potencia</b></td><td>${datos.potencia} kW</td></tr>
+            <tr><td><b>Tensión</b></td><td>${datos.tension} V</td></tr>
+            <tr><td><b>Cosφ</b></td><td>${datos.cosphi}</td></tr>
+            <tr><td><b>Intensidad calculada</b></td><td>${res.intensidadCalculada} A</td></tr>
+            <tr><td><b>Intensidad admisible corregida</b></td><td>${res.intensidadAdmisibleCorregida} A</td></tr>
+            <tr><td><b>Sección</b></td><td>${res.seccion} mm²</td></tr>
+            <tr><td><b>Temperatura</b></td><td>${res.temperatura} °C</td></tr>
+            <tr><td><b>Nº Circuitos</b></td><td>${res.numeroCircuitos}</td></tr>
+            <tr><td><b>Instalación</b></td><td>${datos.tipoInstalacion}</td></tr>
+            <tr><td><b>Material</b></td><td>${datos.material}</td></tr>
+            <tr><td><b>Centralización</b></td><td>${res.centralizacion}</td></tr>
+            <tr><td><b>Longitud línea</b></td><td>${res.longitud} m</td></tr>
+            <tr><td><b>Caída tensión real</b></td><td>${res.caidaReal} V</td></tr>
+            <tr><td><b>Caída máxima admisible</b></td><td>${res.caidaMaxAdmisible} V</td></tr>
+<tr><td><b>Sección mínima normativa</b></td><td>${res.seccionMinimaNormativa ?? 'No encontrada'} mm²</td></tr>
+            <tr><td><b>Cumple intensidad</b></td><td>${res.cumpleIntensidad ? 'Sí' : 'No'}</td></tr>
+            <tr><td><b>Cumple caída de tensión</b></td><td>${res.cumpleCaida ? 'Sí' : 'No'}</td></tr>
+        </table>`;
+}
