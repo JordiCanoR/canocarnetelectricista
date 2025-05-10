@@ -100,17 +100,17 @@
 
 <script>
 const tablaDatos = [
-    { fase: 10, neutro: 10, tubo: 75, fusible: 63 },
-    { fase: 16, neutro: 16, tubo: 75, fusible: 80 },
-    { fase: 25, neutro: 16, tubo: 110, fusible: 100 },
-    { fase: 35, neutro: 16, tubo: 110, fusible: 125 },
-    { fase: 50, neutro: 25, tubo: 125, fusible: 160 },
-    { fase: 70, neutro: 35, tubo: 140, fusible: 200 },
-    { fase: 95, neutro: 50, tubo: 140, fusible: 250 },
-    { fase: 120, neutro: 70, tubo: 160, fusible: 315 },
-    { fase: 150, neutro: 70, tubo: 160, fusible: 315 },
-    { fase: 185, neutro: 95, tubo: 180, fusible: 400 },
-    { fase: 240, neutro: 120, tubo: 200, fusible: 500 }
+    { fase: 10, neutro: 10, tubo: 75 },
+    { fase: 16, neutro: 16, tubo: 75 },
+    { fase: 25, neutro: 16, tubo: 110 },
+    { fase: 35, neutro: 16, tubo: 110 },
+    { fase: 50, neutro: 25, tubo: 125 },
+    { fase: 70, neutro: 35, tubo: 140 },
+    { fase: 95, neutro: 50, tubo: 140 },
+    { fase: 120, neutro: 70, tubo: 160 },
+    { fase: 150, neutro: 70, tubo: 160 },
+    { fase: 185, neutro: 95, tubo: 180 },
+    { fase: 240, neutro: 120, tubo: 200 }
 ];
 
 const tablaCobre = {
@@ -122,6 +122,8 @@ const tablaCobre = {
 };
 
 function calcular() {
+    const fusibles = [63, 80, 100, 125, 160, 200, 224, 250, 315, 400, 500];
+
     const P = parseFloat(document.getElementById('potencia').value);
     const U = parseFloat(document.getElementById('tension').value);
     const cosphi = parseFloat(document.getElementById('cosphi').value);
@@ -147,7 +149,10 @@ function calcular() {
     document.getElementById('imax').value = tablaCobre[tipo][seccion] + " A";
     document.getElementById('neutro').value = datos.neutro + " mm²";
     document.getElementById('tubo').value = datos.tubo + " mm";
-    document.getElementById('fusible').value = datos.fusible + " A";
+
+    let fusible = fusibles.find(f => f >= I && f <= tablaCobre[tipo][seccion]);
+    document.getElementById('fusible').value = fusible ? fusible + " A" : "No válido";
+
     document.getElementById('conductores').value = "3 fases + 1 neutro";
 }
 </script>
