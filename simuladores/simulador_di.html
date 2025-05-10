@@ -74,6 +74,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.innerHTML = `
 <header><h1>Simulador Profesional de Derivación Individual REBT</h1></header>
 <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e1e2f; color: #f0f0f0; margin: 0; }
+    header { background-color: #2a2a40; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.5); position: sticky; top: 0; z-index: 10; }
+    header h1 { color: #4fc3f7; margin: 0; font-size: 24px; font-weight: 600; }
+    .container { max-width: 800px; margin: 20px auto; background-color: #2a2a40; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+    h2, h3 { text-align: center; color: #4fc3f7; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #555; background-color: #1e1e2f; color: #f0f0f0; }
+    button { padding: 10px 20px; margin: 15px 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; transition: background-color 0.3s; }
+    button.primary { background-color: #4fc3f7; color: #1e1e2f; }
+    button.secondary { background-color: #555; color: #fff; }
+    button:hover { filter: brightness(90%); }
+    table { width: 100%; border-collapse: collapse; background-color: #2a2a40; margin-top: 20px; }
+    table td, table th { border: 1px solid #555; padding: 8px; text-align: center; }
+    table th { background-color: #4fc3f7; color: #1e1e2f; }
+</style>
     header { background-color: #2a2a40; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
     header h1 { color: #4fc3f7; margin: 0; font-size: 24px; font-weight: 600; }
 
@@ -115,6 +131,27 @@ function reiniciar() {
 }
 
 function calcular() {
+    // Validaciones de entradas
+    const campos = ['potencia', 'tension', 'cosphi', 'seccion', 'temperatura', 'longitud', 'circuitos'];
+    for (let id of campos) {
+        const valor = parseFloat(document.getElementById(id).value);
+        if (isNaN(valor) || valor <= 0) {
+            alert(`Por favor introduce un valor numérico válido para ${id}`);
+            return;
+        }
+    }
+
+    const tipoSuministro = document.getElementById('suministro').value;
+    if (tipoSuministro !== 'mono' && tipoSuministro !== 'tri') {
+        alert('Tipo de suministro debe ser mono o tri');
+        return;
+    }
+
+    const material = document.getElementById('material').value;
+    if (material !== 'cobre' && material !== 'aluminio') {
+        alert('Material debe ser cobre o aluminio');
+        return;
+    }
     const datos = {
         potencia: parseFloat(document.getElementById('potencia').value),
         tension: parseFloat(document.getElementById('tension').value),
