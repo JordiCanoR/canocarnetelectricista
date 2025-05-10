@@ -153,7 +153,7 @@ function calcular() {
   const tipoCable = document.getElementById('tipo_cable').value;
   let cosphi = parseFloat(document.getElementById('cosphi').value);
   if (isNaN(cosphi) || cosphi <= 0 || cosphi > 1) {
-    alert('Por favor, introduce un valor válido para cosφ entre 0 y 1.');
+    alert('Por favor, introduce un valor válido para cosφ entre 0.8 y 1.0');
     return;
   }
   let potenciaInput = parseFloat(document.getElementById('potencia').value);
@@ -175,6 +175,7 @@ function calcular() {
 
   document.getElementById('resultados').innerHTML = resultado;
 }
+
 const tablaIntensidades = {
   "A1": {1.5: 14, 2.5: 20, 4: 25, 6: 32, 10: 45, 16: 60, 25: 80, 35: 100, 50: 125, 70: 160, 95: 200, 120: 230, 150: 260, 185: 300, 240: 340},
   "A2": {1.5: 17, 2.5: 25, 4: 32, 6: 40, 10: 55, 16: 75, 25: 100, 35: 125, 50: 150, 70: 195, 95: 230, 120: 265, 150: 300, 185: 340, 240: 400},
@@ -183,6 +184,9 @@ const tablaIntensidades = {
   "D1": {1.5: 20.5, 2.5: 27.5, 4: 36, 6: 44, 10: 59, 16: 78, 25: 104, 35: 129, 50: 158, 70: 199, 95: 240, 120: 276, 150: 309, 185: 342, 240: 380},
   "D2": {1.5: 24.5, 2.5: 32.5, 4: 42, 6: 51, 10: 68, 16: 91, 25: 123, 35: 152, 50: 186, 70: 233, 95: 282, 120: 324, 150: 362, 185: 400, 240: 450}
 };
+function reiniciar() {
+  document.getElementById("resultados").innerHTML = "";
+}
 </script>
 </body>
 </html>
