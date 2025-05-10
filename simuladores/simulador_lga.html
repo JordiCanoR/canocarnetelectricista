@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Simulación LGA Ejercicio</title>
+    <title>Simulación LGA Mejorada</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
         input[type=text], input[type=number] {
@@ -23,103 +22,96 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Simulador LGA - Ejercicio Real</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="simulador_lga.html">Simulación LGA</a></li>
-                <li><a href="simulador_di.html">Simulación Derivación Individual</a></li>
-                <li><a href="simulador_prevision.html">Simulación Previsión Cargas</a></li>
-                <li><a href="../test/index.html">Test</a></li>
-                <li><a href="../plantillas/index.html">Plantillas</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Ejercicio de Cálculo Real de LGA</h2>
-        <form id="formLGA">
-            <div class="form-section">
-                <label>Potencia prevista (W):</label><input type="number" id="potencia" value="148890"><br>
-                <label>Tensión (V):</label><input type="number" id="tension" value="400"><br>
-                <label>cos(phi):</label><input type="number" step="any" id="cosphi" value="0.9"><br>
-                <label>Longitud de la LGA (m):</label><input type="number" id="longitud" value="23"><br>
-                <label>Temperatura ambiente (°C):</label><input type="number" id="temperatura" value="40"><br>
-                <label>Conductividad (γ, m/Ohm·mm²):</label><input type="number" step="any" id="gamma" value="44"><br>
-                <label>¿Trifásica? (1 = sí, 0 = no):</label><input type="number" id="trifasica" value="1"><br>
-                <label>¿Centralización parcial? (1 = sí, 0 = no):</label><input type="number" id="centralizado" value="1"><br>
-            </div>
-
-            <div class="form-section">
-                <h3>Resultados</h3>
-                <label>Caída máxima permitida (V):</label><input type="text" id="caida" readonly><br>
-                <label>Intensidad (A):</label><input type="text" id="intensidad" readonly><br>
-                <label>Sección (mm²):</label><input type="text" id="seccion" readonly><br>
-                <label>Sección conductor neutro (70% regla):</label><input type="text" id="neutro" readonly><br>
-                <label>Diámetro tubo (aprox.):</label><input type="text" id="tubo" readonly><br>
-                <label>Fusible recomendado CGP (A):</label><input type="text" id="fusible" readonly><br>
-                <label>Conductores a usar:</label><input type="text" id="conductores" readonly><br>
-            </div>
-
-            <button type="button" onclick="calcular()">Calcular</button>
-        </form>
-
-        <script>
-            function calcular() {
-                const P = parseFloat(document.getElementById('potencia').value);
-                const U = parseFloat(document.getElementById('tension').value);
-                const cosphi = parseFloat(document.getElementById('cosphi').value);
-                const L = parseFloat(document.getElementById('longitud').value);
-                const gamma = parseFloat(document.getElementById('gamma').value);
-                const trifasica = parseInt(document.getElementById('trifasica').value);
-                const centralizado = parseInt(document.getElementById('centralizado').value);
-
-                let e_pct = centralizado === 1 ? 1 : 0.5;
-                let e = (e_pct / 100) * U;
-                let I = trifasica === 1 ? P / (1.73 * U * cosphi) : P / (U * cosphi);
-                let S = trifasica === 1 ? (L * P) / (gamma * e * U) : (2 * L * P) / (gamma * e * U);
-
-                // Ajustar a sección comercial (por simplicidad aproximamos)
-                let seccionComercial = S <= 25 ? 25 : (S <= 35 ? 35 : (S <= 50 ? 50 : (S <= 70 ? 70 : 95)));
-
-                // Fusible: corriente nominal mayor o igual a la intensidad
-                let fusible = Math.ceil(I / 10) * 10;
-
-                // Tubo (aproximación muy básica para 3F+N)
-                let diametroTubo = seccionComercial <= 35 ? "40 mm" : "50 mm";
-
-                document.getElementById('caida').value = e.toFixed(2);
-                document.getElementById('intensidad').value = I.toFixed(2);
-                document.getElementById('seccion').value = seccionComercial + " mm²";
-                document.getElementById('neutro').value = Math.floor(seccionComercial * 0.7) + " mm²";
-                document.getElementById('tubo').value = diametroTubo;
-                document.getElementById('fusible').value = fusible + " A";
-                document.getElementById('conductores').value = "3 fases + 1 neutro";
-            }
-        </script>
-        <div class="section">
-         <button onclick="window.print()" style="padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
-         Imprimir plantilla
-         </button>
-         <button onclick="descargarComoPDF()" style="padding: 10px 20px; font-size: 16px; background-color: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
-         Descargar como PDF
-         </button>
+<header>
+    <h1>Simulador LGA - Mejorado</h1>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="simulador_lga.html">Simulación LGA</a></li>
+            <li><a href="simulador_di.html">Simulación Derivación Individual</a></li>
+            <li><a href="simulador_prevision.html">Simulación Previsión Cargas</a></li>
+            <li><a href="../test/index.html">Test</a></li>
+            <li><a href="../plantillas/index.html">Plantillas</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2>Ejercicio Real LGA + Sección Comercial</h2>
+    <form id="formLGA">
+        <div class="form-section">
+            <label>Potencia prevista (W):</label><input type="number" id="potencia" value="148890"><br>
+            <label>Tensión (V):</label><input type="number" id="tension" value="400"><br>
+            <label>cos(phi):</label><input type="number" step="any" id="cosphi" value="0.9"><br>
+            <label>Longitud de la LGA (m):</label><input type="number" id="longitud" value="23"><br>
+            <label>Temperatura ambiente (°C):</label><input type="number" id="temperatura" value="40"><br>
+            <label>Conductividad (γ, m/Ohm·mm²):</label><input type="number" step="any" id="gamma" value="44"><br>
+            <label>¿Trifásica? (1 = sí, 0 = no):</label><input type="number" id="trifasica" value="1"><br>
+            <label>¿Centralización parcial? (1 = sí, 0 = no):</label><input type="number" id="centralizado" value="1"><br>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-        <script>
-         function descargarComoPDF() {
-         const elemento = document.getElementById("contenedorPDF");
-         const opciones = {
-         margin: 0.3,
-         filename: 'simulador_prevision.pdf',
-         image: { type: 'jpeg', quality: 0.98 },
-         html2canvas: { scale: 2 },
-         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-         };
-         html2pdf().set(opciones).from(elemento).save();
-         }
-       </script>
-    </main>
+
+        <div class="form-section">
+            <h3>Resultados</h3>
+            <label>Caída máxima permitida (V):</label><input type="text" id="caida" readonly><br>
+            <label>Intensidad (A):</label><input type="text" id="intensidad" readonly><br>
+            <label>Sección (mm²):</label><input type="text" id="seccion" readonly><br>
+            <label>Sección conductor neutro (70% regla):</label><input type="text" id="neutro" readonly><br>
+            <label>Diámetro tubo (aprox.):</label><input type="text" id="tubo" readonly><br>
+            <label>Fusible recomendado CGP (A):</label><input type="text" id="fusible" readonly><br>
+            <label>Conductores a usar:</label><input type="text" id="conductores" readonly><br>
+            <label>Sección comercial elegida (mm²):</label><input type="text" id="seccionComercial" readonly><br>
+            <label>Intensidad máxima permitida (A):</label><input type="text" id="intensidadMax" readonly><br>
+        </div>
+
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+
+    <script>
+        function calcular() {
+            const P = parseFloat(document.getElementById('potencia').value);
+            const U = parseFloat(document.getElementById('tension').value);
+            const cosphi = parseFloat(document.getElementById('cosphi').value);
+            const L = parseFloat(document.getElementById('longitud').value);
+            const gamma = parseFloat(document.getElementById('gamma').value);
+            const trifasica = parseInt(document.getElementById('trifasica').value);
+            const centralizado = parseInt(document.getElementById('centralizado').value);
+
+            let e_pct = centralizado === 1 ? 1 : 0.5;
+            let e = (e_pct / 100) * U;
+            let I = trifasica === 1 ? P / (1.73 * U * cosphi) : P / (U * cosphi);
+            let S = trifasica === 1 ? (L * P) / (gamma * e * U) : (2 * L * P) / (gamma * e * U);
+
+            const tablaSecciones = [
+                { seccion: 16, intensidad: 76 },
+                { seccion: 25, intensidad: 101 },
+                { seccion: 35, intensidad: 125 },
+                { seccion: 50, intensidad: 152 },
+                { seccion: 70, intensidad: 192 },
+                { seccion: 95, intensidad: 232 },
+                { seccion: 120, intensidad: 269 },
+                { seccion: 150, intensidad: 309 },
+                { seccion: 185, intensidad: 353 },
+                { seccion: 240, intensidad: 415 }
+            ];
+
+            let seccionElegida = tablaSecciones.find(s => s.seccion >= S) || tablaSecciones[tablaSecciones.length - 1];
+            let seccionComercial = seccionElegida.seccion;
+            let intensidadMax = seccionElegida.intensidad;
+
+            let fusible = Math.ceil(I / 10) * 10;
+            let diametroTubo = seccionComercial <= 35 ? "40 mm" : "50 mm";
+
+            document.getElementById('caida').value = e.toFixed(2);
+            document.getElementById('intensidad').value = I.toFixed(2);
+            document.getElementById('seccion').value = seccionComercial + " mm²";
+            document.getElementById('neutro').value = Math.floor(seccionComercial * 0.7) + " mm²";
+            document.getElementById('tubo').value = diametroTubo;
+            document.getElementById('fusible').value = fusible + " A";
+            document.getElementById('conductores').value = "3 fases + 1 neutro";
+            document.getElementById('seccionComercial').value = seccionComercial + " mm²";
+            document.getElementById('intensidadMax').value = intensidadMax + " A";
+        }
+    </script>
+</main>
 </body>
-</div>
 </html>
+
