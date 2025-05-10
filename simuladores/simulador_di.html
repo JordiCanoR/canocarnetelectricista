@@ -79,6 +79,13 @@
   <label>Longitud de la derivación (m)</label>
   <input type="number" id="longitud">
 
+  <label>Configuración de contadores</label>
+  <select id="contadores">
+    <option value="1">Totalmente centralizados (1%)</option>
+    <option value="0.5">Parcialmente centralizados (0.5%)</option>
+    <option value="1.5">Suministro único sin LGA (1.5%)</option>
+  </select>
+
   <label>Tipo de instalación</label>
   <select id="tipo_instalacion">
     <option value="A1">A1</option>
@@ -92,10 +99,7 @@
   <label>Temperatura ambiente prevista (°C)</label>
   <input type="number" id="temperatura">
 
-  <label>Caída de tensión máxima permitida (%)</label>
-  <input type="number" step="0.1" id="caida">
-
-  <label>Sección seleccionada (mm²)</label>
+    <label>Sección seleccionada (mm²)</label>
   <input type="number" id="seccion">
 
   <label>Material del conductor</label>
@@ -139,7 +143,8 @@ function calcular() {
   const tipo = document.getElementById('tipo_suministro').value;
   const L = parseFloat(document.getElementById('longitud').value);
   const tipoInstal = document.getElementById('tipo_instalacion').value;
-  const caida = parseFloat(document.getElementById('caida').value) / 100 * U;
+  const caidaPorcentaje = parseFloat(document.getElementById('contadores').value);
+const caida = caidaPorcentaje / 100 * U;
   const seccion = parseFloat(document.getElementById('seccion').value);
   const material = document.getElementById('material_conductor').value;
   const tipoCable = document.getElementById('tipo_cable').value;
@@ -164,4 +169,3 @@ let Iadm = (tipoInstal.startsWith('D')) ? tablaEnterrado[material][tipoCable][se
 </script>
 </body>
 </html>
-
