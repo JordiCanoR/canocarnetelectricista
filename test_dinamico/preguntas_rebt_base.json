@@ -634,5 +634,612 @@
         "pregunta": "¿Cuál es la sección mínima recomendada para cables de fuerza en instalaciones domésticas? (ITC-BT-25)",
         "opciones": ["1,5 mm²", "2,5 mm²", "4 mm²"],
         "respuesta": "2,5 mm²"
+    },
+    {
+        "pregunta": "En relación con la instalación de rectificadores, ¿cómo se instalarán los circuitos de corriente continua? (ITC-BT 48)",
+        "opciones": [
+            "Siguiendo las prescripciones que correspondan a su tensión asignada.",
+            "Siguiendo las prescripciones de la ITC-BT 49.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Siguiendo las prescripciones que correspondan a su tensión asignada."
+    },
+    {
+        "pregunta": "¿Qué nombre tiene la corriente que circula debido a un defecto de aislamiento? (ITC-BT 01)",
+        "opciones": [
+            "Corriente de defecto a tierra.",
+            "Corriente diferencial residual.",
+            "Corriente de defecto."
+        ],
+        "respuesta": "Corriente de defecto a tierra."
+    },
+    {
+        "pregunta": "Las prescripciones del Reglamento Electrotécnico de Baja Tensión y sus Instrucciones Técnicas Complementarias son de carácter general unas y de carácter específico otras: (REBT Artículo 2)",
+        "opciones": [
+            "Las específicas sustituirán, modificarán o complementarán a las generales.",
+            "Las generales prevalecerán sobre las específicas.",
+            "Ninguna de las anteriores es correcta."
+        ],
+        "respuesta": "Las específicas sustituirán, modificarán o complementarán a las generales."
+    },
+    {
+        "pregunta": "¿Cómo se pueden realizar las canalizaciones bajo canales aislantes en un local mojado? (ITC-BT 30)",
+        "opciones": [
+            "Se instalarán en superficie y las conexiones, empalmes y derivaciones se realizarán en el interior de cajas.",
+            "Los conductores tendrán una tensión asignada de 450/750 V.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "Los interruptores diferenciales: (ITC-BT 24)",
+        "opciones": [
+            "Se emplean como medida de protección contra contactos directos cuando las instalaciones tienen tensiones superiores a 250 V.",
+            "Provocan el corte automático de la alimentación de la instalación que protegen cuando la suma vectorial de las tensiones que atraviesan los polos del aparato alcanza un valor predeterminado.",
+            "Se emplean como medida de protección complementaria contra contactos directos si tienen una sensibilidad igual o inferior a 30 mA."
+        ],
+        "respuesta": "Se emplean como medida de protección complementaria contra contactos directos si tienen una sensibilidad igual o inferior a 30 mA."
+    },
+    {
+        "pregunta": "¿Qué norma deben cumplir las canalizaciones eléctricas prefabricadas para uso general? (ITC-BT 20)",
+        "opciones": [
+            "La norma UNE-EN 60570.",
+            "La norma UNE-EN 60439-2.",
+            "La norma UNE 60439-2."
+        ],
+        "respuesta": "La norma UNE-EN 60439-2."
+    },
+    {
+        "pregunta": "En una instalación generadora asistida, ¿puede utilizarse la toma de tierra de las masas para la puesta a tierra del neutro? (ITC-BT 40)",
+        "opciones": [
+            "Sí, previa autorización específica del Órgano competente de la Comunidad Autónoma.",
+            "Sí, siempre.",
+            "No, en ningún caso."
+        ],
+        "respuesta": "Sí, previa autorización específica del Órgano competente de la Comunidad Autónoma."
+    },
+    {
+        "pregunta": "La caída de tensión en la línea general de alimentación se entiende que es desde la caja general de protección hasta: (ITC-BT 14)",
+        "opciones": [
+            "La centralización de contadores.",
+            "El interruptor de control de potencia.",
+            "Los dispositivos generales de mando y protección."
+        ],
+        "respuesta": "La centralización de contadores."
+    },
+    {
+        "pregunta": "Cualquier variación en las condiciones y requisitos establecidos para la concesión del certificado de instalador autorizado en baja tensión, cuando se dejan de cumplir los requisitos necesarios para la concesión del certificado: (ITC-BT 03)",
+        "opciones": [
+            "Deberá ser comunicada al Órgano competente de la Comunidad Autónoma en el plazo de 1 mes.",
+            "Deberá ser comunicada al Órgano competente de la Comunidad Autónoma en el plazo de 1 año.",
+            "Deberá ser comunicada al Órgano competente de la Comunidad Autónoma en el plazo de 15 días."
+        ],
+        "respuesta": "Deberá ser comunicada al Órgano competente de la Comunidad Autónoma en el plazo de 1 mes."
+    },
+    {
+        "pregunta": "En las instalaciones de pediluvios, ¿a qué distancia está el plano horizontal que delimita el volumen 1? (ITC-BT 31)",
+        "opciones": [
+            "A 1,5 m del borde del recipiente.",
+            "A 2 m del borde del recipiente.",
+            "A 2,5 m por encima del suelo o de la superficie."
+        ],
+        "respuesta": "A 2,5 m por encima del suelo o de la superficie."
+    },
+    {
+        "pregunta": "La caída de tensión máxima a considerar en la derivación individual de una carpintería instalada en un edificio industrial que tiene los contadores centralizados por plantas será: (ITC-BT 15)",
+        "opciones": [
+            "1%.",
+            "0,5%.",
+            "1,5%."
+        ],
+        "respuesta": "1%."
+    },
+    {
+        "pregunta": "¿Cuál es la sección mínima para el hilo de mando de una derivación individual? (ITC-BT 15)",
+        "opciones": [
+            "6 mm².",
+            "1,5 mm².",
+            "2,5 mm²."
+        ],
+        "respuesta": "1,5 mm²."
+    },
+    {
+        "pregunta": "¿Hasta qué valor es obligatorio compensar el factor de potencia de una lámpara de descarga? (ITC-BT 44)",
+        "opciones": [
+            "Hasta un valor mínimo de 0,8.",
+            "Hasta un valor mínimo de 0,89.",
+            "Hasta un valor mínimo de 0,9."
+        ],
+        "respuesta": "Hasta un valor mínimo de 0,9."
+    },
+    {
+        "pregunta": "¿Cuál es la sección mínima del conductor neutro de aluminio de una línea general de alimentación? (ITC-BT 14)",
+        "opciones": [
+            "10 mm².",
+            "16 mm².",
+            "25 mm²."
+        ],
+        "respuesta": "16 mm²."
+    },
+    {
+        "pregunta": "En las instalaciones receptoras los conductores o los cables podrán ser: (ITC-BT 19)",
+        "opciones": [
+            "Sólo de cobre.",
+            "De cobre o aluminio y estarán siempre aislados.",
+            "De cobre o aluminio y estarán siempre aislados, excepto cuando vayan sobre aisladores."
+        ],
+        "respuesta": "De cobre o aluminio y estarán siempre aislados, excepto cuando vayan sobre aisladores."
+    },
+    {
+        "pregunta": "Indíquese la sección mínima del conductor de tierra de cobre de un edificio industrial si no está protegido contra la corrosión y no protegido mecánicamente, el conductor de fase es de 25 mm² y el conductor de tierra no está enterrado. (ITC-BT 18)",
+        "opciones": [
+            "16 mm².",
+            "25 mm².",
+            "35 mm²."
+        ],
+        "respuesta": "16 mm²."
+    },
+    {
+        "pregunta": "¿Cómo serán los cables instalados en el volumen 0 de una fuente? (ITC-BT 31)",
+        "opciones": [
+            "Los cables serán de las características indicadas para los locales mojados en la ITC-BT 30, además se instalarán lo más cerca posible del borde de la pileta.",
+            "Los cables serán de las características indicadas para los locales mojados en la ITC-BT 30, además se instalarán lo más lejos posible del borde de la pileta.",
+            "Los cables serán de tensión asignada mínima 0,6/1 kV y podrán ir directamente sumergidos en el agua."
+        ],
+        "respuesta": "Los cables serán de tensión asignada mínima 0,6/1 kV y podrán ir directamente sumergidos en el agua."
+    },
+    {
+        "pregunta": "Antes de hacer los cimientos de una vivienda se instalará en el fondo de la zanja de cimentación un cable rígido de cobre desnudo, ¿qué sección mínima tendrá? (ITC-BT 26)",
+        "opciones": [
+            "35 mm² de sección mínima.",
+            "Según ITC-BT 19.",
+            "Según ITC-BT 18."
+        ],
+        "respuesta": "35 mm² de sección mínima."
+    },
+    {
+        "pregunta": "En la instalación de una toma de tierra de protección en una vivienda, ¿deberán disponerse obligadamente electrodos (por ejemplo picas) hincados verticalmente en el terreno? (ITC-BT 26)",
+        "opciones": [
+            "Es obligatorio hacer un anillo perimetral con cable rígido de cobre desnudo. A este anillo deberán conectarse electrodos hincados verticalmente en el terreno cuando se prevea la necesidad de disminuir su resistencia de tierra.",
+            "Sí, siempre es obligatorio.",
+            "El anillo perimetral no es obligatorio pero sí los electrodos hincados verticalmente."
+        ],
+        "respuesta": "Es obligatorio hacer un anillo perimetral con cable rígido de cobre desnudo. A este anillo deberán conectarse electrodos hincados verticalmente en el terreno cuando se prevea la necesidad de disminuir su resistencia de tierra."
+    },
+    {
+        "pregunta": "Indíquese el porcentaje máximo, respecto de la potencia total contratada para el suministro normal, del suministro complementario obligatorio que debe tener una estación de trenes. (Artic. 10.1.B REBT)",
+        "opciones": [
+            "25%.",
+            "50%.",
+            "No existe limitación máxima de potencia."
+        ],
+        "respuesta": "50%."
+    },
+    {
+        "pregunta": "Indíquese si alguno de los siguientes requisitos es necesario para obtener la autorización como instalador autorizado en baja tensión: (ITC-BT 03)",
+        "opciones": [
+            "Estar dado de alta en el impuesto de actividades económicas.",
+            "No estar incluido en el censo de obligaciones tributarias.",
+            "Las dos anteriores son necesarias."
+        ],
+        "respuesta": "Estar dado de alta en el impuesto de actividades económicas."
+    },
+    {
+        "pregunta": "Los interruptores diferenciales: (ITC-BT 24)",
+        "opciones": [
+            "No constituyen por sí mismos una protección contra contactos directos.",
+            "No constituyen por sí mismos una protección contra contactos indirectos.",
+            "No constituyen por sí mismos una protección contra contactos indirectos en un esquema TN-S."
+        ],
+        "respuesta": "No constituyen por sí mismos una protección contra contactos directos."
+    },
+    {
+        "pregunta": "Los equipos eléctricos del volumen 0 de piscinas han de tener un grado de protección: (ITC-BT 31 2.2 Prescripciones generales)",
+        "opciones": [
+            "IP X5.",
+            "IP X6.",
+            "IP X8."
+        ],
+        "respuesta": "IP X8."
+    },
+    {
+        "pregunta": "¿Cuáles de los siguientes equipos se consideran de categoría III para la protección contra sobretensiones? (ITC-BT 23)",
+        "opciones": [
+            "Contadores de energía.",
+            "Ordenadores.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Contadores de energía."
+    },
+    {
+        "pregunta": "En una instalación generadora aislada de baja tensión, ¿qué tasa de armónicos tendrán como máximo los generadores? (ITC-BT 40)",
+        "opciones": [
+            "Para armónicos de orden 5, la tasa de armónicos será como máximo de 5.",
+            "Para armónicos de orden 3, la tasa de armónicos será como máximo de 3.",
+            "La tasa de armónicos será como máximo de 5 en cualquier caso."
+        ],
+        "respuesta": "Para armónicos de orden 5, la tasa de armónicos será como máximo de 5."
+    },
+    {
+        "pregunta": "¿A qué distancia se recomienda poner los recorridos verticales de los tubos empotrados con respecto a los ángulos de las esquinas? (ITC-BT 21)",
+        "opciones": [
+            "20 cm.",
+            "35 cm.",
+            "40 cm."
+        ],
+        "respuesta": "20 cm."
+    },
+    {
+        "pregunta": "El cableado interno de un receptor de alumbrado tendrá una tensión asignada mínima de: (ITC-BT 44)",
+        "opciones": [
+            "300/300 V.",
+            "450/750 V.",
+            "0,6/1 kV."
+        ],
+        "respuesta": "450/750 V."
+    },
+    {
+        "pregunta": "¿Cuál es el objetivo general del alumbrado de emergencia? (ITC-BT 28)",
+        "opciones": [
+            "Garantizar la seguridad de las personas que evacuen una zona o que tienen que terminar un trabajo potencialmente peligroso antes de abandonar la zona.",
+            "Permitir la continuidad de las actividades normales.",
+            "Asegurar, en caso de fallo de la alimentación del alumbrado normal, la iluminación en los locales y accesos hasta las salidas para una eventual evacuación del público o iluminar otros puntos que se señalen."
+        ],
+        "respuesta": "Asegurar, en caso de fallo de la alimentación del alumbrado normal, la iluminación en los locales y accesos hasta las salidas para una eventual evacuación del público o iluminar otros puntos que se señalen."
+    },
+    {
+        "pregunta": "El aislamiento cuyas características mecánicas y eléctricas le hacen equivalente a un doble aislamiento recibe el nombre de: (ITC-BT 01)",
+        "opciones": [
+            "Aislamiento normal.",
+            "Aislamiento reforzado.",
+            "Aislamiento funcional."
+        ],
+        "respuesta": "Aislamiento reforzado."
+    },
+    {
+        "pregunta": "¿Qué factor de reducción por simultaneidad se tendrá que aplicar a la carga correspondiente a los servicios generales de un edificio de viviendas? (ITC-BT 10)",
+        "opciones": [
+            "Depende del número de viviendas.",
+            "No se aplica factor de simultaneidad.",
+            "Ninguna de las anteriores respuestas es correcta."
+        ],
+        "respuesta": "Depende del número de viviendas."
+    },
+    {
+        "pregunta": "¿Cuál es la longitud que se considera para calcular la caída de tensión de la línea general de alimentación? (ITC-BT 14)",
+        "opciones": [
+            "Desde la caja general de protección hasta el cuadro de protección de cada abonado.",
+            "Desde la caja general de protección hasta la acometida.",
+            "Desde la caja general de protección hasta la centralización de contadores."
+        ],
+        "respuesta": "Desde la caja general de protección hasta la centralización de contadores."
+    },
+    {
+        "pregunta": "¿Cómo se podrá alimentar el alumbrado de seguridad? (ITC-BT 28)",
+        "opciones": [
+            "Con un suministro normal exterior.",
+            "Con fuentes propias de energía.",
+            "Ninguna respuesta anterior es correcta."
+        ],
+        "respuesta": "Con fuentes propias de energía."
+    },
+    {
+        "pregunta": "Indíquese el sistema de instalación no correcto para una vivienda: (ITC-BT 26)",
+        "opciones": [
+            "Cables aislados bajo tubo curvable empotrado.",
+            "Cables aislados directamente empotrados.",
+            "Cables aislados bajo tubo rígido superficial."
+        ],
+        "respuesta": "Cables aislados directamente empotrados."
+    },
+    {
+        "pregunta": "¿Cómo se realizará la conexión entre el conductor en anillo de la toma de tierra y la estructura metálica de una vivienda? (ITC-BT 26)",
+        "opciones": [
+            "Mediante grapas de conexión (perrillos).",
+            "De manera fiable y segura mediante soldadura aluminotérmica o autógena.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "De manera fiable y segura mediante soldadura aluminotérmica o autógena."
+    },
+    {
+        "pregunta": "¿Qué sistemas de protección podemos utilizar en un esquema TT para la protección contra contactos indirectos? (ITC-BT 24)",
+        "opciones": [
+            "Únicamente dispositivos de protección de corriente diferencial residual.",
+            "Dispositivos de protección de corriente diferencial-residual, fusibles e interruptores automáticos.",
+            "Ninguna de las anteriores respuestas es correcta."
+        ],
+        "respuesta": "Dispositivos de protección de corriente diferencial-residual, fusibles e interruptores automáticos."
+    },
+    {
+        "pregunta": "Cuál de las siguientes afirmaciones relativas a la caja general de protección es la verdadera: (ITC-BT 13)",
+        "opciones": [
+            "Será construida por la empresa suministradora bajo su inspección y verificación final.",
+            "Es propiedad y responsabilidad de la empresa suministradora.",
+            "Aloja los elementos de protección de la línea general de alimentación."
+        ],
+        "respuesta": "Aloja los elementos de protección de la línea general de alimentación."
+    },
+    {
+        "pregunta": "¿Cuál es el valor máximo de tensión que pueden adquirir las partes metálicas de los aparatos de utilización de una instalación eléctrica antes de que actúe la protección por corte automático de la alimentación? (ITC-BT 24)",
+        "opciones": [
+            "24 V.",
+            "50 V.",
+            "12 V."
+        ],
+        "respuesta": "50 V."
+    },
+    {
+        "pregunta": "¿Cuál es el grado de corrosión mínimo exigido a los tubos instalados en montaje superficial en un local en el que hay manchas salinas permanentes en el techo? (ITC-BT 30)",
+        "opciones": [
+            "4.",
+            "2.",
+            "3."
+        ],
+        "respuesta": "4."
+    },
+    {
+        "pregunta": "¿De qué trata la ITC-BT 32? (ITC-BT 32)",
+        "opciones": [
+            "Trata de los requisitos particulares de instalación del equipo eléctrico de grúas, aparatos de elevación y transporte y similares como escaleras mecánicas, cintas transportadoras, puentes rodantes, cabrestantes, andamios eléctricos, etc.",
+            "Trata de las prescripciones de las instalaciones eléctricas de las piscinas, pediluvios y fuentes ornamentales.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Trata de los requisitos particulares de instalación del equipo eléctrico de grúas, aparatos de elevación y transporte y similares como escaleras mecánicas, cintas transportadoras, puentes rodantes, cabrestantes, andamios eléctricos, etc."
+    },
+    {
+        "pregunta": "La potencia total de cálculo a considerar para el diseño de una línea de alumbrado exterior constituida por 25 lámparas de incandescencia de 450 W y por 47 tubos de descarga de 250 W será: (ITC-BT 09)",
+        "opciones": ["32.400 VA.", "11.500 VA.", "23 kVA."],
+        "respuesta": "32.400 VA."
+    },
+    {
+        "pregunta": "¿Qué se entiende por instalación de enlace? (ITC-BT 12)",
+        "opciones": [
+            "Es la que comienza en el final de la acometida y termina en los dispositivos generales de mando y protección.",
+            "Es la que une la caja general de protección con el interruptor de control de potencia.",
+            "Es la que comienza en el final de la acometida y termina en los dispositivos individuales de mando y protección."
+        ],
+        "respuesta": "Es la que comienza en el final de la acometida y termina en los dispositivos generales de mando y protección."
+    },
+    {
+        "pregunta": "¿Cuál es el valor mínimo del factor de potencia de cada punto de luz de una instalación de alumbrado exterior? (ITC-BT 09)",
+        "opciones": ["0,80.", "0,90.", "0,85."],
+        "respuesta": "0,90."
+    },
+    {
+        "pregunta": "¿Pueden los fusibles del cuadro de baja tensión de un centro de transformación utilizarse como protección de la línea general de alimentación desempeñando la función de caja general de protección? (ITC-BT 13)",
+        "opciones": [
+            "Sí, en el caso de edificios que tengan en su interior un centro de transformación para distribución en baja tensión, pero en este caso la propiedad y el mantenimiento de la protección serán de la empresa suministradora.",
+            "Sí, en el caso de edificios que tengan en su interior un centro de transformación para distribución en baja tensión, pero en este caso la propiedad y el mantenimiento de la protección serán del usuario.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Sí, en el caso de edificios que tengan en su interior un centro de transformación para distribución en baja tensión, pero en este caso la propiedad y el mantenimiento de la protección serán del usuario."
+    },
+    {
+        "pregunta": "¿Es admitido para la protección contra cortocircuitos, que cuando se trate de circuitos derivados de uno principal, cada uno de estos circuitos derivados disponga de protección contra sobrecargas, mientras el dispositivo general pueda asegurar la protección contra cortocircuitos para todos los circuitos derivados? (ITC-BT 22)",
+        "opciones": ["Sí.", "No.", "Sólo si tiene además protección diferencial asociada."],
+        "respuesta": "Sí."
+    },
+    {
+        "pregunta": "¿Cómo se realizará el paso de los conductores de protección a través de paredes o techos? (ITC-BT 19)",
+        "opciones": [
+            "Estarán protegidos por un tubo de adecuada resistencia mecánica.",
+            "Estarán protegidos por una canal protectora.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Estarán protegidos por un tubo de adecuada resistencia mecánica."
+    },
+    {
+        "pregunta": "El neutro de una línea general de alimentación tiene una sección de 25 mm². ¿Qué sección máxima tendrán los conductores de fase? (ITC-BT 14)",
+        "opciones": ["25 mm².", "50 mm².", "Ambas respuestas son correctas."],
+        "respuesta": "50 mm²."
+    },
+    {
+        "pregunta": "¿Cuál será la tensión de contacto límite convencional máxima para el diseño de la protección contra contactos indirectos por corte automático de la alimentación? (ITC-BT 24)",
+        "opciones": ["24 V.", "12 V.", "50 V."],
+        "respuesta": "50 V."
+    },
+    {
+        "pregunta": "¿Cómo estará construido o situado un transformador que pueda estar al alcance de personas no especializadas? (ITC-BT 48)",
+        "opciones": [
+            "Estará construido o situado de manera, que sus arrollamientos y elementos bajo tensión, si ésta es superior a 60 V, sean inaccesibles.",
+            "Estará construido o situado de manera, que sus arrollamientos y elementos bajo tensión, si ésta es superior a 50 V, sean inaccesibles.",
+            "Estará construido o situado de manera, que sus arrollamientos y elementos bajo tensión, si ésta es superior a 50 V, sean accesibles."
+        ],
+        "respuesta": "Estará construido o situado de manera, que sus arrollamientos y elementos bajo tensión, si ésta es superior a 50 V, sean inaccesibles."
+    },
+    {
+        "pregunta": "¿Cuál es la caída de tensión máxima permitida para líneas generales de alimentación destinadas a contadores totalmente centralizados? (ITC-BT 14)",
+        "opciones": [
+            "0,5%.",
+            "1%.",
+            "1,5%."
+        ],
+        "respuesta": "0,5%."
+    },
+    {
+        "pregunta": "¿Es obligatorio realizar algún trámite ante la empresa distribuidora de energía para la instalación de un sistema de generación solar fotovoltaico e interconectado? (ITC-BT 40)",
+        "opciones": [
+            "Sí, es obligatorio.",
+            "No es preciso.",
+            "Depende de la distancia del sistema de generación a la red de distribución pública."
+        ],
+        "respuesta": "Sí, es obligatorio."
+    },
+    {
+        "pregunta": "¿Qué sección mínima tendrá el conductor de protección a instalar en un circuito constituido por conductores de fase de 35 mm² colocados en el interior de un tubo empotrado? (ITC-BT 19)",
+        "opciones": [
+            "16 mm².",
+            "25 mm².",
+            "35 mm²."
+        ],
+        "respuesta": "16 mm²."
+    },
+    {
+        "pregunta": "¿Cómo serán los conductores activos de la instalación eléctrica de una vivienda? (ITC-BT 26)",
+        "opciones": [
+            "De cobre, aislados y con una tensión asignada de 450/750 V, como máximo.",
+            "De cobre o de aluminio.",
+            "De cobre, aislados y con una tensión asignada de 450/750 V, como mínimo."
+        ],
+        "respuesta": "De cobre, aislados y con una tensión asignada de 450/750 V, como máximo."
+    },
+    {
+        "pregunta": "¿Cómo se efectuará la medida de aislamiento con relación a tierra? (ITC-BT 19)",
+        "opciones": [
+            "Uniendo a tierra el polo positivo del generador y dejando, en principio, todos los receptores conectados y sus mandos en posición de “paro”, los dispositivos de interrupción se pondrán en posición de “cerrado” y los cortacircuitos instalados como en servicio normal.",
+            "Uniendo a tierra el polo positivo del generador y dejando, en principio, todos los receptores desconectados y sus mandos en posición de “marcha”, los dispositivos de interrupción se pondrán en posición de “cerrado” y los cortacircuitos instalados como en servicio normal.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Uniendo a tierra el polo positivo del generador y dejando, en principio, todos los receptores desconectados y sus mandos en posición de “marcha”, los dispositivos de interrupción se pondrán en posición de “cerrado” y los cortacircuitos instalados como en servicio normal."
+    },
+    {
+        "pregunta": "¿En qué condiciones una instalación está en situación controlada en relación con la protección contra sobretensiones? (ITC-BT 23)",
+        "opciones": [
+            "Cuando una instalación se alimenta por una línea aérea con conductores desnudos.",
+            "Cuando una instalación se alimenta por una línea aérea con conductores aislados.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Cuando una instalación se alimenta por una línea aérea con conductores aislados."
+    },
+    {
+        "pregunta": "Indíquese la previsión de carga mínima de un edificio de concentración de industrias con 8 locales de 300 m² cada uno. (ITC-BT 10)",
+        "opciones": [
+            "300 kW.",
+            "82,8 kW.",
+            "37,5 kW."
+        ],
+        "respuesta": "300 kW."
+    },
+    {
+        "pregunta": "¿Se puede instalar un interruptor diferencial por cada circuito o grupo de circuitos y prescindir del interruptor diferencial general? (ITC-BT 17)",
+        "opciones": [
+            "No, siempre debe existir un interruptor diferencial general.",
+            "Sí, siempre que queden protegidos todos los circuitos.",
+            "No, excepto que se instale un dispositivo de protección contra sobretensiones."
+        ],
+        "respuesta": "Sí, siempre que queden protegidos todos los circuitos."
+    },
+    {
+        "pregunta": "¿Cuáles de los siguientes tipos de cables pueden utilizarse en un puerto marino si no están instalados bajo conducto? (ITC-BT 42 4.2 Canalizaciones)",
+        "opciones": [
+            "Cables sin aislamiento.",
+            "Cables con armadura y cubierta de material termoplástico o elastómero.",
+            "Otros cables y materiales sin importar la protección mecánica."
+        ],
+        "respuesta": "Cables con armadura y cubierta de material termoplástico o elastómero."
+    },
+    {
+        "pregunta": "Indíquese la tensión asignada mínima de los conductores rígidos aislados instalados bajo tubo en montaje superficial en un local húmedo. (ITC-BT 30)",
+        "opciones": [
+            "No puede utilizarse este sistema de instalación.",
+            "0,6/1 kV.",
+            "450/750 V."
+        ],
+        "respuesta": "450/750 V."
+    },
+    {
+        "pregunta": "¿Qué tensión debe resistir una instalación de 230 V si la sometemos durante 1 minuto al ensayo de rigidez dieléctrica? (ITC-BT 19)",
+        "opciones": [
+            "1.460 V.",
+            "1.000 V.",
+            "1.500 V."
+        ],
+        "respuesta": "1.500 V."
+    },
+    {
+        "pregunta": "Una vivienda de 50 m², ¿puede tener grado de electrificación elevado? (ITC-BT 25)",
+        "opciones": [
+            "No, porque con esta superficie le corresponde grado de electrificación básico.",
+            "Sí, sólo si tiene instalado el circuito adicional para aire acondicionado.",
+            "Sí, siempre que disponga de la instalación adecuada."
+        ],
+        "respuesta": "Sí, siempre que disponga de la instalación adecuada."
+    },
+    {
+        "pregunta": "¿Qué norma UNE determina las condiciones que deben cumplir los grados de protección proporcionados por las envolventes? (Código IP) (UNE 20324)",
+        "opciones": [
+            "UNE 20460 - 5 - 52.",
+            "UNE-EN 50102.",
+            "UNE 20324."
+        ],
+        "respuesta": "UNE 20324."
+    },
+    {
+        "pregunta": "¿Qué desarrolla la norma UNE 20460? (UNE 20460)",
+        "opciones": [
+            "Las instalaciones eléctricas de las redes de distribución.",
+            "Las instalaciones domóticas.",
+            "Las instalaciones eléctricas en edificios."
+        ],
+        "respuesta": "Las instalaciones eléctricas en edificios."
+    },
+    {
+        "pregunta": "Para realizar la verificación inicial, previa a la puesta en servicio de una instalación eléctrica, se deben cumplir los procedimientos desarrollados por la norma: (UNE 20460 - 6 - 61)",
+        "opciones": [
+            "UNE 20460 - 3.",
+            "UNE 20460 - 5 - 523.",
+            "UNE 20460 - 6 - 61."
+        ],
+        "respuesta": "UNE 20460 - 6 - 61."
+    },
+    {
+        "pregunta": "¿Qué norma determina las características que deben cumplir las protecciones para garantizar la seguridad, en las instalaciones eléctricas en edificios? (UNE 20460 Parte 4)",
+        "opciones": [
+            "UNE 20460 Parte 4.",
+            "UNE 20572 Parte 1.",
+            "UNE 50085 Parte 1."
+        ],
+        "respuesta": "UNE 20460 Parte 4."
+    },
+    {
+        "pregunta": "Al realizar la instalación eléctrica de un quirófano, para aplicar las medidas de protección se instalarán un transformador de aislamiento y un vigilante de aislamiento que cumplirán la norma: (UNE 20615)",
+        "opciones": [
+            "UNE 20572 - 1.",
+            "UNE 20615.",
+            "UNE 20460 - 4 - 41."
+        ],
+        "respuesta": "UNE 20615."
+    },
+    {
+        "pregunta": "Los cables eléctricos de tensión asignada 0,6/1 kV con aislamiento y cubierta de policloruro de vinilo cumplirán la norma: (UNE 21123 - 1)",
+        "opciones": [
+            "UNE 21123 - 2.",
+            "UNE 21031 - 9.",
+            "UNE 21123 - 1."
+        ],
+        "respuesta": "UNE 21123 - 1."
+    },
+    {
+        "pregunta": "La norma UNE 21030 se aplicará a: (UNE 21030-X)",
+        "opciones": [
+            "Conductores de Uo/U 450/750 V para instalaciones interiores de viviendas.",
+            "Conductores cableados en haz para líneas de distribución y acometidas de tensión asignada 0,6/1kV.",
+            "Conductores cableados en haz para líneas de distribución y acometidas de Uo/U 450/750 V."
+        ],
+        "respuesta": "Conductores cableados en haz para líneas de distribución y acometidas de tensión asignada 0,6/1kV."
+    },
+    {
+        "pregunta": "Al realizar la instalación de una derivación individual, se han empleado conductores de tensión asignada 450/750 V, con aislamiento de compuesto termoplástico de baja emisión de humos y gases corrosivos, conforme a norma UNE: (UNE 211002)",
+        "opciones": [
+            "UNE 21027 - 9.",
+            "UNE 21031 - 9.",
+            "UNE 211002."
+        ],
+        "respuesta": "UNE 211002."
     }
 ]
+
+
+    
+
+
+
+ 
+
+  
+  
+     
+  
+
+
+
