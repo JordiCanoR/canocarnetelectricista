@@ -1226,8 +1226,614 @@
             "UNE 211002."
         ],
         "respuesta": "UNE 211002."
+    },
+    {
+        "pregunta": "La norma UNE-EN 50102 determina: (UNE-EN 50102)",
+        "opciones": [
+            "Los requisitos particulares para sistemas de tubos enterrados.",
+            "Los grados de protección proporcionados por las envolventes. (Código IP)",
+            "Los grados de protección proporcionados por las envolventes de materiales eléctricos contra los impactos mecánicos externos. (Código IK)"
+        ],
+        "respuesta": "Los grados de protección proporcionados por las envolventes de materiales eléctricos contra los impactos mecánicos externos. (Código IK)"
+    },
+    {
+        "pregunta": "La norma UNE-EN 61558-2-4 determina los requisitos que deben cumplir: (UNE-EN 61558-2-4)",
+        "opciones": [
+            "Los transformadores de uso médico.",
+            "Los transformadores de las máquinas de afeitar.",
+            "Transformadores de separación de circuitos y unidades de alimentación que incorporan transformadores de separación de circuitos"
+        ],
+        "respuesta": "Transformadores de separación de circuitos y unidades de alimentación que incorporan transformadores de separación de circuitos"
+    },
+    {
+        "pregunta": "¿Qué es un conductor CPN o PEN? (ITC-BT-01)",
+        "opciones": [
+            "Es un conductor común para neutro y protección.",
+            "Es el conductor de la línea general de tierras.",
+            "El conductor utilizado para neutro."
+        ],
+        "respuesta": "Es un conductor común para neutro y protección."
+    },
+    {
+        "pregunta": "Se entiende como corriente de sobrecarga de un circuito a la sobreintensidad: (Definición REBT)",
+        "opciones": [
+            "Producida en ausencia de fallo eléctrico.",
+            "Producida por una corriente de fuga.",
+            "Producida en un cortocircuito."
+        ],
+        "respuesta": "Producida en ausencia de fallo eléctrico."
+    },
+    {
+        "pregunta": "Se entiende como tensión de contacto Indirecto: (Definición REBT)",
+        "opciones": [
+            "Es la tensión que aparece entre partes accesibles simultáneamente, cuando hay un fallo de aislamiento.",
+            "A la que aparece entre los contactos de cualquier mecanismo de cierre, en el momento de cerrar el circuito.",
+            "A la que aparece entre los contactos de cualquier mecanismo de apertura, en el momento de abrir el circuito."
+        ],
+        "respuesta": "Es la tensión que aparece entre partes accesibles simultáneamente, cuando hay un fallo de aislamiento."
+    },
+    {
+        "pregunta": "Se entiende por 'Tierra': (Definición REBT)",
+        "opciones": [
+            "Conjunto de electrodos de tierra y las masas conectadas a ellos.",
+            "A la masa conductora de la tierra, en la que el potencial eléctrico en cada punto convencionalmente se toma como cero.",
+            "El conjunto de la red de puesta a tierra de una instalación."
+        ],
+        "respuesta": "A la masa conductora de la tierra, en la que el potencial eléctrico en cada punto convencionalmente se toma como cero."
+    },
+    {
+        "pregunta": "¿Qué es un defecto franco? (Definición REBT)",
+        "opciones": [
+            "Defecto de aislamiento cuya impedancia puede considerarse nula.",
+            "Conexión accidental que origina un fallo de la tensión.",
+            "Conexión accidental de impedancia despreciable, entre dos puntos de un circuito."
+        ],
+        "respuesta": "Defecto de aislamiento cuya impedancia puede considerarse nula."
+    },
+    {
+        "pregunta": "Se entiende por tensión de defecto a la tensión que aparece a causa de un defecto de aislamiento: (Definición REBT)",
+        "opciones": [
+            "Entre dos conductores.",
+            "Entre dos masas.",
+            "F"
+        ],
+        "respuesta": "Entre dos masas."
+    },
+    {
+        "pregunta": "Las redes de distribución pública pueden ser: (Definición REBT)",
+        "opciones": [
+            "De propiedad particular.",
+            "Cualquiera de ellas.",
+            "Pertenecientes a empresas distribuidoras."
+        ],
+        "respuesta": "Cualquiera de ellas."
+    },
+    {
+        "pregunta": "Se entiende por aparato amovible: (Definición REBT)",
+        "opciones": [
+            "Aparato portátil giratorio.",
+            "Aparato semifijo, que sólo puede ser desplazado cuando está sin tensión.",
+            "Aparato movible de uso normal."
+        ],
+        "respuesta": "Aparato semifijo, que sólo puede ser desplazado cuando está sin tensión."
+    },
+    {
+        "pregunta": "Un interruptor diferencial de 30 mA es de sensibilidad: (Definición REBT)",
+        "opciones": [
+            "Media.",
+            "Alta.",
+            "Baja."
+        ],
+        "respuesta": "Alta."
+    },
+    {
+        "pregunta": "Se entiende por circuito eléctrico: (Definición REBT)",
+        "opciones": [
+            "Conjunto de materiales eléctricos de distintas polaridades, alimentados por una o varias fuentes de energía y protegido contra sobreintensidades por uno o varios dispositivos comunes de protección.",
+            "Conjunto de materiales eléctricos de distintas polaridades, alimentados por una fuente de energía y protegido contra sobreintensidades por un dispositivo general de protección.",
+            "Conjunto de materiales eléctricos de distintas polaridades, alimentados por la misma fuente de energía y protegido contra sobreintensidades por el o los mismos dispositivos de protección."
+        ],
+        "respuesta": "Conjunto de materiales eléctricos de distintas polaridades, alimentados por la misma fuente de energía y protegido contra sobreintensidades por el o los mismos dispositivos de protección."
+    },
+    {
+        "pregunta": "¿Qué se entiende por tensión a tierra? (ITC-BT 04)",
+        "opciones": [
+            "La tensión entre una instalación de tierra y un punto a potencial cero, cuando pasa por dicha instalación su intensidad nominal.",
+            "La tensión entre una instalación de tierra y un punto a potencial cero, cuando no pasa corriente por dicha instalación.",
+            "La tensión entre una instalación de tierra y un punto a potencial cero, cuando pasa por la instalación una corriente de defecto."
+        ],
+        "respuesta": "La tensión entre una instalación de tierra y un punto a potencial cero, cuando pasa por la instalación una corriente de defecto."
+    },
+    {
+        "pregunta": "¿Qué se entiende por corriente de contacto? (ITC-BT 04)",
+        "opciones": [
+            "La que se produce en el punto donde se cierra un circuito.",
+            "Corriente que atraviesa un circuito cuando se produce un corto o una derivación.",
+            "Corriente que pasa por el cuerpo humano cuando está sometido a una tensión."
+        ],
+        "respuesta": "Corriente que pasa por el cuerpo humano cuando está sometido a una tensión."
+    },
+    {
+        "pregunta": "¿Qué se entiende por impedancia? (ITC-BT 04)",
+        "opciones": [
+            "El cociente que se obtiene al dividir la tensión en bornes de un circuito de alterna entre la corriente que circula por él.",
+            "El cociente que se obtiene al dividir la tensión en bornes de un circuito de continua entre la corriente que circula por él.",
+            "El cociente que se obtiene al dividir la tensión en bornes de un circuito eléctrico entre la corriente que circula por él."
+        ],
+        "respuesta": "El cociente que se obtiene al dividir la tensión en bornes de un circuito de alterna entre la corriente que circula por él."
+    },
+    {
+        "pregunta": "Una canalización eléctrica es: (ITC-BT 04)",
+        "opciones": [
+            "Los conductores eléctricos y sus elementos de fijación y de protección mecánica.",
+            "Los elementos que fijan a los conductores eléctricos.",
+            "Los elementos que fijan a los conductores eléctricos y los elementos de protección mecánica."
+        ],
+        "respuesta": "Los conductores eléctricos y sus elementos de fijación y de protección mecánica."
+    },
+    {
+        "pregunta": "Un interruptor magnetotérmico no es un dispositivo: (ITC-BT 04)",
+        "opciones": [
+            "De protección contra sobrecargas.",
+            "De mando.",
+            "De protección contra contactos indirectos."
+        ],
+        "respuesta": "De protección contra contactos indirectos."
+    },
+    {
+        "pregunta": "Se entiende como conductor equipotencial: (ITC-BT 04)",
+        "opciones": [
+            "Al conductor de protección que asegura una conexión equipotencial.",
+            "Al conductor de un circuito eléctrico, que tiene un potencial cero en condiciones normales de funcionamiento.",
+            "Al cable de un circuito eléctrico, que tiene el mismo potencial en todo su recorrido."
+        ],
+        "respuesta": "Al conductor de protección que asegura una conexión equipotencial."
+    },
+    {
+        "pregunta": "Se entiende como corriente de puesta a tierra: (ITC-BT 04)",
+        "opciones": [
+            "A la que se deriva a tierra a través de la puesta a tierra.",
+            "A la corriente que en ausencia de fallos se transmite a los elementos conductores del circuito que estén conectados a tierra.",
+            "A la corriente máxima que puede soportar el electrodo de tierra."
+        ],
+        "respuesta": "A la que se deriva a tierra a través de la puesta a tierra."
+    },
+    {
+        "pregunta": "Se entiende como tensión nominal de un receptor: (ITC-BT 04)",
+        "opciones": [
+            "A la tensión entre fase y neutro si son trifásicos.",
+            "A la tensión entre fases si son trifásicos.",
+            "A la tensión entre fases si son monofásicos."
+        ],
+        "respuesta": "A la tensión entre fases si son trifásicos."
+    },
+    {
+        "pregunta": "Para determinar si un suelo es o no conductor tenemos los datos siguientes: Tensión entre la fase R y la placa metálica: 10 V - Tensión entre la misma fase y tierra: 365 V - Resistencia interna del voltímetro: 3.000 Ohmios. ¿Qué valor se obtendrá para la resistencia del suelo? (ITC-BT 04)",
+        "opciones": [
+            "106,5 MΩ.",
+            "10.650 Ω.",
+            "106,5 KΩ."
+        ],
+        "respuesta": "106,5 KΩ."
+    },
+    {
+        "pregunta": "¿Cuál es la misión de la unidad funcional de interruptor general de maniobra en una concentración de contadores? (ITC-BT 16)",
+        "opciones": [
+        "Su misión es dejar fuera de servicio, en caso de necesidad, toda la concentración de contadores.",
+        "Su misión es dejar fuera de servicio, en caso de necesidad, parte de la concentración de contadores.",
+        "Su misión es proteger la concentración de contadores."
+        ],
+        "respuesta": "Su misión es dejar fuera de servicio, en caso de necesidad, toda la concentración de contadores."
+    },
+    {
+        "pregunta": "¿Qué grado mínimo de resistencia a la corrosión deben tener los tubos instalados en montaje superficial en las instalaciones eléctricas de locales mojados? (ITC-BT 30 2.1.1)",
+        "opciones": [
+        "4.",
+        "5.",
+        "3."
+        ],
+        "respuesta": "4."
+    },
+    {
+        "pregunta": "¿Cómo se pueden realizar las canalizaciones bajo canales aislantes en un local húmedo? (ITC-BT 30)",
+        "opciones": [
+        "Se instalarán en superficie y las conexiones, empalmes y derivaciones se realizarán en el interior de cajas.",
+        "Se instalarán en superficie y las conexiones, empalmes y derivaciones se podrán realizar en el interior de la canal.",
+        "Se instalarán empotradas y las conexiones, empalmes y derivaciones se realizarán en el interior de cajas."
+        ],
+        "respuesta": "Se instalarán en superficie y las conexiones, empalmes y derivaciones se realizarán en el interior de cajas."
+    },
+    {
+        "pregunta": "Indíquese cuál de las siguientes respuestas es verdadera: (ITC-BT 18)",
+        "opciones": [
+        "La toma de tierra no deberá establecerse por motivos funcionales.",
+        "Cuando la toma de tierra sea necesaria a la vez por razones de protección y funcionales, prevalecerán las razones funcionales.",
+        "Cuando la toma de tierra sea necesaria a la vez por razones de protección y funcionales, prevalecerán las razones de protección."
+        ],
+        "respuesta": "Cuando la toma de tierra sea necesaria a la vez por razones de protección y funcionales, prevalecerán las razones de protección."
+    },
+    {
+        "pregunta": "El factor de potencia mínimo en instalaciones con generadores síncronos conectados a la red de distribución pública, no será inferior con respecto a la potencia nominal a: (ITC-BT 40 4.3.4)",
+        "opciones": [
+        "0,8 y sólo se permitirá en adelanto.",
+        "0,8, en adelanto o en retraso.",
+        "0,8 y sólo se permitirá en retraso."
+        ],
+        "respuesta": "0,8, en adelanto o en retraso."
+    },
+    {
+        "pregunta": "¿Puede considerarse un centro de transformación como local afecto a un servicio eléctrico? (ITC-BT 30)",
+        "opciones": [
+        "No.",
+        "Sí.",
+        "Solamente si su potencia es superior a 100 kW."
+        ],
+        "respuesta": "Sí."
+    },
+    {
+        "pregunta": "Una línea general de alimentación debe transportar una potencia de 120 kW a 400/230V. Se utilizarán conductores de cobre unipolares RZ1-0,6/1 kV bajo tubo empotrado en una pared de mampostería con una longitud de 1 m. ¿Qué sección será necesaria para los conductores de fase? Contadores concentrados en un solo punto. Factor de potencia 0,9 y temperatura ambiente de 40 °C. (UNE 20.460-5-523)",
+        "opciones": [
+        "50 mm².",
+        "95 mm².",
+        "70 mm²."
+        ],
+        "respuesta": "95 mm²."
+    },
+    {
+        "pregunta": "¿Cuál será la anchura mínima de los pasillos de servicio de un local con baterías de acumuladores? (ITC-BT 30)",
+        "opciones": [
+        "La anchura mínima de los pasillos de servicio será de 0,75 cm.",
+        "La anchura mínima de los pasillos de servicio será de 75 cm.",
+        "La anchura mínima de los pasillos de servicio será de 75 m."
+        ],
+        "respuesta": "La anchura mínima de los pasillos de servicio será de 75 cm."
+    },
+    {
+        "pregunta": "¿Cuál será la sección mínima de los cables de una centralización de contadores? (ITC-BT 16)",
+        "opciones": [
+        "10 mm².",
+        "6 mm².",
+        "4 mm²."
+        ],
+        "respuesta": "10 mm²."
+    },
+    {
+        "pregunta": "¿Cómo se denominará un tubo para una instalación interior según su tamaño? (ITC-BT 21)",
+        "opciones": [
+        "La denominación se realizará en función del diámetro exterior.",
+        "La denominación se realizará en función del diámetro interior.",
+        "La denominación se realizará por el diámetro interior o por el diámetro exterior."
+        ],
+        "respuesta": "La denominación se realizará en función del diámetro exterior."
+    },
+    {
+        "pregunta": "¿Qué categoría ha de tener un instalador para poder efectuar la instalación de un sistema de automatización de un edificio de pública concurrencia? (ITC-BT 03)",
+        "opciones": [
+            "Especialista.",
+            "Básica.",
+            "Puede hacerla un instalador con categoría básica con autorización especial."
+        ],
+        "respuesta": "Especialista."
+    },
+    {
+        "pregunta": "Un circuito MBTF, ¿puede considerarse como un circuito a tensión diferente con respecto a un circuito MBTS o un circuito MBTP? (ITC-BT 36)",
+        "opciones": [
+            "Un circuito MBTF se considera siempre como circuito de tensión diferente.",
+            "Si el circuito MBTF y el circuito MBTP son de 24 V se consideran de la misma tensión.",
+            "Si el circuito MBTF y el circuito MBTS son de 24 V se consideran de la misma tensión."
+        ],
+        "respuesta": "Un circuito MBTF se considera siempre como circuito de tensión diferente."
+    },
+    {
+        "pregunta": "Para los apartados de la norma UNE 20460-7-705 que se encuentran en estudio, ¿qué prescripciones particulares se aplicarán? (ITC-BT 35)",
+        "opciones": [
+            "Se aplicará lo dispuesto para estos apartados en la ITC-BT 35.",
+            "Se aplicará lo dispuesto para estos apartados en instalaciones provisionales y temporales de obra.",
+            "Se aplicará lo dispuesto para estos apartados en la ITC-BT 34."
+        ],
+        "respuesta": "Se aplicará lo dispuesto para estos apartados en la ITC-BT 35."
+    },
+    {
+        "pregunta": "Los conductores a utilizar en derivaciones individuales serán: (ITC-BT 15)",
+        "opciones": [
+            "De cobre o aluminio, aislados y normalmente unipolares.",
+            "De cobre o aluminio, aislados y unipolares.",
+            "De cobre o aluminio, aislados y normalmente multipolares."
+        ],
+        "respuesta": "De cobre o aluminio, aislados y normalmente unipolares."
+    },
+    {
+        "pregunta": "¿Cómo denominamos a la tensión que aparece entre partes simultáneamente accesibles al ocurrir un fallo de aislamiento? (ITC-BT 01)",
+        "opciones": [
+            "Tensión asignada.",
+            "Tensión de defecto.",
+            "Tensión de contacto."
+        ],
+        "respuesta": "Tensión de contacto."
+    },
+    {
+        "pregunta": "¿Qué es una canalización amovible? (ITC-BT 01)",
+        "opciones": [
+            "La que puede ser quitada fácilmente.",
+            "La que no puede ser quitada fácilmente.",
+            "La que puede ser desplazada cuando está sin tensión."
+        ],
+        "respuesta": "La que puede ser desplazada cuando está sin tensión."
+    },
+    {
+        "pregunta": "¿Qué dispositivo se admite para la protección contra cortocircuitos? (ITC-BT 22)",
+        "opciones": [
+            "Interruptor diferencial.",
+            "Interruptor automático con corte omnipolar.",
+            "Las dos son correctas."
+        ],
+        "respuesta": "Interruptor automático con corte omnipolar."
+    },
+    {
+        "pregunta": "¿A partir de qué potencia prevista se hace necesario un proyecto para la ejecución de una industria? (ITC-BT 04)",
+        "opciones": [
+            "15 kW.",
+            "20 kW.",
+            "21 kW."
+        ],
+        "respuesta": "20 kW."
+    },
+    {
+        "pregunta": "¿Dónde se situarán los dispositivos generales de mando y protección? (ITC-BT 17)",
+        "opciones": [
+            "Lo más lejos posible del punto de entrada de la derivación individual en el local o vivienda del usuario.",
+            "Lo más cerca posible del punto de entrada de la derivación individual en el local o vivienda del usuario.",
+            "Al lado de la puerta de entrada del aseo de la vivienda o local."
+        ],
+        "respuesta": "Lo más cerca posible del punto de entrada de la derivación individual en el local o vivienda del usuario."
+    },
+    {
+        "pregunta": "Se podrá instalar un conductor de protección común a varios circuitos en la instalación de una discoteca. (ITC-BT 18)",
+        "opciones": [
+            "Sí, en cuyo caso su sección debe dimensionarse en función de la fase del circuito de mayor sección.",
+            "Nunca.",
+            "Sólo en caso debidamente justificados por imposibilidad técnica de instalar un conductor de protección por circuito."
+        ],
+        "respuesta": "Sí, en cuyo caso su sección debe dimensionarse en función de la fase del circuito de mayor sección."
+    },
+    {
+        "pregunta": "¿Qué sección será necesaria para alimentar un motor trifásico de 50 CV, factor de potencia 0,6 y alimentado a 400 V? (UNE 20.460-5-523)",
+        "opciones": ["No puede instalarse un motor con ese factor de potencia.", "50 mm².", "70 mm²."],
+        "respuesta": "50 mm²."
+    },
+    {
+        "pregunta": "Los materiales utilizados para la realización de la toma de tierra deberán: (ITC-BT 18)",
+        "opciones": ["Ser siempre de cobre.", "Ser siempre de aluminio.", "No afectar la resistencia mecánica y eléctrica por efecto de la corrosión."],
+        "respuesta": "No afectar la resistencia mecánica y eléctrica por efecto de la corrosión."
+    },
+    {
+        "pregunta": "¿Cómo se instalarán los reóstatos de arranque y regulación de velocidad de un motor? (ITC-BT 47)",
+        "opciones": ["Deberán estar separados de la instalación por interruptores generales de corte unipolar.", "Deberán estar provistos de un aislamiento de clase II.", "Deberán estar separados de los muros 5 cm como mínimo."],
+        "respuesta": "Deberán estar separados de los muros 5 cm como mínimo."
+    },
+    {
+        "pregunta": "¿Cómo se instalarán cercas eléctricas para ganado cercanas con diferentes alimentadores? (ITC-BT 39)",
+        "opciones": ["Se tomarán medidas convenientes para evitar que una persona o animal pueda tocarlas simultáneamente. Normalmente se considera suficiente una separación de 2 m, entre los conductores de unas y otras cercas.", "No es posible instalar cercas eléctricas a menos de 4 m con distintas alimentaciones.", "Se colocarán carteles que avisen de la existencia de dos fuentes de alimentación independientes."],
+        "respuesta": "Se tomarán medidas convenientes para evitar que una persona o animal pueda tocarlas simultáneamente. Normalmente se considera suficiente una separación de 2 m, entre los conductores de unas y otras cercas."
+    },
+    {
+        "pregunta": "En un edificio de oficinas, ¿qué carga mínima se considera para una oficina de 30m²? (ITC-BT 10)",
+        "opciones": ["3.000 W.", "3.450 W.", "5.750 W."],
+        "respuesta": "3.450 W."
+    },
+    {
+        "pregunta": "Indíquese la sección mínima del conductor de tierra de cobre de un edificio industrial si no está protegido contra la corrosión y no protegido mecánicamente, el conductor de fase es de 95 mm² y el conductor de tierra está enterrado: (ITC-BT 18)",
+        "opciones": ["50 mm².", "25 mm².", "95 mm²."],
+        "respuesta": "25 mm²."
+    },
+    {
+        "pregunta": "¿Qué temperatura máxima de servicio tendrá un cable de PVC para alimentación a paneles de folio radiante? (ITC-BT 46)",
+        "opciones": ["90 °C.", "70 °C.", "60 °C."],
+        "respuesta": "70 °C."
+    },
+    {
+        "pregunta": "La intensidad de defecto, umbral de desconexión de los interruptores diferenciales para las instalaciones de alumbrado exterior, será como máximo: (ITC-BT 09)",
+        "opciones": ["500 mA si la resistencia de puesta a tierra medida en la puesta en servicio de la instalación es como máximo de 5 Ω.", "300 mA si la resistencia de puesta a tierra medida en la puesta en servicio de la instalación es como máximo de 300 Ω.", "1 A si la resistencia de puesta a tierra medida en la puesta en servicio de la instalación es como máximo de 5 Ω."],
+        "respuesta": "500 mA si la resistencia de puesta a tierra medida en la puesta en servicio de la instalación es como máximo de 5 Ω."
+    },
+    {
+        "pregunta": "En una instalación interior, ¿a qué distancia mínima se mantendrán una canalización eléctrica de otra no eléctrica? (ITC-BT 20)",
+        "opciones": ["5 cm.", "3 cm.", "4 cm."],
+        "respuesta": "5 cm."
+    },
+    {
+        "pregunta": "¿Cuál es la caída de tensión máxima que puede producirse en la conexión de generadores asíncronos respecto de la tensión asignada de la red cuando están trabajando en paralelo con ella? (ITC-BT 40)",
+        "opciones": ["8%.", "5%.", "3%."],
+        "respuesta": "3%."
+    },
+    {
+        "pregunta": "¿Qué norma UNE determina las condiciones que deben cumplir los grados de protección proporcionados por las envolventes? (Código IP) (UNE 20324)",
+        "opciones": [
+            "UNE 20324.",
+            "UNE-EN 50102.",
+            "UNE 20460 - 5 - 52."
+        ],
+        "respuesta": "UNE 20324."
+    },
+    {
+        "pregunta": "¿Qué desarrolla la norma UNE 20460? (UNE 20460-4-45)",
+        "opciones": [
+            "Las instalaciones eléctricas de las redes de distribución.",
+            "Las instalaciones eléctricas en edificios.",
+            "Las instalaciones domóticas."
+        ],
+        "respuesta": "Las instalaciones eléctricas en edificios."
+    },
+    {
+        "pregunta": "Para realizar la verificación inicial, previa a la puesta en servicio de una instalación eléctrica, se deben cumplir los procedimientos desarrollados por la norma: (UNE 20460 - 6 -61)",
+        "opciones": [
+            "UNE 20460 - 6 -61.",
+            "UNE 20460 - 5 - 523.",
+            "UNE 20460 - 3."
+        ],
+        "respuesta": "UNE 20460 - 6 -61."
+    },
+    {
+        "pregunta": "¿Qué norma determina las características que deben cumplir las protecciones para garantizar la seguridad, en las instalaciones eléctricas en edificios? (UNE 20460 Parte 4)",
+        "opciones": [
+            "UNE 20460 Parte 4.",
+            "UNE 20572 Parte 1.",
+            "UNE 50085 Parte 1."
+        ],
+        "respuesta": "UNE 20460 Parte 4."
+    },
+    {
+        "pregunta": "Al realizar la instalación eléctrica de un quirófano, para aplicar las medidas de protección se instalarán un transformador de aislamiento y un vigilante de aislamiento que cumplirán la norma: (UNE 20615)",
+        "opciones": [
+            "UNE 20460 - 4 - 41.",
+            "UNE 20572 - 1.",
+            "UNE 20615."
+        ],
+        "respuesta": "UNE 20615."
+    },
+    {
+        "pregunta": "Los cables eléctricos de tensión asignada 0,6/1 kV con aislamiento y cubierta de policloruro de vinilo cumplirán la norma: (UNE 21123-1)",
+        "opciones": [
+            "UNE 21123 - 1.",
+            "UNE 21031 - 9.",
+            "UNE 21123 - 2."
+        ],
+        "respuesta": "UNE 21123 - 1."
+    },
+    {
+        "pregunta": "La norma UNE 21030 se aplicará a: (UNE 21030-X)",
+        "opciones": [
+            "Conductores cableados en haz para líneas de distribución y acometidas de Uo/U 450/750 v.",
+            "Conductores de Uo/U 450/750 v para Instalaciones interiores de viviendas.",
+            "Conductores cableados en haz para líneas de distribución y acometidas de tensión asignada 0,6/1kV."
+        ],
+        "respuesta": "Conductores cableados en haz para líneas de distribución y acometidas de tensión asignada 0,6/1kV."
+    },
+    {
+        "pregunta": "Al realizar la instalación de una derivación individual, se han empleado conductores de tensión asignada 450/750 v, con aislamiento de compuesto termoplástico de baja emisión de humos y gases corrosivos, conforme a norma UNE: (UNE 211002)",
+        "opciones": [
+            "UNE 211002.",
+            "UNE 21031 - 9.",
+            "UNE 21027 - 9."
+        ],
+        "respuesta": "UNE 211002."
+    },
+    {
+        "pregunta": "La norma UNE-EN 50102 determina: (UNE-EN 50102)",
+        "opciones": [
+            "Los grados de protección proporcionados por las envolventes de materiales eléctricos contra los impactos mecánicos externos. (Código IK)",
+            "Los requisitos particulares para sistemas de tubos enterrados.",
+            "Los grados de protección proporcionados por las envolventes. (Código IP)"
+        ],
+        "respuesta": "Los grados de protección proporcionados por las envolventes de materiales eléctricos contra los impactos mecánicos externos. (Código IK)"
+    },
+    {
+        "pregunta": "La norma UNE-EN 61558-2-4 determina los requisitos que deben cumplir: (UNE-EN 61558-2-4)",
+        "opciones": [
+            "transformadores de separación de circuitos y unidades de alimentación que incorporan transformadores de separación de circuitos",
+            "Los transformadores de uso médico.",
+            "Los transformadores de las máquinas de afeitar."
+        ],
+        "respuesta": "transformadores de separación de circuitos y unidades de alimentación que incorporan transformadores de separación de circuitos"
+    },
+    {
+        "pregunta": "¿Qué es un conductor CPN o PEN? (ITC-BT 01)",
+        "opciones": [
+            "Es el conductor de la línea general de tierras",
+            "Es un conductor común para neutro y protección",
+            "El conductor utilizado para neutro"
+        ],
+        "respuesta": "Es un conductor común para neutro y protección"
+    },
+    {
+        "pregunta": "Se entiende como corriente de sobrecarga de un circuito a la sobreintensidad: (ITC-BT 01)",
+        "opciones": [
+            "Producida en ausencia de fallo eléctrico",
+            "Producida en un cortocircuito",
+            "Producida por una corriente de fuga"
+        ],
+        "respuesta": "Producida en ausencia de fallo eléctrico"
+    },
+    {
+        "pregunta": "Se entiende como tensión de contacto indirecto: (ITC-BT 01)",
+        "opciones": [
+            "Es la tensión que aparece entre partes accesibles simultáneamente, cuando hay un fallo de aislamiento",
+            "A la que aparece entre los contactos de cualquier mecanismo de apertura, en el momento de abrir el circuito",
+            "A la que aparece entre los contactos de cualquier mecanismo de cierre, en el momento de cerrar el circuito"
+        ],
+        "respuesta": "Es la tensión que aparece entre partes accesibles simultáneamente, cuando hay un fallo de aislamiento"
+    },
+    {
+        "pregunta": "Se entiende por 'Tierra': (ITC-BT 01)",
+        "opciones": [
+            "El conjunto de la red de puesta a tierra de una instalación",
+            "A la masa conductora de la tierra, en la que el potencial eléctrico en cada punto convencionalmente se toma como cero",
+            "Conjunto de electrodos de tierra y las masas conectadas a ellos"
+        ],
+        "respuesta": "A la masa conductora de la tierra, en la que el potencial eléctrico en cada punto convencionalmente se toma como cero"
+    },
+    {
+        "pregunta": "¿Qué es un defecto franco? (ITC-BT 01)",
+        "opciones": [
+            "Defecto de aislamiento cuya impedancia puede considerarse nula",
+            "Conexión accidental que origina un fallo de la tensión",
+            "Conexión accidental de impedancia despreciable, entre dos puntos de un circuito"
+        ],
+        "respuesta": "Defecto de aislamiento cuya impedancia puede considerarse nula"
+    },
+    {
+        "pregunta": "Se entiende por tensión de defecto a la tensión que aparece a causa de un defecto de aislamiento: (ITC-BT 01)",
+        "opciones": [
+            "Entre dos conductores",
+            "F",
+            "Entre dos masas"
+        ],
+        "respuesta": "Entre dos masas"
+    },
+    {
+        "pregunta": "Las redes de distribución pública pueden ser: (ITC-BT 01)",
+        "opciones": [
+            "Pertenecientes a empresas distribuidoras",
+            "Cualquiera de ellas",
+            "De propiedad particular"
+        ],
+        "respuesta": "Cualquiera de ellas"
+    },
+    {
+        "pregunta": "Se entiende por aparato amovible: (ITC-BT 01)",
+        "opciones": [
+            "Aparato portátil giratorio",
+            "Aparato movible de uso normal",
+            "Aparato semifijo, que solo puede ser desplazado cuando está sin tensión"
+        ],
+        "respuesta": "Aparato semifijo, que solo puede ser desplazado cuando está sin tensión"
+    },
+    {
+        "pregunta": "Un interruptor diferencial de 30 mA es de sensibilidad: (ITC-BT 01)",
+        "opciones": [
+            "Media",
+            "Baja",
+            "Alta"
+        ],
+        "respuesta": "Alta"
+    },
+    {
+        "pregunta": "Se entiende por circuito eléctrico: (ITC-BT 01)",
+        "opciones": [
+            "Conjunto de materiales eléctricos de distintas polaridades, alimentados por la misma fuente de energía y protegido contra sobreintensidades por el o los mismos dispositivos de protección",
+            "Conjunto de materiales eléctricos de distintas polaridades, alimentados por una fuente de energía y protegido contra sobreintensidades por un dispositivo general de protección",
+            "Conjunto de materiales eléctricos de distintas polaridades, alimentados por una o varias fuentes de energía y protegido contra sobreintensidades por uno o varios dispositivos comunes de protección"
+        ],
+        "respuesta": "Conjunto de materiales eléctricos de distintas polaridades, alimentados por la misma fuente de energía y protegido contra sobreintensidades por el o los mismos dispositivos de protección"
     }
 ]
+
+
+  
+
+  
+
+
 
 
     
