@@ -903,7 +903,7 @@
             "No se aplica factor de simultaneidad.",
             "Ninguna de las anteriores respuestas es correcta."
         ],
-        "respuesta": "Depende del número de viviendas."
+        "respuesta":  "No se aplica factor de simultaneidad."
     },
     {
         "pregunta": "¿Cuál es la longitud que se considera para calcular la caída de tensión de la línea general de alimentación? (ITC-BT 14)",
