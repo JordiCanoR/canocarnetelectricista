@@ -338,9 +338,9 @@
         "opciones": [
              "0,8 m y bajo tubos protectores",
              "0,4 m medidos desde la cota superior del tubo hasta el nivel del suelo, además los tubos deben de ir hormigonados",
-             "0,4 m medidos desde la cota inferior del tubo hasta el nivel del suelo, además los tubos deben ir hormigonados"  
+             "0,4 m medidos desde la cota inferior del tubo hasta el nivel del suelo, además los tubos deben de ir hormigonados"  
         ],  
-        "respuesta": "0,4 m medidos desde la cota superior del tubo hasta el nivel del suelo, además los tubos deben ir hormigonados"
+        "respuesta": "0,4 m medidos desde la cota superior del tubo hasta el nivel del suelo, además los tubos deben de ir hormigonados"
     },
     {
       "pregunta": "¿Cuándo discurrirá la línea general de alimentación por el interior de una canaladura o conducto de obra de fábrica empotrado o adosado al hueco de la escalera por lugares de uso común?(ITC-BT 14)", 
