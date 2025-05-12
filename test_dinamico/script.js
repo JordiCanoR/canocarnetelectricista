@@ -3,7 +3,7 @@ const tiempoSpan = document.getElementById("tiempo");
 const testForm = document.getElementById("testForm");
 let preguntas = [];
 let seleccionadas = [];
-let preguntasTextosUsadas = new Set();
+let preguntasNoUsadas = [];
 
 function temporizador() {
     const timer = setInterval(() => {
@@ -21,26 +21,27 @@ function temporizador() {
 function generarTest() {
     testForm.innerHTML = "";
 
-    // Copia y baraja usando Fisher-Yates
-    let copiaPreguntas = [...preguntas];
+    // Si preguntasNoUsadas está vacía o no tiene suficientes, recarga todas
+    if (preguntasNoUsadas.length < 30) {
+        preguntasNoUsadas = [...preguntas];
+    }
+
+    // Baraja preguntasNoUsadas
+    let copiaPreguntas = [...preguntasNoUsadas];
     for (let i = copiaPreguntas.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [copiaPreguntas[i], copiaPreguntas[j]] = [copiaPreguntas[j], copiaPreguntas[i]];
     }
 
-    // Crear array filtrado sin repetir enunciados ya usados
-    let preguntasFiltradas = [];
-    for (let pregunta of copiaPreguntas) {
-        let texto = pregunta.pregunta.toLowerCase().trim();
-        if (!preguntasTextosUsadas.has(texto)) {
-            preguntasFiltradas.push(pregunta);
-            preguntasTextosUsadas.add(texto);
-        }
-        if (preguntasFiltradas.length >= 30) break;
-    }
+    // Selecciona las primeras 30
+    seleccionadas = copiaPreguntas.slice(0, 30);
 
-    seleccionadas = preguntasFiltradas;
+    // Elimina las seleccionadas de preguntasNoUsadas
+    seleccionadas.forEach(p => {
+        preguntasNoUsadas = preguntasNoUsadas.filter(q => q.pregunta !== p.pregunta);
+    });
 
+    // Mostrar preguntas
     seleccionadas.forEach((pregunta, i) => {
         const div = document.createElement("div");
         div.classList.add("pregunta");
@@ -52,14 +53,12 @@ function generarTest() {
     });
 }
 
-
-
 function normalizar(texto) {
     return texto
         .trim()
         .toLowerCase()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, ""); // quita acentos
+        .replace(/[\u0300-\u036f]/g, "");
 }
 
 function corregirTest() {
@@ -127,6 +126,7 @@ fetch("preguntas_rebt_base.json")
     .then(res => res.json())
     .then(data => {
         preguntas = data;
+        preguntasNoUsadas = [...preguntas]; // inicializar
         generarTest();
         temporizador();
     });
@@ -135,6 +135,5 @@ document.getElementById("btnCorregir").addEventListener("click", corregirTest);
 document.getElementById("btnNuevo").addEventListener("click", () => {
     tiempo = 40 * 60;
     document.getElementById("resultado").innerHTML = "";
-    preguntasTextosUsadas.clear();
     generarTest();
 });
