@@ -3,6 +3,7 @@ const tiempoSpan = document.getElementById("tiempo");
 const testForm = document.getElementById("testForm");
 let preguntas = [];
 let seleccionadas = [];
+let preguntasTextosUsadas = new Set();
 
 function temporizador() {
     const timer = setInterval(() => {
@@ -16,6 +17,7 @@ function temporizador() {
         tiempo--;
     }, 1000);
 }
+
 function generarTest() {
     testForm.innerHTML = "";
 
@@ -26,8 +28,18 @@ function generarTest() {
         [copiaPreguntas[i], copiaPreguntas[j]] = [copiaPreguntas[j], copiaPreguntas[i]];
     }
 
-    // Selecciona las primeras 30
-    seleccionadas = copiaPreguntas.slice(0, 30);
+    // Crear array filtrado sin repetir enunciados ya usados
+    let preguntasFiltradas = [];
+    for (let pregunta of copiaPreguntas) {
+        let texto = pregunta.pregunta.toLowerCase().trim();
+        if (!preguntasTextosUsadas.has(texto)) {
+            preguntasFiltradas.push(pregunta);
+            preguntasTextosUsadas.add(texto);
+        }
+        if (preguntasFiltradas.length >= 30) break;
+    }
+
+    seleccionadas = preguntasFiltradas;
 
     seleccionadas.forEach((pregunta, i) => {
         const div = document.createElement("div");
@@ -39,6 +51,7 @@ function generarTest() {
         testForm.appendChild(div);
     });
 }
+
 
 
 function normalizar(texto) {
@@ -122,5 +135,6 @@ document.getElementById("btnCorregir").addEventListener("click", corregirTest);
 document.getElementById("btnNuevo").addEventListener("click", () => {
     tiempo = 40 * 60;
     document.getElementById("resultado").innerHTML = "";
+    preguntasTextosUsadas.clear();
     generarTest();
 });
