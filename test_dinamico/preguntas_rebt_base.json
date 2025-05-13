@@ -506,11 +506,6 @@
         "respuesta": "Señalización permanente"
     },
     {
-        "pregunta": "¿Qué intensidad máxima permite la ITC-BT para un cable de 70 mm² enterrado? (ITC-BT 20)",
-        "opciones": ["150 A", "170 A", "200 A"],
-        "respuesta": "170 A"
-    },
-    {
         "pregunta": "¿Cuál es el grado mínimo de protección IP exigido para cuadros eléctricos en garajes? (ITC-BT 28)",
         "opciones": ["IP20", "IP44", "IP65"],
         "respuesta": "IP44"
