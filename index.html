@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -59,6 +58,10 @@
     <a href="test_dinamico/index.html" class="card">
       <h2>Test<br>Dinámico Oficial</h2>
     </a>
+    <div id="contadorPreguntas" style="text-align: center; font-size: 1.2rem; color: #333; margin-top: 0.5rem;">
+    Cargando número total de preguntas...
+    </div>
+
     <a href="plantillas/index.html" class="card">
       <h2>Plantillas</h2>
     </a>
@@ -67,5 +70,23 @@
   <footer class="footer">
     <p>Hecho por Jordi Cano Román</p>
   </footer>
+
+  <!-- Script colocado fuera del main -->
+  <script>
+  fetch('test_dinamico/preguntas_rebt_base.json')
+    .then(response => response.json())
+    .then(data => {
+      let total = 0;
+      if (Array.isArray(data)) {
+        total = data.length;
+      } else if (data.preguntas && Array.isArray(data.preguntas)) {
+        total = data.preguntas.length;
+      }
+      document.getElementById('contadorPreguntas').innerText = `👉 Actualmente tienes ${total} preguntas acumuladas en el test.`;
+    })
+    .catch(error => {
+      document.getElementById('contadorPreguntas').innerText = '';
+    });
+  </script>
 </body>
 </html>
