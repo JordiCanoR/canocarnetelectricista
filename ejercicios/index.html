@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de Test</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    .ejercicio {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 800px;
+    }
+    .ejercicio h2 {
+      color: #333;
+    }
+    .solucion {
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .volver {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .volver a {
+      text-decoration: none;
+      background: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Ejercicios de Test</h1>
+
+<div class="ejercicio">
+  <h2>1️⃣ Iluminación de restaurante (ITC-BT 44)</h2>
+  <p>El circuito alimenta 3 pantallas fluorescentes de 2x36W + 10 lámparas incandescentes de 60W. Tensión: 230V.</p>
+  <div class="solucion">
+    Ptotal = (3×2×36) + (10×60) = 216 + 600 = 816W<br>
+    I = P / V = 816W / 230V = 3,55A ≈ 3,5A ✅
+  </div>
+</div>
+
+<div class="ejercicio">
+  <h2>2️⃣ Línea general 120 kW (UNE 20.460-5-523)</h2>
+  <p>Potencia: 120kW a 400V, cosφ=0,9. ¿Qué sección de conductor?</p>
+  <div class="solucion">
+    I = P / (√3 × V × cosφ) = 120000W / (1,73×400×0,9) ≈ 192,5A<br>
+    Según tablas UNE, sección aproximada para esa intensidad: 95 mm²
+  </div>
+</div>
+
+<div class="ejercicio">
+  <h2>3️⃣ Determinar resistencia del suelo (ITC-BT 04)</h2>
+  <p>Voltímetro mide: 10V con 3000Ω, tensión fase-tierra: 365V.</p>
+  <div class="solucion">
+    Rs = (365V - 10V) × (3000Ω / 10V) = 355V × 300Ω = 106.500 Ω ✅
+  </div>
+</div>
+
+<div class="ejercicio">
+  <h2>4️⃣ Motor trifásico 50CV (UNE 20.460-5-523)</h2>
+  <p>Motor de 50CV a 400V, cosφ=0,6.</p>
+  <div class="solucion">
+    P = 50CV×736 = 36.800W<br>
+    I = P / (√3 × V × cosφ) = 36.800W / (1,73×400×0,6) ≈ 88,5A<br>
+    Sección según tablas: 35 mm²
+  </div>
+</div>
+
+<div class="volver">
+  <a href="../index.html">← Volver al menú</a>
+</div>
+
+</body>
+</html>
