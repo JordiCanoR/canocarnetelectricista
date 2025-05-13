@@ -3566,8 +3566,283 @@
             "Grado de electrificación básico si tiene además calefacción eléctrica."
         ],
         "respuesta": "Grado de electrificación elevado."
+    },
+    {
+        "pregunta": "¿Cuál será la sección mínima del conductor de puesta a tierra de la cuba de un calentador de agua si ésta forma parte del circuito eléctrico? (ITC-BT 45 3.1.1)",
+        "opciones": [
+            "6 mm².",
+            "4 mm².",
+            "2,5 mm²."
+        ],
+        "respuesta": "4 mm²."
+    },
+    {
+        "pregunta": "En la instalación de un local polvoriento sin riesgo de incendio o explosión, ¿qué grado de protección mínimo tendrán las canalizaciones? (ITC-BT 30)",
+        "opciones": [
+            "IP 5X.",
+            "IP X5.",
+            "IP X4."
+        ],
+        "respuesta": "IP 5X."
+    },
+    {
+        "pregunta": "¿Cuál es la distancia mínima que deben guardar los cables subterráneos de distribución de baja tensión si se cruzan con otros de baja tensión? (ITC-BT 07 2.2.1)",
+        "opciones": [
+            "0,15 m.",
+            "0,25 m.",
+            "0,10 m."
+        ],
+        "respuesta": "0,10 m."
+    },
+    {
+        "pregunta": "Indíquese el porcentaje respecto de la potencia total contratada para el suministro normal que corresponde al suministro duplicado. (Artic. 10.1.B.c REBT)",
+        "opciones": [
+            "Mayor del 50%.",
+            "100%.",
+            "50%."
+        ],
+        "respuesta": "Mayor del 50%."
+    },
+    {
+        "pregunta": "Las bañeras y duchas metálicas pueden considerarse aisladas del edificio cuando la resistencia de aislamiento es como mínimo de: (ITC-BT 27)",
+        "opciones": [
+            "100 kΩ.",
+            "120 kΩ.",
+            "150 kΩ."
+        ],
+        "respuesta": "100 kΩ."
+    },
+    {
+        "pregunta": "¿Qué grado de electrificación mínimo tendrá una vivienda con 180 m²? (ITC-BT 10)",
+        "opciones": [
+            "Grado de electrificación básico.",
+            "Grado de electrificación elevado.",
+            "Grado de electrificación básico si tiene además calefacción eléctrica."
+        ],
+        "respuesta": "Grado de electrificación elevado."
+    },
+    {
+        "pregunta": "Indicar la resistencia de aislamiento que tendrán como mínimo las instalaciones con tensiones superiores a 500 V. (ITC-BT 19)",
+        "opciones": [
+            "0,25 MΩ.",
+            "500 kΩ.",
+            "1 MΩ."
+        ],
+        "respuesta": "1 MΩ."
+    },
+    {
+        "pregunta": "Para la protección contra contactos indirectos y contra sobreintensidades se emplea un esquema de distribución que tiene el neutro de la alimentación conectado directamente a tierra y las masas de la instalación receptora están conectadas a una toma de tierra separada de la toma de tierra de la alimentación. Dicho esquema: (ITC-BT 08)",
+        "opciones": [
+            "Debe emplearse siempre en instalaciones alimentadas en baja tensión a partir de un centro de transformación de abonado.",
+            "No debe emplearse nunca en instalaciones receptoras alimentadas directamente de una red de distribución pública de baja tensión.",
+            "Es el esquema que se emplea en instalaciones receptoras alimentadas directamente desde la red de distribución pública."
+        ],
+        "respuesta": "Es el esquema que se emplea en instalaciones receptoras alimentadas directamente desde la red de distribución pública."
+    },
+    {
+        "pregunta": "Indíquese la clasificación que obtendrá la instalación de una vivienda que tenga un valor elevado de resistencia de tierra en relación con las protecciones adoptadas. (ITC-BT 05)",
+        "opciones": [
+            "Defecto crítico.",
+            "Defecto grave.",
+            "Defecto muy grave."
+        ],
+        "respuesta": "Defecto grave."
+    },
+    {
+        "pregunta": "¿Cómo se denomina al circuito adicional de distribución interna destinado a proteger las tomas de corriente de los cuartos de baño, así como las bases auxiliares del cuarto de cocina de una vivienda de grado de electrificación elevado? (ITC-BT 25)",
+        "opciones": [
+            "C5.",
+            "C11.",
+            "C12."
+        ],
+        "respuesta": "C12."
+    },
+    {
+        "pregunta": "Indíquese la sección mínima del conductor de tierra de cobre de un edificio destinado principalmente a viviendas si está protegido contra la corrosión y protegido mecánicamente, siendo la sección del conductor de fase de 16 mm²: (ITC-BT 18)",
+        "opciones": [
+            "16 mm².",
+            "10 mm².",
+            "Ninguna de las anteriores."
+        ],
+        "respuesta": "16 mm²."
+    },
+    {
+        "pregunta": "¿Cuál es la potencia mínima a considerar para un edificio de oficinas con una superficie total de 12.000 m² repartidos en dos plantas en el que hay 400 oficinas de 25 m²? (ITC-BT 10)",
+        "opciones": [
+            "1.200 kW.",
+            "1.380.000 W.",
+            "2.400.000 W."
+        ],
+        "respuesta": "1.380.000 W."
+    },
+    {
+        "pregunta": "¿Qué intensidad máxima admitirán tres cables unipolares de cobre de 50 mm² con aislamiento de PVC hasta 0,6/1 kV, instalados en bandeja perforada en capa única horizontal y a la temperatura ambiente de 20 ºC? (UNE 20.460-5-523)",
+        "opciones": [
+            "194,88 A.",
+            "167 A.",
+            "187,04 A."
+        ],
+        "respuesta": "187,04 A."
+    },
+    {
+        "pregunta": "¿De qué depende la carga máxima que hay que prever por vivienda? (ITC-BT 10)",
+        "opciones": [
+            "Del número de habitaciones de la vivienda.",
+            "Del grado de utilización que se desee alcanzar.",
+            "Ninguna de las anteriores respuestas es correcta."
+        ],
+        "respuesta": "Del grado de utilización que se desee alcanzar."
+    },
+    {
+        "pregunta": "¿Qué sección mínima tendrá el conductor suplementario de equipotencialidad que une una masa a un elemento conductor? (ITC-BT 18)",
+        "opciones": [
+            "No será superior a la mitad de la sección del conductor de protección unido a esta masa.",
+            "No será inferior a la mitad de la sección del conductor de protección unido a esta masa.",
+            "6 mm²."
+        ],
+        "respuesta": "No será inferior a la mitad de la sección del conductor de protección unido a esta masa."
+    },
+    {
+        "pregunta": "Cuando se instale más de un interruptor diferencial en serie: (ITC-BT 17)",
+        "opciones": [
+            "Tendrán la misma intensidad diferencial residual.",
+            "No pueden instalarse dos diferenciales en serie.",
+            "Existirá una selectividad entre ellos."
+        ],
+        "respuesta": "Existirá una selectividad entre ellos."
+    },
+    {
+        "pregunta": "Indíquese la intensidad máxima admisible para un cable de cobre, tetrapolar, de 70 mm² con aislamiento de XLPE de tensión asignada de 0,6/1 kV, de sección nominal, instalado bajo tubo de acero en montaje superficial, a la temperatura de 20 ºC. (UNE 20.460-5-523 (fc=1,08))",
+        "opciones": [
+            "194 A.",
+            "184,68 A.",
+            "Ninguna de las anteriores."
+        ],
+        "respuesta": "Ninguna de las anteriores."
+    },
+    {
+        "pregunta": "¿Cuál es la potencia máxima de un generador eólico con respecto a la potencia de cortocircuito en el punto de interconexión con la red de distribución pública? (ITC-BT 40)",
+        "opciones": [
+            "5%.",
+            "3%.",
+            "2%."
+        ],
+        "respuesta": "5%."
+    },
+    {
+        "pregunta": "¿Quién es el encargado de emitir el certificado de instalación eléctrica? (REBT Art.18)",
+        "opciones": [
+            "El director de obra.",
+            "El instalador autorizado que ejecuto la instalación.",
+            "El organismo de control."
+        ],
+        "respuesta": "El instalador autorizado que ejecuto la instalación."
+    },
+    {
+        "pregunta": "La conexión equipotencial local suplementaria del cuarto de baño de una vivienda unirá el conductor de protección de los equipos de clase I (incluidas las tomas de corriente) que estén situados en los volúmenes 0, 1, 2 y 3 con: (ITC-BT 27)",
+        "opciones": [
+            "Las canalizaciones metálicas de agua, gas, calefacción centralizada, sistemas de aire acondicionado y otras partes conductoras externas susceptibles de transferir tensiones.",
+            "Las partes metálicas accesibles de la estructura del edificio.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "En el caso de edificios destinados principalmente a viviendas, ¿por donde deben discurrir las derivaciones individuales? (ITC-BT 15)",
+        "opciones": [
+            "Sólo pueden ir por lugares de uso común.",
+            "Por lugares de uso común o en caso contrario quedar determinadas sus servidumbres correspondientes.",
+            "Ninguna de las anteriores respuestas es correcta."
+        ],
+        "respuesta": "Por lugares de uso común o en caso contrario quedar determinadas sus servidumbres correspondientes."
+    },
+    {
+        "pregunta": "Indíquese la distancia desde la pared donde se instale la concentración de contadores hasta el primer obstáculo que tenga enfrente. (ITC-BT 16)",
+        "opciones": [
+            "2,30 m.",
+            "1,50 m.",
+            "1,10 m."
+        ],
+        "respuesta": "1,10 m."
+    },
+    {
+        "pregunta": "Para la protección contra contactos indirectos por corte automático de la alimentación en un esquema TN-C pueden utilizarse los dispositivos de protección siguientes: (ITC-BT 24)",
+        "opciones": [
+            "Fusibles o interruptores automáticos.",
+            "Dispositivos de protección de corriente diferencial-residual.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Fusibles o interruptores automáticos."
+    },
+    {
+        "pregunta": "¿Qué grado de protección mínimo deberán tener los equipos eléctricos de una fuente? (ITC-BT 31)",
+        "opciones": [
+            "IP X8 en el volumen 0.",
+            "IP X5 en el volumen 1.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "Las prescripciones particulares contempladas en la ITC-BT 33 se aplican a: (ITC-BT 33)",
+        "opciones": [
+            "Trabajos de construcción, reparación, modificación, extensión o demolición de edificios nuevos o existentes.",
+            "Trabajos públicos, de excavación u otros similares.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "Indíquese la previsión de carga mínima de un edificio de concentración de industrias con 4 locales de 100 m² cada uno. (ITC-BT 10)",
+        "opciones": [
+            "41.400 W.",
+            "30.000 W.",
+            "50.000 W."
+        ],
+        "respuesta": "50.000 W."
+    },
+    {
+        "pregunta": "En instalaciones eléctricas bajo canales protectoras, si éstas son de grado IP 4X y clasificadas como \"canales con tapa de acceso que sólo pueden abrirse con herramientas\", se podrá: (ITC-BT 20)",
+        "opciones": [
+            "Utilizar conductor aislado de tensión 450/750 V.",
+            "Realizar empalmes de conductores en su interior.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "¿Qué protección contra choques eléctricos deben incorporar los receptores de clase III? (ITC-BT 43)",
+        "opciones": [
+            "Provistos de medios de conexión a tierra.",
+            "Aislamiento suplementario o reforzado.",
+            "Alimentados con muy baja tensión de seguridad (MBTS)."
+        ],
+        "respuesta": "Alimentados con muy baja tensión de seguridad (MBTS)."
+    },
+    {
+        "pregunta": "¿Pueden instalarse mecanismos en el volumen 0 del cuarto de baño de una vivienda? (ITC-BT 27)",
+        "opciones": [
+            "Sí están permitidos.",
+            "Sí, en caso de interruptores de circuitos MBTS alimentados a una tensión nominal de 12 V de valor eficaz en corriente alterna o de 30 V en continua. En este caso la fuente de alimentación estará fuera de los volúmenes 0, 1 y 2.",
+            "No están permitidos."
+        ],
+        "respuesta": "No están permitidos."
+    },
+    {
+        "pregunta": "Indíquese cuál de las siguientes instalaciones requiere proyecto firmado por técnico titulado competente: (ITC-BT 04)",
+        "opciones": [
+            "Instalación eléctrica de una piscina de 4.500 W de potencia.",
+            "Instalación eléctrica de un local para 2 plazas de garaje con ventilación forzada.",
+            "Instalación eléctrica de un local para una estación de extracción de agua de un pozo con 9.200 W de potencia."
+        ],
+        "respuesta": "Instalación eléctrica de un local para 2 plazas de garaje con ventilación forzada."
     }
 ]
+
+
+
+
+
 
 
 
