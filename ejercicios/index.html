@@ -22,9 +22,10 @@
       margin: 20px auto;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       max-width: 800px;
+      color: #333;
     }
     .ejercicio h2 {
-      color: #333;
+      color: #007bff;
     }
     .solucion {
       background: #007bff;
@@ -52,38 +53,38 @@
 <h1>Ejercicios de Test</h1>
 
 <div class="ejercicio">
-  <h2>1️⃣ Iluminación de restaurante (ITC-BT 44)</h2>
-  <p>El circuito alimenta 3 pantallas fluorescentes de 2x36W + 10 lámparas incandescentes de 60W. Tensión: 230V.</p>
+  <h2>1️⃣ Iluminación restaurante (ITC-BT 44)</h2>
+  <p>El circuito de iluminación de un restaurante alimenta 3 pantallas fluorescentes de 2 x 36 W cada una y 10 lámparas incandescentes de 60 W cada una. ¿Cuál será la intensidad de cálculo a efectos de determinar la sección del circuito si se supone un factor de potencia de la unidad y no se conoce la carga que suponen los elementos asociados a las lámparas? Tensión 230 V.</p>
   <div class="solucion">
     Ptotal = (3×2×36) + (10×60) = 216 + 600 = 816W<br>
-    I = P / V = 816W / 230V = 3,55A ≈ 3,5A ✅
+    I = P / V = 816W / 230V = 3,55A → respuesta: 3,5A ✅
   </div>
 </div>
 
 <div class="ejercicio">
   <h2>2️⃣ Línea general 120 kW (UNE 20.460-5-523)</h2>
-  <p>Potencia: 120kW a 400V, cosφ=0,9. ¿Qué sección de conductor?</p>
+  <p>Una línea general de alimentación debe transportar una potencia de 120 kW a 400/230V. Se utilizarán conductores de cobre unipolares RZ1-0,6/1 kV bajo tubo empotrado en una pared de mampostería con una longitud de 1 m. ¿Qué sección será necesaria para los conductores de fase? Contadores concentrados en un solo punto. Factor de potencia 0,9 y temperatura ambiente de 40 ºC.</p>
   <div class="solucion">
     I = P / (√3 × V × cosφ) = 120000W / (1,73×400×0,9) ≈ 192,5A<br>
-    Según tablas UNE, sección aproximada para esa intensidad: 95 mm²
+    Según tablas UNE: sección ≈ 95 mm²
   </div>
 </div>
 
 <div class="ejercicio">
-  <h2>3️⃣ Determinar resistencia del suelo (ITC-BT 04)</h2>
-  <p>Voltímetro mide: 10V con 3000Ω, tensión fase-tierra: 365V.</p>
+  <h2>3️⃣ Resistencia del suelo (ITC-BT 04)</h2>
+  <p>Para determinar si un suelo es o no conductor tenemos los datos siguientes: Tensión entre la fase R y la placa metálica: 10 V. Tensión entre la misma fase y tierra: 365 V. Resistencia interna del voltímetro: 3.000 Ohmios. ¿Qué valor se obtendrá para la resistencia del suelo?</p>
   <div class="solucion">
     Rs = (365V - 10V) × (3000Ω / 10V) = 355V × 300Ω = 106.500 Ω ✅
   </div>
 </div>
 
 <div class="ejercicio">
-  <h2>4️⃣ Motor trifásico 50CV (UNE 20.460-5-523)</h2>
-  <p>Motor de 50CV a 400V, cosφ=0,6.</p>
+  <h2>4️⃣ Motor trifásico 50 CV (UNE 20.460-5-523)</h2>
+  <p>¿Qué sección será necesaria para alimentar un motor trifásico de 50 CV, factor de potencia 0,6 y alimentado a 400 V?</p>
   <div class="solucion">
-    P = 50CV×736 = 36.800W<br>
+    P = 50CV × 736 = 36.800W<br>
     I = P / (√3 × V × cosφ) = 36.800W / (1,73×400×0,6) ≈ 88,5A<br>
-    Sección según tablas: 35 mm²
+    Sección recomendada: 35 mm²
   </div>
 </div>
 
