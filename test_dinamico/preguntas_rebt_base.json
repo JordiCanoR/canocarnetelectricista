@@ -1250,7 +1250,7 @@
         "respuesta": "Es un conductor común para neutro y protección."
     },
     {
-        "pregunta": "Se entiende como corriente de sobrecarga de un circuito a la sobreintensidad: (Definición REBT)",
+        "pregunta": "Se entiende como corriente de sobrecarga de un circuito a la sobreintensidad: (Definición. 62)",
         "opciones": [
             "Producida en ausencia de fallo eléctrico.",
             "Producida por una corriente de fuga.",
@@ -1259,7 +1259,7 @@
         "respuesta": "Producida en ausencia de fallo eléctrico."
     },
     {
-        "pregunta": "Se entiende como tensión de contacto Indirecto: (Definición REBT)",
+        "pregunta": "Se entiende como tensión de contacto Indirecto: (Definición. 52)",
         "opciones": [
             "Es la tensión que aparece entre partes accesibles simultáneamente, cuando hay un fallo de aislamiento.",
             "A la que aparece entre los contactos de cualquier mecanismo de cierre, en el momento de cerrar el circuito.",
@@ -1268,16 +1268,16 @@
         "respuesta": "Es la tensión que aparece entre partes accesibles simultáneamente, cuando hay un fallo de aislamiento."
     },
     {
-        "pregunta": "Se entiende por 'Tierra': (Definición REBT)",
+        "pregunta": "Se entiende por 'Tierra': (Definición. 137)",
         "opciones": [
             "Conjunto de electrodos de tierra y las masas conectadas a ellos.",
-            "A la masa conductora de la tierra, en la que el potencial eléctrico en cada punto convencionalmente se toma como cero.",
+            "A la masa conductora de la tierra en la que el potencial eléctrico en cada punto se toma, convencionalmente, igual a cero.",
             "El conjunto de la red de puesta a tierra de una instalación."
         ],
-        "respuesta": "A la masa conductora de la tierra, en la que el potencial eléctrico en cada punto convencionalmente se toma como cero."
+        "respuesta": "A la masa conductora de la tierra en la que el potencial eléctrico en cada punto se toma, convencionalmente, igual a cero."
     },
     {
-        "pregunta": "¿Qué es un defecto franco? (Definición REBT)",
+        "pregunta": "¿Qué es un defecto franco? (Definición. 70)",
         "opciones": [
             "Defecto de aislamiento cuya impedancia puede considerarse nula.",
             "Conexión accidental que origina un fallo de la tensión.",
@@ -1286,7 +1286,7 @@
         "respuesta": "Defecto de aislamiento cuya impedancia puede considerarse nula."
     },
     {
-        "pregunta": "Se entiende por tensión de defecto a la tensión que aparece a causa de un defecto de aislamiento: (Definición REBT)",
+        "pregunta": "Se entiende por tensión de defecto a la tensión que aparece a causa de un defecto de aislamiento: (Definición. 130)",
         "opciones": [
             "Entre dos conductores.",
             "Entre dos masas.",
@@ -1295,7 +1295,7 @@
         "respuesta": "Entre dos masas."
     },
     {
-        "pregunta": "Las redes de distribución pública pueden ser: (Definición REBT)",
+        "pregunta": "Las redes de distribución pública pueden ser: (Definición. 123)",
         "opciones": [
             "De propiedad particular.",
             "Cualquiera de ellas.",
@@ -1304,7 +1304,7 @@
         "respuesta": "Cualquiera de ellas."
     },
     {
-        "pregunta": "Se entiende por aparato amovible: (Definición REBT)",
+        "pregunta": "Se entiende por aparato amovible: (Definición. 9)",
         "opciones": [
             "Aparato portátil giratorio.",
             "Aparato semifijo, que sólo puede ser desplazado cuando está sin tensión.",
@@ -1313,7 +1313,7 @@
         "respuesta": "Aparato semifijo, que sólo puede ser desplazado cuando está sin tensión."
     },
     {
-        "pregunta": "Un interruptor diferencial de 30 mA es de sensibilidad: (Definición REBT)",
+        "pregunta": "Un interruptor diferencial de 30 mA es de sensibilidad: (ITC-BT 24)",
         "opciones": [
             "Media.",
             "Alta.",
@@ -1322,7 +1322,7 @@
         "respuesta": "Alta."
     },
     {
-        "pregunta": "Se entiende por circuito eléctrico: (Definición REBT)",
+        "pregunta": "Se entiende por circuito eléctrico: (Definición. 33)",
         "opciones": [
             "Conjunto de materiales eléctricos de distintas polaridades, alimentados por una o varias fuentes de energía y protegido contra sobreintensidades por uno o varios dispositivos comunes de protección.",
             "Conjunto de materiales eléctricos de distintas polaridades, alimentados por una fuente de energía y protegido contra sobreintensidades por un dispositivo general de protección.",
@@ -1331,7 +1331,7 @@
         "respuesta": "Conjunto de materiales eléctricos de distintas polaridades, alimentados por la misma fuente de energía y protegido contra sobreintensidades por el o los mismos dispositivos de protección."
     },
     {
-        "pregunta": "¿Qué se entiende por tensión a tierra? (ITC-BT 04)",
+        "pregunta": "¿Qué se entiende por tensión a tierra? (DEFINICION. 136)",
         "opciones": [
             "La tensión entre una instalación de tierra y un punto a potencial cero, cuando pasa por dicha instalación su intensidad nominal.",
             "La tensión entre una instalación de tierra y un punto a potencial cero, cuando no pasa corriente por dicha instalación.",
@@ -1340,16 +1340,16 @@
         "respuesta": "La tensión entre una instalación de tierra y un punto a potencial cero, cuando pasa por la instalación una corriente de defecto."
     },
     {
-        "pregunta": "¿Qué se entiende por corriente de contacto? (ITC-BT 04)",
+        "pregunta": "¿Qué se entiende por corriente de contacto? (DEFINICION. 53)",
         "opciones": [
             "La que se produce en el punto donde se cierra un circuito.",
             "Corriente que atraviesa un circuito cuando se produce un corto o una derivación.",
-            "Corriente que pasa por el cuerpo humano cuando está sometido a una tensión."
+            "Corriente que pasa por el cuerpo humano o de un animal cuando está sometido a una tensión eléctrica."
         ],
-        "respuesta": "Corriente que pasa por el cuerpo humano cuando está sometido a una tensión."
+        "respuesta": "Corriente que pasa por el cuerpo humano o de un animal cuando está sometido a una tensión eléctrica."
     },
     {
-        "pregunta": "¿Qué se entiende por impedancia? (ITC-BT 04)",
+        "pregunta": "¿Qué se entiende por impedancia? (DEFINICION. 81)",
         "opciones": [
             "El cociente que se obtiene al dividir la tensión en bornes de un circuito de alterna entre la corriente que circula por él.",
             "El cociente que se obtiene al dividir la tensión en bornes de un circuito de continua entre la corriente que circula por él.",
@@ -1358,7 +1358,7 @@
         "respuesta": "El cociente que se obtiene al dividir la tensión en bornes de un circuito de alterna entre la corriente que circula por él."
     },
     {
-        "pregunta": "Una canalización eléctrica es: (ITC-BT 04)",
+        "pregunta": "Una canalización eléctrica es: (DEFINICION. 26)",
         "opciones": [
             "Los conductores eléctricos y sus elementos de fijación y de protección mecánica.",
             "Los elementos que fijan a los conductores eléctricos.",
@@ -1367,7 +1367,7 @@
         "respuesta": "Los conductores eléctricos y sus elementos de fijación y de protección mecánica."
     },
     {
-        "pregunta": "Un interruptor magnetotérmico no es un dispositivo: (ITC-BT 04)",
+        "pregunta": "Un interruptor magnetotérmico no es un dispositivo: (ITC-BT 24)",
         "opciones": [
             "De protección contra sobrecargas.",
             "De mando.",
@@ -1376,7 +1376,7 @@
         "respuesta": "De protección contra contactos indirectos."
     },
     {
-        "pregunta": "Se entiende como conductor equipotencial: (ITC-BT 04)",
+        "pregunta": "Se entiende como conductor equipotencial: (DEFINICION. 37)",
         "opciones": [
             "Al conductor de protección que asegura una conexión equipotencial.",
             "Al conductor de un circuito eléctrico, que tiene un potencial cero en condiciones normales de funcionamiento.",
@@ -1385,7 +1385,7 @@
         "respuesta": "Al conductor de protección que asegura una conexión equipotencial."
     },
     {
-        "pregunta": "Se entiende como corriente de puesta a tierra: (ITC-BT 04)",
+        "pregunta": "Se entiende como corriente de puesta a tierra: (DEFINICION. 61)",
         "opciones": [
             "A la que se deriva a tierra a través de la puesta a tierra.",
             "A la corriente que en ausencia de fallos se transmite a los elementos conductores del circuito que estén conectados a tierra.",
@@ -1394,7 +1394,7 @@
         "respuesta": "A la que se deriva a tierra a través de la puesta a tierra."
     },
     {
-        "pregunta": "Se entiende como tensión nominal de un receptor: (ITC-BT 04)",
+        "pregunta": "Se entiende como tensión nominal de un receptor: (DEFINICION)",
         "opciones": [
             "A la tensión entre fase y neutro si son trifásicos.",
             "A la tensión entre fases si son trifásicos.",
@@ -1538,7 +1538,7 @@
         "respuesta": "De cobre o aluminio, aislados y normalmente unipolares."
     },
     {
-        "pregunta": "¿Cómo denominamos a la tensión que aparece entre partes simultáneamente accesibles al ocurrir un fallo de aislamiento? (ITC-BT 01)",
+        "pregunta": "¿Cómo denominamos a la tensión que aparece entre partes simultáneamente accesibles al ocurrir un fallo de aislamiento? (DEFINICION. 129)",
         "opciones": [
             "Tensión asignada.",
             "Tensión de defecto.",
@@ -1547,7 +1547,7 @@
         "respuesta": "Tensión de contacto."
     },
     {
-        "pregunta": "¿Qué es una canalización amovible? (ITC-BT 01)",
+        "pregunta": "¿Qué es una canalización amovible? (DEFINICION. 25)",
         "opciones": [
             "La que puede ser quitada fácilmente.",
             "La que no puede ser quitada fácilmente.",
