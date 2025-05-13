@@ -1732,79 +1732,7 @@
         "respuesta": "transformadores de separación de circuitos y unidades de alimentación que incorporan transformadores de separación de circuitos"
     },
     {
-        "pregunta": "¿Qué es un conductor CPN o PEN? (ITC-BT 01)",
-        "opciones": [
-            "Es el conductor de la línea general de tierras",
-            "Es un conductor común para neutro y protección",
-            "El conductor utilizado para neutro"
-        ],
-        "respuesta": "Es un conductor común para neutro y protección"
-    },
-    {
-        "pregunta": "Se entiende como corriente de sobrecarga de un circuito a la sobreintensidad: (ITC-BT 01)",
-        "opciones": [
-            "Producida en ausencia de fallo eléctrico",
-            "Producida en un cortocircuito",
-            "Producida por una corriente de fuga"
-        ],
-        "respuesta": "Producida en ausencia de fallo eléctrico"
-    },
-    {
-        "pregunta": "Se entiende como tensión de contacto indirecto: (ITC-BT 01)",
-        "opciones": [
-            "Es la tensión que aparece entre partes accesibles simultáneamente, cuando hay un fallo de aislamiento",
-            "A la que aparece entre los contactos de cualquier mecanismo de apertura, en el momento de abrir el circuito",
-            "A la que aparece entre los contactos de cualquier mecanismo de cierre, en el momento de cerrar el circuito"
-        ],
-        "respuesta": "Es la tensión que aparece entre partes accesibles simultáneamente, cuando hay un fallo de aislamiento"
-    },
-    {
-        "pregunta": "Se entiende por 'Tierra': (ITC-BT 01)",
-        "opciones": [
-            "El conjunto de la red de puesta a tierra de una instalación",
-            "A la masa conductora de la tierra, en la que el potencial eléctrico en cada punto convencionalmente se toma como cero",
-            "Conjunto de electrodos de tierra y las masas conectadas a ellos"
-        ],
-        "respuesta": "A la masa conductora de la tierra, en la que el potencial eléctrico en cada punto convencionalmente se toma como cero"
-    },
-    {
-        "pregunta": "¿Qué es un defecto franco? (ITC-BT 01)",
-        "opciones": [
-            "Defecto de aislamiento cuya impedancia puede considerarse nula",
-            "Conexión accidental que origina un fallo de la tensión",
-            "Conexión accidental de impedancia despreciable, entre dos puntos de un circuito"
-        ],
-        "respuesta": "Defecto de aislamiento cuya impedancia puede considerarse nula"
-    },
-    {
-        "pregunta": "Se entiende por tensión de defecto a la tensión que aparece a causa de un defecto de aislamiento: (ITC-BT 01)",
-        "opciones": [
-            "Entre dos conductores",
-            "F",
-            "Entre dos masas"
-        ],
-        "respuesta": "Entre dos masas"
-    },
-    {
-        "pregunta": "Las redes de distribución pública pueden ser: (ITC-BT 01)",
-        "opciones": [
-            "Pertenecientes a empresas distribuidoras",
-            "Cualquiera de ellas",
-            "De propiedad particular"
-        ],
-        "respuesta": "Cualquiera de ellas"
-    },
-    {
-        "pregunta": "Se entiende por aparato amovible: (ITC-BT 01)",
-        "opciones": [
-            "Aparato portátil giratorio",
-            "Aparato movible de uso normal",
-            "Aparato semifijo, que solo puede ser desplazado cuando está sin tensión"
-        ],
-        "respuesta": "Aparato semifijo, que solo puede ser desplazado cuando está sin tensión"
-    },
-    {
-        "pregunta": "Un interruptor diferencial de 30 mA es de sensibilidad: (ITC-BT 01)",
+        "pregunta": "Un interruptor diferencial de 30 mA es de sensibilidad: (ITC-BT 24)",
         "opciones": [
             "Media",
             "Baja",
@@ -1813,7 +1741,7 @@
         "respuesta": "Alta"
     },
     {
-        "pregunta": "Se entiende por circuito eléctrico: (ITC-BT 01)",
+        "pregunta": "Se entiende por circuito eléctrico: (DEFINICION. 33)",
         "opciones": [
             "Conjunto de materiales eléctricos de distintas polaridades, alimentados por la misma fuente de energía y protegido contra sobreintensidades por el o los mismos dispositivos de protección",
             "Conjunto de materiales eléctricos de distintas polaridades, alimentados por una fuente de energía y protegido contra sobreintensidades por un dispositivo general de protección",
@@ -1822,7 +1750,7 @@
         "respuesta": "Conjunto de materiales eléctricos de distintas polaridades, alimentados por la misma fuente de energía y protegido contra sobreintensidades por el o los mismos dispositivos de protección"
     },
     {
-        "pregunta": "¿Qué es una canalización amovible? (ITC-BT 01)",
+        "pregunta": "¿Qué es una canalización amovible? (DEFINICION. 25)",
         "opciones": [
             "La que puede ser quitada fácilmente.",
             "La que no puede ser quitada fácilmente.",
