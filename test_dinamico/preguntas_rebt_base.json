@@ -2153,11 +2153,11 @@
     {
         "pregunta": "¿Cómo se efectuará la medida de aislamiento con relación a tierra? (ITC-BT 19)",
         "opciones": [
-            "Uniendo a tierra el polo positivo del generador y dejando, en principio, todos los receptores conectados y sus mandos en posición de “paro”, los dispositivos de interrupción se pondrán en posición de \"cerrado\" y los cortacircuitos instalados como en servicio normal.",
-            "Uniendo a tierra el polo positivo del generador y dejando, en principio, todos los receptores desconectados y sus mandos en posición de “marcha”, los dispositivos de interrupción se pondrán en posición de \"cerrado\" y los cortacircuitos instalados como en servicio normal.",
+            "Uniendo a tierra el polo positivo del generador y dejando, en principio, todos los receptores conectados y sus mandos en posición de 'paro', los dispositivos de interrupción se pondrán en posición de 'cerrado' y los cortacircuitos instalados como en servicio normal.",
+            "Uniendo a tierra el polo positivo del generador y dejando, en principio, todos los receptores desconectados y sus mandos en posición de 'marcha', los dispositivos de interrupción se pondrán en posición de 'cerrado' y los cortacircuitos instalados como en servicio normal.",
             "Ninguna de las respuestas anteriores es correcta."
         ],
-        "respuesta": "Uniendo a tierra el polo positivo del generador y dejando, en principio, todos los receptores conectados y sus mandos en posición de “paro”, los dispositivos de interrupción se pondrán en posición de \"cerrado\" y los cortacircuitos instalados como en servicio normal."
+        "respuesta": "Uniendo a tierra el polo positivo del generador y dejando, en principio, todos los receptores conectados y sus mandos en posición de 'paro', los dispositivos de interrupción se pondrán en posición de 'cerrado' y los cortacircuitos instalados como en servicio normal."
     },
     {
         "pregunta": "¿Qué tensión debe resistir una instalación de 230 V si la sometemos durante 1 minuto al ensayo de rigidez dieléctrica? (ITC-BT 19)",
