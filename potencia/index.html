@@ -83,17 +83,27 @@
   <p>Si un sistema tiene una potencia activa de 4 kW y una potencia reactiva de 3 kVAr, la potencia aparente será:</p>
   <div class="formula">S = √(P² + Q²) = √(4² + 3²) = √(16 + 9) = √25 = 5 kVA</div>
 </div>
-
 <div class="section">
-  <h2>5️⃣ Cálculo de Potencia útil o absorbida en un cilindro</h2>
-  <p>Si te dan la potencia de entrada en el eje de un cilindro (Pentrada) y la potencia de salida (Psalida), la potencia absorbida (o útil) es simplemente la salida:</p>
-  <div class="formula">Pútil = Psalida</div>
-  <p>Si necesitas calcular las pérdidas:</p>
-  <div class="formula">Pérdidas = Pentrada - Psalida</div>
-  <h3>Ejemplo:</h3>
-  <p>Si un motor entrega 12 kW al eje del cilindro y la potencia medida en la carga es de 10 kW:</p>
-  <div class="formula">Pérdidas = 12 kW - 10 kW = 2 kW</div>
-  <p>La potencia absorbida o útil sería 10 kW.</p>
+  <h2>5️⃣ Ejemplo práctico: Cálculo de potencia absorbida en un grupo de presión</h2>
+  <p>Si nos dan un <strong>grupo de presión con la potencia del eje de salida</strong>, se calcula la potencia absorbida (entrada) teniendo en cuenta el rendimiento.</p>
+  
+  <h3>Datos:</h3>
+  <ul>
+    <li>Potencia eje salida: 2,5 CV</li>
+    <li>1 CV = 736 W → 2,5 CV × 736 W = 1840 W</li>
+    <li>Rendimiento: 80% (0,8)</li>
+  </ul>
+
+  <h3>Fórmulas:</h3>
+  <p>El rendimiento se define como:</p>
+  <div class="formula">R = Ps / Pe</div>
+  <p><b>Ps</b> = Potencia de salida (W) <br> <b>Pe</b> = Potencia absorbida o de entrada (W)</p>
+
+  <p>Despejando Pe:</p>
+  <div class="formula">Pe = Ps / R = 1840 W / 0,8 = 2300 W</div>
+
+  <p><strong>Resultado:</strong> la potencia absorbida o de entrada es <strong>2300 W</strong>.</p>
+  <p><em>Nota:</em> El 80% se convierte a 0,8 dividiéndolo entre 100.</p>
 </div>
 
 <div class="volver">
