@@ -12,10 +12,12 @@
       padding: 20px;
       background-color: #f4f4f4;
     }
+
     h1 {
       text-align: center;
       color: #007bff;
     }
+
     .section {
       background: white;
       border-radius: 10px;
@@ -24,9 +26,16 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       max-width: 700px;
     }
+
     .section h2 {
-      color: #333;
+      color: black;
     }
+
+    /* 👉 Todos los textos en negro fuerte */
+    p, ul, li, h3 {
+      color: black !important;
+    }
+
     .formula {
       background: #007bff;
       color: white;
@@ -36,11 +45,13 @@
       border-radius: 8px;
       margin: 15px 0;
     }
+
     .volver {
       display: block;
       text-align: center;
       margin-top: 30px;
     }
+
     .volver a {
       text-decoration: none;
       background: #007bff;
@@ -83,6 +94,7 @@
   <p>Si un sistema tiene una potencia activa de 4 kW y una potencia reactiva de 3 kVAr, la potencia aparente será:</p>
   <div class="formula">S = √(P² + Q²) = √(4² + 3²) = √(16 + 9) = √25 = 5 kVA</div>
 </div>
+
 <div class="section">
   <h2>5️⃣ Ejemplo práctico: Cálculo de potencia absorbida en un grupo de presión</h2>
   <p>Si nos dan un <strong>grupo de presión con la potencia del eje de salida</strong>, se calcula la potencia absorbida (entrada) teniendo en cuenta el rendimiento.</p>
