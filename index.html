@@ -27,6 +27,33 @@
     .link-buttons a:hover {
       background-color: #0056b3;
     }
+
+    /* NUEVO estilo para el contador PRO */
+    .contador-caja {
+        background-color: #007bff;
+        color: white;
+        border-radius: 12px;
+        padding: 15px 25px;
+        display: inline-block;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        position: absolute;
+        right: 30px;
+        top: 270px; /* ajusta según necesidad */
+    }
+
+    .contador-caja h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #e0e0e0;
+    }
+
+    .contador-caja p {
+        margin: 5px 0 0 0;
+        font-size: 2.5rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
   </style>
 </head>
 <body>
@@ -58,8 +85,11 @@
     <a href="test_dinamico/index.html" class="card">
       <h2>Test<br>Dinámico Oficial</h2>
     </a>
-    <div id="contadorPreguntas" style="text-align: center; font-size: 1.2rem; color: #333; margin-top: 0.5rem;">
-    Cargando número total de preguntas...
+
+    <!-- NUEVO contador -->
+    <div class="contador-caja">
+        <h3>Preguntas Totales</h3>
+        <p id="contadorPreguntas">---</p>
     </div>
 
     <a href="plantillas/index.html" class="card">
@@ -71,7 +101,7 @@
     <p>Hecho por Jordi Cano Román</p>
   </footer>
 
-  <!-- Script colocado fuera del main -->
+  <!-- Script para cargar preguntas -->
   <script>
   fetch('test_dinamico/preguntas_rebt_base.json')
     .then(response => response.json())
@@ -82,11 +112,12 @@
       } else if (data.preguntas && Array.isArray(data.preguntas)) {
         total = data.preguntas.length;
       }
-      document.getElementById('contadorPreguntas').innerText = `👉 Actualmente tienes ${total} preguntas acumuladas en el test.`;
+      document.getElementById('contadorPreguntas').innerText = total;
     })
     .catch(error => {
-      document.getElementById('contadorPreguntas').innerText = '';
+      document.getElementById('contadorPreguntas').innerText = 'Error';
     });
   </script>
 </body>
 </html>
+
