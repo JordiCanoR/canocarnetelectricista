@@ -3926,6 +3926,275 @@
         "A veces."
         ],
         "respuesta": "No."
+    },
+    {
+        "pregunta": "¿Qué distancia habrá entre las pantallas incombustibles empleadas para separar un transformador de 6.000 VA de las partes combustibles de un edificio? (ITC-BT 48)",
+        "opciones": [
+            "2 cm.",
+            "3 cm.",
+            "1 cm."
+        ],
+        "respuesta": "2 cm."
+    },
+    {
+        "pregunta": "Indíquese la calificación qué obtendrá una inspección realizada en una instalación en servicio en la que se detectara, al menos, un defecto muy grave: (ITC-BT 05)",
+        "opciones": [
+            "Pésima.",
+            "Condicionada.",
+            "Negativa."
+        ],
+        "respuesta": "Negativa."
+    },
+    {
+        "pregunta": "Son locales o emplazamientos con riesgo de corrosión: (ITC-BT 30)",
+        "opciones": [
+            "Aquellos que tienen un ambiente polvoriento.",
+            "Aquellos en los que haya gases que no puedan dañar a los materiales eléctricos utilizados en la instalación.",
+            "Aquellos en los que haya vapores que puedan dañar a los materiales eléctricos utilizados en la instalación."
+        ],
+        "respuesta": "Aquellos en los que haya vapores que puedan dañar a los materiales eléctricos utilizados en la instalación."
+    },
+    {
+        "pregunta": "¿Cuál será la distancia mínima desde la parte inferior de una concentración de contadores al suelo? (ITC-BT 16)",
+        "opciones": [
+            "0,30 m.",
+            "0,25 m.",
+            "0,20 m."
+        ],
+        "respuesta": "0,25 m."
+    },
+    {
+        "pregunta": "El certificado de cualificación individual tendrá validez: (ITC-BT 03)",
+        "opciones": [
+            "En la Comunidad Autónoma donde resida la persona física.",
+            "En todo el ámbito de la Comunidad Económica Europea.",
+            "En todo el territorio español."
+        ],
+        "respuesta": "En todo el territorio español."
+    },
+    {
+        "pregunta": "¿Cuál es el grado de electrificación mínimo en una vivienda con superficie superior a 160 m²? (ITC-BT 10 2.2)",
+        "opciones": [
+            "Básico.",
+            "Elevado.",
+            "Depende si dispone de calefacción eléctrica."
+        ],
+        "respuesta": "Elevado."
+    },
+    {
+        "pregunta": "¿Qué cable se utilizará en una canalización exterior móvil destinada a alimentar una cinta transportadora? (ITC-BT 32)",
+        "opciones": [
+            "Rígido con cubierta de policloropreno.",
+            "Flexible con cubierta de policloropreno.",
+            "Ninguna respuesta es correcta."
+        ],
+        "respuesta": "Flexible con cubierta de policloropreno."
+    },
+    {
+        "pregunta": "Los equipos eléctricos de los puntos de luz para alumbrado exterior y montaje externo, ¿qué grado de protección mínimo tendrán? (ITC-BT 09)",
+        "opciones": [
+            "IP 44.",
+            "IK 07.",
+            "IP 54."
+        ],
+        "respuesta": "IP 54."
+    },
+    {
+        "pregunta": "El esquema de contadores en forma centralizada en más de un lugar: (ITC-BT 12)",
+        "opciones": [
+            "Se empleará únicamente en conjuntos de edificación vertical u horizontal destinados a viviendas.",
+            "Es de aplicación en el caso de centralización de contadores de forma distribuida mediante canalizaciones eléctricas prefabricadas que cumplan lo establecido en la norma UNE-EN 60.439-2.",
+            "No es de aplicación en agrupaciones de viviendas en distribución horizontal dentro de un recinto privado."
+        ],
+        "respuesta": "Es de aplicación en el caso de centralización de contadores de forma distribuida mediante canalizaciones eléctricas prefabricadas que cumplan lo establecido en la norma UNE-EN 60.439-2."
+    },
+    {
+        "pregunta": "Potencia mínima prevista por toma que hemos de considerar en el circuito destinado a iluminación de una instalación eléctrica de una vivienda. (ITC-BT 25 3)",
+        "opciones": [
+            "300 W por punto de luz.",
+            "200 W por punto de luz.",
+            "150 W por punto de luz."
+        ],
+        "respuesta": "200 W por punto de luz."
+    },
+    {
+        "pregunta": "Si hay una variación importante del reglamento de baja tensión que constituye la base para obtener el certificado de cualificación individual en baja tensión: (ITC-BT 03)",
+        "opciones": [
+            "El titular del certificado deberá solicitar la actualización del mismo.",
+            "El titular del certificado deberá solicitar la actualización del mismo, siempre que en la disposición correspondiente se determine que sea preciso hacerlo y se cumplan los requisitos establecidos.",
+            "El certificado será actualizado automáticamente siempre."
+        ],
+        "respuesta": "El titular del certificado deberá solicitar la actualización del mismo, siempre que en la disposición correspondiente se determine que sea preciso hacerlo y se cumplan los requisitos establecidos."
+    },
+    {
+        "pregunta": "La falta de identificación de los conductores neutro y de protección en una vivienda: (ITC-BT 05)",
+        "opciones": [
+            "Se considera defecto grave.",
+            "Se considera defecto leve.",
+            "Se considera defecto muy grave."
+        ],
+        "respuesta": "Se considera defecto grave."
+    },
+    {
+        "pregunta": "¿Cuál es el número máximo de circuitos que pueden conectarse a un diferencial en la instalación eléctrica de una vivienda? (ITC-BT 25)",
+        "opciones": [
+            "Cuando el circuito C4 no está desdoblado pueden conectarse 5 circuitos.",
+            "Cuando el circuito C4 está desdoblado pueden conectarse 7 circuitos.",
+            "Ambas respuestas son correctas."
+        ],
+        "respuesta": "Ambas respuestas son correctas."
+    },
+    {
+        "pregunta": "Si en la inspección de la instalación eléctrica de una vivienda nueva se detecta que el número de circuitos es menor a los mínimos estipulados: (ITC-BT 05)",
+        "opciones": [
+            "Se considera un defecto muy grave.",
+            "Se considera un defecto leve.",
+            "No podrá ser suministrada de energía eléctrica hasta que se corrija el defecto."
+        ],
+        "respuesta": "No podrá ser suministrada de energía eléctrica hasta que se corrija el defecto."
+    },
+    {
+        "pregunta": "¿Cómo se definen las redes de distribución pública en baja tensión? (REBT Art. 8)",
+        "opciones": [
+            "Por los valores de la tensión entre fase y tierra y entre dos conductores de fase, para las instalaciones unidas directamente a tierra.",
+            "Por los valores de la tensión entre fase y tierra y entre dos conductores de fase, para las instalaciones no unidas directamente a tierra.",
+            "Por los valores de la tensión entre dos conductores de fase, para las instalaciones unidas directamente a tierra."
+        ],
+        "respuesta": "Por los valores de la tensión entre fase y tierra y entre dos conductores de fase, para las instalaciones unidas directamente a tierra."
+    },
+    {
+        "pregunta": "En una instalación eléctrica con una tensión a 500 V, un suelo o una pared se considerará no conductora cuando su resistencia sea como mínimo de: (ITC-BT 01)",
+        "opciones": [
+            "75 000 Ω.",
+            "100 000 Ω.",
+            "50 000 Ω."
+        ],
+        "respuesta": "50 000 Ω."
+    },
+    {
+        "pregunta": "¿Qué grado de protección mínimo requieren los equipos eléctricos instalados en el volumen 1 de una fuente? (ITC-BT 31)",
+        "opciones": [
+            "IP X4.",
+            "IP X5.",
+            "IP X6."
+        ],
+        "respuesta": "IP X5."
+    },
+    {
+        "pregunta": "Una pared, en una instalación eléctrica con una tensión superior a 500 V, se considerará no conductora cuando su resistencia sea como mínimo de: (ITC-BT 01)",
+        "opciones": [
+            "50 000 Ω.",
+            "0,5 MΩ.",
+            "100 000 Ω."
+        ],
+        "respuesta": "100 000 Ω."
+    },
+    {
+        "pregunta": "La derivación individual para un local comercial en un edificio de viviendas: (ITC-BT 15)",
+        "opciones": [
+            "Tendrá una caída de tensión máxima del 0,5 % en el caso de contadores concentrados en un único punto.",
+            "Se instalará por un tubo de 32 mm. de diámetro mínimo.",
+            "Si el local no tiene definida la partición, se instalará un tubo por cada 80 m² de superficie del local."
+        ],
+        "respuesta": "Se instalará por un tubo de 32 mm. de diámetro mínimo."
+    },
+    {
+        "pregunta": "¿Cómo se denomina al esquema de las redes con neutro conectado directamente a tierra y masas puestas a tierra en puntos diferentes al anterior? (ITC-BT 08)",
+        "opciones": [
+            "TN-C.",
+            "TN-S.",
+            "TT."
+        ],
+        "respuesta": "TT."
+    },
+    {
+        "pregunta": "Grado de electrificación mínimo de una vivienda de superficie igual o inferior a 160 m². (ITC-BT 10 2.1.2)",
+        "opciones": [
+            "Básico.",
+            "Elevado."
+        ],
+        "respuesta": "Básico."
+    },
+    {
+        "pregunta": "Indíquese cuáles son los conductores activos en corriente alterna: (ITC-BT 01)",
+        "opciones": [
+            "Únicamente las fases.",
+            "Los de compensación y el neutro.",
+            "Las fases y el neutro."
+        ],
+        "respuesta": "Las fases y el neutro."
+    },
+    {
+        "pregunta": "¿Cuándo deben disponer los estacionamientos subterráneos de un suministro complementario de reserva? (ITC-BT 28)",
+        "opciones": [
+            "Cuando su capacidad sea para más de 100 vehículos.",
+            "Cuando su capacidad sea para más de 200 vehículos.",
+            "Nunca."
+        ],
+        "respuesta": "Cuando su capacidad sea para más de 100 vehículos."
+    },
+    {
+        "pregunta": "Las tomas de corriente en las instalaciones eléctricas de puertos y marinas para barcos de recreo tendrán un grado de protección mínimo: (ITC-BT 42)",
+        "opciones": [
+            "IP X6.",
+            "IP X4.",
+            "IP X1."
+        ],
+        "respuesta": "IP X6."
+    },
+    {
+        "pregunta": "En la instalación de una grúa, ¿deberá ponerse a tierra la estructura de los motores? (ITC-BT 32)",
+        "opciones": [
+            "No es obligatorio si se utiliza protección por separación eléctrica.",
+            "Sí, siempre.",
+            "Solamente es obligatorio cuando dichos motores son accesibles."
+        ],
+        "respuesta": "Sí, siempre."
+    },
+    {
+        "pregunta": "¿Cuándo podrán los usuarios o el instalador electricista autorizado acceder y actuar sobre las conexiones de la caja general de protección con la línea general de alimentación? (ITC-BT 13)",
+        "opciones": [
+            "Siempre que quieran y sin previa comunicación a la empresa suministradora.",
+            "Nunca aunque lo comuniquen a la empresa suministradora.",
+            "Previa comunicación a la empresa suministradora."
+        ],
+        "respuesta": "Previa comunicación a la empresa suministradora."
+    },
+    {
+        "pregunta": "Indíquese la intensidad máxima admisible para un cable tetrapolar de cobre de 120 mm² de sección con aislamiento de polietileno reticulado (XLPE), tensión asignada de 0,6/1 kV, instalado bajo tubo en montaje superficial, a la temperatura ambiente de 20 °C, si su aislamiento está a 95 °C. (UNE 20.460-5-523)",
+        "opciones": [
+            "240 A.",
+            "283,2 A.",
+            "Ninguna de las anteriores."
+        ],
+        "respuesta": "Ninguna de las anteriores."
+    },
+    {
+        "pregunta": "Indíquese la caída de tensión máxima admisible de la derivación individual en el caso de contadores concentrados en más de un lugar. (ITC-BT 15)",
+        "opciones": [
+            "0,5 %.",
+            "1 %.",
+            "1,5 %."
+        ],
+        "respuesta": "0,5 %."
+    },
+    {
+        "pregunta": "¿Qué resistencia de aislamiento tendrán las siguientes instalaciones? (ITC-BT 19)",
+        "opciones": [
+            "Mayor o igual a 1 MΩ para una instalación con tensión nominal de 400 V.",
+            "Menor o igual a 0,25 MΩ para una instalación con tensión nominal de 50 V.",
+            "Mayor o igual a 0,5 MΩ para una instalación con tensión nominal de 400 V."
+        ],
+        "respuesta": "Mayor o igual a 0,5 MΩ para una instalación con tensión nominal de 400 V."
+    },
+    {
+        "pregunta": "En la medida de la resistencia de tierra y de los conductores de protección de las masas de una vivienda, se obtiene un valor de 900 Ω. ¿Cuál es el valor de la corriente diferencial residual máxima del interruptor diferencial? (Considérese que la tensión límite convencional es de 24 V) (ITC-BT 24, ITC-BT 25)",
+        "opciones": [
+            "10 mA.",
+            "30 mA.",
+            "No se puede tener una resistencia de tierra de ese valor en este caso."
+        ],
+        "respuesta": "10 mA."
     }
 ]
 
