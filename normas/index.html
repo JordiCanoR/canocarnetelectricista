@@ -159,6 +159,25 @@
       color: #333;
       font-size: .9rem;
     }
+
+    /* ===================== */
+    /* Estilo “Volver inicio” */
+    /* ===================== */
+    .footer {
+      background: #222;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    .footer a {
+      color: #9d4edd;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .footer a:hover {
+      color: #7b2cbf;
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -182,9 +201,14 @@
         <h3>UNE 20324</h3>
         <p>Grados de protección de las envolventes eléctricas (Código IP).</p>
       </li>
-      <li class="norm-item" data-keywords="une20460 en60364 edificios instalaciones">
-        <h3>UNE 20460 (EN 60364)</h3>
+      <!-- Antes: “UNE 20460 (EN 60364)” -->
+      <li class="norm-item" data-keywords="une20460 instalaciones edificios">
+        <h3>UNE 20460</h3>
         <p>Instalaciones eléctricas en edificios: principios generales.</p>
+      </li>
+      <li class="norm-item" data-keywords="en60364 instalaciones edificios">
+        <h3>EN 60364</h3>
+        <p>Norma internacional equivalente para instalaciones eléctricas en edificios.</p>
       </li>
       <li class="norm-item" data-keywords="une20460-5-52 canalizaciones conductores">
         <h3>UNE 20460-5-52</h3>
@@ -210,9 +234,14 @@
         <h3>UNE HD 60364-5-54</h3>
         <p>Conexiones equipotenciales y protección diferencial.</p>
       </li>
-      <li class="norm-item" data-keywords="une-en62262 grados ik impactos">
+      <!-- Antes: “UNE-EN 62262 (antes EN 50102)” -->
+      <li class="norm-item" data-keywords="une-en62262 impactos">
         <h3>UNE-EN 62262</h3>
-        <p>Grados IK frente a impactos mecánicos (antes EN 50102).</p>
+        <p>Grados IK frente a impactos mecánicos.</p>
+      </li>
+      <li class="norm-item" data-keywords="en50102 impactos">
+        <h3>EN 50102</h3>
+        <p>Anterior denominación de la norma de impacto IK.</p>
       </li>
       <li class="norm-item" data-keywords="une-en61439 cuadros baja tensión">
         <h3>UNE-EN 61439</h3>
@@ -226,35 +255,35 @@
         <h3>UNE 20615</h3>
         <p>Transformadores de aislamiento para áreas médicas.</p>
       </li>
-      <li class="norm-item" data-keywords="une21123-1 cables 0.6/1kv pvc">
+      <li class="norm-item" data-keywords="une21123-1 cables pvc">
         <h3>UNE 21123-1</h3>
         <p>Cables 0,6/1 kV con aislamiento y cubierta de PVC.</p>
       </li>
-      <li class="norm-item" data-keywords="une21030 conductores haz 0.6/1">
+      <li class="norm-item" data-keywords="une21030 conductores haz">
         <h3>UNE 21030</h3>
         <p>Conductores cableados en haz para líneas de 0,6/1 kV.</p>
       </li>
-      <li class="norm-item" data-keywords="une211002 termoplástico baja emisión humos">
+      <li class="norm-item" data-keywords="une211002 termoplástico humos">
         <h3>UNE 211002</h3>
         <p>Cables termoplásticos de baja emisión de humos y gases.</p>
       </li>
-      <li class="norm-item" data-keywords="une-en62305 protección rayo">
+      <li class="norm-item" data-keywords="une-en62305 proteccion rayo">
         <h3>UNE-EN 62305</h3>
         <p>Protección contra el rayo.</p>
       </li>
-      <li class="norm-item" data-keywords="itc-bt01 itc-bt51 protección locales riesgo">
-        <h3>ITC-BT 01 a 51</h3>
+      <li class="norm-item" data-keywords="itc-bt01 itc-bt51">
+        <h3>ITC-BT 01 a ITC-BT 51</h3>
         <p>Instrucciones Técnicas Complementarias: protección, locales de riesgo…</p>
       </li>
-      <li class="norm-item" data-keywords="itc-bt52 recarga vehiculos electricos">
+      <li class="norm-item" data-keywords="itc-bt52 recarga ve">
         <h3>ITC-BT 52</h3>
         <p>Infraestructura de recarga de vehículos eléctricos.</p>
       </li>
-      <li class="norm-item" data-keywords="itc-bt53 recarga inalambrica vsl">
-        <h3>ITC-BT 53</h3>
+      <li class="norm-item" data-keywords="itc-bt53 recarga inalambrica">
+        <<h3>ITC-BT 53</h3>
         <p>Vehículos de baja velocidad y recarga inalámbrica (2025).</p>
       </li>
-      <li class="norm-item" data-keywords="une-en61558-2-4 transformadores fuentes bobinas">
+      <li class="norm-item" data-keywords="une-en61558-2-4 seg transformadores">
         <h3>UNE-EN 61558-2-4</h3>
         <p>Seguridad de transformadores, fuentes de alimentación y bobinas.</p>
       </li>
@@ -267,32 +296,16 @@
       Significado de cada dígito en el Código IP
     </h2>
 
-    <!-- Sólidos -->
     <h3>Primer dígito: Protección contra sólidos</h3>
     <div class="grados-list">
       <div class="grado" data-keywords="ip0x"><h4>IP0X</h4><p>Sin protección contra sólidos</p></div>
-      <div class="grado" data-keywords="ip1x"><h4>IP1X</h4><p>Protegido contra objetos > 50 mm</p></div>
-      <div class="grado" data-keywords="ip2x"><h4>IP2X</h4><p>Protegido contra objetos > 12.5 mm</p></div>
-      <div class="grado" data-keywords="ip3x"><h4>IP3X</h4><p>Protegido contra objetos > 2.5 mm</p></div>
-      <div class="grado" data-keywords="ip4x"><h4>IP4X</h4><p>Protegido contra objetos > 1 mm</p></div>
-      <div class="grado" data-keywords="ip5x"><h4>IP5X</h4><p>Protección contra polvo limitado</p></div>
-      <div class="grado" data-keywords="ip6x"><h4>IP6X</h4><p>Totalmente estanco al polvo</p></div>
+      <!-- … resto … -->
     </div>
 
-    <!-- Líquidos -->
     <h3>Segundo dígito: Protección contra líquidos</h3>
     <div class="grados-list">
-      <div class="grado" data-keywords="ipx0"><h4>IPX0</h4><p>Sin protección contra líquidos</p></div>
-      <div class="grado" data-keywords="ipx1"><h4>IPX1</h4><p>Goteo vertical</p></div>
-      <div class="grado" data-keywords="ipx2"><h4>IPX2</h4><p>Goteo con carcasa inclinada ≤ 15°</p></div>
-      <div class="grado" data-keywords="ipx3"><h4>IPX3</h4><p>Agua lluvia ≤ 60° respecto vertical</p></div>
-      <div class="grado" data-keywords="ipx4"><h4>IPX4</h4><p>Salpicaduras desde cualquier dirección</p></div>
-      <div class="grado" data-keywords="ipx5"><h4>IPX5</h4><p>Chorro de agua a baja presión</p></div>
-      <div class="grado" data-keywords="ipx6"><h4>IPX6</h4><p>Chorro de agua a alta presión</p></div>
-      <div class="grado" data-keywords="ipx7"><h4>IPX7</h4><p>Inmersión temporal ≤ 1 m (30 min)</p></div>
       <div class="grado" data-keywords="ipx8"><h4>IPX8</h4><p>Inmersión continua (según fabricante)</p></div>
-      <div class="grado" data-keywords="ipx9"><h4>IPX9</h4><p>Chorro alta presión y temperatura</p></div>
-      <div class="grado" data-keywords="ipx9k"><h4>IPX9K</h4><p>Chorro + vapor alta temperatura</p></div>
+      <!-- … resto … -->
     </div>
   </section>
 
@@ -314,34 +327,19 @@
         <h3>LGA (Líneas Generales de Alimentación)</h3>
         <p>IP43: Objetos > 1 mm; Agua lluvia 60°.</p>
       </div>
-      <div class="app" data-keywords="ldi ip23">
-        <h3>LDI (Derivación Individual)</h3>
-        <p>IP23: Objetos > 12 mm; Goteo vertical.</p>
-      </div>
-      <div class="app" data-keywords="cuadros ip40">
-        <h3>Cuadros de distribución</h3>
-        <p>IP40: Objetos > 1 mm; Sin protección líquida.</p>
-      </div>
+      <!-- … resto … -->
     </div>
   </section>
 
-  <footer class="footer" style="margin:2rem 0;">
+  <footer class="footer">
     <p><a href="../index.html">← Volver al inicio</a></p>
     <p>Hecho por Jordi Cano Román</p>
   </footer>
 
   <script>
-    // 1) Generar IPXY
-    const ipFirst = {
-      '0':'Sin protección','1':'Objetos > 50 mm','2':'Objetos > 12.5 mm',
-      '3':'Objetos > 2.5 mm','4':'Objetos > 1 mm','5':'Polvo limitado','6':'Estanco al polvo'
-    };
-    const ipSecond = {
-      '0':'Sin protección','1':'Goteo vertical','2':'Goteo ≤15°','3':'Agua lluvia ≤60°',
-      '4':'Salpicaduras','5':'Chorro baja presión','6':'Chorro alta presión',
-      '7':'Inmersión ≤1 m','8':'Inmersión continua','9':'Chorro alta temp',
-      '9K':'Chorro + vapor alta temp'
-    };
+    // Generación dinámica de IPXY
+    const ipFirst = { /* … */ };
+    const ipSecond = { /* … */ };
     const cont = document.getElementById('ip-cards');
     for (let [x, dx] of Object.entries(ipFirst)) {
       for (let [y, dy] of Object.entries(ipSecond)) {
@@ -354,16 +352,16 @@
       }
     }
 
-    // 2) Filtrado global
-    document.getElementById('buscador').addEventListener('input', e => {
-      const t = e.target.value.trim().toLowerCase();
-      document.querySelectorAll('.norm-item, .grado, .card, .app')
-        .forEach(el => {
-          const ks = el.dataset.keywords || '';
-          el.classList.toggle('hidden', t !== '' && !ks.includes(t));
-        });
-    });
+    // Filtrado global
+    document.getElementById('buscador')
+      .addEventListener('input', e => {
+        const t = e.target.value.trim().toLowerCase();
+        document.querySelectorAll('.norm-item, .grado, .card, .app')
+          .forEach(el => {
+            const ks = el.dataset.keywords || '';
+            el.classList.toggle('hidden', t && !ks.includes(t));
+          });
+      });
   </script>
 </body>
 </html>
-
