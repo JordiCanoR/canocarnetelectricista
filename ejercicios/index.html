@@ -61,9 +61,11 @@
   <p>El circuito de iluminación de un restaurante alimenta 3 pantallas fluorescentes de 2 x 36 W cada una y 10 lámparas incandescentes de 60 W cada una. ¿Cuál será la intensidad de cálculo a efectos de determinar la sección del circuito si se supone un factor de potencia de la unidad y no se conoce la carga que suponen los elementos asociados a las lámparas? Tensión 230 V.</p>
   <div class="solucion">
     <p><strong>Solución:</strong></p>
-    <p><em>Nota:</em> En los test oficiales solo multiplicamos por 1,80 (simultaneidad), no es necesario aplicar el cos φ.</p>
-    <p>P<sub>total</sub> = (3 × 2 × 36) + (10 × 60) = 216 + 600 = 816 W × 1,80 = 1468,8 W</p>
-    <p>I = P / V = 816 W / 230 V = 3,55 A</p>
+    <p><em>Nota:</em> En los test oficiales solo multiplicamos por 1,80 (factor simultaneidad fluorescentes), no es necesario aplicar el cos φ (× 0,9% a los fluorescentes y × 1% a las incandescentes).</p>
+    <p>P<sub>total fluorescentes</sub> = (3 × 2 × 36) × 1,80 = 388,8 W</p>
+    <p>P<sub>total incandescentes</sub>(10 × 60) = 600 W</p>
+    <p>P<sub>total incandescentes + fluorescentes</sub> 600 W + 388,8 W = 988,8 W</p>
+    <p>I = P / V = 988,8 W / 230 V = 4,299 A</p>
   </div>
 </div>
  
