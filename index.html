@@ -30,51 +30,58 @@
 
     /* NUEVO estilo para el contador PRO */
     .contador-caja {
-        background-color: #007bff;
-        color: white;
-        border-radius: 12px;
-        padding: 15px 25px;
-        display: inline-block;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        position: absolute;
-        right: 30px;
-        top: 270px; /* ajusta según necesidad */
+      background-color: #007bff;
+      color: white;
+      border-radius: 12px;
+      padding: 15px 25px;
+      display: inline-block;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: absolute;
+      right: 30px;
+      top: 270px; /* ajusta según necesidad */
     }
 
     .contador-caja h3 {
-        margin: 0;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #e0e0e0;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #e0e0e0;
     }
 
     .contador-caja p {
-        margin: 5px 0 0 0;
-        font-size: 2.5rem;
-        font-family: 'Courier New', Courier, monospace;
-    }
-    .rotator {
-        margin: 2rem auto;
-        padding: 1.5rem;
-        max-width: 600px;
-        background: #f5f5f5;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-    .rotator p {
-        margin: .8rem 0;
-        transition: opacity .5s;
-    }  
-    .rotator-pregunta {
-        color: #000;
-    }
-    .rotator-respuesta {
-        font-weight: bold;
-        color: #007bff;
+      margin: 5px 0 0 0;
+      font-size: 2.5rem;
+      font-family: 'Courier New', Courier, monospace;
     }
 
+    /* Estilos del rotador de preguntas */
+    .rotator {
+      margin: 2rem auto;
+      padding: 1.5rem;
+      max-width: 600px;
+      background: #f5f5f5;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .rotator p {
+      margin: .8rem 0;
+      transition: opacity .5s;
+    }
+
+    /* Pregunta en negro */
+    #rotator-pregunta {
+      color: #000 !important;
+      font-weight: normal;
+    }
+
+    /* Respuesta en azul */
+    #rotator-respuesta {
+      color: #007bff !important;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -82,9 +89,11 @@
     <h1>Instalador-Electricista</h1>
     <p>Tu portal eléctrico de pruebas, plantillas y simuladores</p>
   </header>
+
+  <!-- Rotador de preguntas y respuestas -->
   <section id="rotator" class="rotator">
     <p id="rotator-pregunta">Cargando pregunta…</p>
-    <p id="rotator-respuesta" class="respuesta">…</p>
+    <p id="rotator-respuesta">…</p>
   </section>
 
   <!-- Botones de enlaces -->
@@ -111,59 +120,57 @@
       <h2>Test<br>Dinámico Oficial</h2>
     </a>
 
-    <!-- NUEVO contador -->
+    <!-- Contador de preguntas -->
     <div class="contador-caja">
-        <h3>Preguntas Totales</h3>
-        <p id="contadorPreguntas">---</p>
+      <h3>Preguntas Totales</h3>
+      <p id="contadorPreguntas">---</p>
     </div>
 
     <a href="plantillas/index.html" class="card">
       <h2>Plantillas</h2>
     </a>
     <a href="formulas/index.html" class="card">
-    <h2>Fórmulas</h2>
+      <h2>Fórmulas</h2>
     </a>
     <a href="potencia/index.html" class="card">
-    <h2>Potencia<br>Reactiva y Aparente</h2>
+      <h2>Potencia<br>Reactiva y Aparente</h2>
     </a>
     <a href="ejercicios/index.html" class="card">
-    <h2>Ejercicios<br>de Test</h2>
-    </a>
+      <h2>Ejercicios<br>de Test</h2>
     </a>
     <a href="normas/index.html" class="card">
-    <h2>Normas RBT<br>Grados de Protección</h2>
+      <h2>Normas RBT<br>Grados de Protección</h2>
     </a>
-  
-  
   </main>
 
   <footer class="footer">
     <p>Hecho por Jordi Cano Román</p>
   </footer>
 
-  <!-- Script para cargar preguntas -->
+  <!-- Script: contador de preguntas -->
   <script>
-  fetch('test_dinamico/preguntas_rebt_base.json')
-    .then(response => response.json())
-    .then(data => {
-      let total = 0;
-      if (Array.isArray(data)) {
-        total = data.length;
-      } else if (data.preguntas && Array.isArray(data.preguntas)) {
-        total = data.preguntas.length;
-      }
-      document.getElementById('contadorPreguntas').innerText = total;
-    })
-    .catch(error => {
-      document.getElementById('contadorPreguntas').innerText = 'Error';
-    });
+    fetch('test_dinamico/preguntas_rebt_base.json')
+      .then(response => response.json())
+      .then(data => {
+        let total = 0;
+        if (Array.isArray(data)) {
+          total = data.length;
+        } else if (data.preguntas && Array.isArray(data.preguntas)) {
+          total = data.preguntas.length;
+        }
+        document.getElementById('contadorPreguntas').innerText = total;
+      })
+      .catch(error => {
+        document.getElementById('contadorPreguntas').innerText = 'Error';
+      });
   </script>
+
+  <!-- Script: rotador de pregunta + respuesta -->
   <script>
     (function(){
       fetch('test_dinamico/preguntas_rebt_base.json')
         .then(r => r.json())
         .then(data => {
-          // obtenemos array principal
           const lista = Array.isArray(data)
             ? data
             : (Array.isArray(data.preguntas) ? data.preguntas : []);
@@ -183,15 +190,11 @@
 
           function mostrar() {
             const it = lista[rnd()];
-            // SOLO pregunta y respuesta
-            const textoP = it.pregunta;
-            const textoR = it.respuesta;
-
             P.style.opacity = 0;
             R.style.opacity = 0;
             setTimeout(() => {
-              P.textContent = textoP;
-              R.textContent = textoR;
+              P.textContent = it.pregunta;
+              R.textContent = it.respuesta;
               P.style.opacity = 1;
               R.style.opacity = 1;
             }, 500);
@@ -205,4 +208,3 @@
   </script>
 </body>
 </html>
-
