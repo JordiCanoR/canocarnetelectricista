@@ -30,9 +30,13 @@
     .solucion {
       background: #007bff;
       color: white;
-      padding: 10px;
+      padding: 15px;
       border-radius: 5px;
       margin-top: 10px;
+    }
+    .solucion h3 {
+      margin-top: 0;
+      color: #fff;
     }
     .volver {
       display: block;
@@ -56,26 +60,31 @@
   <h2>1️⃣ Iluminación restaurante (ITC-BT 44)</h2>
   <p>El circuito de iluminación de un restaurante alimenta 3 pantallas fluorescentes de 2 x 36 W cada una y 10 lámparas incandescentes de 60 W cada una. ¿Cuál será la intensidad de cálculo a efectos de determinar la sección del circuito si se supone un factor de potencia de la unidad y no se conoce la carga que suponen los elementos asociados a las lámparas? Tensión 230 V.</p>
   <div class="solucion">
-    Ptotal = (3×2×36) + (10×60) = 216 + 600 = 816W × 1,80 = <br>
-    I = P / V = 816W / 230V = 3,55A × 1,80 → respuesta: 4,2A ✅
-  <h2>En los Test oficiales sólamente multiplicamos por 1,80 que es la simultaneidad del alumbrado, no hace falta multiplicar el cosφ 0.90(Fluorescentes) o por cosφ 1(incandescentes)</h2>
+    <p><strong>Solución:</strong></p>
+    <p>P<sub>total</sub> = (3 × 2 × 36) + (10 × 60) = 216 + 600 = 816 W</p>
+    <p>I = P / V = 816 W / 230 V ≈ 3,55 A</p>
+    <p>Aplicando simultaneidad (×1,80): I<sub>cálculo</sub> ≈ 3,55 A × 1,80 ≈ <strong>6,39 A</strong> ✅</p>
+    <p><em>Nota:</em> En los test oficiales solo multiplicamos por 1,80 (simultaneidad), no es necesario aplicar el cos φ.</p>
   </div>
 </div>
 
 <div class="ejercicio">
   <h2>2️⃣ Línea general 120 kW (UNE 20.460-5-523)</h2>
-  <p>Una línea general de alimentación debe transportar una potencia de 120 kW a 400/230V. Se utilizarán conductores de cobre unipolares RZ1-0,6/1 kV bajo tubo empotrado en una pared de mampostería con una longitud de 1 m. ¿Qué sección será necesaria para los conductores de fase? Contadores concentrados en un solo punto. Factor de potencia 0,9 y temperatura ambiente de 40 ºC.</p>
+  <p>Una línea general de alimentación debe transportar una potencia de 120 kW a 400/230 V. Se utilizarán conductores de cobre unipolares RZ1-0,6/1 kV bajo tubo empotrado en una pared de mampostería con una longitud de 1 m. ¿Qué sección será necesaria para los conductores de fase? Contadores concentrados en un solo punto. Factor de potencia 0,9 y temperatura ambiente de 40 ºC.</p>
   <div class="solucion">
-    I = P / (√3 × V × cosφ) = 120000W / (1,73 × 400 ×0,9) ≈ 192,5A<br>
-    Según tablas UNE: sección ≈ 95 mm² ✅
+    <p><strong>Solución:</strong></p>
+    <p>I = P / (√3 × V × cos φ) = 120 000 W / (1,73 × 400 V × 0,9) ≈ <strong>192,5 A</strong></p>
+    <p>Según tabla UNE 20.460-5-523: sección ≈ <strong>95 mm²</strong> ✅</p>
   </div>
 </div>
 
 <div class="ejercicio">
   <h2>3️⃣ Resistencia del suelo (ITC-BT 04)</h2>
-  <p>Para determinar si un suelo es o no conductor tenemos los datos siguientes: Tensión entre la fase R y la placa metálica: 10 V. Tensión entre la misma fase y tierra: 365 V. Resistencia interna del voltímetro: 3.000 Ohmios. ¿Qué valor se obtendrá para la resistencia del suelo?</p>
+  <p>Para determinar si un suelo es o no conductor tenemos los datos siguientes: Tensión entre la fase R y la placa metálica: 10 V. Tensión entre la misma fase y tierra: 365 V. Resistencia interna del voltímetro: 3 000 Ω. ¿Qué valor se obtendrá para la resistencia del suelo?</p>
   <div class="solucion">
-    Rs = (365V - 10V) × (3000Ω / 10V) = 355V × 300Ω = 106.500 Ω ✅
+    <p><strong>Solución:</strong></p>
+    <p>R<sub>s</sub> = (V<sub>fase-tierra</sub> - V<sub>fase-placa</sub>) × (R<sub>voltímetro</sub> / V<sub>fase-placa</sub>)</p>
+    <p>R<sub>s</sub> = (365 V - 10 V) × (3 000 Ω / 10 V) = 355 V × 300 Ω = <strong>106 500 Ω</strong> ✅</p>
   </div>
 </div>
 
@@ -83,52 +92,37 @@
   <h2>4️⃣ Motor trifásico 50 CV (UNE 20.460-5-523)</h2>
   <p>¿Qué sección será necesaria para alimentar un motor trifásico de 50 CV, factor de potencia 0,6 y alimentado a 400 V?</p>
   <div class="solucion">
-    P = 50CV × 736 = 36.800W<br>
-    I = P / (√3 × V × cosφ) = 36.800W / (1,73 × 400 ×0,6) ≈ 88,5A<br>
-    Sección recomendada: 70 mm² ✅
+    <p><strong>Solución:</strong></p>
+    <p>P = 50 CV × 736 W/CV = 36 800 W</p>
+    <p>I = P / (√3 × V × cos φ) = 36 800 W / (1,73 × 400 V × 0,6) ≈ <strong>88,5 A</strong></p>
+    <p>Sección recomendada: <strong>70 mm²</strong> ✅</p>
   </div>
 </div>
 
 <div class="ejercicio">
   <h2>6️⃣ Ejercicio práctico: Cálculo de la potencia en un conjunto de lámparas</h2>
-
   <h3>Enunciado</h3>
-   <p>Se tienen <strong>50 lámparas fluorescentes</strong> de <strong>36 W</strong> cada una. El sistema está sobredimensionado con un factor de <strong>1,8</strong>, y el factor de potencia es <strong>0,9</strong>. La tensión de alimentación es de <strong>230 V</strong>. Calcula:</p>
-  
-    <p>Potencia total (activa) del conjunto.</p>
-    <p>Potenciaa activa sobredimensionada.</p>
-    <p>Intensidad sobredimensionada de la corriente.</p>
-    <p>Potencia aparente sobredimensionada.</p>
-  
+  <p>Se tienen <strong>50 lámparas fluorescentes</strong> de <strong>36 W</strong> cada una. El sistema está sobredimensionado con un factor de <strong>1,8</strong>, y el factor de potencia es <strong>0,9</strong>. La tensión de alimentación es de <strong>230 V</strong>. Calcula:</p>
+  <ul>
+    <li>Potencia activa total real del conjunto.</li>
+    <li>Potencia activa sobredimensionada.</li>
+    <li>Intensidad sobredimensionada de la corriente.</li>
+    <li>Potencia aparente sobredimensionada.</li>
+  </ul>
+  <div class="solucion">
+    <h3>Solución</h3>
+    <p><strong>1. Potencia activa total real:</strong><br>
+    P<sub>real</sub> = 50 × 36 W = <strong>1 800 W</strong></p>
 
-  <h3>Desarrollo paso a paso</h3>
-  
-  <div class="solucion"></div>
-      <strong>Cálculo de la potencia activa total sin sobredimensionar:</strong><br>
-      Ps_real = 50 × 36 W = <strong>1800 W</strong>
-    
-    
-    
-    
-      <strong>Aplicación del factor de sobredimensionamiento:</strong><br>
-      Ps_sobredim = 1,8 × 1800 W × 0,9 = <strong>2916 W</strong>
-    
-    
-    
-    
-      <strong>Cálculo de la intensidad sobredimensionada del circuito:</strong><br>
-      <div class="formula">I = Ps_sobredim / V × 0,9 = 2916 / 230v × 0,9 = <strong>14,086 A</strong></div>
-    
-   
-   
-    
-      <strong>Potencia aparente sobredimensionada:</strong><br>
-      <div class="formula">Ss = V × I = 230 V × 14,086 A ≈ <strong>3239,78 VA</strong></div>
-    
+    <p><strong>2. Potencia activa sobredimensionada:</strong><br>
+    P<sub>sobredim</sub> = 1,8 × 1 800 W = <strong>3 240 W</strong></p>
+
+    <p><strong>3. Intensidad sobredimensionada:</strong><br>
+    I = P<sub>sobredim</sub> / (V × cos φ) = 3 240 W / (230 V × 0,9) ≈ <strong>15,65 A</strong></p>
+
+    <p><strong>4. Potencia aparente sobredimensionada:</strong><br>
+    S = V × I = 230 V × 15,65 A ≈ <strong>3 600 VA</strong></p>
   </div>
-
-  
-  <p><em>Conclusión:</em> Al sobredimensionar la potencia activa con factor 1,8 y un cos φ de 0,9, obtenemos una potencia aparente sobredimensionada de 3239,78 VA y una intensidad sobredimensionada de ≈ 14,086 A.</p>
 </div>
 
 <div class="volver">
@@ -137,3 +131,4 @@
 
 </body>
 </html>
+
