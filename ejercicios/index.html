@@ -62,7 +62,7 @@
   <div class="solucion">
     <p><strong>Solución:</strong></p>
     <p><em>Nota:</em> En los test oficiales solo multiplicamos por 1,80 (simultaneidad), no es necesario aplicar el cos φ.</p>
-    <p>P<sub>total</sub> = (3 × 2 × 36) + (10 × 60) = 216 + 600 = 816 W × 1,80 = 1468,8 w</p>
+    <p>P<sub>total</sub> = (3 × 2 × 36) + (10 × 60) = 216 + 600 = 816 W × 1,80 = 1468,8 W</p>
     <p>I = P / V = 816 W / 230 V = 3,55 A</p>
   </div>
 </div>
@@ -72,18 +72,18 @@
   <p>Una línea general de alimentación debe transportar una potencia de 120 kW a 400/230 V. Se utilizarán conductores de cobre unipolares RZ1-0,6/1 kV bajo tubo empotrado en una pared de mampostería con una longitud de 1 m. ¿Qué sección será necesaria para los conductores de fase? Contadores concentrados en un solo punto. Factor de potencia 0,9 y temperatura ambiente de 40 ºC.</p>
   <div class="solucion">
     <p><strong>Solución:</strong></p>
-    <p>I = P / (√3 × V × cos φ) = 120 000 W / (1,73 × 400 V × 0,9) ≈ <strong>192,5 A</strong></p>
+    <p>I = P / (√3 × V × cos φ) = 120 000 W / (1,73 × 400 V × 0,9) ≈ <strong>192,5 A</strong></p>
     <p>Según tabla UNE 20.460-5-523: sección ≈ <strong>95 mm²</strong> ✅</p>
   </div>
 </div>
 
 <div class="ejercicio">
   <h2>3️⃣ Resistencia del suelo (ITC-BT 04)</h2>
-  <p>Para determinar si un suelo es o no conductor tenemos los datos siguientes: Tensión entre la fase R y la placa metálica: 10 V. Tensión entre la misma fase y tierra: 365 V. Resistencia interna del voltímetro: 3 000 Ω. ¿Qué valor se obtendrá para la resistencia del suelo?</p>
+  <p>Para determinar si un suelo es o no conductor tenemos los datos siguientes: Tensión entre la fase R y la placa metálica: 10 V. Tensión entre la misma fase y tierra: 365 V. Resistencia interna del voltímetro: 3 000 Ω. ¿Qué valor se obtendrá para la resistencia del suelo?</p>
   <div class="solucion">
     <p><strong>Solución:</strong></p>
     <p>R<sub>s</sub> = (V<sub>fase-tierra</sub> - V<sub>fase-placa</sub>) × (R<sub>voltímetro</sub> / V<sub>fase-placa</sub>)</p>
-    <p>R<sub>s</sub> = (365 V - 10 V) × (3 000 Ω / 10 V) = 355 V × 300 Ω = <strong>106 500 Ω</strong> ✅</p>
+    <p>R<sub>s</sub> = (365 V - 10 V) × (3 000 Ω / 10 V) = 355 V × 300 Ω = <strong>106 500 Ω</strong> ✅</p>
   </div>
 </div>
 
@@ -92,9 +92,19 @@
   <p>¿Qué sección será necesaria para alimentar un motor trifásico de 50 CV, factor de potencia 0,6 y alimentado a 400 V?</p>
   <div class="solucion">
     <p><strong>Solución:</strong></p>
-    <p>P = 50 CV × 736 W/CV = 36 800 W</p>
-    <p>I = P / (√3 × V × cos φ) = 36 800 W / (1,73 × 400 V × 0,6) ≈ <strong>88,5 A</strong></p>
+    <p>P = 50 CV × 736 W/CV = 36 800 W</p>
+    <p>I = P / (√3 × V × cos φ) = 36 800 W / (1,73 × 400 V × 0,6) ≈ <strong>88,5 A</strong></p>
     <p>Sección recomendada: <strong>70 mm²</strong> ✅</p>
+  </div>
+</div>
+
+<!-- Ejercicio 5 añadido -->
+<div class="ejercicio">
+  <h2>5️⃣ Intensidad máxima admisible cable tetrapolar (XLPE a 95 °C)</h2>
+  <p>Indíquese la intensidad máxima admisible para un cable tetrapolar de cobre de 120 mm<sup>2</sup> de sección con aislamiento de polietileno reticulado (XLPE), tensión asignada de 0,6/1 kV, instalado bajo tubo en montaje superficial, a la temperatura ambiente de 20 °C, si su aislamiento está a 95 °C.</p>
+  <div class="solucion">
+    <p><strong>Respuesta:</strong> Ninguna, porque no existe en la práctica ningún cable que admita una temperatura de aislamiento superior a 90 °C.</p>
+    <p><em>Explicación:</em> Las normas y tablas de fabricantes definen los cables con aislamiento XLPE hasta 90 °C como máximo. No hay datos de intensidad admisible para 95 °C, por lo que no puede determinarse ninguna intensidad para esa condición.</p>
   </div>
 </div>
 
@@ -111,26 +121,18 @@
     <p><strong>Solución:</strong></p>
     
     <p><strong>1. Potencia activa total real:</strong><br>
-    
-      <p>Preal = 50 × 36 W = <strong>1800 W</strong></p>
-    
+      Preal = 50 × 36 W = <strong>1800 W</strong></p>
     
     <p><strong>2. Potencia activa sobredimensionada:</strong><br>
-    
-      <p>Psobredim = 1,8 × 1800 W × 0.9 = <strong>2916 W</strong></p>
-    
+      Psobredim = 1,8 × 1800 W × 0.9 = <strong>2916 W</strong></p>
     
     <p><strong>3. Intensidad sobredimensionada:</strong><br>
-    
-      <p>Isobredim = Psobredim / V × cos φ = 2916 W / 230 V × 0,9 = <strong>14,086 A</strong></p>
-    
+      Isobredim = Psobredim / (V × cos φ) = 2916 W / (230 V × 0,9) = <strong>14,086 A</strong></p>
     
     <p><strong>4. Potencia aparente sobredimensionada:</strong><br>
-    
-      <p>Ssobredim = V × I = 230 V × 14,086 A = <strong>3239,78 VA</strong></p>
+      Ssobredim = V × I = 230 V × 14,086 A = <strong>3239,78 VA</strong></p>
   </div>
 </div>
-
 
 <div class="volver">
   <a href="../index.html">← Volver al menú</a>
@@ -138,4 +140,3 @@
 
 </body>
 </html>
-
