@@ -3836,8 +3836,99 @@
             "Instalación eléctrica de un local para una estación de extracción de agua de un pozo con 9.200 W de potencia."
         ],
         "respuesta": "Instalación eléctrica de un local para 2 plazas de garaje con ventilación forzada."
-    }
-]
+    },
+    {
+        "pregunta": "Los conductores de las líneas generales de alimentación serán (ITC-BT 14)",
+        "opciones": [
+        "Un grado de protección IP08.",
+        "Un grado de protección IP43.",
+        "Ventilación interna necesaria que garantice la no formación de condensaciones."
+        ],
+        "respuesta": "Un grado de protección IP43."
+    },
+    {
+        "pregunta": "¿Cuál será la máxima caída de tensión permitida desde la C.G.P. a la centralización de contadores? (ITC-BT 14)",
+        "opciones": [
+        "1 %.",
+        "0,5 %.",
+        "1,5 %."
+        ],
+        "respuesta": "0,5 %."
+    },
+    {
+        "pregunta": "La caída de tensión en la línea general de alimentación se extiende desde la caja general de protección: (ITC-BT 14)",
+        "opciones": [
+        "Hasta la centralización de contadores.",
+        "Hasta el interruptor de control de potencia.",
+        "Hasta los dispositivos generales de mando y protección."
+        ],
+        "respuesta": "Hasta la centralización de contadores."
+    },
+    {
+        "pregunta": "Los tubos que se destinen a contener una línea general de alimentación deberán tener los diámetros: (ITC-BT 14)",
+        "opciones": [
+        "Indicados en la tabla 1 de la ITC-BT-14.",
+        "Que permitan ampliar la sección de los conductores en un 50 %.",
+        "Que permitan ampliar la sección de los conductores en un 100 %."
+        ],
+        "respuesta": "Que permitan ampliar la sección de los conductores en un 50 %."
+    },
+    {
+        "pregunta": "Cuando la línea general de alimentación se instale bajo tubo empotrado: (ITC-BT 14)",
+        "opciones": [
+        "La sección del tubo será tal que permita la ampliación de la de los cables en un 100 %.",
+        "Si la sección de la fase es de 150 mm², el diámetro mínimo del tubo será de 160 mm.",
+        "Si la sección de la fase es de 16 mm² en cobre, la sección del neutro será como máximo de 16 mm²."
+        ],
+        "respuesta": "La sección del tubo será tal que permita la ampliación de la de los cables en un 100 %."
+    },
+    {
+        "pregunta": "El conductor neutro que acompaña a la línea general de alimentación, que tiene una sección de 16 mm² en aluminio, tendrá una sección mínima de: (ITC-BT 14)",
+        "opciones": [
+        "16 mm².",
+        "25 mm².",
+        "10 mm²."
+        ],
+        "respuesta": "16 mm²."
+    },
+    {
+        "pregunta": "Las dimensiones de las canalizaciones que alberguen a la línea general de alimentación: (ITC-BT 14)",
+        "opciones": [
+        "Deberán permitir la ampliación de la sección de los conductores en un 100 %.",
+        "Deberán permitir la ampliación de la sección de los conductores en un 50 %.",
+        "Deberán permitir la ampliación de la sección de los conductores en un 200 %."
+        ],
+        "respuesta": "Deberán permitir la ampliación de la sección de los conductores en un 100 %."
+    },
+    {
+        "pregunta": "La sección mínima para la línea general de alimentación será: (ITC-BT 14)",
+        "opciones": [
+        "10 mm² en cobre.",
+        "10 mm² en aluminio.",
+        "16 mm² en cobre o aluminio."
+        ],
+        "respuesta": "10 mm² en cobre."
+    },
+    {
+        "pregunta": "El diámetro exterior de los tubos que alberga a la línea general de alimentación, que tiene una sección de 150 mm² en cobre, tendrá un diámetro mínimo de: (ITC-BT 14)",
+        "opciones": [
+        "160 mm.",
+        "110 mm.",
+        "180 mm."
+        ],
+        "respuesta": "160 mm"
+    },
+    {
+        "pregunta": "¿Se puede instalar la línea general de alimentación por un hueco de escalera, compartiendo el recinto con las tuberías de agua y gas? (ITC-BT 14)",
+        "opciones": [
+        "Sí.",
+        "No.",
+        "A veces."
+        ],
+        "respuesta": "No."
+    },
+
+
 
 
 
