@@ -155,6 +155,51 @@
       document.getElementById('contadorPreguntas').innerText = 'Error';
     });
   </script>
+  <script>
+    (function(){
+      fetch('test_dinamico/preguntas_rebt_base.json')
+        .then(r => r.json())
+        .then(data => {
+          // obtenemos array principal
+          const lista = Array.isArray(data)
+            ? data
+            : (Array.isArray(data.preguntas) ? data.preguntas : []);
+          if (!lista.length) return;
+
+          const P = document.getElementById('rotator-pregunta'),
+                R = document.getElementById('rotator-respuesta');
+          let prev = -1;
+
+          function rnd() {
+            let i;
+            do { i = Math.floor(Math.random() * lista.length); }
+            while (i === prev && lista.length > 1);
+            prev = i;
+            return i;
+          }
+
+          function mostrar() {
+            const it = lista[rnd()];
+            // SOLO pregunta y respuesta
+            const textoP = it.pregunta;
+            const textoR = it.respuesta;
+
+            P.style.opacity = 0;
+            R.style.opacity = 0;
+            setTimeout(() => {
+              P.textContent = textoP;
+              R.textContent = textoR;
+              P.style.opacity = 1;
+              R.style.opacity = 1;
+            }, 500);
+          }
+
+          mostrar();
+          setInterval(mostrar, 8000);
+        })
+        .catch(console.error);
+    })();
+  </script>
 </body>
 </html>
 
