@@ -235,7 +235,7 @@
         "respuesta": "Las canalizaciones podrán tener un IP 54"
     },
     {
-      "pregunta": "¿Qué es un defecto franco?(ITC-BT 01)", 
+      "pregunta": "¿Qué es un defecto franco?(DEFINICION. 70)", 
         "opciones": [
              "Un defecto de aislamiento cuya impedancia puede considerarse nula",
              "Un defecto de aislamiento con independencia de la impedancia",
@@ -1813,7 +1813,7 @@
         "respuesta": "No afectar la resistencia mecánica y eléctrica por efecto de la corrosión."
     },
     {
-        "pregunta": "¿Cómo denominamos a la tensión que aparece entre partes simultáneamente accesibles al ocurrir un fallo de aislamiento? (ITC-BT 01)",
+        "pregunta": "¿Cómo denominamos a la tensión que aparece entre partes simultáneamente accesibles al ocurrir un fallo de aislamiento? (DEFINICION. 129)",
         "opciones": [
             "Tensión asignada.",
             "Tensión de defecto.",
@@ -2431,7 +2431,7 @@
             "31.250 W.",
             "25.000 W."
         ],
-        "respuesta": "31.250 W."
+        "respuesta": "25.000 W."
     },
     {
         "pregunta": "¿A partir de qué valor deberá actuar la protección de mínima tensión de un generador en paralelo con la red de distribución pública? (ITC-BT 40)",
