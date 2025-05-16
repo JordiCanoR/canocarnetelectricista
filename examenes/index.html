@@ -1,61 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>EXAMENES Y PRACTICAS OFICIALES</title>
     <link rel="stylesheet" href="../css/style.css">
- <style> 
-   .volver {
-      display: block;
-      text-align: center;
-      margin-top: 30px;
-    }
-    .volver a {
-      text-decoration: none;
-      background: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-    }
-  </style>  
+    <style>
+      /* —— Tu estilo original —— */
+      .volver {
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+      }
+      .volver a {
+        text-decoration: none;
+        background: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+      }
+
+      /* —— Nuevas reglas para colores —— */
+      /* 1. Todo el texto en negro por defecto */
+      body {
+        color: #000; /* negro */
+      }
+
+      /* 2. Título principal en azul */
+      header h1 {
+        color: #0047AB; /* azul Royal Blue */
+      }
+
+      /* 3. Sobrescribe cualquier color blanco restante */
+      main h2,
+      main h3,
+      main p,
+      main a {
+        color: #000 !important; /* fuerza negro donde hiciera falta */
+      }
+    </style>
 </head>
 <body>
   <header>
     <h1>EXAMENES Y PRACTICAS OFICIALES</h1>
   </header>
   
-   <main>
-        <h2>Visualiza o descarga las plantillas de examenes oficiales</h2>
+  <main>
+    <h2>Visualiza o descarga las plantillas de examenes oficiales</h2>
 
-        <section>
-            <h3>EXAMEN CÁLCULO LGA</h3>
-            <iframe src="../pdfs/CALCULO DE SECCIÓN Exámen 2024.pdf" width="100%" height="400px"></iframe>
-            <p><a href="../pdfs/CALCULO DE SECCIÓN Exámen 2024.pdf" download>Descargar Examen cálculo LGA</a></p>
-        </section>
+    <section>
+      <h3>EXAMEN CÁLCULO LGA</h3>
+      <iframe src="../pdfs/CALCULO DE SECCIÓN Exámen 2024.pdf" width="100%" height="400px"></iframe>
+      <p><a href="../pdfs/CALCULO DE SECCIÓN Exámen 2024.pdf" download>Descargar Examen cálculo LGA</a></p>
+    </section>
 
-        <section>
-            <h3>EXAMEN LGA Y PROTECCIONES</h3>
-            <iframe src="../pdfs/CALCULO DE SECCIÓN LGA Nº 52.pdf" width="100%" height="400px"></iframe>
-            <p><a href="../pdfs/CALCULO DE SECCIÓN LGA Nº 52.pdf" download>Descargar Examen cálculo LGA y protecciones </a></p>
-        </section>
+    <section>
+      <h3>EXAMEN LGA Y PROTECCIONES</h3>
+      <iframe src="../pdfs/CALCULO DE SECCIÓN LGA Nº 52.pdf" width="100%" height="400px"></iframe>
+      <p><a href="../pdfs/CALCULO DE SECCIÓN LGA Nº 52.pdf" download>Descargar Examen cálculo LGA y protecciones </a></p>
+    </section>
 
-        <section>
-            <h3>EXAMEN PREVISIÓN DE CARGAS</h3>
-            <iframe src="../pdfs/PREVISIÓN DE CARGAS EXAMEN 2024.pdf" width="100%" height="400px"></iframe>
-            <p><a href="../pdfs/PREVISIÓN DE CARGAS EXAMEN 2024.pdf" download>Descargar PREVISIÓN DE CARGAS EXAMEN</a></p>
-        </section>
+    <section>
+      <h3>EXAMEN PREVISIÓN DE CARGAS</h3>
+      <iframe src="../pdfs/PREVISIÓN DE CARGAS EXAMEN 2024.pdf" width="100%" height="400px"></iframe>
+      <p><a href="../pdfs/PREVISIÓN DE CARGAS EXAMEN 2024.pdf" download>Descargar PREVISIÓN DE CARGAS EXAMEN</a></p>
+    </section>
        
-        <section>
-            <h3>PRACTICAS PARA EXAMEN DE INSTALADOR</h3>
-            <iframe src="../pdfs/Practicas_a_Realizar.pdf" width="100%" height="400px"></iframe>
-            <p><a href="../pdfs/Practicas_a_Realizar.pdf" download>Descargar PRACTICAS PARA EXAMEN DE INSTALADOR</a></p>
-        </section>
-    </main>
+    <section>
+      <h3>PRACTICAS PARA EXAMEN DE INSTALADOR</h3>
+      <iframe src="../pdfs/Practicas_a_Realizar.pdf" width="100%" height="400px"></iframe>
+      <p><a href="../pdfs/Practicas_a_Realizar.pdf" download>Descargar PRACTICAS PARA EXAMEN DE INSTALADOR</a></p>
+    </section>
+  </main>
 
-    <div class="volver">
+  <div class="volver">
     <a href="../index.html">← Volver al menú</a>
-    </div>
-
+  </div>
 </body>
 </html>
