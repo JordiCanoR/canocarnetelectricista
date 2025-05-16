@@ -4,22 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tablas Informativas - Carnet Electricista</title>
- <style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
       margin: 0;
       padding: 20px;
     }
-    h1 {
+    h1, h2 {
       text-align: center;
       color: #333;
-      margin-bottom: 30px;
+    }
+    h2 {
+      margin-top: 40px;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
+      margin-top: 20px;
     }
     .card {
       background: white;
@@ -38,23 +41,10 @@
       margin-top: 10px;
       color: #444;
     }
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #007BFF;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-    .card a:hover {
-      background-color: #0056b3;
-    }
     .volver {
       display: block;
       text-align: center;
-      margin-top: 30px;
+      margin-top: 40px;
     }
     .volver a {
       text-decoration: none;
@@ -62,66 +52,93 @@
       color: white;
       padding: 10px 20px;
       border-radius: 8px;
-    } 
- </style>
+    }
+  </style>
 </head>
 <body>
-  <h1>Tablas Informativas - Carnet de Electricista</h1>
+  <h1>Tablas Informativas - Carnet Electricista</h1>
+
+  <h2>1. Calculo potencia activa alumbrado exterior</h2>
   <div class="grid">
+    <div class="card"><img src="Calculo potencia activa alumbrado exterior.png"><h3>Potencia Activa en Alumbrado Exterior</h3></div>
+  </div>
 
-    <!-- Ejemplo de tarjeta -->
-    <div class="card">
-      <h3>Tabla A1, A2, B1, B2, C, D1, D2</h3>
-      <img src="capturas/cd76ca0e-a6b6-4e5f-8fa6-9c03aaa2f884.png" alt="Tabla A1 A2">
-      <a href="pdfs/TABLA_A1_A2_B1_B2_C_D1_D2.pdf" target="_blank">Ver PDF</a>
-    </div>
+  <h2>2. Clasificación de tensiones</h2>
+  <div class="grid">
+    <div class="card"><img src="Clasificación de tensiones.png"><h3>Clasificación de Tensiones</h3></div>
+  </div> 
+  
+  <h2>3. Tablas de electrificacion y coeficientes de viviendas</h2>
+  <div class="grid">
+    <div class="card"><img src="Tipo y condiciones de electrificacion de viviendas.png"><h3>Condiciones Electrificación Viviendas</h3></div>
+    <div class="card"><img src="Tabla coeficiente por Nº vivienda.png"><h3>Coeficiente por Nº de Viviendas</h3></div>
+    <div class="card"><img src="Tabla de electrificaciones viviendas.png"><h3>Electrificación de Viviendas</h3></div>
+    
+  <h2>4. Tabla de cargas de oficinas y locales</h2>
+  <div class="grid">
+    <div class="card"><img src="Tabla de cargas de oficinas y locales.png"><h3>Carga en Oficinas y Locales</h3></div>
+  </div> 
+  
+  <h2>5. Tabla de edificios y oficinas comerciales destinados a una o varia industrias</h2>
+  <div class="grid">  
+    <div class="card"><img src="Tabla de edificios y oficinas comerciales destinados a una o varias industrias.png"><h3>Carga en Edificios Comerciales</h3></div>
+  </div> 
 
-    <div class="card">
-      <h3>Instalaciones Enterradas D-D1/D2</h3>
-      <img src="capturas/4a0ff2c7-c738-4bec-878d-47d958a078a6.png" alt="Instalaciones D1">
-      <a href="pdfs/Instalaciones_enterradas_TIPO_D_D1_D2.pdf" target="_blank">Ver PDF</a>
-    </div>
+  <h2>6. Cargas correspondiente a los garajes</h2>
+  <div class="grid">   
+    <div class="card"><img src="Cargas correspondiente a los garajes.png"><h3>Carga en Garajes</h3></div>
+  </div>
+  
+  <h2>7. Caídas de Tensión máximas</h2>
+  <div class="grid">
+    <div class="card"><img src="Tabla de caidas de tension maxima.png"><h3>Caída de Tensión Máxima</h3></div>
+  </div>
 
-    <div class="card">
-      <h3>Instalaciones Interiores o Receptoras</h3>
-      <img src="capturas/9ac6d6d1-4bce-4f2a-8d83-dca2a40a7622.png" alt="Interiores">
-      <a href="pdfs/Instalaciones_INTERIORES_O_RECEPTORAS.pdf" target="_blank">Ver PDF</a>
-    </div>
+  <h2>8. Tabla cálculos de derivaciones individuales enterradas bajo tubo</h2>
+  <div class="grid">
+    <div class="card"><img src="Tabla de derivaciones individuales enterradas bajo tubo.png"><h3>Derivaciones Individuales</h3></div>
+  </div>  
+  
+  <h2>9. Tabla seccion fase,neutro, diametro tubo</h2>
+  <div class="grid">
+   <div class="card"><img src="Tabla seccion fase,neutro, diametro tubo.png"><h3>Sección Fase y Neutro</h3></div>
+  </div>
+ 
+  <h2>10. Tabla intensidades máximas LGA</h2>
+  <div class="grid">
+    <div class="card"><img src="Tabla intensidad maximas LGA.png"><h3>Intensidades Máximas LGA</h3></div>
+  </div>
+  
+  <h2>11. Tabla intensidades máximas LGA</h2>
+  <div class="grid">  
+    <div class="card"><img src="Tabla proteccion fusible y parametro....png"><h3>Protección Fusibles CGP y LGA</h3></div>
+  </div>
 
-    <div class="card">
-      <h3>Tabla de Fusibles CGP y LGA</h3>
-      <img src="capturas/2d745ea5-2af0-4436-9865-30a203b3871a.png" alt="CGP y LGA">
-      <a href="pdfs/Tabla_calculo_fusible_CGP_y_parametros_LGA.pdf" target="_blank">Ver PDF</a>
-    </div>
+  <h2>12. Tabla Instalaciones Tipos: A1, A2, B1, B2, C, D1, D2</h2>
+  <div class="grid">
+    <div class="card"><img src="TABLA_INSTALACIONES.SECCIONES.png"><h3>Secciones e Intensidades Máximas</h3></div>
+    <div class="card"><img src="Tipos instalaciones(1).png"><h3>Tipos de Instalaciones Parte 1</h3></div>
+    <div class="card"><img src="Tipos instalaciones(2).png"><h3>Tipos de Instalaciones Parte 2</h3></div>
+  </div>
 
-    <div class="card">
-      <h3>Sección Fase, Neutro y Tubo LGA</h3>
-      <img src="capturas/0cce2b69-16a7-4016-82d4-9a000e2b6506.png" alt="Fase Neutro">
-      <a href="pdfs/TABLA_DE_SECCION_FASE_NEUTRO_Y_DIAMETRO_TUBO_LGA.pdf" target="_blank">Ver PDF</a>
-    </div>
+  <h2>13. Tablas de instalaciones enterradas</h2>
+  <div class="grid">
+    <div class="card"><img src="Tabla de instalaciones enterradas(1).png"><h3>Instalación Enterrada - Cobre</h3></div>
+    <div class="card"><img src="Tabla de instalaciones enterradas(2).png"><h3>Instalación Enterrada - Aluminio</h3></div>
+  </div>
 
-    <div class="card">
-      <h3>Intensidades Admisibles LGA</h3>
-      <img src="capturas/72860ae3-95e0-44a9-af37-1978d7d348d0.png" alt="Intensidades LGA">
-      <a href="pdfs/Instalaciones_TABLA_DE_INTENSIDADES_ADMISIBLES_LGA.pdf" target="_blank">Ver PDF</a>
-    </div>
+  <h2>14. Tablas de instalaciones en galerias ventiladas</h2>
+  <div class="grid">
+    <div class="card"><img src="Tabla de instalaciones en galerias ventiladas(1)....png"><h3>Instalación Galería Ventilada - Cobre</h3></div>
+    <div class="card"><img src="Tabla de instalaciones en galerias ventiladas(2)....png"><h3>Instalación Galería Ventilada - Aluminio</h3></div>
 
-    <div class="card">
-      <h3>Clasificación de las Tensiones</h3>
-      <img src="capturas/8747bda6-8ecb-46ea-b5ce-f5c81504ae86.png" alt="Tensiones">
-      <a href="pdfs/Clasificacion_De_Las_Tensiones.pdf" target="_blank">Ver PDF</a>
-    </div>
+  <h2>15. Tabla ITA de ascensores</h2>
+  <div class="grid">
+    <div class="card"><img src="Tabla ITA ascensores.png"><h3>Previsión Potencia Ascensores</h3></div>
+  </div>
 
-    <div class="card">
-      <h3>Protección en Alumbrado Exterior</h3>
-      <img src="capturas/a28c8077-2eb5-4e85-8961-243e7e96b552.png" alt="Protección Alumbrado">
-      <a href="pdfs/TABLA_DE_PROTECCION_EN_ALUMBRADO_EXTERIOR.pdf" target="_blank">Ver PDF</a>
-    </div>
-    <div class="volver">
-    <a href="../index.html">← Volver al menú</a>
-    </div>
-    <!-- Puedes seguir duplicando tarjetas aquí para el resto de las tablas cargadas -->
-
+  <div class="volver">
+    <a href="../index.html">Volver a la página principal</a>
   </div>
 </body>
 </html>
