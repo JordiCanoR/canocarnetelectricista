@@ -63,6 +63,7 @@ function normalizar(texto) {
 
 function corregirTest() {
     let correctas = 0;
+    let incorrectas = 0;
     let detallesFallos = "";
 
     seleccionadas.forEach((pregunta, i) => {
@@ -90,6 +91,7 @@ function corregirTest() {
             }
 
             if (seleccion && seleccion.value === op.value && opValNorm !== respNormalizada) {
+                incorrectas++;
                 seleccion.closest("label").classList.add("incorrecta");
             }
         });
@@ -102,7 +104,7 @@ function corregirTest() {
     });
 
     const total = seleccionadas.length;
-    const puntos = (correctas * 0.3).toFixed(2);
+    const puntos = (correctas * 0.3 - incorrectas * 1).toFixed(2);
     let mensajeFinal = "", clase = "";
 
     if (puntos >= 8.1) {
@@ -117,7 +119,8 @@ function corregirTest() {
     }
 
     document.getElementById("resultado").innerHTML =
-        `Has acertado ${correctas} de ${total} preguntas. Puntuación: ${puntos} / 9<br><br>` +
+        `Has acertado ${correctas} de ${total} preguntas, fallado ${incorrectas}, sin responder ${total - correctas - incorrectas}.<br>` +
+        `Puntuación: ${puntos} / 9<br><br>` +
         `<div class='mensaje-final ${clase}'>${mensajeFinal}</div><br>` +
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
 }
