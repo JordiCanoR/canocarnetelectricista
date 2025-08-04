@@ -63,7 +63,7 @@ function normalizar(texto) {
 
 function corregirTest() {
     let correctas = 0;
-    let incorrectas = 0;           // añadido para contar errores
+    let incorrectas = 0;
     let detallesFallos = "";
 
     seleccionadas.forEach((pregunta, i) => {
@@ -91,7 +91,7 @@ function corregirTest() {
             }
 
             if (seleccion && seleccion.value === op.value && opValNorm !== respNormalizada) {
-                incorrectas++;                        // contamos el error
+                incorrectas++;
                 seleccion.closest("label").classList.add("incorrecta");
             }
         });
@@ -104,11 +104,9 @@ function corregirTest() {
     });
 
     const total = seleccionadas.length;
-    // puntuación: +1 por correcta, -0.3 por incorrecta
     const puntos = (correctas * 1 - incorrectas * 0.3).toFixed(2);
     let mensajeFinal = "", clase = "";
 
-    // umbrales: excelente ≥27, aprobado ≥15.7
     if (puntos >= 27) {
         mensajeFinal = "✅ ¡Excelente! Has sacado más del 90 %.";
         clase = "aprobado";
