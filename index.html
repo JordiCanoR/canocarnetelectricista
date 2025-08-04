@@ -84,13 +84,13 @@
     }
     @media (max-width: 600px) {
       .contador-caja {
-      position: static !important;
-      margin: 1.5rem auto;
-      right: auto;
-      top: auto;
-      display: block;
+        position: static !important;
+        margin: 1.5rem auto;
+        right: auto;
+        top: auto;
+        display: block;
+      }
     }
-  }
   </style>
 </head>
 <body>
@@ -112,6 +112,9 @@
     </a>
     <a href="https://classroom.google.com/" target="_blank">
       📚 Enlace a Google Classroom
+    </a>
+    <a href="TU_URL_DE_POWERBI" target="_blank">
+      📊 Estadísticas
     </a>
   </div>
 
@@ -167,15 +170,11 @@
     fetch('test_dinamico/preguntas_rebt_base.json')
       .then(response => response.json())
       .then(data => {
-        let total = 0;
-        if (Array.isArray(data)) {
-          total = data.length;
-        } else if (data.preguntas && Array.isArray(data.preguntas)) {
-          total = data.preguntas.length;
-        }
+        let total = Array.isArray(data) ? data.length
+                   : (data.preguntas?.length || 0);
         document.getElementById('contadorPreguntas').innerText = total;
       })
-      .catch(error => {
+      .catch(() => {
         document.getElementById('contadorPreguntas').innerText = 'Error';
       });
   </script>
@@ -186,9 +185,8 @@
       fetch('test_dinamico/preguntas_rebt_base.json')
         .then(r => r.json())
         .then(data => {
-          const lista = Array.isArray(data)
-            ? data
-            : (Array.isArray(data.preguntas) ? data.preguntas : []);
+          const lista = Array.isArray(data) ? data
+                      : (Array.isArray(data.preguntas) ? data.preguntas : []);
           if (!lista.length) return;
 
           const P = document.getElementById('rotator-pregunta'),
