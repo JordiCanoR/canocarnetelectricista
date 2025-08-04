@@ -139,4 +139,5 @@ document.getElementById("btnNuevo").addEventListener("click", () => {
     tiempo = 40 * 60;
     document.getElementById("resultado").innerHTML = "";
     generarTest();
+});
 
