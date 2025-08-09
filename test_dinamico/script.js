@@ -104,13 +104,15 @@ function corregirTest() {
     });
 
     const total = seleccionadas.length;
-    const puntos = (correctas * 0.3 - incorrectas * 1).toFixed(2);
+    // aquí cambiamos la puntuación: +1 por cada correcta, –0.3 por cada incorrecta
+    const puntos = (correctas * 1 - incorrectas * 0.3).toFixed(2);
     let mensajeFinal = "", clase = "";
 
-    if (puntos >= 8.1) {
-        mensajeFinal = "✅ ¡Excelente! Has aprobado con nota.";
+    // adaptamos los umbrales al nuevo máximo de 30 puntos
+    if (puntos >= 27) {
+        mensajeFinal = "✅ ¡Excelente! Has sacado más del 90 %.";
         clase = "aprobado";
-    } else if (puntos >= 5) {
+    } else if (puntos >= 15) {
         mensajeFinal = "✅ ¡Bien hecho! Has aprobado.";
         clase = "aprobado";
     } else {
@@ -120,7 +122,7 @@ function corregirTest() {
 
     document.getElementById("resultado").innerHTML =
         `Has acertado ${correctas} de ${total} preguntas, fallado ${incorrectas}, sin responder ${total - correctas - incorrectas}.<br>` +
-        `Puntuación: ${puntos} / 9<br><br>` +
+        `Puntuación: ${puntos} / 30<br><br>` +
         `<div class='mensaje-final ${clase}'>${mensajeFinal}</div><br>` +
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
 }
