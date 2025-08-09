@@ -5461,9 +5461,285 @@
             "Categoría III."
         ],
         "respuesta": "Categoría III."
+    },
+    {
+        "pregunta": "¿Cuál es la caída de tensión máxima permitida en un circuito de alumbrado de un taller de confección? (ITC-BT 19)",
+        "opciones": [
+        "1,5%.",
+        "3%.",
+        "5%."
+        ],
+        "respuesta": "3%."
+    },
+    {
+        "pregunta": "La previsión de potencia mínima para un edificio de 23 viviendas con grado de electrificación básico y con una demanda de potencia máxima de 5.750 W cada una será de: (ITC-BT 10)",
+        "opciones": [
+        "93.725 W.",
+        "87.975 W.",
+        "132.250 W."
+        ],
+        "respuesta": "93.725 W."
+    },
+    {
+        "pregunta": "¿Qué nombre tiene el valor de la corriente total que se deriva a tierra a través de la puesta a tierra? (ITC-BT 01)",
+        "opciones": [
+        "Corriente de defecto a tierra.",
+        "Corriente de falta.",
+        "Corriente de puesta a tierra."
+        ],
+        "respuesta": "Corriente de puesta a tierra."
+    },
+    {
+        "pregunta": "¿Cómo se realizará la protección contra contactos indirectos de una vivienda? (ITC-BT 26)",
+        "opciones": [
+        "Mediante la puesta a tierra de las masas y el empleo de interruptores diferenciales.",
+        "Mediante el empleo de interruptores diferenciales.",
+        "Mediante la puesta a tierra de las masas."
+        ],
+        "respuesta": "Mediante la puesta a tierra de las masas y el empleo de interruptores diferenciales."
+    },
+    {
+        "pregunta": "Calcúlese la sección de la línea de alimentación para un motor de elevación de corriente alterna que en su placa de características indica: U= 230/400 V, P= 10 CV, rendimiento= 85%. Teniendo en cuenta que la máxima caída de tensión permitida es del 5%, la longitud de dicha línea es de 100 m y que la línea está formada por un cable de cobre tetrapolar con aislamiento de etileno propileno de tensión asignada 0,6/1 kV, instalado en bandeja perforada. Factor de potencia de 0,85, motor conectado en estrella y temperatura ambiente de 40 °C. (UNE 20.460-5-523)",
+        "opciones": [
+        "2,5 mm².",
+        "6 mm².",
+        "4 mm²."
+        ],
+        "respuesta": "4 mm²."
+    },
+    {
+        "pregunta": "¿Cómo está delimitado verticalmente el volumen 3? (ITC-BT 27)",
+        "opciones": [
+        "Cuando la altura del techo exceda de 2,25 m por encima del suelo, el espacio comprendido entre el volumen 1 y el techo o hasta una altura de 3 m por encima del suelo, cualquiera que sea el valor menor, se considera volumen 3.",
+        "Por el plano vertical límite exterior del volumen 2 y el plano vertical paralelo situado a una distancia de éste de 2,4 m.",
+        "Por el suelo y por el plano horizontal situado a 2,25 m por encima del suelo."
+        ],
+        "respuesta": "Por el suelo y por el plano horizontal situado a 2,25 m por encima del suelo."
+    },
+    {
+        "pregunta": "¿Cuál es el objetivo de la ITC-BT 45? (ITC-BT 45)",
+        "opciones": [
+        "El objeto es no determinar los requisitos de instalación de los aparatos eléctricos de caldeo.",
+        "El objeto es determinar los requisitos de instalación de los aparatos eléctricos de caldeo.",
+        "El objeto es determinar los requisitos de instalación de los cables y folios radiantes."
+        ],
+        "respuesta": "El objeto es determinar los requisitos de instalación de los aparatos eléctricos de caldeo."
+    },
+    {
+        "pregunta": "Para la puesta en servicio de la instalación eléctrica de una nave industrial con una potencia instalada de 110 kW es necesaria la realización de: (ITC-BT 04)",
+        "opciones": [
+        "Una verificación y una inspección realizadas por un Organismo de Control Autorizado.",
+        "Una verificación realizada por el instalador autorizado en baja tensión y una inspección realizada por un Organismo de Control Autorizado.",
+        "Una verificación realizada por un técnico titulado competente y una inspección realizada por un Organismo de Control Autorizado."
+        ],
+        "respuesta": "Una verificación realizada por el instalador autorizado en baja tensión y una inspección realizada por un Organismo de Control Autorizado."
+    },
+    {
+        "pregunta": "¿Quién decidirá la situación de la caja general de protección? (ITC-BT 13)",
+        "opciones": [
+        "Se fijará de común acuerdo entre la propiedad y la empresa suministradora.",
+        "Se fijará de común acuerdo entre la propiedad y el instalador autorizado.",
+        "La empresa suministradora."
+        ],
+        "respuesta": "Se fijará de común acuerdo entre la propiedad y la empresa suministradora."
+    },
+    {
+        "pregunta": "¿Qué son instalaciones a muy baja tensión de seguridad (MBTS)? (ITC-BT 36)",
+        "opciones": [
+        "Las de tensión nominal que no supera 50 V en c.a. o 75 V en c.c, alimentadas mediante un transformador de seguridad o fuente equivalente.",
+        "Aquellas cuyos circuitos disponen de aislamiento de protección y no están conectados a tierra. Las masas tampoco deben estar conectadas a tierra.",
+        "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "¿Qué tensión de aislamiento mínima tendrán los conductores aislados instalados bajo tubo empotrado? (ITC BT 20 2.2.1)",
+        "opciones": [
+        "450/750 V.",
+        "300/500 V.",
+        "0,6/1 kV."
+        ],
+        "respuesta": "450/750 V."
+    },
+    {
+        "pregunta": "Los conductores a instalar en una columna de alumbrado exterior: (ITC-BT 09)",
+        "opciones": [
+        "Serán de tensión nominal no inferior a 450/750 V.",
+        "Podrán tener empalmes en el interior de los soportes.",
+        "Serán de cobre, de sección mínima de 2,5 mm² y de tensión nominal no inferior a 0,6/1 kV."
+        ],
+        "respuesta": "Serán de cobre, de sección mínima de 2,5 mm² y de tensión nominal no inferior a 0,6/1 kV."
+    },
+    {
+        "pregunta": "¿Qué tipo de protección contra sobretensiones regula la ITC-BT 23 del Reglamento Electrotécnico para Baja Tensión? (ITC-BT 23)",
+        "opciones": [
+        "Las sobretensiones transitorias que se transmiten por las redes de distribución.",
+        "Las sobretensiones permanentes que se transmiten por las redes de distribución.",
+        "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Las sobretensiones transitorias que se transmiten por las redes de distribución."
+    },
+    {
+        "pregunta": "La tensión de defecto es la que aparece a causa de un defecto de aislamiento entre: (ITC-BT 01)",
+        "opciones": [
+        "Una fase y una toma de tierra.",
+        "Una masa y una toma de tierra de referencia.",
+        "Una fase y neutro."
+        ],
+        "respuesta": "Una masa y una toma de tierra de referencia."
+    },
+    {
+        "pregunta": "La sección mínima de los conductores polares de la derivación individual será: (ITC-BT 15)",
+        "opciones": [
+        "6 mm² en cobre o aluminio.",
+        "10 mm² en aluminio.",
+        "4 mm² en cobre o aluminio."
+        ],
+        "respuesta": "6 mm² en cobre o aluminio."
+    },
+    {
+        "pregunta": "En el caso de aparatos de elevación en lugares de edificación, ¿cómo se cumplirá el requisito de protección contra el cierre no autorizado de los interruptores en el lado de la alimentación? (ITC-BT 32)",
+        "opciones": [
+        "Por bloqueo mediante llave.",
+        "Por bloqueo mediante candado.",
+        "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "Para más de 5 conductores a instalar en un mismo tubo en montaje empotrado de una instalación receptora: (ITC-BT 21)",
+        "opciones": [
+        "La sección interior del tubo será, como máximo, igual a 3 veces la sección ocupada por los conductores.",
+        "La sección interior del tubo será, como mínimo, igual a 3 veces la sección ocupada por los conductores.",
+        "La sección interior del tubo será, como mínimo, igual a 2,5 veces la sección ocupada por los conductores."
+        ],
+        "respuesta": "La sección interior del tubo será, como mínimo, igual a 3 veces la sección ocupada por los conductores."
+    },
+    {
+        "pregunta": "¿Cuál será la previsión de cargas para un edificio de 23 viviendas con grado de electrificación básico con una demanda de potencia máxima de 7.360 W cada una? (ITC-BT 10)",
+        "opciones": [
+        "119.968 W.",
+        "169.280 W.",
+        "93.725 W."
+        ],
+        "respuesta": "119.968 W."
+    },
+    {
+        "pregunta": "Para suministros industriales que dispongan de una caja de protección y medida con medida indirecta, la solución a adoptar será la que se especifique en los requisitos particulares de la empresa suministradora pero tendrán que cumplir, además, los siguientes principios: (ITC-BT 16)",
+        "opciones": [
+        "Fácil lectura del equipo de medida.",
+        "Acceso permanente a los fusibles generales de protección y garantías de seguridad y mantenimiento.",
+        "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "¿Qué intensidad máxima deberán soportar en régimen permanente los aparatos de mando y protección de los condensadores instalados en un hipermercado de 1.000 m²? (ITC-BT 48)",
+        "opciones": [
+        "1,5 a 1,8 veces la intensidad nominal del condensador.",
+        "1,3 veces la intensidad nominal del condensador.",
+        "1,25 veces la intensidad nominal del condensador."
+        ],
+        "respuesta": "1,5 a 1,8 veces la intensidad nominal del condensador."
+    },
+    {
+        "pregunta": "En la medida de la corriente de fuga en una instalación eléctrica de una vivienda con un único diferencial: (ITC-BT 19)",
+        "opciones": [
+        "Las corrientes de fuga de una instalación no afectan al funcionamiento de un diferencial de clase AC.",
+        "Los aparatos de utilización previstos deben estar desconectados.",
+        "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Ninguna de las respuestas anteriores es correcta."
+    },
+    {
+        "pregunta": "¿Qué tensión soportará un motor industrial trifásico conectado a una red de 230/400 V a un impulso de sobretensión del tipo 1,2/50 μs? (ITC-BT 23)",
+        "opciones": [
+        "4 kV.",
+        "6 kV.",
+        "8 kV."
+        ],
+        "respuesta": "4 kV."
+    },
+    {
+        "pregunta": "¿Qué protección contra choques eléctricos tendrán los receptores de clase II? (ITC-BT 43)",
+        "opciones": [
+        "Provistos de medios de conexión a tierra.",
+        "Alimentación a MBTS.",
+        "Sin medios de protección por puesta a tierra y aislamiento suplementario además del principal."
+        ],
+        "respuesta": "Sin medios de protección por puesta a tierra y aislamiento suplementario además del principal."
+    },
+    {
+        "pregunta": "¿Cuál es la sección mínima que hay que emplear en el neutro para las redes subterráneas de alimentación de alumbrado exterior? (ITC-BT 09)",
+        "opciones": [
+        "16 mm².",
+        "10 mm².",
+        "6 mm²."
+        ],
+        "respuesta": "6 mm²."
+    },
+    {
+        "pregunta": "¿Debe incluir la canalización de la derivación individual el conductor de protección? (ITC-BT 15)",
+        "opciones": [
+        "Sí, siempre.",
+        "No, nunca.",
+        "Depende del esquema de instalación de enlace utilizado."
+        ],
+        "respuesta": "Sí, siempre."
+    },
+    {
+        "pregunta": "¿Podrán realizarse empalmes dentro de una canal protectora con grado de protección IP44 instalada en un lavadero público? (ITC-BT 30)",
+        "opciones": [
+        "No, deberán realizarse en el interior de cajas.",
+        "Sí, cuando además la tapa de la canal sólo pueda abrirse con herramientas.",
+        "No puede instalarse una canal protectora con IP 44 en este tipo de emplazamiento."
+        ],
+        "respuesta": "No, deberán realizarse en el interior de cajas."
+    },
+    {
+        "pregunta": "¿Cuál es grado de protección mínimo contra la penetración de agua que deben tener los equipos eléctricos de una fuente? (ITC-BT 31)",
+        "opciones": [
+        "IP X8 en el volumen 1.",
+        "IP X8 en el volumen 0.",
+        "IP X5 en el volumen 0."
+        ],
+        "respuesta": "IP X8 en el volumen 0."
+    },
+    {
+        "pregunta": "¿Necesita proyecto la instalación de alimentación a un anuncio publicitario? (ITC-BT 04)",
+        "opciones": [
+        "Sí, siempre que la potencia instalada sea mayor de 5 kW.",
+        "No, siempre requerirá de memoria técnica de diseño.",
+        "Ninguna de las anteriores es correcta."
+        ],
+        "respuesta": "Sí, siempre que la potencia instalada sea mayor de 5 kW."
+    },
+    {
+        "pregunta": "¿Cómo se asegurará la protección contra contactos directos en un circuito MBTS cuando la tensión nominal es superior a 25 V en corriente alterna? (ITC-BT 36)",
+        "opciones": [
+        "Por un aislamiento que pueda soportar una tensión de 600 voltios durante un minuto.",
+        "Por barreras o envolventes que presenten como mínimo un grado de protección IP1X.",
+        "Por un aislamiento que pueda soportar una tensión de 500 voltios durante un minuto."
+        ],
+        "respuesta": "Por un aislamiento que pueda soportar una tensión de 500 voltios durante un minuto."
+    },
+    {
+        "pregunta": "En una instalación interior o receptora, ¿por dónde debe discurrir una canalización eléctrica que está próxima a una conducción de vapor de agua? (ITC-BT 20)",
+        "opciones": [
+        "A tres centímetros por encima de la conducción de vapor.",
+        "A tres centímetros por debajo de la conducción de vapor.",
+        "Es indiferente la forma de colocación."
+        ],
+        "respuesta": "A tres centímetros por encima de la conducción de vapor."
     }
-
 ]
+
+
+
+
+
+
+
 
 
 
