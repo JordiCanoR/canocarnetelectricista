@@ -5731,8 +5731,192 @@
         "Es indiferente la forma de colocación."
         ],
         "respuesta": "A tres centímetros por encima de la conducción de vapor."
+    },
+    {
+        "pregunta": "Las instalaciones de puesta a tierra se revisarán por técnicos al menos: (ITC-BT 18)",
+        "opciones": [
+        "Cada año en la época en la que el terreno esté más seco.",
+        "Cada 2 años.",
+        "Cada año sin importar como esté el terreno."
+        ],
+        "respuesta": "Cada año en la época en la que el terreno esté más seco."
+    },
+    {
+        "pregunta": "¿Cómo podrán alimentarse los aparatos de iluminación portátiles de una calderería si no son alimentados por medio de transformadores de separación? (ITC-BT 44)",
+        "opciones": [
+        "Deben alimentarse con una tensión de seguridad no superior a 24 V.",
+        "Sólo pueden alimentarse con transformadores de separación de circuitos.",
+        "Deben alimentarse con una tensión de seguridad no superior a 50 V."
+        ],
+        "respuesta": "Deben alimentarse con una tensión de seguridad no superior a 24 V."
+    },
+    {
+        "pregunta": "¿Qué criterios se tendrán en cuenta para el cálculo de la sección de los cables de la línea general de alimentación? (ITC-BT 14)",
+        "opciones": [
+        "La intensidad máxima admisible por los cables.",
+        "La máxima caída de tensión permitida.",
+        "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "¿Cuál de las siguientes definiciones corresponde con un esquema de distribución IT? (ITC-BT 08)",
+        "opciones": [
+        "Es el que conecta el neutro a tierra y las masas a neutro.",
+        "Es el que se utiliza en redes de distribución públicas.",
+        "Es el que no tiene ningún punto de la alimentación conectado directamente a tierra."
+        ],
+        "respuesta": "Es el que no tiene ningún punto de la alimentación conectado directamente a tierra."
+    },
+    {
+        "pregunta": "¿Cómo se define aislamiento funcional? (ITC-BT 01)",
+        "opciones": [
+        "Aislamiento necesario para garantizar el funcionamiento normal y la protección fundamental contra los contactos indirectos.",
+        "Aislamiento necesario para garantizar el funcionamiento normal y la protección fundamental contra los choques eléctricos.",
+        "Ninguna de las anteriores es correcta."
+        ],
+        "respuesta": "Aislamiento necesario para garantizar el funcionamiento normal y la protección fundamental contra los choques eléctricos."
+    },
+    {
+        "pregunta": "¿Qué dimensión mínima tendrá la puerta de acceso al cuarto de contadores de un local con riesgo de incendio o explosión? (ITC-BT 16)",
+        "opciones": [
+        "0,70 x 2,30 m.",
+        "0,70 x 2 m.",
+        "0,80 x 2 m."
+        ],
+        "respuesta": "0,70 x 2 m."
+    },
+    {
+        "pregunta": "Señálese la tensión nominal mínima de los cables empleados en instalaciones eléctricas a tensiones especiales: (ITC-BT 37)",
+        "opciones": [
+        "750 V (450/750 V).",
+        "500 V (300/500 V).",
+        "1000 V (0,6/1 kV)."
+        ],
+        "respuesta": "1000 V (0,6/1 kV)."
+    },
+    {
+        "pregunta": "En caso de utilizar como protección contra contactos indirectos dispositivos de corriente diferencial residual temporizados en serie con dispositivos de tipo general, ¿cuál ha de ser el tiempo máximo de funcionamiento del elemento temporizado suponiendo un esquema de distribución TT? (ITC-BT 24)",
+        "opciones": [
+        "No pueden instalarse dos diferenciales en serie.",
+        "0,1 segundo.",
+        "1 segundo."
+        ],
+        "respuesta": "1 segundo."
+    },
+    {
+        "pregunta": "Indíquese la sección mínima de la líneas principal de tierra de un edificio de viviendas. (ITC-BT 26)",
+        "opciones": [
+        "Siempre la mitad de la sección de fase de la línea general de alimentación.",
+        "16 mm².",
+        "Igual que la sección de fase de la línea general de alimentación."
+        ],
+        "respuesta": "16 mm²."
+    },
+    {
+        "pregunta": "¿Está permitido el uso de contactores como interruptores para el control de una grúa? (ITC-BT 32)",
+        "opciones": [
+        "Si está permitido.",
+        "El uso de contactores está permitido para el seccionamiento pero no para el corte.",
+        "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Si está permitido."
+    },
+    {
+        "pregunta": "¿Qué componente de la instalación eléctrica de enlace marca el final de la propiedad de la compañía suministradora? (ITC-BT 12)",
+        "opciones": [
+        "El contador.",
+        "El interruptor de control de potencia.",
+        "La caja general de protección."
+        ],
+        "respuesta": "La caja general de protección."
+    },
+    {
+        "pregunta": "¿Qué es la corriente de contacto? (ITC-BT 01)",
+        "opciones": [
+        "Valor máximo de la corriente que circula permanentemente por un conductor.",
+        "Corriente que pasa a través de cuerpo humano cuando está sometido a una tensión eléctrica.",
+        "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Corriente que pasa a través de cuerpo humano cuando está sometido a una tensión eléctrica."
+    },
+    {
+        "pregunta": "¿Qué distancia máxima habrá entre las abrazaderas que sujetan un tubo en montaje superficial? (ITC-BT 21)",
+        "opciones": [
+        "1 m.",
+        "0,5 m.",
+        "0,6 m."
+        ],
+        "respuesta": "0,5 m."
+    },
+    {
+        "pregunta": "Una línea general de alimentación debe transportar una potencia de 120 kW a 400/230V. Se utilizarán conductores de cobre unipolares RZ1-K 0,6/1 kV bajo tubo empotrado en pared de mampostería con una longitud de 1 m. ¿Qué sección mínima será necesaria para los conductores de fase? Contadores concentrados en un sólo punto, factor de potencia 0,9 y temperatura ambiente de 30 °C. (UNE 20.460-5-523)",
+        "opciones": [
+        "50 mm².",
+        "70 mm².",
+        "35 mm²."
+        ],
+        "respuesta": "70 mm²."
+    },
+    {
+        "pregunta": "La canalización para la alimentación de una instalación de cable calefactor deberá terminar, respecto a la conexión con dicho cable calefactor, como mínimo a: (ITC-BT 46 3.2.1)",
+        "opciones": [
+        "0,15 m.",
+        "0,20 m.",
+        "0,25 m."
+        ],
+        "respuesta": "0,20 m."
+    },
+    {
+        "pregunta": "¿Qué tipo de protección contra choques eléctricos tienen los receptores de clase 0? (ITC-BT 43)",
+        "opciones": [
+        "Aislamiento suplementario.",
+        "Previstos medios de conexión a tierra.",
+        "Sin medios de protección por puesta a tierra y instalados en un entorno aislado de tierra."
+        ],
+        "respuesta": "Sin medios de protección por puesta a tierra y instalados en un entorno aislado de tierra."
+    },
+    {
+        "pregunta": "Los conductores aislados de la red de tierra que unen los electrodos en una red posada de alumbrado exterior: (ITC-BT 09)",
+        "opciones": [
+        "Serán de la misma sección que los conductores de fase.",
+        "Tendrán una sección mínima de 16 mm².",
+        "Tendrán una sección mínima de 16 mm² de cobre."
+        ],
+        "respuesta": "Serán de la misma sección que los conductores de fase."
+    },
+    {
+        "pregunta": "Indíquese cuáles de las siguientes nuevas instalaciones requieren proyecto para su ejecución. (ITC-BT 04)",
+        "opciones": [
+        "Bombas de extracción o elevación de agua de 5 kW de potencia.",
+        "Instalación de conductores aislados para caldeo de 12 kW de potencia.",
+        "Vivienda unifamiliar de 30 kW de potencia."
+        ],
+        "respuesta": "Instalación de conductores aislados para caldeo de 12 kW de potencia."
+    },
+    {
+        "pregunta": "¿Cuál es la tensión máxima para la protección mediante muy baja tensión de seguridad (MBTS) en el volumen 1 de una fuente pública? (ITC-BT 31)",
+        "opciones": [
+        "12 V en corriente continua.",
+        "12 V en corriente alterna.",
+        "30 V en corriente alterna."
+        ],
+        "respuesta": "12 V en corriente alterna."
+    },
+    {
+        "pregunta": "¿Qué tipo de cable se permite para instalaciones con conductores directamente empotrados en estructuras? (ITC-BT 20)",
+        "opciones": [
+        "Solamente se utilizarán cables armados.",
+        "Conductores aislados con cubierta.",
+        "Ninguna de las anteriores es correcta."
+        ],
+        "respuesta": "Conductores aislados con cubierta."
     }
 ]
+
+
+
+
 
 
 
