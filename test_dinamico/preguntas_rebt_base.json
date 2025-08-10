@@ -5911,8 +5911,91 @@
         "Ninguna de las anteriores es correcta."
         ],
         "respuesta": "Conductores aislados con cubierta."
+    },
+    {
+        "pregunta": "El valor de resistencia de tierra será tal que cualquier masa no pueda dar lugar a tensiones de contacto superiores a: (ITC-BT 18)",
+        "opciones": [
+            "24 V en local o emplazamiento conductor y 50 V en los demás casos.",
+            "50 V en local o emplazamiento conductor y 24 V en los demás casos.",
+            "50 V en todos los casos."
+        ],
+        "respuesta": "24 V en local o emplazamiento conductor y 50 V en los demás casos."
+    },
+    {
+        "pregunta": "La línea general de alimentación: (ITC-BT 14)",
+        "opciones": [
+            "Es la que enlaza la caja general de protección y medida con la centralización de contadores.",
+            "Es la línea que va conectada a la salida de la caja general de protección y a la entrada de la unidad funcional de interruptor general de maniobra de la centralización de contadores.",
+            "Ninguna de las anteriores."
+        ],
+        "respuesta": "Es la línea que va conectada a la salida de la caja general de protección y a la entrada de la unidad funcional de interruptor general de maniobra de la centralización de contadores."
+    },
+    {
+        "pregunta": "Indíquese el diámetro del tubo de una línea general de alimentación si los conductores de fase son de 50 mm² de sección. (ITC-BT 14)",
+        "opciones": [
+            "125 mm.",
+            "160 mm.",
+            "110 mm."
+        ],
+        "respuesta": "125 mm."
+    },
+    {
+        "pregunta": "Las instalaciones interiores o receptoras: (REBT Art. 16)",
+        "opciones": [
+            "Incluyen cualquier instalación receptora aunque toda ella o alguna de sus partes esté situada a la intemperie.",
+            "Sólo pueden estar alimentadas por una red de distribución pública.",
+            "Son las que utilizan tensiones usuales únicamente."
+        ],
+        "respuesta": "Incluyen cualquier instalación receptora aunque toda ella o alguna de sus partes esté situada a la intemperie."
+    },
+    {
+        "pregunta": "La medición del aislamiento con relación a tierra y entre conductores se realiza mediante un generador capaz de suministrar una corriente de ensayo en corriente continua de: (ITC-BT 19)",
+        "opciones": [
+            "3 mA.",
+            "1 mA.",
+            "0,5 mA."
+        ],
+        "respuesta": "1 mA."
+    },
+    {
+        "pregunta": "Las sobreintensidades pueden estar motivadas por: (ITC-BT 22)",
+        "opciones": [
+            "Sobrecargas.",
+            "Cortocircuitos y descargas atmosféricas.",
+            "Ambas respuestas son correctas."
+        ],
+        "respuesta": "Ambas respuestas son correctas."
+    },
+    {
+        "pregunta": "Las canales protectoras de una línea general de alimentación deberán permitir la ampliación de la sección de los conductores instalados inicialmente en un: (ITC-BT 14)",
+        "opciones": [
+            "50%.",
+            "100%.",
+            "Ninguna de las anteriores."
+        ],
+        "respuesta": "100%."
+    },
+    {
+        "pregunta": "¿Cuál es el número máximo de curvas que se pueden realizar en un tubo entre dos registros consecutivos? (ITC-BT 21)",
+        "opciones": [
+            "3.",
+            "2.",
+            "1."
+        ],
+        "respuesta": "3."
+    },
+    {
+        "pregunta": "¿Qué motores deben incorporar en la protección contra sobrecargas elementos que cubran el riesgo de la falta de tensión en una de sus fases? (ITC-BT 47)",
+        "opciones": [
+            "Todos los trifásicos.",
+            "Todos los monofásicos y trifásicos.",
+            "Los de potencia nominal superior a 750 W."
+        ],
+        "respuesta": "Todos los trifásicos."
     }
 ]
+
+
 
 
 
