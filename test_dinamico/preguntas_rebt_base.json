@@ -5992,8 +5992,190 @@
             "Los de potencia nominal superior a 750 W."
         ],
         "respuesta": "Todos los trifásicos."
+    },
+    {
+        "pregunta": "¿Qué condiciones cumplirán los conectores y tomas de corriente thy usados para aislar los anillos de colector y los cables de una grúa antes de su punto de conexión con el suministro principal? (ITC-BT 32)",
+        "opciones": [
+            "No pueden usarse conectores y tomas de corriente para este fin.",
+            "Pueden usarse conectores pero no tomas de corriente.",
+            "Los conectores y tomas de corriente conformes a la norma UNE-EN 60309-1 pueden usarse para este fin."
+        ],
+        "respuesta": "Los conectores y tomas de corriente conformes a la norma UNE-EN 60309-1 pueden usarse para este fin."
+    },
+    {
+        "pregunta": "¿Cuál será la caída de tensión máxima permitida en la línea general de alimentación de un edificio con contadores totalmente concentrados? (ITC-BT 14)",
+        "opciones": [
+            "0,5%.",
+            "1%.",
+            "1,5%."
+        ],
+        "respuesta": "0,5%."
+    },
+    {
+        "pregunta": "¿Cuál es la potencia mínima a prever para una vivienda con grado de electrificación elevado? (ITC-BT 10)",
+        "opciones": [
+            "5.750 W.",
+            "9.200 W.",
+            "3.450 W."
+        ],
+        "respuesta": "9.200 W."
+    },
+    {
+        "pregunta": "¿Cómo se pueden ejecutar las canalizaciones en un local mojado? (ITC-BT 30)",
+        "opciones": [
+            "Instalación de conductores y cables aislados en el interior de tubos.",
+            "Instalación de cables aislados con cubierta en el interior de canales aislantes.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "¿Cómo serán las características de protección de la unión entre un tubo y sus accesorios? (ITC-BT 21)",
+        "opciones": [
+            "Se tienen que mantener las características de protección del tubo aunque no las del accesorio.",
+            "Se mantendrán las características de protección declaradas para el sistema de tubos.",
+            "El grado de protección es indiferente en las uniones."
+        ],
+        "respuesta": "Se mantendrán las características de protección declaradas para el sistema de tubos."
+    },
+    {
+        "pregunta": "¿Cuál es la corriente diferencial residual asignada máxima que se permite para el corte automático de la alimentación del alumbrado navideño de una calle? (ITC-BT 34)",
+        "opciones": [
+            "500 mA.",
+            "30 mA.",
+            "300 mA."
+        ],
+        "respuesta": "30 mA."
+    },
+    {
+        "pregunta": "¿Qué potencia mínima respecto a la potencia total contratada para el suministro normal deberá tener el suministro de reserva? (REBT Artículo 10)",
+        "opciones": [
+            "El 50%.",
+            "El 25%.",
+            "El 15%."
+        ],
+        "respuesta": "El 25%."
+    },
+    {
+        "pregunta": "Indíquese la sección nominal del conductor de puesta a tierra de una cuba metálica de caldeo en la que el agua forma parte del circuito eléctrico si la sección del cable de alimentación es de 6 mm²: (ITC-BT 45)",
+        "opciones": [
+            "La mitad del conductor de fase con un mínimo de 4 mm².",
+            "6 mm².",
+            "Un 125% mayor que el conductor de mayor tensión con un mínimo de 6 mm²."
+        ],
+        "respuesta": "6 mm²."
+    },
+    {
+        "pregunta": "Si en una instalación eléctrica de baja tensión hay elementos integrados en alta tensión: (REBT Art. 7)",
+        "opciones": [
+            "Se cumplirá sólo lo relativo a la instalación de baja tensión.",
+            "Se cumplirá lo que determinen los reglamentos de alta tensión.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Se cumplirá lo que determinen los reglamentos de alta tensión."
+    },
+    {
+        "pregunta": "¿Cuál es la sección interior mínima de un tubo aéreo por el que van seis conductores? (ITC-BT 21)",
+        "opciones": [
+            "2,5 veces la sección ocupada por los conductores.",
+            "4 veces la sección ocupada por los conductores.",
+            "3 veces la sección ocupada por los conductores."
+        ],
+        "respuesta": "4 veces la sección ocupada por los conductores."
+    },
+    {
+        "pregunta": "Indíquese cuál es la sección mínima de los conductores que alimentan el circuito de iluminación de una instalación eléctrica de una vivienda. (ITC-BT 25 3 tabla 1)",
+        "opciones": [
+            "4 mm².",
+            "2,5 mm².",
+            "1,5 mm²."
+        ],
+        "respuesta": "1,5 mm²."
+    },
+    {
+        "pregunta": "¿Es obligatorio en una instalación a muy baja tensión de protección seguir las prescripciones de la ITC-BT 19 para identificar los conductores? (ITC-BT 36)",
+        "opciones": [
+            "No es necesario.",
+            "Sí, pero únicamente en el caso de circuitos a muy baja tensión de protección.",
+            "Sí, pero únicamente en el caso de circuitos a muy baja tensión de seguridad."
+        ],
+        "respuesta": "No es necesario."
+    },
+    {
+        "pregunta": "El conductor conectado al punto de una red y capaz de contribuir al transporte de energía eléctrica es: (ITC-BT 01)",
+        "opciones": [
+            "El conductor de protección.",
+            "El conductor de fase.",
+            "El conductor neutro."
+        ],
+        "respuesta": "El conductor neutro."
+    },
+    {
+        "pregunta": "¿Se deberán poner a tierra las partes metálicas de un kiosco? (ITC-BT 09)",
+        "opciones": [
+            "Sí, cuando sea posible tocar simultáneamente las partes metálicas de la instalación de alumbrado exterior y del kiosco y estén situadas a una distancia inferior a 2 m.",
+            "Sí, cuando estén situadas a una distancia inferior a 2 m de las partes metálicas de una farola.",
+            "Sí, siempre."
+        ],
+        "respuesta": "Sí, cuando sea posible tocar simultáneamente las partes metálicas de la instalación de alumbrado exterior y del kiosco y estén situadas a una distancia inferior a 2 m."
+    },
+    {
+        "pregunta": "En la instalación eléctrica de una vivienda unifamiliar con longitud del conjunto de las canalizaciones inferior a 100 m se tendrá: (ITC-BT 19)",
+        "opciones": [
+            "La caída de tensión máxima en la línea general de alimentación es del 0,5%.",
+            "Si cada circuito va por un tubo distinto al de los demás, no es necesario instalar el interruptor general automático en el cuadro.",
+            "La resistencia de aislamiento de la instalación debe ser superior o igual a 0,5 MΩ con tensión de ensayo de 500 V en corriente continua."
+        ],
+        "respuesta": "La resistencia de aislamiento de la instalación debe ser superior o igual a 0,5 MΩ con tensión de ensayo de 500 V en corriente continua."
+    },
+    {
+        "pregunta": "¿Podrá la empresa suministradora realizar las verificaciones que considere oportunas en lo que se refiere al cumplimiento de las prescripciones del Reglamento de Baja Tensión? (ITC-BT 04)",
+        "opciones": [
+            "Sí, pero correrá de su cargo.",
+            "Sí, pero correrá a cargo del titular de la instalación.",
+            "No, nunca."
+        ],
+        "respuesta": "Sí, pero correrá de su cargo."
+    },
+    {
+        "pregunta": "¿Qué tipo de instalaciones eléctricas podrían efectuar los instaladores autorizados en baja tensión de categoría básica? (ITC-BT 03)",
+        "opciones": [
+            "Edificios e industrias en baja tensión que estén dentro del marco de sus competencias.",
+            "Líneas aéreas o subterráneas para distribución de energía.",
+            "Plantas de fabricación y procesado de fibras."
+        ],
+        "respuesta": "Edificios e industrias en baja tensión que estén dentro del marco de sus competencias."
+    },
+    {
+        "pregunta": "Indíquese cuáles de las siguientes nuevas instalaciones requieren memoria técnica de diseño para su ejecución. (ITC-BT 04)",
+        "opciones": [
+            "Piscina de 5 kW de potencia.",
+            "Quirófano de 4 kW de potencia.",
+            "Bombas de extracción o elevación de agua de 12 kW de potencia."
+        ],
+        "respuesta": "Piscina de 5 kW de potencia."
+    },
+    {
+        "pregunta": "Si al pasar una inspección no se detectan defectos graves o muy graves, ¿qué calificación se le dará? (ITC-BT 05 5.2.1)",
+        "opciones": [
+            "Condicionada.",
+            "Negativa.",
+            "Favorable."
+        ],
+        "respuesta": "Favorable."
+    },
+    {
+        "pregunta": "La protección contra contactos directos de una tintorería: (ITC-BT 24)",
+        "opciones": [
+            "Consiste en tomar las medidas destinadas a proteger a las personas contra los contactos con las partes no activas de los materiales eléctricos.",
+            "Se considera hecha con un dispositivo de corriente diferencial residual de 10 mA.",
+            "La utilización de un dispositivo de corriente diferencial residual de 10 mA complementa al resto de medidas contra contactos directos descritas por el REBT."
+        ],
+        "respuesta": "La utilización de un dispositivo de corriente diferencial residual de 10 mA complementa al resto de medidas contra contactos directos descritas por el REBT."
     }
 ]
+
+
 
 
 
