@@ -141,7 +141,6 @@ function generarTest() {
         const opcionesHTML = opciones.map(op =>
             `<label><input type="radio" name="q${i + 1}" value="${op}"> ${op}</label><br>`
         ).join("");
-        // Por seguridad: si alguna pregunta llegara sin opciones válidas, se avisa visualmente.
         div.innerHTML = `<p><strong>${i + 1}. ${pregunta.pregunta}</strong></p>` +
             (opciones.length ? opcionesHTML : `<em>Pregunta sin opciones válidas (revisar banco)</em>`);
         testForm.appendChild(div);
@@ -165,7 +164,7 @@ function normalizar(texto) {
         .replace(/[\u0300-\u036f]/g, "");
 }
 
-// === NUEVO: utilidades para limpiar preguntas del JSON ===
+// === utilidades para limpiar preguntas del JSON ===
 function normalizarOpciones(opciones) {
     if (Array.isArray(opciones)) {
         return [...new Set(opciones.map(o => String(o ?? "").trim()))].filter(Boolean);
@@ -192,6 +191,33 @@ function prepararPregunta(p) {
     copia.opciones = ops;
     copia.respuesta = resp;
     return copia;
+}
+
+// === NUEVO: inyectar estilos para que el resultado nunca salga "en blanco" ===
+function inyectarEstilosResultado() {
+    const css = `
+        #resultado { color: #111 !important; background: transparent; }
+        #resultado .totales {
+            color: #111 !important;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 10px 12px;
+            line-height: 1.4;
+        }
+        #resultado .mensaje-final {
+            color: #111 !important;
+            padding: 8px 10px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            background: #f9fafb;
+        }
+        #resultado details summary { cursor: pointer; }
+    `;
+    const tag = document.createElement("style");
+    tag.setAttribute("data-inyectado", "resultado-visible");
+    tag.appendChild(document.createTextNode(css));
+    document.head.appendChild(tag);
 }
 
 function corregirTest() {
@@ -238,7 +264,6 @@ function corregirTest() {
 
     const total = seleccionadas.length;
     const noRespondidas = total - correctas - incorrectas;
-
     const pct = (n) => total ? (100 * n / total).toFixed(1) : "0.0";
 
     const puntos = (correctas * 1 - incorrectas * 0.3).toFixed(2);
@@ -255,7 +280,6 @@ function corregirTest() {
         clase = "suspendido";
     }
 
-    // Bloque de totales claro + tu frase original
     document.getElementById("resultado").innerHTML =
         `<div class="totales">
             <strong>Totales</strong><br>
@@ -299,6 +323,9 @@ fetch("preguntas_rebt_base.json")
             inicializarOrden();
             guardarEstado(sig);
         }
+
+        // Aseguramos estilos visibles para el resultado
+        inyectarEstilosResultado();
 
         generarTest();
         temporizador();
