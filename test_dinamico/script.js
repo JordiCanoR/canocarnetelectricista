@@ -170,7 +170,6 @@ function normalizarOpciones(opciones) {
     if (Array.isArray(opciones)) {
         return [...new Set(opciones.map(o => String(o ?? "").trim()))].filter(Boolean);
     }
-    // Si viene como string, intentamos dividir por delimitadores comunes
     const s = String(opciones ?? "").trim();
     if (!s) return [];
     const trozos = s.split(/[\|\;\,\n\r]+/).map(t => t.trim()).filter(Boolean);
@@ -179,21 +178,15 @@ function normalizarOpciones(opciones) {
 
 function prepararPregunta(p) {
     const copia = { ...p };
-    // Normaliza y valida opciones
     const ops = normalizarOpciones(copia.opciones);
     const resp = String(copia.respuesta ?? "").trim();
 
-    // Si hay respuesta pero no está en opciones, la añadimos
     if (resp && ops.length && !ops.includes(resp)) {
         ops.push(resp);
     }
-
-    // Reglas mínimas: al menos 2 opciones y respuesta no vacía
     if (!resp || ops.length < 2) {
-        return null; // inválida -> se filtrará
+        return null;
     }
-
-    // Barajar opciones para esa pregunta
     barajarArray(ops);
 
     copia.opciones = ops;
@@ -244,6 +237,10 @@ function corregirTest() {
     });
 
     const total = seleccionadas.length;
+    const noRespondidas = total - correctas - incorrectas;
+
+    const pct = (n) => total ? (100 * n / total).toFixed(1) : "0.0";
+
     const puntos = (correctas * 1 - incorrectas * 0.3).toFixed(2);
     let mensajeFinal = "", clase = "";
 
@@ -258,8 +255,15 @@ function corregirTest() {
         clase = "suspendido";
     }
 
+    // Bloque de totales claro + tu frase original
     document.getElementById("resultado").innerHTML =
-        `Has acertado ${correctas} de ${total} preguntas, fallado ${incorrectas}, sin responder ${total - correctas - incorrectas}.<br>` +
+        `<div class="totales">
+            <strong>Totales</strong><br>
+            ✅ Correctas: <strong>${correctas}</strong> (${pct(correctas)}%)<br>
+            ❌ Incorrectas: <strong>${incorrectas}</strong> (${pct(incorrectas)}%)<br>
+            ⏸️ No respondidas: <strong>${noRespondidas}</strong> (${pct(noRespondidas)}%)
+        </div><br>` +
+        `Has acertado ${correctas} de ${total} preguntas, fallado ${incorrectas}, sin responder ${noRespondidas}.<br>` +
         `Puntuación: ${puntos} / ${Math.min(TEST_SIZE, preguntas.length)}<br><br>` +
         `<div class='mensaje-final ${clase}'>${mensajeFinal}</div><br>` +
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
@@ -276,7 +280,7 @@ fetch("preguntas_rebt_base.json")
         for (const p of listaOriginal) {
             const clave = normalizar(p?.pregunta || "");
             if (!mapa.has(clave)) {
-                mapa.set(clave, p); // conserva la primera aparición
+                mapa.set(clave, p);
             }
         }
         const sinDuplicados = Array.from(mapa.values());
@@ -289,10 +293,7 @@ fetch("preguntas_rebt_base.json")
 
         preguntas = preparadas;
 
-        // Firma del banco para validar/restaurar estado previo
         const sig = firmaBanco(preguntas);
-
-        // Intentar cargar estado persistido; si falla/mismatch, iniciar orden nuevo
         const restaurado = cargarEstado(sig, preguntas.length);
         if (!restaurado) {
             inicializarOrden();
