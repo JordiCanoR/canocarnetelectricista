@@ -5097,8 +5097,6 @@
         ],
         "respuesta": "Sí, para más de 5 plazas de estacionamiento."
     },
-
-
     {
         "pregunta": "¿Cuál es el origen de una instalación eléctrica temporal de una feria? (ITC-BT 34)",
         "opciones": [
@@ -5189,7 +5187,6 @@
         ],
         "respuesta": "5 años."
     },
-
     {
         "pregunta": "¿A qué altura mínima desde el nivel del suelo se instalarán los dispositivos generales e individuales de mando y de protección de una lencería? (ITC-BT 17.1.1)",
         "opciones": [
