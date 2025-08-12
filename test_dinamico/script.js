@@ -9,7 +9,7 @@ const TEST_SIZE = 30;
 let ordenBarajado = [];   // array de índices 0..N-1 barajado
 let puntero = 0;          // próxima posición en el orden barajado
 
-// === NUEVO: Persistencia ===
+// === Persistencia ===
 const STORAGE_KEY = "test_estado_v1";
 function guardarEstado(sig) {
     try {
@@ -37,14 +37,12 @@ function cargarEstado(sig, totalPreguntas) {
             data.ordenBarajado.length === totalPreguntas &&
             Number.isInteger(data.puntero)
         ) {
-            // Validar índices
             const valid = data.ordenBarajado.every(i =>
                 Number.isInteger(i) && i >= 0 && i < totalPreguntas
             );
             if (!valid) return false;
 
             ordenBarajado = data.ordenBarajado.slice();
-            // Asegurar puntero dentro de rango
             puntero = Math.max(0, Math.min(data.puntero, totalPreguntas));
             return true;
         }
@@ -75,7 +73,6 @@ function temporizador() {
 }
 
 function barajarArray(arr) {
-    // Fisher-Yates in-place
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -92,29 +89,24 @@ function inicializarOrden() {
 function generarLoteIndices(size) {
     const n = preguntas.length;
     const lote = [];
-
     if (n === 0) return lote;
 
-    // Si hay suficientes restantes en el ciclo actual, toma directo
     if (puntero + size <= n) {
         for (let k = 0; k < size; k++) {
             lote.push(ordenBarajado[puntero + k]);
         }
         puntero += size;
-        // Si justo hemos llegado al final, preparamos un nuevo ciclo barajado para la próxima vez
         if (puntero === n) {
             inicializarOrden();
         }
         return lote;
     }
 
-    // Si no hay suficientes, toma las que quedan, rebaraja todo el banco y completa
     const restantes = n - puntero;
     for (let k = 0; k < restantes; k++) {
         lote.push(ordenBarajado[puntero + k]);
     }
 
-    // Reinicia ciclo (nuevo barajado) y toma el resto del tamaño requerido
     inicializarOrden();
     const faltan = size - restantes;
     for (let k = 0; k < faltan; k++) {
@@ -128,36 +120,34 @@ function generarLoteIndices(size) {
 function generarTest() {
     testForm.innerHTML = "";
 
-    // Comprobaciones
     if (!Array.isArray(preguntas) || preguntas.length === 0) {
         document.getElementById("resultado").innerHTML = "No hay preguntas disponibles.";
         return;
     }
 
-    // Si hay menos de 30 preguntas en total, avisamos y usamos todas (no se puede tener 30 únicas)
     const tamano = Math.min(TEST_SIZE, preguntas.length);
     if (preguntas.length < TEST_SIZE) {
         console.warn(`Solo hay ${preguntas.length} preguntas en el banco; se generará un test de ${tamano} sin repeticiones.`);
     }
 
-    // Obtener índices para este test sin repetir hasta agotar el banco
     const indices = generarLoteIndices(tamano);
-
-    // Construir 'seleccionadas'
     seleccionadas = indices.map(idx => preguntas[idx]);
 
     // Render
     seleccionadas.forEach((pregunta, i) => {
         const div = document.createElement("div");
         div.classList.add("pregunta");
-        const opcionesHTML = (pregunta.opciones || []).map(op =>
+        const opciones = Array.isArray(pregunta.opciones) ? pregunta.opciones : [];
+        const opcionesHTML = opciones.map(op =>
             `<label><input type="radio" name="q${i + 1}" value="${op}"> ${op}</label><br>`
         ).join("");
-        div.innerHTML = `<p><strong>${i + 1}. ${pregunta.pregunta}</strong></p>${opcionesHTML}`;
+        // Por seguridad: si alguna pregunta llegara sin opciones válidas, se avisa visualmente.
+        div.innerHTML = `<p><strong>${i + 1}. ${pregunta.pregunta}</strong></p>` +
+            (opciones.length ? opcionesHTML : `<em>Pregunta sin opciones válidas (revisar banco)</em>`);
         testForm.appendChild(div);
     });
 
-    // === NUEVO: guardar estado después de seleccionar el lote (puntero ya avanzó) ===
+    // Guardar estado
     try {
         const sig = firmaBanco(preguntas);
         guardarEstado(sig);
@@ -173,6 +163,42 @@ function normalizar(texto) {
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
+}
+
+// === NUEVO: utilidades para limpiar preguntas del JSON ===
+function normalizarOpciones(opciones) {
+    if (Array.isArray(opciones)) {
+        return [...new Set(opciones.map(o => String(o ?? "").trim()))].filter(Boolean);
+    }
+    // Si viene como string, intentamos dividir por delimitadores comunes
+    const s = String(opciones ?? "").trim();
+    if (!s) return [];
+    const trozos = s.split(/[\|\;\,\n\r]+/).map(t => t.trim()).filter(Boolean);
+    return [...new Set(trozos)];
+}
+
+function prepararPregunta(p) {
+    const copia = { ...p };
+    // Normaliza y valida opciones
+    const ops = normalizarOpciones(copia.opciones);
+    const resp = String(copia.respuesta ?? "").trim();
+
+    // Si hay respuesta pero no está en opciones, la añadimos
+    if (resp && ops.length && !ops.includes(resp)) {
+        ops.push(resp);
+    }
+
+    // Reglas mínimas: al menos 2 opciones y respuesta no vacía
+    if (!resp || ops.length < 2) {
+        return null; // inválida -> se filtrará
+    }
+
+    // Barajar opciones para esa pregunta
+    barajarArray(ops);
+
+    copia.opciones = ops;
+    copia.respuesta = resp;
+    return copia;
 }
 
 function corregirTest() {
@@ -239,14 +265,13 @@ function corregirTest() {
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
 }
 
-// Carga de preguntas e inicialización (con DEDUPLICACIÓN por enunciado + persistencia)
+// Carga de preguntas e inicialización (DEDUP + saneo de opciones + persistencia)
 fetch("preguntas_rebt_base.json")
     .then(res => res.json())
     .then(data => {
-        // Asegurar array
         const listaOriginal = Array.isArray(data) ? data : [];
 
-        // Eliminar duplicadas por campo 'pregunta' (normalizado)
+        // 1) Deduplicar por enunciado (normalizado)
         const mapa = new Map();
         for (const p of listaOriginal) {
             const clave = normalizar(p?.pregunta || "");
@@ -254,8 +279,15 @@ fetch("preguntas_rebt_base.json")
                 mapa.set(clave, p); // conserva la primera aparición
             }
         }
-        preguntas = Array.from(mapa.values());
-        console.log(`Preguntas cargadas: ${preguntas.length} (duplicados eliminados si había)`);
+        const sinDuplicados = Array.from(mapa.values());
+
+        // 2) Preparar/sanear cada pregunta (opciones y respuesta)
+        const preparadas = sinDuplicados.map(prepararPregunta).filter(Boolean);
+
+        // 3) Informe en consola
+        console.log(`Original: ${listaOriginal.length} | Únicas: ${sinDuplicados.length} | Válidas: ${preparadas.length}`);
+
+        preguntas = preparadas;
 
         // Firma del banco para validar/restaurar estado previo
         const sig = firmaBanco(preguntas);
@@ -264,7 +296,6 @@ fetch("preguntas_rebt_base.json")
         const restaurado = cargarEstado(sig, preguntas.length);
         if (!restaurado) {
             inicializarOrden();
-            // Guardar estado inicial
             guardarEstado(sig);
         }
 
@@ -277,5 +308,5 @@ document.getElementById("btnCorregir").addEventListener("click", corregirTest);
 document.getElementById("btnNuevo").addEventListener("click", () => {
     tiempo = 40 * 60;
     document.getElementById("resultado").innerHTML = "";
-    generarTest(); // generarTest ya guarda el estado actualizado
+    generarTest();
 });
