@@ -1,11 +1,10 @@
-
 let tiempo = 40 * 60;
 const tiempoSpan = document.getElementById("tiempo");
 const testForm = document.getElementById("testForm");
 let preguntas = [];
 let seleccionadas = [];
 
-// === NUEVO: control de no repetición entre tests ===
+// === Control de no repetición entre tests ===
 const TEST_SIZE = 30;
 let ordenBarajado = [];   // array de índices 0..N-1 barajado
 let puntero = 0;          // próxima posición en el orden barajado
@@ -180,11 +179,24 @@ function corregirTest() {
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
 }
 
-// Carga de preguntas e inicialización
+// Carga de preguntas e inicialización (con DEDUPLICACIÓN por enunciado)
 fetch("preguntas_rebt_base.json")
     .then(res => res.json())
     .then(data => {
-        preguntas = Array.isArray(data) ? data : [];
+        // Asegurar array
+        const listaOriginal = Array.isArray(data) ? data : [];
+
+        // Eliminar duplicadas por campo 'pregunta' (normalizado)
+        const mapa = new Map();
+        for (const p of listaOriginal) {
+            const clave = normalizar(p?.pregunta || "");
+            if (!mapa.has(clave)) {
+                mapa.set(clave, p); // conserva la primera aparición
+            }
+        }
+        preguntas = Array.from(mapa.values());
+        console.log(`Preguntas cargadas: ${preguntas.length} (duplicados eliminados si había)`);
+
         inicializarOrden();
         generarTest();
         temporizador();
