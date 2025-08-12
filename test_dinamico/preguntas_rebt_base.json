@@ -6222,9 +6222,369 @@
         "pregunta": "El coeficiente de simultaneidad para un edificio que tiene 20 viviendas será:",
         "respuesta_correcta": "14,8.",
         "comentario": "ITC-BT 10"
+    },
+    {
+        "pregunta": "Los receptores de clase III: (ITC-BT 43 2.2 Clasificación de los receptores)",
+        "opciones": [
+            "Funcionan a 50 V como máximo en corriente alterna.",
+            "Funcionan a 24 V como máximo en corriente alterna.",
+            "Funcionan a 500 V como máximo en corriente alterna."
+        ],
+        "respuesta": "Funcionan a 50 V como máximo en corriente alterna."
+    },
+    {
+        "pregunta": "¿Qué tipo de sobretensiones no regula el Reglamento Electrotécnico para Baja Tensión? (ITC-BT 23 3. MEDIDAS PARA EL CONTROL DE LAS SOBRETENSIONES)",
+        "opciones": [
+            "Conmutaciones de la red.",
+            "Descarga directa del rayo.",
+            "Efectos inductivos o capacitivos."
+        ],
+        "respuesta": "Descarga directa del rayo."
+    },
+    {
+        "pregunta": "¿Cuál es el significado de corte omnipolar simultáneo? (ITC-BT 01)",
+        "opciones": [
+            "Corte del neutro antes que las fases y conexión de las fases antes que el neutro.",
+            "Corte de las fases antes que el neutro y conexión del neutro antes que las fases.",
+            "Corte de fases y neutro al mismo tiempo."
+        ],
+        "respuesta": "Corte de fases y neutro al mismo tiempo."
+    },
+    {
+        "pregunta": "¿Qué tipos de electrodos se pueden utilizar para la toma de tierra? (ITC-BT 18)",
+        "opciones": [
+            "Pletinas y conductores desnudos.",
+            "Armaduras de hormigón enterradas incluyendo las armaduras pretensadas.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Pletinas y conductores desnudos."
+    },
+    {
+        "pregunta": "Indíquese la velocidad que debe adquirir un generador asíncrono para que pueda ser conectado a la red: (ITC-BT 40)",
+        "opciones": [
+            "Entre un 90% y un 100% de la velocidad del sincronismo.",
+            "No hay que tener en cuenta la velocidad del sincronismo.",
+            "La central deberá tener un equipo de sincronización automático."
+        ],
+        "respuesta": "Entre un 90% y un 100% de la velocidad del sincronismo."
+    },
+    {
+        "pregunta": "¿A qué porcentaje mínimo está limitado un suministro de socorro con respecto a la potencia total contratada para el suministro normal? (Artic. REBT)",
+        "opciones": [
+            "15%.",
+            "25%.",
+            "50%."
+        ],
+        "respuesta": "15%."
+    },
+    {
+        "pregunta": "Las prescripciones particulares para la instalación eléctrica de una caravana, ¿dónde están recogidas? (ITC-BT 41)",
+        "opciones": [
+            "En la norma UNE 20460-7-708.",
+            "En la norma UNE 20460-8-707.",
+            "En la norma UNE 20460-7-808."
+        ],
+        "respuesta": "En la norma UNE 20460-7-708."
+    },
+    {
+        "pregunta": "¿Puede instalarse un cable calefactor por debajo de una unión de una tubería de agua? (ITC-BT 46)",
+        "opciones": [
+            "Sí puede instalarse en dicho lugar.",
+            "No, puede instalarse en dicho lugar.",
+            "Sí cuando los tubos de distribución de agua estén protegidos."
+        ],
+        "respuesta": "No, puede instalarse en dicho lugar."
+    },
+    {
+        "pregunta": "Los generadores síncronos conectados en paralelo con la red de distribución deberán tener una capacidad de generación de energía reactiva suficiente para mantener el factor de potencia entre: (ITC-BT 40)",
+        "opciones": [
+            "0,6 y 0,8.",
+            "0,8 y 1.",
+            "Opción 3"
+        ],
+        "respuesta": "0,8 y 1."
+    },
+    {
+        "pregunta": "Los soportes de las luminarias para alumbrado exterior que así lo requieran deben tener una abertura de dimensiones adecuadas a los elementos de protección y maniobra. ¿A qué distancia mínima del suelo estará la parte inferior de esta abertura? (ITC-BT 09)",
+        "opciones": [
+            "0,30 m.",
+            "0,35 m.",
+            "0,45 m."
+        ],
+        "respuesta": "0,30 m."
+    },
+    {
+        "pregunta": "¿Se podrán instalar tubos entre el forjado y revestimiento para la instalación correspondiente a la propia planta? (ITC-BT 21)",
+        "opciones": [
+            "Sí, recubiertos con una capa de mortero de 2 cm de espesor.",
+            "Sí, recubiertos con una capa de hormigón de 1 cm de espesor.",
+            "No está permitido."
+        ],
+        "respuesta": "Sí, recubiertos con una capa de hormigón de 1 cm de espesor."
+    },
+    {
+        "pregunta": "En la instalación eléctrica temporal para una exposición, las tomas de corriente de valor asignado inferior a 32 A deberán tener protección diferencial no superior a: (ITC-BT 34)",
+        "opciones": [
+            "300 mA.",
+            "30 mA.",
+            "100 mA."
+        ],
+        "respuesta": "30 mA."
+    },
+    {
+        "pregunta": "Indique de entre los elementos que se citan a continuación cuál no constituye una fuente propia de energía: (ITC-BT 28)",
+        "opciones": [
+            "Baterías de pilas.",
+            "Aparatos autónomos automáticos.",
+            "Baterías de acumuladores."
+        ],
+        "respuesta": "Baterías de pilas."
+    },
+    {
+        "pregunta": "Las instalaciones de las viviendas alimentadas por una red de distribución pública de baja tensión: (ITC-BT 08 1.4.a)",
+        "opciones": [
+            "Se consideran alimentadas por redes de distribución de 230/400 V con esquema TN.",
+            "Se consideran alimentadas por redes de distribución de 230/400 V con esquema TT.",
+            "Se consideran alimentadas por redes de distribución de 127/230 V en trifásica con el esquema que detalle la compañía suministradora."
+        ],
+        "respuesta": "Se consideran alimentadas por redes de distribución de 230/400 V con esquema TT."
+    },
+    {
+        "pregunta": "¿Quién elegirá el sistema de instalación para los contadores en un nuevo suministro? (ITC-BT 16)",
+        "opciones": [
+            "El propietario del edificio.",
+            "La empresa suministradora.",
+            "La empresa suministradora de común acuerdo con la propiedad."
+        ],
+        "respuesta": "La empresa suministradora de común acuerdo con la propiedad."
+    },
+    {
+        "pregunta": "Una instalación generadora interconectada con la red de distribución pública: (ITC-BT 40)",
+        "opciones": [
+            "Si la conexión es con un generador eólico, la potencia del generador no será superior al 5% de la potencia nominal en el punto de conexión con la red de distribución pública.",
+            "Si la conexión es con un generador eólico asíncrono, la frecuencia de las conexiones será como máximo del ± 2%.",
+            "La caída de tensión que puede producirse en la conexión de los generadores asíncronos no será superior al 3% de la tensión asignada de la red."
+        ],
+        "respuesta": "La caída de tensión que puede producirse en la conexión de los generadores asíncronos no será superior al 3% de la tensión asignada de la red."
+    },
+    {
+        "pregunta": "¿Qué tensión asignada mínima deben tener los cables armados con alambres galvanizados sin tubo protector en las instalaciones de locales húmedos? (ITC-BT 30)",
+        "opciones": [
+            "0,6/1 kV.",
+            "450/750 V.",
+            "300/500 V."
+        ],
+        "respuesta": "0,6/1 kV."
+    },
+    {
+        "pregunta": "¿Pueden instalarse luminarias en el volumen 1 de una piscina pequeña? (ITC-BT 31)",
+        "opciones": [
+            "Sí, cuando están a más de 1,25 m del volumen 0 y protegidas por un dispositivo de corte diferencial como máximo de 30 mA, son clase II y AG 2.",
+            "No se admite su instalación en dicho volumen.",
+            "Se admite su instalación si cumplen con la norma UNE-EN 60958-2-18."
+        ],
+        "respuesta": "Sí, cuando están a más de 1,25 m del volumen 0 y protegidas por un dispositivo de corte diferencial como máximo de 30 mA, son clase II y AG 2."
+    },
+    {
+        "pregunta": "Los aparatos para soldadura eléctrica por arco: (ITC-BT 45)",
+        "opciones": [
+            "Llevarán un dispositivo de protección contra sobrecargas regulado, como mínimo, al 200% de la intensidad nominal de la instalación eléctrica del local donde esté instalado.",
+            "Tendrán la superficie exterior de los porta-electrodos manuales completamente aislados.",
+            "Cuando se utilicen en locales muy conductores, se recomienda que sean de clase II."
+        ],
+        "respuesta": "Tendrán la superficie exterior de los porta-electrodos manuales completamente aislados."
+    },
+    {
+        "pregunta": "Indique, de entre los siguientes aparatos, aquellos que no puedan considerarse fuentes propias de energía para alimentar a servicios de seguridad. (ITC-BT 28)",
+        "opciones": [
+            "Baterías de pilas.",
+            "Aparatos autónomos automáticos.",
+            "Baterías de acumuladores."
+        ],
+        "respuesta": "Baterías de pilas."
+    },
+    {
+        "pregunta": "¿Podemos utilizar barnices para la protección contra contactos directos por medio de aislamiento de las partes activas? (ITC-BT 24 3.1)",
+        "opciones": [
+            "Sí, siempre.",
+            "Sí, si se limita la corriente a 1 mA.",
+            "No."
+        ],
+        "respuesta": "No."
+    },
+    {
+        "pregunta": "Las instalaciones eléctricas de baja tensión con tensión nominal asignada comprendida entre 500 V y 1.000 V de valor eficaz en corriente alterna son: (ITC-BT 37)",
+        "opciones": [
+            "Instalaciones a muy baja tensión.",
+            "Instalaciones a tensión usual.",
+            "Instalaciones a tensión especial."
+        ],
+        "respuesta": "Instalaciones a tensión especial."
+    },
+    {
+        "pregunta": "¿Cuál es la potencia mínima a prever para una vivienda con grado de electrificación básico? (ITC-BT 10)",
+        "opciones": [
+            "5.750 W.",
+            "9.200 W.",
+            "3.450 W."
+        ],
+        "respuesta": "5.750 W."
+    },
+    {
+        "pregunta": "Los registros destinados únicamente a facilitar la introducción y retirada de los conductores en los tubos, ¿podrán servir al mismo tiempo como cajas de empalme o derivación? (ITC-BT 21)",
+        "opciones": [
+            "Sí.",
+            "No.",
+            "Sólo las que se coloquen en los tramos rectos."
+        ],
+        "respuesta": "Sí."
+    },
+    {
+        "pregunta": "En redes aéreas de distribución, ¿pueden empotrarse los postes de madera en hormigón? (ITC-BT 06 3.8)",
+        "opciones": [
+            "Sí.",
+            "No.",
+            "Sí, si es de pino."
+        ],
+        "respuesta": "No."
+    },
+    {
+        "pregunta": "¿Cuál será la intensidad a efectos de cálculo de los conductores para una instalación de alumbrado exterior compuesta por 10 lámparas de vapor de sodio de 250 W en la que está corregido el factor de potencia hasta el valor mínimo indicado en el REBT si el circuito es monofásico? (ITC-BT 09)",
+        "opciones": [
+            "19,56 A.",
+            "21,74 A.",
+            "10,87 A."
+        ],
+        "respuesta": "21,74 A."
+    },
+    {
+        "pregunta": "¿Cuál será la sección interior mínima de un tubo empotrado que contenga cables de secciones diferentes? (ITC-BT 21)",
+        "opciones": [
+            "25 mm.",
+            "2,5 veces la sección ocupada por los conductores.",
+            "3 veces la sección ocupada por los conductores."
+        ],
+        "respuesta": "3 veces la sección ocupada por los conductores."
+    },
+    {
+        "pregunta": "Indíquese la máxima resistencia de tierra del neutro para una red de distribución con esquema TN en la proximidad del centro de transformación. (ITC-BT 08)",
+        "opciones": [
+            "5 Ω.",
+            "3 Ω.",
+            "2 Ω."
+        ],
+        "respuesta": "5 Ω."
+    },
+    {
+        "pregunta": "En un almacén de frutas, ¿cuál de las siguientes luminarias está bien instalada? (ITC-BT 44)",
+        "opciones": [
+            "Una de clase 0 instalada a 2,25 m del suelo.",
+            "Una de clase I sin toma de tierra instalada a 2,25 m del suelo.",
+            "Una de clase I sin toma de tierra instalada a 3 m del suelo."
+        ],
+        "respuesta": "Una de clase I sin toma de tierra instalada a 3 m del suelo."
+    },
+    {
+        "pregunta": "La instalación eléctrica de una fábrica de productos químicos: (ITC-BT 30)",
+        "opciones": [
+            "Podrá realizarse con conductores en el interior de tubos en montaje superficial con un grado de resistencia a la corrosión de 3.",
+            "Podrá realizarse con conductores sin cubierta en el interior de canales aislantes.",
+            "Las canalizaciones serán estancas y para las conexiones y empalmes se utilizarán dispositivos con un grado de protección IP X4."
+        ],
+        "respuesta": "Las canalizaciones serán estancas y para las conexiones y empalmes se utilizarán dispositivos con un grado de protección IP X4."
+    },
+    {
+        "pregunta": "En un edificio destinado a uso comercial de 1.000 m² de superficie total, en el que hay 40 locales comerciales de 25 m² cada uno a 230 V: (ITC-BT 10)",
+        "opciones": [
+            "La carga mínima a prever para el edificio es de 10.000 W.",
+            "La carga mínima a prever por local es de 2.500 W.",
+            "La carga mínima a prever para el edificio es de 138.000 W."
+        ],
+        "respuesta": "La carga mínima a prever para el edificio es de 138.000 W."
+    },
+    {
+        "pregunta": "El volumen 1 en una ducha sin plato está delimitado por el plano horizontal superior al volumen 0 y el plano horizontal situado a: (ITC-BT 27)",
+        "opciones": [
+            "2,25 m por encima del suelo.",
+            "2,25 m por encima del volumen 0.",
+            "2,25 m por encima del plano horizontal superior al volumen 0."
+        ],
+        "respuesta": "2,25 m por encima del suelo."
+    },
+    {
+        "pregunta": "¿Puede instalarse una lámpara de gas con descarga en alta tensión dentro de una vivienda? (ITC-BT 44 2.2)",
+        "opciones": [
+            "Sí.",
+            "Se permite con las restricciones que establece el Reglamento Electrotécnico para Baja Tensión.",
+            "Está prohibida su instalación."
+        ],
+        "respuesta": "Está prohibida su instalación."
+    },
+    {
+        "pregunta": "¿Cómo estarán dispuestas las líneas de alumbrado en las dependencias donde se reúna público de un local de pública concurrencia? (ITC-BT 28)",
+        "opciones": [
+            "El número de líneas secundarias y su disposición en relación con el total de lámparas a alimentar deberá ser tal que el corte de corriente en una cualquiera de ellas no afecte a más de la tercera parte del total de lámparas instaladas.",
+            "El número de líneas secundarias y su disposición en relación con el total de lámparas a alimentar deberá ser tal que el corte de corriente en una cualquiera de ellas afecte a más de la tercera parte del total de lámparas instaladas.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "El número de líneas secundarias y su disposición en relación con el total de lámparas a alimentar deberá ser tal que el corte de corriente en una cualquiera de ellas no afecte a más de la tercera parte del total de lámparas instaladas."
+    },
+    {
+        "pregunta": "Calcúlese la previsión de cargas mínima de un edificio destinado principalmente a viviendas compuesto de 7 viviendas de 170 m², 5 de básica con potencia máxima de 5.750 W, 5 de básica con potencia máxima de 7.360 W, un local comercial de 120 m² y un garaje con ventilación forzada de 120 m². Potencia total de los servicios generales de 7 kW. (ITC-BT 10)",
+        "opciones": [
+            "175,4 kW.",
+            "115.587,94 W.",
+            "122.587,94 W."
+        ],
+        "respuesta": "122.587,94 W."
+    },
+    {
+        "pregunta": "¿Qué se entiende por canalización movible? (ITC-BT 01)",
+        "opciones": [
+            "La que no se mueve.",
+            "La que se desplaza pero no durante su utilización.",
+            "La que puede ser desplazada durante su utilización."
+        ],
+        "respuesta": "La que puede ser desplazada durante su utilización."
+    },
+    {
+        "pregunta": "En la instalación eléctrica de un centro de enseñanza con una ocupación prevista de 300 personas hay dos instalaciones, una con tensión nominal de 230 V y otra de 400 V bajo un mismo tubo, entonces: (ITC-BT 19)",
+        "opciones": [
+            "El centro de enseñanza deberá disponer de suministro de socorro.",
+            "No se podrá utilizar un conductor de protección común para estas dos instalaciones.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "No se podrá utilizar un conductor de protección común para estas dos instalaciones."
+    },
+    {
+        "pregunta": "La configuración de los circuitos en el método de referencia A2 para instalaciones interiores es: (UNE 20.460-5-523)",
+        "opciones": [
+            "Un cable de dos o tres conductores en conducto en una pared térmicamente aislante.",
+            "Dos conductores aislados o dos cables unipolares en conducto en una pared térmicamente aislante.",
+            "Tres cables unipolares o un cable de tres conductores en conducto en una pared térmicamente aislante."
+        ],
+        "respuesta": "Un cable de dos o tres conductores en conducto en una pared térmicamente aislante."
+    },
+    {
+        "pregunta": "¿Cuál de los siguientes edificios deberá tener obligatoriamente un suministro complementario de reserva? (ITC-BT 28)",
+        "opciones": [
+            "Cine.",
+            "Clínica.",
+            "Ninguno de ellos."
+        ],
+        "respuesta": "Clínica."
+    },
+    {
+        "pregunta": "¿Cómo se define una canalización fija? (ITC-BT 01)",
+        "opciones": [
+            "La que se desplaza durante el funcionamiento.",
+            "La que es rígida.",
+            "La que no puede ser desplazada."
+        ],
+        "respuesta": "La que no puede ser desplazada."
     }
-
 ]
+
 
 
 

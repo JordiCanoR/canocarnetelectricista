@@ -1,9 +1,14 @@
+
 let tiempo = 40 * 60;
 const tiempoSpan = document.getElementById("tiempo");
 const testForm = document.getElementById("testForm");
 let preguntas = [];
 let seleccionadas = [];
-let preguntasNoUsadas = [];
+
+// === NUEVO: control de no repetición entre tests ===
+const TEST_SIZE = 30;
+let ordenBarajado = [];   // array de índices 0..N-1 barajado
+let puntero = 0;          // próxima posición en el orden barajado
 
 function temporizador() {
     const timer = setInterval(() => {
@@ -18,43 +23,93 @@ function temporizador() {
     }, 1000);
 }
 
+function barajarArray(arr) {
+    // Fisher-Yates in-place
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+function inicializarOrden() {
+    ordenBarajado = Array.from({ length: preguntas.length }, (_, i) => i);
+    barajarArray(ordenBarajado);
+    puntero = 0;
+}
+
+function generarLoteIndices(size) {
+    const n = preguntas.length;
+    const lote = [];
+
+    if (n === 0) return lote;
+
+    // Si hay suficientes restantes en el ciclo actual, toma directo
+    if (puntero + size <= n) {
+        for (let k = 0; k < size; k++) {
+            lote.push(ordenBarajado[puntero + k]);
+        }
+        puntero += size;
+        // Si justo hemos llegado al final, preparamos un nuevo ciclo barajado para la próxima vez
+        if (puntero === n) {
+            inicializarOrden();
+        }
+        return lote;
+    }
+
+    // Si no hay suficientes, toma las que quedan, rebaraja todo el banco y completa
+    const restantes = n - puntero;
+    for (let k = 0; k < restantes; k++) {
+        lote.push(ordenBarajado[puntero + k]);
+    }
+
+    // Reinicia ciclo (nuevo barajado) y toma el resto del tamaño requerido
+    inicializarOrden();
+    const faltan = size - restantes;
+    for (let k = 0; k < faltan; k++) {
+        lote.push(ordenBarajado[puntero + k]);
+    }
+    puntero += faltan;
+
+    return lote;
+}
+
 function generarTest() {
     testForm.innerHTML = "";
 
-    // Si preguntasNoUsadas está vacía o no tiene suficientes, recarga todas
-    if (preguntasNoUsadas.length < 30) {
-        preguntasNoUsadas = [...preguntas];
+    // Comprobaciones
+    if (!Array.isArray(preguntas) || preguntas.length === 0) {
+        document.getElementById("resultado").innerHTML = "No hay preguntas disponibles.";
+        return;
     }
 
-    // Baraja preguntasNoUsadas
-    let copiaPreguntas = [...preguntasNoUsadas];
-    for (let i = copiaPreguntas.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copiaPreguntas[i], copiaPreguntas[j]] = [copiaPreguntas[j], copiaPreguntas[i]];
+    // Si hay menos de 30 preguntas en total, avisamos y usamos todas (no se puede tener 30 únicas)
+    const tamano = Math.min(TEST_SIZE, preguntas.length);
+    if (preguntas.length < TEST_SIZE) {
+        console.warn(`Solo hay ${preguntas.length} preguntas en el banco; se generará un test de ${tamano} sin repeticiones.`);
     }
 
-    // Selecciona las primeras 30
-    seleccionadas = copiaPreguntas.slice(0, 30);
+    // Obtener índices para este test sin repetir hasta agotar el banco
+    const indices = generarLoteIndices(tamano);
 
-    // Elimina las seleccionadas de preguntasNoUsadas
-    seleccionadas.forEach(p => {
-        preguntasNoUsadas = preguntasNoUsadas.filter(q => q.pregunta !== p.pregunta);
-    });
+    // Construir 'seleccionadas'
+    seleccionadas = indices.map(idx => preguntas[idx]);
 
-    // Mostrar preguntas
+    // Render
     seleccionadas.forEach((pregunta, i) => {
         const div = document.createElement("div");
         div.classList.add("pregunta");
-        div.innerHTML = `<p><strong>${i + 1}. ${pregunta.pregunta}</strong></p>` +
-            pregunta.opciones.map(op =>
-                `<label><input type="radio" name="q${i + 1}" value="${op}"> ${op}</label><br>`
-            ).join("");
+        const opcionesHTML = (pregunta.opciones || []).map(op =>
+            `<label><input type="radio" name="q${i + 1}" value="${op}"> ${op}</label><br>`
+        ).join("");
+        div.innerHTML = `<p><strong>${i + 1}. ${pregunta.pregunta}</strong></p>${opcionesHTML}`;
         testForm.appendChild(div);
     });
 }
 
 function normalizar(texto) {
-    return texto
+    return (texto ?? "")
+        .toString()
         .trim()
         .toLowerCase()
         .normalize("NFD")
@@ -104,11 +159,9 @@ function corregirTest() {
     });
 
     const total = seleccionadas.length;
-    // aquí cambiamos la puntuación: +1 por cada correcta, –0.3 por cada incorrecta
     const puntos = (correctas * 1 - incorrectas * 0.3).toFixed(2);
     let mensajeFinal = "", clase = "";
 
-    // adaptamos los umbrales al nuevo máximo de 30 puntos
     if (puntos >= 27) {
         mensajeFinal = "✅ ¡Excelente! Has sacado más del 90 %.";
         clase = "aprobado";
@@ -122,20 +175,22 @@ function corregirTest() {
 
     document.getElementById("resultado").innerHTML =
         `Has acertado ${correctas} de ${total} preguntas, fallado ${incorrectas}, sin responder ${total - correctas - incorrectas}.<br>` +
-        `Puntuación: ${puntos} / 30<br><br>` +
+        `Puntuación: ${puntos} / ${Math.min(TEST_SIZE, preguntas.length)}<br><br>` +
         `<div class='mensaje-final ${clase}'>${mensajeFinal}</div><br>` +
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
 }
 
+// Carga de preguntas e inicialización
 fetch("preguntas_rebt_base.json")
     .then(res => res.json())
     .then(data => {
-        preguntas = data;
-        preguntasNoUsadas = [...preguntas]; // inicializar
+        preguntas = Array.isArray(data) ? data : [];
+        inicializarOrden();
         generarTest();
         temporizador();
     });
 
+// Botones
 document.getElementById("btnCorregir").addEventListener("click", corregirTest);
 document.getElementById("btnNuevo").addEventListener("click", () => {
     tiempo = 40 * 60;
