@@ -196,7 +196,11 @@ function prepararPregunta(p) {
 // === NUEVO: inyectar estilos para que el resultado nunca salga "en blanco" ===
 function inyectarEstilosResultado() {
     const css = `
-        #resultado { color: #111 !important; background: transparent; }
+        #resultado {
+            color: #111 !important;
+            background: transparent;
+            font-weight: bold;
+        }
         #resultado .totales {
             color: #111 !important;
             background: #fff;
@@ -204,6 +208,7 @@ function inyectarEstilosResultado() {
             border-radius: 8px;
             padding: 10px 12px;
             line-height: 1.4;
+            font-weight: bold;
         }
         #resultado .mensaje-final {
             color: #111 !important;
@@ -211,8 +216,11 @@ function inyectarEstilosResultado() {
             border-radius: 8px;
             border: 1px solid #e5e7eb;
             background: #f9fafb;
+            font-weight: bold;
         }
-        #resultado details summary { cursor: pointer; }
+        #resultado details summary {
+            cursor: pointer;
+        }
     `;
     const tag = document.createElement("style");
     tag.setAttribute("data-inyectado", "resultado-visible");
