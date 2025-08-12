@@ -6169,56 +6169,6 @@
         "respuesta": "La utilización de un dispositivo de corriente diferencial residual de 10 mA complementa al resto de medidas contra contactos directos descritas por el REBT."
     },
     {
-        "pregunta": "¿Cuál de los siguientes equipos es necesario como mínimo para un instalador autorizado con categoría básica?",
-        "respuesta_correcta": "Equipo verificador de la continuidad de conductores.",
-        "comentario": "ITC-BT 03"
-    },
-    {
-        "pregunta": "En las instalaciones para alimentar barcos de recreo:",
-        "respuesta_correcta": "La protección de las tomas de corriente será con diferenciales de sensibilidad no superior a 30 mA.",
-        "comentario": "ITC-BT 42"
-    },
-    {
-        "pregunta": "¿Cuáles serán las características, según UNE-EN 50086-1, para los tubos en la instalación provisional de una obra?",
-        "respuesta_correcta": "Resistencia a la compresión “muy fuerte” y al impacto “muy fuerte”.",
-        "comentario": "ITC-BT 33"
-    },
-    {
-        "pregunta": "Calcúlese la previsión de cargas mínima de un edificio compuesto de 9 viviendas de electrificación elevada, 12 viviendas de electrificación básica, un local de 120 m², y un garaje con ventilación forzada de 300 m².",
-        "respuesta_correcta": "128,5 kW.",
-        "comentario": "ITC-BT 10"
-    },
-    {
-        "pregunta": "¿Cuándo se inspeccionará una modificación de importancia de un local de pública concurrencia?",
-        "respuesta_correcta": "Una vez ejecutadas las obras y previamente a ser documentadas.",
-        "comentario": "ITC-BT 05 4.1"
-    },
-    {
-        "pregunta": "En la medida del aislamiento de un suelo de un hipermercado, realizada en condiciones reglamentarias, se obtienen los siguientes resultados: MEDIDA 1: TENSIÓN ENTRE FASE Y PLACA: 4 V. TENSIÓN ENTRE FASE Y TIERRA: 46 V. MEDIDA 2: TENSIÓN ENTRE FASE Y PLACA: 5 V. TENSIÓN ENTRE FASE Y TIERRA: 54 V. MEDIDA 3: TENSIÓN ENTRE FASE Y PLACA: 5 V. TENSIÓN ENTRE FASE Y TIERRA: 45 V. La resistencia interna del voltímetro es de 5 kΩ.",
-        "respuesta_correcta": "El suelo es conductor.",
-        "comentario": "ITC-BT 01"
-    },
-    {
-        "pregunta": "¿Qué método de instalación no está permitido para una línea general de alimentación?",
-        "respuesta_correcta": "Conductores aislados en montaje superficial.",
-        "comentario": "ITC-BT 14"
-    },
-    {
-        "pregunta": "¿Qué dimensiones mínimas tendrá el conducto para la instalación de una línea general de alimentación que discurre verticalmente?",
-        "respuesta_correcta": "30 x 30 cm.",
-        "comentario": "ITC-BT 14"
-    },
-    {
-        "pregunta": "¿Cuándo está clasificada una tensión alterna como usual?",
-        "respuesta_correcta": "Cuando está comprendida entre 50 V y 500 V.",
-        "comentario": "Artic. 4.1 REBT"
-    },
-    {
-        "pregunta": "El coeficiente de simultaneidad para un edificio que tiene 20 viviendas será:",
-        "respuesta_correcta": "14,8.",
-        "comentario": "ITC-BT 10"
-    },
-    {
         "pregunta": "Los receptores de clase III: (ITC-BT 43 2.2 Clasificación de los receptores)",
         "opciones": [
             "Funcionan a 50 V como máximo en corriente alterna.",
