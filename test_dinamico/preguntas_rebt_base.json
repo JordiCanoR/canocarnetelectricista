@@ -259,7 +259,7 @@
              "Deberá ser inferior a 6 veces el diámetro exterior de los mismos, cuando estos no tengan armadura, y a 10 veces cuando tengan armadura",
              "No deberá ser inferior a 6 veces el diámetro exterior de los mismos, cuando estos no tengan armadura, y a 10 veces cuando tengan armadura"
         ],
-        "respuesta": "No deberá ser inferior a 6 veces el diámetro exterior cuando no tengan armadura, y 10 veces cuando tengan armadura"
+        "respuesta": "No deberá ser inferior a 6 veces el diámetro exterior de los mismos, cuando estos no tengan armadura, y a 10 veces cuando tengan armadura"
     },
     {
       "pregunta": "Cuando los contadores van colocados en forma concentrada pueden ubicarse:(ITC-BT 16)",
