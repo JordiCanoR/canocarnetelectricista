@@ -9,6 +9,58 @@ const TEST_SIZE = 30;
 let ordenBarajado = [];   // array de índices 0..N-1 barajado
 let puntero = 0;          // próxima posición en el orden barajado
 
+// === NUEVO: Persistencia ===
+const STORAGE_KEY = "test_estado_v1";
+function guardarEstado(sig) {
+    try {
+        const payload = {
+            sig,
+            ordenBarajado,
+            puntero,
+            testSize: TEST_SIZE
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+    } catch (e) {
+        console.warn("No se pudo guardar estado:", e);
+    }
+}
+
+function cargarEstado(sig, totalPreguntas) {
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return false;
+        const data = JSON.parse(raw);
+        if (
+            data &&
+            data.sig === sig &&
+            Array.isArray(data.ordenBarajado) &&
+            data.ordenBarajado.length === totalPreguntas &&
+            Number.isInteger(data.puntero)
+        ) {
+            // Validar índices
+            const valid = data.ordenBarajado.every(i =>
+                Number.isInteger(i) && i >= 0 && i < totalPreguntas
+            );
+            if (!valid) return false;
+
+            ordenBarajado = data.ordenBarajado.slice();
+            // Asegurar puntero dentro de rango
+            puntero = Math.max(0, Math.min(data.puntero, totalPreguntas));
+            return true;
+        }
+    } catch (e) {
+        console.warn("No se pudo cargar estado:", e);
+    }
+    return false;
+}
+
+// Firma del banco para invalidar estado si cambian preguntas (N o enunciados)
+function firmaBanco(pregs) {
+    const claves = pregs.map(p => normalizar(p?.pregunta || ""));
+    claves.sort();
+    return `${claves.length}|` + claves.join("|");
+}
+
 function temporizador() {
     const timer = setInterval(() => {
         let minutos = Math.floor(tiempo / 60);
@@ -104,6 +156,14 @@ function generarTest() {
         div.innerHTML = `<p><strong>${i + 1}. ${pregunta.pregunta}</strong></p>${opcionesHTML}`;
         testForm.appendChild(div);
     });
+
+    // === NUEVO: guardar estado después de seleccionar el lote (puntero ya avanzó) ===
+    try {
+        const sig = firmaBanco(preguntas);
+        guardarEstado(sig);
+    } catch (e) {
+        console.warn("No se pudo guardar el estado tras generar el test:", e);
+    }
 }
 
 function normalizar(texto) {
@@ -179,7 +239,7 @@ function corregirTest() {
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
 }
 
-// Carga de preguntas e inicialización (con DEDUPLICACIÓN por enunciado)
+// Carga de preguntas e inicialización (con DEDUPLICACIÓN por enunciado + persistencia)
 fetch("preguntas_rebt_base.json")
     .then(res => res.json())
     .then(data => {
@@ -197,7 +257,17 @@ fetch("preguntas_rebt_base.json")
         preguntas = Array.from(mapa.values());
         console.log(`Preguntas cargadas: ${preguntas.length} (duplicados eliminados si había)`);
 
-        inicializarOrden();
+        // Firma del banco para validar/restaurar estado previo
+        const sig = firmaBanco(preguntas);
+
+        // Intentar cargar estado persistido; si falla/mismatch, iniciar orden nuevo
+        const restaurado = cargarEstado(sig, preguntas.length);
+        if (!restaurado) {
+            inicializarOrden();
+            // Guardar estado inicial
+            guardarEstado(sig);
+        }
+
         generarTest();
         temporizador();
     });
@@ -207,5 +277,5 @@ document.getElementById("btnCorregir").addEventListener("click", corregirTest);
 document.getElementById("btnNuevo").addEventListener("click", () => {
     tiempo = 40 * 60;
     document.getElementById("resultado").innerHTML = "";
-    generarTest();
+    generarTest(); // generarTest ya guarda el estado actualizado
 });
