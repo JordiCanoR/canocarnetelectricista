@@ -196,7 +196,7 @@
              "1,5%",
              "5%"
         ],
-        "respuesta": "5%"
+        "respuesta": "3%"
     },
     {
       "pregunta": "En el stand de una feria se han instalado 10 tomas de 16 A 2P+T para ordenadores de uso público que están protegidos contra contactos indirectos con dispositivos de corte por corriente diferencial residual. ¿Cuál será el valor máximo de la suma de la resistencia de tierra y de los conductores de protección de las masas si se considera una tensión de contacto límite convencional de 24 V?(ITC-BT 34 y 24)",
@@ -6760,8 +6760,292 @@
             "Cuando discurra verticalmente u horizontalmente."
         ],
         "respuesta": "Cuando discurra verticalmente."
+    },
+    {
+        "pregunta": "¿Pueden coincidir dos o más derivaciones individuales dentro de una canal 1/1 protectora? (ITC-BT 15)",
+        "opciones": [
+        "Sí, pero se utilizará cable con cubierta.",
+        "No, no está permitido.",
+        "Sí, pero se utilizará cable sin cubierta."
+        ],
+        "respuesta": "Sí, pero se utilizará cable con cubierta."
+    },
+    {
+        "pregunta": "En caso de que haya masas de circuitos MBTS que puedan ponerse en contacto con masas de otros circuitos, ¿es suficiente protección contra choques el empleo de MBTS? (ITC-BT 36)",
+        "opciones": [
+        "Sí, es suficiente protección contra choques.",
+        "No, deberán tenerse en cuenta las medidas de protección contra choques de los circuitos que no son de muy baja tensión de seguridad.",
+        "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "No, deberán tenerse en cuenta las medidas de protección contra choques de los circuitos que no son de muy baja tensión de seguridad."
+    },
+    {
+        "pregunta": "¿Cómo se denomina a la tensión que por convenio sólo se utiliza en relación con la protección contra contactos indirectos? (ITC-BT 01 TENSIÓN DE CONTACTO)",
+        "opciones": [
+        "Tensión de defecto.",
+        "Tensión de contacto.",
+        "Tensión a tierra."
+        ],
+        "respuesta": "Tensión de contacto."
+    },
+    {
+        "pregunta": "¿Cuál es el diámetro exterior nominal mínimo de los tubos en una derivación individual? (ITC-BT 15)",
+        "opciones": [
+        "25 mm.",
+        "40 mm.",
+        "32 mm."
+        ],
+        "respuesta": "32 mm."
+    },
+    {
+        "pregunta": "En un local de pública concurrencia los dispositivos generales de mando y protección deberán situarse: (ITC-BT 17)",
+        "opciones": [
+        "Lo más cerca posible del punto de entrada de la derivación individual.",
+        "En un lugar no accesible al público en general.",
+        "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "La protección contra contactos directos por medio de obstáculos: (ITC-BT 24 3.3 Protección por medio de obstáculos)",
+        "opciones": [
+        "Evita un acercamiento físico intencionado a las partes activas.",
+        "Su aplicación está limitada a locales de servicio eléctrico sólo accesibles al personal autorizado.",
+        "Ninguna respuesta es correcta."
+        ],
+        "respuesta": "Su aplicación está limitada a locales de servicio eléctrico sólo accesibles al personal autorizado."
+    },
+    {
+        "pregunta": "Los tubos protectores flexibles para canalizaciones fijas superficiales: (ITC-BT 21)",
+        "opciones": [
+        "Tienen que soportar una temperatura máxima de instalación y servicio de +100 ºC.",
+        "Deberán instalarse siguiendo líneas verticales y horizontales o paralelas a las aristas de las paredes que limitan el local donde se efectúa la instalación superficial.",
+        "No está permitido el uso de tubos flexibles para canalizaciones fijas superficiales."
+        ],
+        "respuesta": "No está permitido el uso de tubos flexibles para canalizaciones fijas superficiales."
+    },
+    {
+        "pregunta": "¿Cómo se identificarán los conductores de la instalación eléctrica de una vivienda? (ITC-BT 26)",
+        "opciones": [
+        "Los conductores de fase se identificarán por el color negro o marrón. Cuando se considere necesario identificar tres fases diferentes podrá utilizarse el color gris.",
+        "Al conductor de protección se le identificará por el color amarillo-verde y al conductor neutro por el color azul claro.",
+        "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "¿A partir de qué potencia las nuevas instalaciones eléctricas de establecimientos comerciales no considerados locales de pública concurrencia necesitan la aprobación previa de proyecto por el Órgano territorial correspondiente? (ITC-BT 04)",
+        "opciones": [
+        "Cuando la potencia instalada sea superior a 50 kW por cada caja general de protección.",
+        "Cuando la potencia instalada sea superior a 100 kW por cada caja general de protección.",
+        "Se exige la aprobación previa de proyecto en todo caso."
+        ],
+        "respuesta": "Cuando la potencia instalada sea superior a 100 kW por cada caja general de protección."
+    },
+    {
+        "pregunta": "¿Es obligatoria la instalación de dispositivos de protección contra sobretensiones en la instalación eléctrica de una vivienda? (ITC-BT 25)",
+        "opciones": [
+        "Nunca es obligatoria.",
+        "Siempre que la ITC-BT 23 lo considere necesario.",
+        "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Siempre que la ITC-BT 23 lo considere necesario."
+    },
+    {
+        "pregunta": "El suministro de socorro instalado en un cine se considera, según el Reglamento Electrotécnico para Baja Tensión como: (REBT Art. 10 ITC-BT 28)",
+        "opciones": [
+        "Suministro especial.",
+        "Suministro de reemplazamiento.",
+        "Suministro complementario."
+        ],
+        "respuesta": "Suministro complementario."
+    },
+    {
+        "pregunta": "¿Cuál es el máximo valor orientativo de resistencia de tierra que puede tener una pica de 2 metros de longitud en un suelo de pizarra? (ITC-BT 18)",
+        "opciones": [
+        "300 Ω.",
+        "150 Ω.",
+        "50 Ω."
+        ],
+        "respuesta": "150 Ω."
+    },
+    {
+        "pregunta": "Señale cuál de estas medidas se debe tomar cuando sea necesario abrir una envolvente. (ITC-BT 24)",
+        "opciones": [
+        "Ponerse guantes aislantes.",
+        "Quitar la tensión de las partes activas protegidas después de abrir.",
+        "Abrir con la ayuda de una llave o de una herramienta."
+        ],
+        "respuesta": "Abrir con la ayuda de una llave o de una herramienta."
+    },
+    {
+        "pregunta": "De los siguientes enunciados relativos a las instalaciones de tubos luminosos de descarga que funcionan con tensiones asignadas en vacío comprendidas entre 1 kV y 10 kV, indíquese el no correcto: (ITC-BT 44)",
+        "opciones": [
+        "Los transformadores de alimentación y demás elementos de los rótulos no deben presentar al exterior conductores sometidos a tensiones superiores a 1kV, para que se puedan considerar como instalaciones de baja tensión.",
+        "La instalación debe ir provista de un interruptor de corte omnipolar situado en la parte de baja tensión.",
+        "Es obligatorio colocar interruptor, seccionador, conmutador o cortacircuito en la parte de la instalación comprendida entre las lámparas y su transformador."
+        ],
+        "respuesta": "Es obligatorio colocar interruptor, seccionador, conmutador o cortacircuito en la parte de la instalación comprendida entre las lámparas y su transformador."
+    },
+    {
+        "pregunta": "Considerando la acción del viento, ¿cuál es el coeficiente de seguridad mínimo para el soporte de una luminaria de alumbrado exterior? (ITC-BT 09)",
+        "opciones": [
+        "3.",
+        "3,5.",
+        "2,5."
+        ],
+        "respuesta": "2,5."
+    },
+    {
+        "pregunta": "Indíquese la previsión de cargas mínima para un edificio de 15 viviendas de 155 m² cada una. (ITC-BT 10)",
+        "opciones": [
+        "109.480 W.",
+        "64.975 W.",
+        "68.425 W."
+        ],
+        "respuesta": "68.425 W."
+    },
+    {
+        "pregunta": "¿Cómo se determinará la intensidad máxima admisible de la línea general de alimentación? (ITC-BT 14)",
+        "opciones": [
+        "Según la norma UNE 20.460-5-523 con los factores de corrección correspondientes a cada tipo de montaje.",
+        "Según la norma UNE 20.640-5-523 con los factores de corrección correspondientes a cada tipo de montaje.",
+        "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Según la norma UNE 20.460-5-523 con los factores de corrección correspondientes a cada tipo de montaje."
+    },
+    {
+        "pregunta": "Los motores deberán estar protegidos contra la falta de tensión por un dispositivo de corte automático de la alimentación, cuando el arranque espontáneo del motor al restablecerse la tensión pueda: (ITC-BT 47)",
+        "opciones": [
+        "Provocar accidentes.",
+        "Perjudicar al motor.",
+        "Las respuestas a y b son correctas."
+        ],
+        "respuesta": "Las respuestas a y b son correctas."
+    },
+    {
+        "pregunta": "¿Qué intensidad admite un circuito de un local de pública concurrencia realizado con conductores unipolares de cobre y aislados con XLPE de 25 mm² de sección, constituido por una fase, neutro y conductor de protección con aislamiento de 450/750 kV y en instalación enterrada bajo tubo? Temperatura del terreno 20 ºC y resistividad térmica de 2,5 K x m / W. (UNE 20.460-5-523)",
+        "opciones": [
+        "101 A.",
+        "148,22 A.",
+        "121 A."
+        ],
+        "respuesta": "121 A."
+    },
+    {
+        "pregunta": "¿Cuál será la sección mínima de un tubo enterrado si contiene más de 10 conductores? (ITC-BT 21)",
+        "opciones": [
+        "3 veces la sección ocupada por los conductores.",
+        "4 veces la sección ocupada por los conductores.",
+        "5 veces la sección ocupada por los conductores."
+        ],
+        "respuesta": "4 veces la sección ocupada por los conductores."
+    },
+    {
+        "pregunta": "En la protección contra contactos indirectos mediante separación eléctrica, ¿cómo debe alimentarse el circuito? (ITC-BT 24)",
+        "opciones": [
+        "Mediante transformador de aislamiento.",
+        "Mediante fuente que asegure un grado de seguridad equivalente a un transformador de aislamiento.",
+        "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "De las siguientes prescripciones generales, ¿cuál se aplica a la instalación de motores? (ITC-BT 47)",
+        "opciones": [
+        "Deben instalarse de manera que la aproximación a sus partes en movimiento no pueda ser causa de accidente.",
+        "No deben estar en contacto con materias fácilmente combustibles y se situarán de manera que no puedan provocar la ignición de estas.",
+        "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "El grado de electrificación básico de una vivienda: (ITC-BT 25)",
+        "opciones": [
+        "Se plantea como el sistema mínimo, a efectos de uso, de la instalación interior de las viviendas en edificios nuevos tal como se indica en la ITC-BT 01.",
+        "Se plantea como el sistema mínimo, a efectos de uso, de la instalación interior de las viviendas en edificios nuevos tal como se indica en la ITC-BT 11.",
+        "Su objeto es permitir la utilización de los aparatos electrodomésticos de uso básico sin necesidad de obras posteriores de adecuación."
+        ],
+        "respuesta": "Su objeto es permitir la utilización de los aparatos electrodomésticos de uso básico sin necesidad de obras posteriores de adecuación."
+    },
+    {
+        "pregunta": "¿Cómo se realizará la instalación empotrada de un interruptor en una vivienda? (ITC-BT 26)",
+        "opciones": [
+        "No existen prescripciones para este tipo de instalación.",
+        "Con cajas metálicas no puestas a tierra y sin aislamiento interior.",
+        "Utilizando cajas especiales para su empotramiento."
+        ],
+        "respuesta": "Utilizando cajas especiales para su empotramiento."
+    },
+    {
+        "pregunta": "¿Dónde se debe colocar la caja general de protección si la compañía suministradora va a pasar la red de distribución aérea a subterránea? (ITC-BT 13)",
+        "opciones": [
+        "En montaje superficial a tres o cuatro metros sobre el suelo.",
+        "En la última planta del edificio.",
+        "Como si se tratase de una acometida subterránea."
+        ],
+        "respuesta": "Como si se tratase de una acometida subterránea."
+    },
+    {
+        "pregunta": "La caja general de protección y medida: (ITC-BT 13)",
+        "opciones": [
+        "Tendrán acceso a ella los usuarios o el instalador electricista y podrán actuar sobre las conexiones con la línea general de alimentación.",
+        "Tendrán acceso a ella los usuarios o el instalador electricista y podrán actuar sobre las conexiones con la derivación individual.",
+        "Podrá utilizarse en el caso de tres usuarios alimentados desde el mismo lugar."
+        ],
+        "respuesta": "Tendrán acceso a ella los usuarios o el instalador electricista y podrán actuar sobre las conexiones con la derivación individual."
+    },
+    {
+        "pregunta": "La caja general de protección: (ITC-BT 13 1.1)",
+        "opciones": [
+        "La fijará el instalador en el lugar que estime conveniente sobre las fachadas exteriores de los edificios en lugares de libre y permanente acceso.",
+        "Cuando la acometida sea aérea podrá instalarse en montaje superficial a una altura desde el suelo comprendida entre 3 m y 4,5 m.",
+        "Cuando la acometida sea subterránea se instalará siempre en nicho en pared cerrado con una puerta con grado de protección IK 10, según UNE-EN 50.102."
+        ],
+        "respuesta": "Cuando la acometida sea subterránea se instalará siempre en nicho en pared cerrado con una puerta con grado de protección IK 10, según UNE-EN 50.102."
+    },
+    {
+        "pregunta": "Un instalador autorizado en baja tensión, observa durante el desempeño de su actividad un peligro manifiesto en una instalación eléctrica. ¿En qué plazo máximo pondrá esta circunstancia en conocimiento del Órgano competente de la Comunidad Autónoma? (ITC-BT 03)",
+        "opciones": [
+        "En 12 horas.",
+        "En 24 horas.",
+        "En 48 horas."
+        ],
+        "respuesta": "En 24 horas."
+    },
+    {
+        "pregunta": "¿Dónde empieza la propiedad del usuario de una instalación eléctrica? (REBT Art.15 ITC-BT 12)",
+        "opciones": [
+        "En la caja general de protección excluyéndola.",
+        "En la caja general de protección incluyéndola.",
+        "En la acometida, incluyéndola."
+        ],
+        "respuesta": "En la caja general de protección incluyéndola."
+    },
+    {
+        "pregunta": "¿Quién es el encargado de revisar la instalación eléctrica antes de la puesta en servicio? (REBT Art. 18)",
+        "opciones": [
+        "El instalador autorizado que ejecutó la instalación.",
+        "El director de obra.",
+        "El director de obra con la supervisión del instalador autorizado."
+        ],
+        "respuesta": "El instalador autorizado que ejecutó la instalación."
+    },
+    {
+        "pregunta": "En el stand de una feria se han instalado 10 tomas de 16 A 2P+T para ordenadores de uso público que están protegidos contra contactos indirectos con dispositivos de corte por corriente diferencial residual. ¿Cuál será el valor máximo de la suma de la resistencia de tierra y de los conductores de protección de las masas si se considera una tensión de contacto límite convencional de 24 V? (ITC-BT 34 ITC-BT 24)",
+        "opciones": [
+            "1.666,66 Ω.",
+            "800 Ω.",
+            "48 Ω."
+        ],
+        "respuesta": "800 Ω."
     }
 ]
+
+
+
+
+
 
 
 
