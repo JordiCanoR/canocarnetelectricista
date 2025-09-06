@@ -8,6 +8,7 @@ let seleccionadas = [];
 const TEST_SIZE = 30;
 let ordenBarajado = [];   // array de índices 0..N-1 barajado
 let puntero = 0;          // próxima posición en el orden barajado
+let preguntasUsadas = new Set(); // ← Para evitar repeticiones entre tests
 
 // === Persistencia ===
 const STORAGE_KEY = "test_estado_v1";
@@ -88,37 +89,31 @@ function inicializarOrden() {
 
 function generarLoteIndices(size) {
     const n = preguntas.length;
+    const disponibles = ordenBarajado.filter(i => !preguntasUsadas.has(i));
     const lote = [];
-    if (n === 0) return lote;
 
-    if (puntero + size <= n) {
-        for (let k = 0; k < size; k++) {
-            lote.push(ordenBarajado[puntero + k]);
+    // Si no hay suficientes disponibles, reinicia el set (pero NO el orden barajado)
+    if (disponibles.length < size) {
+        preguntasUsadas.clear();
+        disponibles.push(...ordenBarajado);
+    }
+
+    let count = 0;
+    for (let i = 0; i < disponibles.length && count < size; i++) {
+        const idx = disponibles[i];
+        if (!preguntasUsadas.has(idx)) {
+            lote.push(idx);
+            preguntasUsadas.add(idx);
+            count++;
         }
-        puntero += size;
-        if (puntero === n) {
-            inicializarOrden();
-        }
-        return lote;
     }
-
-    const restantes = n - puntero;
-    for (let k = 0; k < restantes; k++) {
-        lote.push(ordenBarajado[puntero + k]);
-    }
-
-    inicializarOrden();
-    const faltan = size - restantes;
-    for (let k = 0; k < faltan; k++) {
-        lote.push(ordenBarajado[puntero + k]);
-    }
-    puntero += faltan;
 
     return lote;
 }
 
 function generarTest() {
     testForm.innerHTML = "";
+    document.getElementById("resultado").innerHTML = "";
 
     if (!Array.isArray(preguntas) || preguntas.length === 0) {
         document.getElementById("resultado").innerHTML = "No hay preguntas disponibles.";
@@ -126,8 +121,14 @@ function generarTest() {
     }
 
     const tamano = Math.min(TEST_SIZE, preguntas.length);
-    if (preguntas.length < TEST_SIZE) {
-        console.warn(`Solo hay ${preguntas.length} preguntas en el banco; se generará un test de ${tamano} sin repeticiones.`);
+
+    const disponibles = ordenBarajado.filter(i => !preguntasUsadas.has(i));
+    if (disponibles.length < tamano) {
+        document.getElementById("resultado").innerHTML =
+            `<div class="mensaje-final" style="background: #fff3cd; border: 1px solid #ffeeba; padding: 10px; border-radius: 8px; color: #856404;">
+                ⚠️ <strong>Has respondido todas las preguntas disponibles.</strong><br>
+                El banco se reiniciará para seguir generando nuevos tests.
+            </div><br>`;
     }
 
     const indices = generarLoteIndices(tamano);
@@ -164,7 +165,6 @@ function normalizar(texto) {
         .replace(/[\u0300-\u036f]/g, "");
 }
 
-// === utilidades para limpiar preguntas del JSON ===
 function normalizarOpciones(opciones) {
     if (Array.isArray(opciones)) {
         return [...new Set(opciones.map(o => String(o ?? "").trim()))].filter(Boolean);
@@ -193,7 +193,6 @@ function prepararPregunta(p) {
     return copia;
 }
 
-// === NUEVO: inyectar estilos para que el resultado nunca salga "en blanco" ===
 function inyectarEstilosResultado() {
     const css = `
         #resultado {
@@ -301,13 +300,13 @@ function corregirTest() {
         `<details><summary>Ver detalles de respuestas falladas</summary><ul>${detallesFallos}</ul></details>`;
 }
 
-// Carga de preguntas e inicialización (DEDUP + saneo de opciones + persistencia)
+// Carga de preguntas e inicialización
 fetch("preguntas_rebt_base.json")
     .then(res => res.json())
     .then(data => {
         const listaOriginal = Array.isArray(data) ? data : [];
 
-        // 1) Deduplicar por enunciado (normalizado)
+        // Deduplicar
         const mapa = new Map();
         for (const p of listaOriginal) {
             const clave = normalizar(p?.pregunta || "");
@@ -317,10 +316,8 @@ fetch("preguntas_rebt_base.json")
         }
         const sinDuplicados = Array.from(mapa.values());
 
-        // 2) Preparar/sanear cada pregunta (opciones y respuesta)
         const preparadas = sinDuplicados.map(prepararPregunta).filter(Boolean);
 
-        // 3) Informe en consola
         console.log(`Original: ${listaOriginal.length} | Únicas: ${sinDuplicados.length} | Válidas: ${preparadas.length}`);
 
         preguntas = preparadas;
@@ -332,14 +329,11 @@ fetch("preguntas_rebt_base.json")
             guardarEstado(sig);
         }
 
-        // Aseguramos estilos visibles para el resultado
         inyectarEstilosResultado();
-
         generarTest();
         temporizador();
     });
 
-// Botones
 document.getElementById("btnCorregir").addEventListener("click", corregirTest);
 document.getElementById("btnNuevo").addEventListener("click", () => {
     tiempo = 40 * 60;
