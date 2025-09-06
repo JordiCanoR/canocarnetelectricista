@@ -7039,11 +7039,278 @@
             "48 Ω."
         ],
         "respuesta": "800 Ω."
+    },
+    {
+        "pregunta": "¿Cuál será el tiempo mínimo de funcionamiento del alumbrado de reemplazamiento de una sala de intervención? (ITC-BT 28)",
+        "opciones": [
+            "1 hora.",
+            "3 horas.",
+            "2 horas."
+        ],
+        "respuesta": "2 horas."
+    },
+    {
+        "pregunta": "¿Cuál es la toma de corriente para el circuito de lavadora de una instalación eléctrica de vivienda? (ITC-BT 25)",
+        "opciones": [
+            "Base de 25 A 2p+T.",
+            "Base de 16 A sin toma de tierra.",
+            "base de 16 A con toma de tierra."
+        ],
+        "respuesta": "base de 16 A con toma de tierra."
+    },
+    {
+        "pregunta": "¿Cuál es la potencia máxima admisible en el circuito de tomas de calefacción de una vivienda? (ITC-BT 25)",
+        "opciones": [
+            "3.450 W.",
+            "5.750 W.",
+            "3.680 W."
+        ],
+        "respuesta": "5.750 W."
+    },
+    {
+        "pregunta": "El certificado de cualificación individual en baja tensión: (ITC-BT 03)",
+        "opciones": [
+            "Por sí sólo no capacita para la realización de una actividad eléctrica, sólo es un requisito anterior a la obtención del certificado de instalador autorizado en baja tensión.",
+            "En él no deben constar las modalidades para las que esté autorizada la persona que lo obtiene.",
+            "Ninguna de las anteriores."
+        ],
+        "respuesta": "Por sí sólo no capacita para la realización de una actividad eléctrica, sólo es un requisito anterior a la obtención del certificado de instalador autorizado en baja tensión."
+    },
+    {
+        "pregunta": "Un edificio dedicado a una concentración de industrias tiene cuatro plantas de forma rectangular que miden 30 m de largo por 20 m de ancho cada una. ¿Cuál será la potencia mínima necesaria considerando que el número de abonados es de 40 y que toda la superficie es útil? (ITC-BT 10)",
+        "opciones": [
+            "300 kW.",
+            "414 kW.",
+            "400 kW."
+        ],
+        "respuesta": "414 kW."
+    },
+    {
+        "pregunta": "¿Cómo se consigue la reducción de las sobretensiones de entrada a valores inferiores a los indicados en cada categoría de sobretensiones? (ITC-BT 23)",
+        "opciones": [
+            "Se consigue con una estrategia de protección en cascada que integra dos niveles de protección: basta y fina.",
+            "Se consigue con una estrategia de protección en cascada que integra tres niveles de protección: basta, media y fina.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Se consigue con una estrategia de protección en cascada que integra tres niveles de protección: basta, media y fina."
+    },
+    {
+        "pregunta": "¿Cuándo se realizará la conexión de un generador asíncrono con la red? (ITC-BT 40)",
+        "opciones": [
+            "En cualquier momento.",
+            "La conexión de un generador asíncrono a la red no se realizará hasta que, accionado por una turbina o un motor, haya adquirido una velocidad entre el 90% y el 100% de la velocidad de sincronismo.",
+            "Cuando gire a una velocidad entre el 90% y el 101% de la velocidad de sincronismo."
+        ],
+        "respuesta": "La conexión de un generador asíncrono a la red no se realizará hasta que, accionado por una turbina o un motor, haya adquirido una velocidad entre el 90% y el 100% de la velocidad de sincronismo."
+    },
+    {
+        "pregunta": "¿Cómo serán las tomas de calefacción de una vivienda de grado de electrificación elevado? (ITC-BT 25)",
+        "opciones": [
+            "Base de 25 A 2p + T.",
+            "Base de 16 A 2p + T.",
+            "El REBT no define este tipo de toma."
+        ],
+        "respuesta": "El REBT no define este tipo de toma."
+    },
+    {
+        "pregunta": "El interruptor general de maniobra de una centralización de contadores debe ser de corte omnipolar y la apertura en carga garantizará que: (ITC-BT 16)",
+        "opciones": [
+            "El neutro sea cortado antes que los otros polos.",
+            "Las fases se conectarán antes que el neutro.",
+            "El neutro no sea cortado antes que los otros polos."
+        ],
+        "respuesta": "El neutro no sea cortado antes que los otros polos."
+    },
+    {
+        "pregunta": "Indíquese, entre las siguientes, las indicaciones mínimas que deben marcarse en un equipo eléctrico. (REBT Art. 6)",
+        "opciones": [
+            "Tensión y potencia asignadas.",
+            "Marca y modelo.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "Las dos respuestas anteriores son correctas."
+    },
+    {
+        "pregunta": "¿Qué se instalará en edificios de viviendas con sistema de instalación individual, en el local de contadores? (ITC-BT 13)",
+        "opciones": [
+            "Una caja para cada vivienda, con su base de fusibles y embarrado.",
+            "Un cuadro general de mando y protección.",
+            "Una CGMP por cada derivación individual."
+        ],
+        "respuesta": "Una caja para cada vivienda, con su base de fusibles y embarrado."
+    },
+    {
+        "pregunta": "La superficie máxima de una zona de ocupación habitual en una vivienda para electrificación elevada será de: (ITC-BT 25)",
+        "opciones": [
+            "50 m².",
+            "40 m².",
+            "30 m²."
+        ],
+        "respuesta": "50 m²."
+    },
+    {
+        "pregunta": "¿A qué distancia como mínimo se instalarán los diferenciales del cuarto de baño respecto al borde de la bañera o ducha? (ITC-BT 27)",
+        "opciones": [
+            "1,50 m.",
+            "1 m.",
+            "2,5 m."
+        ],
+        "respuesta": "1 m."
+    },
+    {
+        "pregunta": "¿Cuál es la profundidad mínima que debe tener una canalización subterránea que discurra por una acera? (ITC-BT 21)",
+        "opciones": [
+            "50 cm.",
+            "30 cm.",
+            "45 cm."
+        ],
+        "respuesta": "50 cm."
+    },
+    {
+        "pregunta": "¿A qué grupo pertenecen los locales destinados a talleres con riesgo de incendio o explosión? (ITC-BT 29)",
+        "opciones": [
+            "Grupo I.",
+            "Grupo II.",
+            "Grupo III."
+        ],
+        "respuesta": "Grupo II."
+    },
+    {
+        "pregunta": "La intensidad asignada mínima de los interruptores automáticos que protegen las líneas que alimentan a receptores de uso colectivo será de: (ITC-BT 25)",
+        "opciones": [
+            "25 A.",
+            "20 A.",
+            "32 A."
+        ],
+        "respuesta": "25 A."
+    },
+    {
+        "pregunta": "¿Qué debe preverse en una vivienda unifamiliar de electrificación elevada para recargar un vehículo eléctrico? (ITC-BT 52)",
+        "opciones": [
+            "Una derivación individual para uso exclusivo.",
+            "Una instalación trifásica.",
+            "Una base de carga rápida obligatoria."
+        ],
+        "respuesta": "Una derivación individual para uso exclusivo."
+    },
+    {
+        "pregunta": "¿Cuál es el nivel de puesta a tierra exigido para una instalación en local mojado? (ITC-BT 30)",
+        "opciones": [
+            "Resistencia de puesta a tierra inferior a 10 ohmios.",
+            "Resistencia inferior a 2 ohmios.",
+            "Resistencia inferior a 5 ohmios."
+        ],
+        "respuesta": "Resistencia inferior a 5 ohmios."
+    },
+    {
+        "pregunta": "¿Qué tipo de esquema se recomienda en una instalación de alumbrado público? (ITC-BT 09)",
+        "opciones": [
+            "TT.",
+            "IT.",
+            "TN-S."
+        ],
+        "respuesta": "TN-S."
+    },
+    {
+        "pregunta": "¿Cuál es el grado de protección mínimo de una caja de derivación instalada en el exterior? (ITC-BT 20)",
+        "opciones": [
+            "IP44.",
+            "IP55.",
+            "IP65."
+        ],
+        "respuesta": "IP55."
+    },
+    {
+        "pregunta": "¿En un local de pública concurrencia hay receptores conectados a 230 V con cos φ = 1. ¿A partir de qué potencia se alimentarán directamente desde el cuadro general o desde los secundarios? (ITC-BT 28)",
+        "opciones": [
+            "14.490 W.",
+            "5.750 W.",
+            "3.680 W."
+        ],
+        "respuesta": "3.680 W."
+    },
+    {
+        "pregunta": "En instalaciones generadoras interconectadas con generadores asíncronos, ¿es obligatoria la instalación de un contador de energía reactiva? (ITC-BT 40)",
+        "opciones": [
+            "Sí, es obligatoria para registrar el consumo del generador.",
+            "No es obligatoria su instalación si se corrige el factor de potencia de la red.",
+            "Es obligatoria para registrar el consumo de los receptores."
+        ],
+        "respuesta": "Sí, es obligatoria para registrar el consumo del generador."
+    },
+    {
+        "pregunta": "¿Qué dispositivos se admiten para la desconexión de la alimentación? (ITC-BT 19)",
+        "opciones": [
+            "Tomas de corriente.",
+            "Seccionadores omnipolares en todos los casos.",
+            "Seccionadores omnipolares que si están en una red TN-C no corten el neutro."
+        ],
+        "respuesta": "Seccionadores omnipolares que si están en una red TN-C no corten el neutro."
+    },
+    {
+        "pregunta": "De los siguientes mecanismos, ¿cuáles se pueden instalar en el volumen 0 de un local con ducha? (ITC-BT 27)",
+        "opciones": [
+            "Bases de circuitos de muy baja tensión de seguridad (MBTS).",
+            "Interruptores de circuitos de muy baja tensión de seguridad (MBTS) alimentados a una tensión de 12 V en corriente alterna.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Ninguna de las respuestas anteriores es correcta."
+    },
+    {
+        "pregunta": "¿Qué tipo de cables se utilizarán para la conexión de las luminarias suspendidas en alumbrado exterior? (ITC-BT 09)",
+        "opciones": [
+            "Cables de aislamiento mineral.",
+            "Cables flexibles de 4 mm² de sección mínima.",
+            "Cables flexibles."
+        ],
+        "respuesta": "Cables flexibles."
+    },
+    {
+        "pregunta": "En una canal protectora con grado de protección inferior a IP 4X, ¿qué conductores o cables deben utilizarse? (ITC-BT 20)",
+        "opciones": [
+            "Conductor aislado bajo cubierta estanca de tensión asignada mínima 300/500 V.",
+            "Conductor aislado bajo cubierta estanca de tensión asignada mínima 450/750 V.",
+            "Conductores unipolares de tensión asignada mínima de 450/750 V."
+        ],
+        "respuesta": "Conductor aislado bajo cubierta estanca de tensión asignada mínima 300/500 V."
+    },
+    {
+        "pregunta": "En un edificio de viviendas de grado de electrificación elevada cada vivienda tiene: un circuito de aire acondicionado, secadora, 50 puntos de luz y 35 tomas de corriente de uso general, además del resto de los circuitos correspondientes a una vivienda de grado de electrificación básico. ¿De cuántos dispositivos como mínimo estará compuesto el cuadro general? (ITC-BT 25)",
+        "opciones": [
+            "1 Interruptor automático general, 1 interruptor diferencial y 9 magnetotérmicos.",
+            "1 Interruptor automático general, 2 interruptores diferenciales y 9 magnetotérmicos.",
+            "1 Interruptor automático general, 2 interruptores diferenciales y 7 magnetotérmicos."
+        ],
+        "respuesta": "1 Interruptor automático general, 2 interruptores diferenciales y 9 magnetotérmicos."
+    },
+    {
+        "pregunta": "Indíquese cuáles de los siguientes conductores no se unirán directamente al borne principal de tierra. (ITC-BT 18)",
+        "opciones": [
+            "Los conductores de tierra.",
+            "Los conductores de protección.",
+            "Los conductores de unión equipotencial suplementaria."
+        ],
+        "respuesta": "Los conductores de unión equipotencial suplementaria."
+    },
+    {
+        "pregunta": "¿Puede el interruptor general automático de un local hacer la función de interruptor de control de potencia? (ITC-BT 17)",
+        "opciones": [
+            "No, nunca.",
+            "Sí, en cualquier caso.",
+            "Sí, cuando no sea posible la instalación de los dos por separado."
+        ],
+        "respuesta": "No, nunca."
+    },
+    {
+        "pregunta": "¿Cuál es la definición de canalización amovible? (ITC-BT 01 CANALIZACIÓN AMOVIBLE)",
+        "opciones": [
+            "La que puede ser quitada fácilmente.",
+            "La que está instalada de forma inamovible y no puede ser desplazada.",
+            "La que puede ser desplazada durante su utilización."
+        ],
+        "respuesta": "La que puede ser quitada fácilmente."
     }
 ]
-
-
-
 
 
 
