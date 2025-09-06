@@ -7309,10 +7309,278 @@
             "La que puede ser desplazada durante su utilización."
         ],
         "respuesta": "La que puede ser quitada fácilmente."
+    },
+    {
+        "pregunta": "¿Cuál es la previsión de cargas para un garaje de 800 m² con ventilación natural en un edificio de viviendas? (ITC-BT 10)",
+        "opciones": [
+            "16.000 W.",
+            "5.750 W.",
+            "8.000 W."
+        ],
+        "respuesta": "8.000 W."
+    },
+    {
+        "pregunta": "Indíquese la sección mínima del conductor de tierra enterrado y de cobre de un edificio destinado principalmente a viviendas si está protegido contra la corrosión y no protegido mecánicamente. (ITC-BT 18)",
+        "opciones": [
+            "25 mm².",
+            "50 mm².",
+            "16 mm²."
+        ],
+        "respuesta": "16 mm²."
+    },
+    {
+        "pregunta": "¿Para qué sirven las categorías de sobretensión? (ITC-BT 23)",
+        "opciones": [
+            "Para seleccionar la protección contra contactos indirectos de una instalación.",
+            "Permiten distinguir los diversos grados de sobreintensidades soportadas en cada una de las partes de la instalación, equipos y receptores.",
+            "Permiten distinguir los diversos grados de tensión soportada a las sobretensiones en cada una de las partes de la instalación, equipos y receptores."
+        ],
+        "respuesta": "Permiten distinguir los diversos grados de tensión soportada a las sobretensiones en cada una de las partes de la instalación, equipos y receptores."
+    },
+    {
+        "pregunta": "¿Cuál será la sección mínima de un hueco de la construcción para la instalación de conductores eléctricos aislados? (ITC-BT 20)",
+        "opciones": [
+            "Cuatro veces la ocupada por los cables o tubos y su dimensión más pequeña no será inferior a dos veces el diámetro exterior de mayor sección de éstos, con un mínimo de 20 milímetros.",
+            "Cuatro veces la ocupada por los cables o tubos y su dimensión más pequeña no será inferior a dos veces el diámetro exterior de mayor sección de éstos, con un mínimo de 30 milímetros.",
+            "Tres veces la ocupada por los cables o tubos."
+        ],
+        "respuesta": "Cuatro veces la ocupada por los cables o tubos y su dimensión más pequeña no será inferior a dos veces el diámetro exterior de mayor sección de éstos, con un mínimo de 20 milímetros."
+    },
+    {
+        "pregunta": "¿Qué intensidad mínima tendrá el interruptor general de maniobra de una concentración de contadores? (ITC-BT 16)",
+        "opciones": [
+            "160 A para previsiones de carga hasta 150 kW.",
+            "250 A para previsiones de carga superiores a 90 kW, hasta 150 kW.",
+            "Las dos respuestas anteriores son correctas."
+        ],
+        "respuesta": "250 A para previsiones de carga superiores a 90 kW, hasta 150 kW."
+    },
+    {
+        "pregunta": "En la instalación de una línea general de alimentación que discurre horizontalmente, ¿cuáles serán las dimensiones mínimas del conducto de obra adosado obligatorio? (ITC-BT 14)",
+        "opciones": [
+            "50 x 50 cm.",
+            "El conducto no es obligatorio en este caso.",
+            "30 x 30 cm."
+        ],
+        "respuesta": "El conducto no es obligatorio en este caso."
+    },
+    {
+        "pregunta": "Las prescripciones particulares contempladas en la ITC-BT 42 se aplican a: (ITC-BT 42)",
+        "opciones": [
+            "Las instalaciones eléctricas de puertos y marinas para la alimentación de buques mercantes.",
+            "Las instalaciones de caravanas y de parques de caravanas.",
+            "Las instalaciones eléctricas de puertos y marinas para la alimentación de los barcos de recreo."
+        ],
+        "respuesta": "Las instalaciones eléctricas de puertos y marinas para la alimentación de los barcos de recreo."
+    },
+    {
+        "pregunta": "¿Pueden instalarse mecanismos en el volumen 1 del cuarto de baño de una vivienda? (ITC-BT 27)",
+        "opciones": [
+            "Sí, en caso de interruptores o bases de circuitos MBTS. En este caso la fuente de alimentación estará fuera de los volúmenes 0, 1 y 2.",
+            "No están permitidos.",
+            "Los interruptores de los cuartos de baño de una vivienda deberán colocarse obligatoriamente fuera de los mismos."
+        ],
+        "respuesta": "Sí, en caso de interruptores o bases de circuitos MBTS. En este caso la fuente de alimentación estará fuera de los volúmenes 0, 1 y 2."
+    },
+    {
+        "pregunta": "La resistencia de aislamiento mínima que debe tener una instalación con tensión nominal de 230 V será mayor o igual a 0,5 MΩ cuando la longitud de los conductores es: (ITC-BT 19)",
+        "opciones": [
+            "Inferior a 100 m.",
+            "Superior a 100 m.",
+            "Inferior a 200 m."
+        ],
+        "respuesta": "Inferior a 100 m."
+    },
+    {
+        "pregunta": "En las instalaciones bajo tubo, ¿se pueden instalar tubos entre el forjado y el revestimiento destinados a la instalación eléctrica de las plantas inferiores? (ITC-BT 21)",
+        "opciones": [
+            "Sí, pero con tubo de acero.",
+            "Sólo con cables aislados a 0,6/1 kV.",
+            "No está permitido."
+        ],
+        "respuesta": "No está permitido."
+    },
+    {
+        "pregunta": "¿Cómo no puede instalarse una derivación individual? (ITC-BT 15)",
+        "opciones": [
+            "Con conductores aislados en el interior de tubos enterrados.",
+            "Con conductores aislados sobre bandeja perforada.",
+            "Con conductores aislados en el interior de tubos en montaje superficial."
+        ],
+        "respuesta": "Con conductores aislados sobre bandeja perforada."
+    },
+    {
+        "pregunta": "¿Cuál es la iluminancia horizontal mínima que debe proporcionar el alumbrado ambiente o anti-pánico? (ITC-BT 28)",
+        "opciones": [
+            "1 lux desde el suelo hasta una altura de 1 m.",
+            "0,6 lux desde el suelo hasta una altura de 1 m.",
+            "0,5 lux desde el suelo hasta una altura de 1 m."
+        ],
+        "respuesta": "0,5 lux desde el suelo hasta una altura de 1 m."
+    },
+    {
+        "pregunta": "¿Qué grado de protección mínimo tendrá un equipo de filtrado instalado en el volumen 1 de una piscina cuando la tapa del registro donde está instalado está abierta? (ITC-BT 31)",
+        "opciones": [
+            "IP X5.",
+            "IP X4 para piscinas interiores que no se limpian con chorros de agua.",
+            "IP XXB si es fijo, está especialmente diseñado para ser utilizado en piscinas y alimentado en baja tensión que no es MBTS."
+        ],
+        "respuesta": "IP XXB si es fijo, está especialmente diseñado para ser utilizado en piscinas y alimentado en baja tensión que no es MBTS."
+    },
+    {
+        "pregunta": "En un pabellón deportivo de 8.000 m² de superficie, se desea realizar el alumbrado de emergencia con luminarias que proporcionan 500 lúmenes cada una. Sabiendo que están alimentados por fuente central y que se quiere conseguir una iluminancia de 5 lux, ¿cuántas lámparas y líneas se deberán instalar como mínimo? (ITC-BT 28)",
+        "opciones": [
+            "80 lámparas y 7 líneas.",
+            "80 lámparas y 6 líneas.",
+            "84 lámparas y 7 líneas."
+        ],
+        "respuesta": "80 lámparas y 7 líneas."
+    },
+    {
+        "pregunta": "Las prescripciones particulares contempladas en la ITC-BT 41 se aplican a: (ITC-BT 41)",
+        "opciones": [
+            "Las instalaciones de caravanas y de parques de caravanas.",
+            "Las instalaciones generadoras, entendiendo como tales, las destinadas a transformar cualquier tipo de energía no eléctrica en energía eléctrica.",
+            "Las instalaciones eléctricas de puertos y marinas para la alimentación de los barcos de recreo."
+        ],
+        "respuesta": "Las instalaciones de caravanas y de parques de caravanas."
+    },
+    {
+        "pregunta": "Los arrollamientos y elementos bajo tensión de un transformador al alcance de un niño serán inaccesibles cuando la tensión sea superior a: (ITC BT 48 2.1)",
+        "opciones": [
+            "100 V.",
+            "50 V.",
+            "24 V."
+        ],
+        "respuesta": "50 V."
+    },
+    {
+        "pregunta": "¿Qué medida mínima tendrá el lado interior de las cajas de conexiones utilizadas en las instalaciones eléctricas bajo tubo? (ITC-BT 21)",
+        "opciones": [
+            "80 mm.",
+            "60 mm.",
+            "70 mm."
+        ],
+        "respuesta": "60 mm."
+    },
+    {
+        "pregunta": "¿Cuál de los siguientes equipos no es obligatorio para un instalador autorizado con categoría básica? (ITC-BT 03)",
+        "opciones": [
+            "Telurómetro.",
+            "Electrodos para la medida del aislamiento de los suelos.",
+            "Equipo verificador de la continuidad de conductores."
+        ],
+        "respuesta": "Electrodos para la medida del aislamiento de los suelos."
+    },
+    {
+        "pregunta": "¿Cuál es el esquema de distribución para instalaciones receptoras alimentadas directamente de una red de distribución pública de baja tensión en España? (ITC-BT 08)",
+        "opciones": [
+            "IT.",
+            "TN.",
+            "TT."
+        ],
+        "respuesta": "TT."
+    },
+    {
+        "pregunta": "Indíquese qué mecanismos podemos instalar en el volumen 2 de un local con bañera o ducha. (ITC-BT 27)",
+        "opciones": [
+            "Bases de circuitos MBTS con la fuente de alimentación fuera del volumen 0, 1 y 2.",
+            "Bases de circuitos MBTS con la fuente de alimentación fuera de los volúmenes 1, 2 y 3.",
+            "Ninguna de las respuestas anteriores es correcta."
+        ],
+        "respuesta": "Bases de circuitos MBTS con la fuente de alimentación fuera del volumen 0, 1 y 2."
+    },
+    {
+        "pregunta": "¿Qué tensión asignada mínima tendrán los conductores de una derivación individual instalados en el interior de un tubo enterrado? (ITC-BT 15)",
+        "opciones": [
+            "No está permitido este sistema de instalación.",
+            "0,6/1 kV.",
+            "450/750 V."
+        ],
+        "respuesta": "0,6/1 kV."
+    },
+    {
+        "pregunta": "Indíquese la tensión nominal máxima de la instalación eléctrica temporal de un parque de atracciones. (ITC-BT 34)",
+        "opciones": [
+            "230/400 V en corriente alterna.",
+            "0,6/1 kV.",
+            "230/400 V en corriente continua."
+        ],
+        "respuesta": "230/400 V en corriente alterna."
+    },
+    {
+        "pregunta": "¿Qué iluminancia horizontal mínima debe proporcionar el alumbrado de evacuación de un estadio deportivo en el eje de los pasos principales? (ITC-BT 28)",
+        "opciones": [
+            "5 lux a nivel del suelo.",
+            "1 lux a un metro del suelo.",
+            "1 lux a nivel del suelo."
+        ],
+        "respuesta": "1 lux a nivel del suelo."
+    },
+    {
+        "pregunta": "Si al pasar una inspección se detecta la falta de protección contra cortocircuitos en un circuito de la instalación, ¿qué calificación se le dará? (ITC-BT 05)",
+        "opciones": [
+            "Condicionada.",
+            "Favorable.",
+            "Negativa."
+        ],
+        "respuesta": "Condicionada."
+    },
+    {
+        "pregunta": "Todos los condensadores que formen parte del equipo auxiliar eléctrico de las lámparas de descarga para corregir el factor de potencia de los balastos, deberán llevar conectada una resistencia que asegure que la tensión en bornes del condensador no sea mayor de: (ITC-BT 44)",
+        "opciones": [
+            "60 V transcurridos 60 s desde la desconexión del receptor.",
+            "50 V transcurridos 60 s desde la desconexión del receptor.",
+            "60 V transcurridos 50 s desde la desconexión del receptor."
+        ],
+        "respuesta": "50 V transcurridos 60 s desde la desconexión del receptor."
+    },
+    {
+        "pregunta": "¿Quién es el responsable de redactar y firmar el proyecto de una instalación eléctrica? (ITC-BT 04)",
+        "opciones": [
+            "El técnico titulado competente.",
+            "El instalador autorizado.",
+            "Cualquiera de los anteriores."
+        ],
+        "respuesta": "El técnico titulado competente."
+    },
+    {
+        "pregunta": "La protección complementaria contra contactos directos se hace con dispositivos de corriente diferencial residual de valor máximo: (ITC-BT 24)",
+        "opciones": [
+            "Igual o inferior a 30 mA.",
+            "Igual o inferior a 10 mA.",
+            "Igual o inferior a 300 mA."
+        ],
+        "respuesta": "Igual o inferior a 30 mA."
+    },
+    {
+        "pregunta": "¿Qué tensión deberá resistir una instalación a 230 V al someterla a un ensayo de rigidez dieléctrica? (ITC-BT 19)",
+        "opciones": [
+            "1.800 V durante un minuto.",
+            "1.500 V durante un minuto.",
+            "1.460 V durante un minuto."
+        ],
+        "respuesta": "1.500 V durante un minuto."
+    },
+    {
+        "pregunta": "¿Cuál es la sección mínima del neutro en una instalación aérea de alumbrado exterior con distribución trifásica tetrapolar y conductores de fase de sección superior a 10 mm²? (ITC-BT 09)",
+        "opciones": [
+            "La mitad de la sección de fase.",
+            "Igual que la sección de fase.",
+            "Ninguna respuesta es correcta."
+        ],
+        "respuesta": "La mitad de la sección de fase."
+    },
+    {
+        "pregunta": "Una base prevista para conectarse a cables flexibles y que puede desplazarse fácilmente cuando está conectada al circuito de alimentación es: (ITC-BT 01)",
+        "opciones": [
+            "Base móvil.",
+            "Base fija.",
+            "Base amovible."
+        ],
+        "respuesta": "Base móvil."
     }
 ]
-
-
 
 
 
